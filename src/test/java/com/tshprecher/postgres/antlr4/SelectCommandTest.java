@@ -14,17 +14,25 @@ public class SelectCommandTest {
 
     @Test
     public void testParse() throws IOException {
-        PostgreSQLLexer lexer = new PostgreSQLLexer(new ANTLRInputStream(getClass().getResourceAsStream("/select_1.sql")));
-        PostgreSQLParser parser = new PostgreSQLParser(new CommonTokenStream(lexer));
+        String testResources[] = new String[]{
+                "/select_1.sql",
+                "/select_2.sql"
+        };
 
-        parser.addErrorListener(new BaseErrorListener() {
-            @Override
-            public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e)
-                    throws RecognitionException {
-                throw e;
-            }
-                                }
-        );
-        PostgreSQLParser.RootContext context = parser.root();
+
+        for (String resource: testResources) {
+            PostgreSQLLexer lexer = new PostgreSQLLexer(new ANTLRInputStream(getClass().getResourceAsStream(resource)));
+            PostgreSQLParser parser = new PostgreSQLParser(new CommonTokenStream(lexer));
+
+            parser.addErrorListener(new BaseErrorListener() {
+                                        @Override
+                                        public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e)
+                                                throws RecognitionException {
+                                            throw e;
+                                        }
+                                    }
+            );
+            PostgreSQLParser.RootContext context = parser.root();
+        }
     }
 }

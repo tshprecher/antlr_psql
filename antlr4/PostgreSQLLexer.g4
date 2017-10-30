@@ -1,31 +1,6 @@
-/*
-PostgreSQL grammar
-The MIT License (MIT).
-Copyright (c) 2017, Tal Shprecher (tshprecher@gmail.com)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-*/
-
 lexer grammar PostgreSQLLexer;
 
-// SKIP
-
+// Skip
 WHITESPACE          : [ \t\r\n]+    -> skip;
 COMMENT_INPUT       : '/*' .*? '*/' -> skip;
 
@@ -56,6 +31,12 @@ fragment W          : ('W'|'w') ;
 fragment X          : ('X'|'x') ;
 fragment Y          : ('Y'|'y') ;
 fragment Z          : ('Z'|'z') ;
+
+fragment HEX_DIGIT                    : [0-9A-F];
+fragment DEC_DIGIT                    : [0-9];
+fragment DQUOTA_STRING                : '"' ( '\\'. | '""' | ~('"' | '\\') )* '"';
+fragment SQUOTA_STRING                : '\'' ('\\'. | '\'\'' | ~('\'' | '\\'))* '\'';
+fragment BQUOTA_STRING                : '`' ( '\\'. | '``' | ~('`' | '\\'))* '`';
 
 // Keywords
 
@@ -672,3 +653,11 @@ WORK                                 : W O R K;
 WRITE                                : W R I T E;
 YEAR                                 : Y E A R;
 ZONE                                 : Z O N E;
+
+// Literal
+COMMA                                : ',';
+STAR                                 : '*';
+INTEGER_LITERAL                      : DEC_DIGIT+;
+STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
+
+
