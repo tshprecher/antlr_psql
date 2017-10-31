@@ -1,0 +1,259 @@
+#!/usr/bin/python
+
+"""Generates a suite of parser tests classified organized by the
+official postgres sql command type. This is intended to be run
+against the regression test dir in the postgres project:
+
+https://github.com/postgres/postgres/tree/master/src/test/regress/sql
+
+ex: gen_psql_tests src/test/regress/sql /tmp/my_local_psql_tests/
+"""
+
+import sys
+import hashlib
+from os import listdir, makedirs
+from os.path import dirname, exists, join, isfile
+
+# Postgres v10.0 commands.
+# https://www.postgresql.org/docs/10/static/sql-commands.html
+commands = set([
+    "ABORT",
+    "ALTER AGGREGATE",
+    "ALTER COLLATION",
+    "ALTER CONVERSION",
+    "ALTER DATABASE",
+    "ALTER DEFAULT",
+    "ALTER DOMAIN",
+    "ALTER EVENT TRIGGER",
+    "ALTER EXTENSION",
+    "ALTER FOREIGN DATA",
+    "ALTER FOREIGN TABLE",
+    "ALTER FUNCTION",
+    "ALTER GROUP",
+    "ALTER INDEX",
+    "ALTER LANGUAGE",
+    "ALTER LARGE OBJECT",
+    "ALTER MATERIALIZED",
+    "ALTER OPERATOR",
+    "ALTER OPERATOR CLASS",
+    "ALTER OPERATOR FAMILY",
+    "ALTER POLICY",
+    "ALTER PUBLICATION",
+    "ALTER ROLE",
+    "ALTER RULE",
+    "ALTER SCHEMA",
+    "ALTER SEQUENCE",
+    "ALTER SERVER",
+    "ALTER STATISTICS",
+    "ALTER SUBSCRIPTION",
+    "ALTER SYSTEM",
+    "ALTER TABLE",
+    "ALTER TABLESPACE",
+    "ALTER TEXT SEARCH",
+    "ALTER TEXT SEARCH",
+    "ALTER TEXT SEARCH",
+    "ALTER TEXT SEARCH",
+    "ALTER TRIGGER",
+    "ALTER TYPE",
+    "ALTER USER",
+    "ALTER USER MAPPING",
+    "ALTER VIEW",
+    "ANALYZE",
+    "BEGIN",
+    "CHECKPOINT",
+    "CLOSE",
+    "CLUSTER",
+    "COMMENT",
+    "COMMIT",
+    "COMMIT PREPARED",
+    "COPY",
+    "CREATE ACCESS",
+    "CREATE AGGREGATE",
+    "CREATE CAST",
+    "CREATE COLLATION",
+    "CREATE CONVERSION",
+    "CREATE DATABASE",
+    "CREATE DOMAIN",
+    "CREATE EVENT",
+    "CREATE EXTENSION",
+    "CREATE FOREIGN DATA",
+    "CREATE FOREIGN",
+    "CREATE FUNCTION",
+    "CREATE GROUP",
+    "CREATE INDEX",
+    "CREATE LANGUAGE",
+    "CREATE MATERIALIZED",
+    "CREATE OPERATOR",
+    "CREATE OPERATOR CLASS",
+    "CREATE OPERATOR FAMILY",
+    "CREATE POLICY",
+    "CREATE PUBLICATION",
+    "CREATE ROLE",
+    "CREATE RULE",
+    "CREATE SCHEMA",
+    "CREATE SEQUENCE",
+    "CREATE SERVER",
+    "CREATE STATISTICS",
+    "CREATE",
+    "CREATE TABLE",
+    "CREATE TABLE AS",
+    "CREATE TABLESPACE",
+    "CREATE TEXT SEARCH",
+    "CREATE TEXT SEARCH",
+    "CREATE TEXT SEARCH",
+    "CREATE TEXT SEARCH",
+    "CREATE TRANSFORM",
+    "CREATE TRIGGER",
+    "CREATE TYPE",
+    "CREATE USER",
+    "CREATE USER MAPPING",
+    "CREATE VIEW",
+    "DEALLOCATE",
+    "DECLARE",
+    "DELETE",
+    "DISCARD",
+    "DO",
+    "DROP ACCESS METHOD",
+    "DROP AGGREGATE",
+    "DROP CAST",
+    "DROP COLLATION",
+    "DROP CONVERSION",
+    "DROP DATABASE",
+    "DROP DOMAIN",
+    "DROP EVENT TRIGGER",
+    "DROP EXTENSION",
+    "DROP FOREIGN DATA",
+    "DROP FOREIGN TABLE",
+    "DROP FUNCTION",
+    "DROP GROUP",
+    "DROP INDEX",
+    "DROP LANGUAGE",
+    "DROP MATERIALIZED",
+    "DROP OPERATOR",
+    "DROP OPERATOR CLASS",
+    "DROP OPERATOR FAMILY",
+    "DROP OWNED",
+    "DROP POLICY",
+    "DROP PUBLICATION",
+    "DROP ROLE",
+    "DROP RULE",
+    "DROP SCHEMA",
+    "DROP SEQUENCE",
+    "DROP SERVER",
+    "DROP STATISTICS",
+    "DROP SUBSCRIPTION",
+    "DROP TABLE",
+    "DROP TABLESPACE",
+    "DROP TEXT SEARCH",
+    "DROP TEXT SEARCH",
+    "DROP TEXT SEARCH PARSER",
+    "DROP TEXT SEARCH",
+    "DROP TRANSFORM",
+    "DROP TRIGGER",
+    "DROP TYPE",
+    "DROP USER",
+    "DROP USER MAPPING",
+    "DROP VIEW",
+    "END",
+    "EXECUTE",
+    "EXPLAIN",
+    "FETCH",
+    "GRANT",
+    "IMPORT FOREIGN",
+    "INSERT",
+    "LISTEN",
+    "LOAD",
+    "LOCK",
+    "MOVE",
+    "NOTIFY",
+    "PREPARE",
+    "PREPARE",
+    "REASSIGN OWNED",
+    "REFRESH MATERIALIZED",
+    "REINDEX",
+    "RELEASE SAVEPOINT",
+    "RESET",
+    "REVOKE",
+    "ROLLBACK",
+    "ROLLBACK PREPARED",
+    "ROLLBACK TO SAVEPOINT",
+    "SAVEPOINT",
+    "SECURITY LABEL",
+    "SELECT",
+    "SELECT INTO",
+    "SET",
+    "SET CONSTRAINTS",
+    "SET ROLE",
+    "SET SESSION",
+    "SET TRANSACTION",
+    "SHOW",
+    "START TRANSACTION",
+    "TRUNCATE",
+    "UNLISTEN",
+    "UPDATE",
+    "VACUUM",
+    "VALUES",
+])
+
+
+def get_query_type(query):
+    """Return the query type of the query in snake case, '_unknown' if unknown"""
+
+    terms = query.split()
+    # the query command may reveal itself a few terms into the command,
+    # e.g. 'WITH RECURSIVE ... SELECT'. the command is a SELECT but can
+    # only be classified by searching a few terms into the query.
+    for start in range(0, min(4, len(terms))):
+        # iterate with depth to include commands with multiple terms, e.g. 'SELECT INTO'
+        for depth in range(4, 0, -1):
+            if start+depth >= len(terms):
+                continue
+            cmd = " ".join(terms[start:start+depth]).upper()
+            if cmd in commands:
+                return cmd.replace(" ", "_").lower()
+    return "_unknown"
+
+def generate_test_cases(file, output_dir):
+    """Given an open file and directory to write the test cases,
+    remove the comments, parse out each sql command, and write it
+    to the output directory.
+    """
+
+    next_char = file.read(1)
+    next_next_char = file.read(1)
+    query = ""
+    line_num = 1
+    while next_char != "":
+        if next_char == "-" and next_next_char == "-":
+            while next_char != "\n":
+                next_char = next_next_char
+                next_next_char = file.read(1)
+        elif next_char == ";":
+            query_type = get_query_type(query)
+            type_dir = join(output_dir, query_type)
+            if not exists(type_dir):
+                makedirs(type_dir)
+            testfile = open(join(type_dir,  hashlib.sha224(query).hexdigest()[:8]) + ".sql", 'w')
+            testfile.write("-- file: " + file.name.split("/")[-1] + "\n")
+            testfile.write("-- line: " + str(line_num-len(query.split("\n"))+1) + "\n")
+            testfile.write(query + "\n")
+            testfile.close()
+            query = ""
+        elif query != "" or next_char.isspace() == False:
+            query += next_char
+        if next_char == "\n":
+            line_num += 1
+        next_char = next_next_char
+        next_next_char = file.read(1)
+
+def main():
+    input_dir = sys.argv[1]
+    output_dir = sys.argv[2]
+
+    input_files = [f for f in listdir(input_dir) if isfile(join(input_dir, f))]
+    for filename in input_files:
+        file = open(join(input_dir, filename), "r")
+        generate_test_cases(file, output_dir)
+
+if __name__ == "__main__":
+    main()
