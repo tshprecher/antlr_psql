@@ -1,0 +1,3 @@
+-- file: timestamp.sql
+-- line: 74
+INSERT INTO TIMESTAMP_TBL VALUES ('19970210 173201 -0800')

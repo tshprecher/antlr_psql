@@ -1,0 +1,7 @@
+-- file: case.sql
+-- line: 48
+SELECT '4' AS "One",
+  CASE
+    WHEN 1 > 2 THEN 3
+    ELSE 4
+  END AS "ELSE default"

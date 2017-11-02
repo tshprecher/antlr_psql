@@ -1,0 +1,3 @@
+-- file: date.sql
+-- line: 238
+SELECT EXTRACT(CENTURY FROM CURRENT_DATE)>=21 AS True

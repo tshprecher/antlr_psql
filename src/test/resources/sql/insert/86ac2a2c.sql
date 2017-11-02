@@ -1,0 +1,3 @@
+-- file: int8.sql
+-- line: 8
+INSERT INTO INT8_TBL VALUES('123   ','4567890123456789')

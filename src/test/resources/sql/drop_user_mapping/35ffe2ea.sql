@@ -1,0 +1,3 @@
+-- file: rolenames.sql
+-- line: 371
+DROP USER MAPPING IF EXISTS FOR SESSION_USER SERVER sv5

@@ -1,0 +1,3 @@
+-- file: oid.sql
+-- line: 27
+INSERT INTO OID_TBL(f1) VALUES ('-23582358720398502385')

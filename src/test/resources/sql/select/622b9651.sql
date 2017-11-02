@@ -1,0 +1,3 @@
+-- file: date.sql
+-- line: 274
+SELECT DATE_TRUNC('MILLENNIUM', TIMESTAMP '1970-03-20 04:30:00.00000')

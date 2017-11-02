@@ -1,0 +1,3 @@
+-- file: bit.sql
+-- line: 165
+INSERT INTO BIT_SHIFT_TABLE SELECT b>>4 FROM BIT_SHIFT_TABLE

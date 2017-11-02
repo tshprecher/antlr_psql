@@ -1,0 +1,3 @@
+-- file: prepared_xacts.sql
+-- line: 105
+BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE

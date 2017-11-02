@@ -1,0 +1,3 @@
+-- file: rolenames.sql
+-- line: 125
+ALTER USER SESSION_ROLE WITH NOREPLICATION

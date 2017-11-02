@@ -1,0 +1,4 @@
+-- file: tidscan.sql
+-- line: 62
+EXPLAIN (ANALYZE, COSTS OFF, SUMMARY OFF, TIMING OFF)
+UPDATE tidscan SET id = -id WHERE CURRENT OF c RETURNING *

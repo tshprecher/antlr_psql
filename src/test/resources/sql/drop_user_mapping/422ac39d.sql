@@ -1,0 +1,3 @@
+-- file: rolenames.sql
+-- line: 380
+DROP USER MAPPING IF EXISTS FOR CURRENT_ROLE SERVER sv9

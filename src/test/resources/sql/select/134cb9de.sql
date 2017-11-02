@@ -1,0 +1,3 @@
+-- file: date.sql
+-- line: 225
+SELECT EXTRACT(EPOCH FROM TIMESTAMPTZ '1970-01-01+00')

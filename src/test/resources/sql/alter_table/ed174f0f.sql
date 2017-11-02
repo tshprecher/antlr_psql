@@ -1,0 +1,3 @@
+-- file: identity.sql
+-- line: 25
+ALTER TABLE itest4 ALTER COLUMN b ADD GENERATED ALWAYS AS IDENTITY

@@ -1,0 +1,3 @@
+-- file: privileges.sql
+-- line: 772
+GRANT SELECT, INSERT ON LARGE OBJECT 1001 TO PUBLIC

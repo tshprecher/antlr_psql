@@ -1,0 +1,3 @@
+-- file: bit.sql
+-- line: 27
+INSERT INTO VARBIT_TABLE VALUES (B'101011111010')

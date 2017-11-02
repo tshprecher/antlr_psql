@@ -1,0 +1,4 @@
+-- file: with.sql
+-- line: 741
+CREATE RULE y_rule AS ON DELETE TO y DO INSTEAD
+  INSERT INTO y VALUES(42) RETURNING *

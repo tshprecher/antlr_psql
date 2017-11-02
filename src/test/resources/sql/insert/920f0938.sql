@@ -1,0 +1,3 @@
+-- file: bit.sql
+-- line: 174
+INSERT INTO VARBIT_SHIFT_TABLE VALUES (B'11011')

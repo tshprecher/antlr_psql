@@ -1,0 +1,3 @@
+-- file: foreign_data.sql
+-- line: 344
+ALTER FOREIGN TABLE ft1 ALTER COLUMN c1 SET STATISTICS 10000

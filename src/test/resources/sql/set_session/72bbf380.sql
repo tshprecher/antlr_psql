@@ -1,0 +1,3 @@
+-- file: transactions.sql
+-- line: 84
+SET SESSION CHARACTERISTICS AS TRANSACTION READ ONLY

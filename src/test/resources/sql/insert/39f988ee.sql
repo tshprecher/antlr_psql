@@ -1,0 +1,3 @@
+-- file: bit.sql
+-- line: 15
+INSERT INTO BIT_TABLE VALUES (B'101011111010')

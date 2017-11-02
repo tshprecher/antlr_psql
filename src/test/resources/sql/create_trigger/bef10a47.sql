@@ -1,0 +1,3 @@
+-- file: object_address.sql
+-- line: 33
+CREATE TRIGGER t BEFORE INSERT ON addr_nsp.gentable FOR EACH ROW EXECUTE PROCEDURE addr_nsp.trig()

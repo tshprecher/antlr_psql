@@ -1,0 +1,3 @@
+-- file: create_view.sql
+-- line: 250
+CREATE TABLE tt1 (f1 int, f2 int, f3 text)

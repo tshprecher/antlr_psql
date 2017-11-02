@@ -1,0 +1,5 @@
+-- file: json.sql
+-- line: 175
+SELECT test_json -> 'x'
+FROM test_json
+WHERE json_type = 'scalar'

@@ -1,0 +1,5 @@
+-- file: union.sql
+-- line: 82
+SELECT f1 AS eight FROM VARCHAR_TBL
+UNION ALL
+SELECT f1 FROM CHAR_TBL

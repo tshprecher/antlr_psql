@@ -1,0 +1,3 @@
+-- file: date.sql
+-- line: 233
+SELECT EXTRACT(CENTURY FROM DATE '0001-01-01 AD')

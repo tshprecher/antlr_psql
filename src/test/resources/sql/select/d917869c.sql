@@ -1,0 +1,3 @@
+-- file: bit.sql
+-- line: 120
+SELECT POSITION(B'10110110' IN B'001011011011010')

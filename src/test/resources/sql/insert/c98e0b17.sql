@@ -1,0 +1,3 @@
+-- file: bit.sql
+-- line: 162
+INSERT INTO BIT_SHIFT_TABLE VALUES (B'1101100000000000')

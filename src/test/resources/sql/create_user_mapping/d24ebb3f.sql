@@ -1,0 +1,3 @@
+-- file: rolenames.sql
+-- line: 356
+CREATE USER MAPPING FOR SESSION_USER SERVER sv5 OPTIONS (user 'SESSION_USER')

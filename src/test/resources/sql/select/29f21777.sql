@@ -1,0 +1,3 @@
+-- file: misc_functions.sql
+-- line: 20
+SELECT num_nulls(VARIADIC '{"1","2","3","4"}'::text[])

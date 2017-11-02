@@ -1,0 +1,3 @@
+-- file: date.sql
+-- line: 245
+SELECT EXTRACT(MILLENNIUM FROM DATE '1001-01-01')

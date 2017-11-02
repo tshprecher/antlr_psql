@@ -1,0 +1,3 @@
+-- file: date.sql
+-- line: 249
+SELECT EXTRACT(MILLENNIUM FROM CURRENT_DATE)

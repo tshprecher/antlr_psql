@@ -1,0 +1,3 @@
+-- file: triggers.sql
+-- line: 563
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE
