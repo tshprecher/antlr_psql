@@ -2,7 +2,8 @@ lexer grammar PostgreSQLLexer;
 
 // Skip
 WHITESPACE          : [ \t\r\n]+    -> skip;
-COMMENT_INPUT       : '/*' .*? '*/' -> skip;
+BLOCK_COMMENT       : '/*' .*? '*/' -> skip;
+LINE_COMMENT        : '--' .*? '\n' -> skip;
 
 // Fragments
 fragment A          : ('A'|'a') ;
@@ -656,8 +657,19 @@ ZONE                                 : Z O N E;
 
 // Literal
 COMMA                                : ',';
+COLON                                : ':';
+DOUBLE_COLON                         : '::';
 STAR                                 : '*';
+OPEN_PAREN                           : '(';
+CLOSE_PAREN                          : ')';
 INTEGER_LITERAL                      : DEC_DIGIT+;
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
+IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]+;
+
+// Operators
+OP_JSON_GET                          : '->';
+OP_JSON_GET_TEXT                     : '->>';
+OP_JSON_GET_PATH                     : '#>';
+OP_JSON_GET_PATH_TEXT                : '#>>';
 
 
