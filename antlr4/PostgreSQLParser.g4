@@ -92,11 +92,33 @@ expr
     | oper expr
     | expr oper
     | func_call
+    | aggregate
     | array_cons
     ;
 
 expr_list
     : OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN
+    ;
+
+
+// TODO: change select_order_by and other clauses to *_clause names
+aggregate
+    : OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* select_order_by? CLOSE_PAREN
+      (FILTER OPEN_PAREN WHERE select_where CLOSE_PAREN)?
+    | OPEN_PAREN STAR OPEN_PAREN (FILTER OPEN_PAREN WHERE select_where CLOSE_PAREN)?
+    | OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN WITHIN GROUP
+      OPEN_PAREN select_order_by CLOSE_PAREN
+      (FILTER OPEN_PAREN WHERE select_where CLOSE_PAREN)?
+    ;
+
+aggregate_name
+    : COUNT
+    | IDENTIFIER
+    ;
+
+output_name
+    : STRING_LITERAL // TODO: restrict to only double quoted
+    | IDENTIFIER
     ;
 
 type_name
@@ -111,6 +133,12 @@ type_name
     | IDENTIFIER
     ;
 
+func_name
+    : ANY
+    | SOME
+    | ALL
+    | IDENTIFIER;
+
 oper
     : OP_JSON_GET
     | OP_JSON_GET_PATH
@@ -123,9 +151,13 @@ oper
     | OP_GREATER_THAN_OR_EQ
     | OP_EQUAL
     | OP_NOT_EQUAL
+    | OP_CONTAINS
+    | OP_CONTAINED_BY
+    | OP_OVERLAP
+    | OP_CONCAT
     | OP_ADD
     | OP_SUB
-    | OP_MUL
+    | STAR   // STAR and would-be OP_MUL are equivalent
     | OP_DIV
     | OP_MOD
     | OP_EXP
@@ -148,7 +180,8 @@ bool_literal
     ;
 
 func_call
-    : func OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN
+    : func_name OPEN_PAREN VARIADIC expr CLOSE_PAREN
+    | func_name OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN
     ;
 
 array_cons
@@ -200,8 +233,6 @@ predicate
     ;
 
 todo_fill_in        : IDENTIFIER;  // TODO: Fill in with proper identification
-func                : IDENTIFIER;
-output_name         : IDENTIFIER;
 table_name          : IDENTIFIER;
 alias               : IDENTIFIER;
 column_alias        : IDENTIFIER;

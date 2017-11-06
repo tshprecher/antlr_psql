@@ -638,6 +638,7 @@ VALUE                                : V A L U E;
 VALUES                               : V A L U E S;
 VARCHAR                              : V A R C H A R;
 VARIABLE                             : V A R I A B L E;
+VARIADIC                             : V A R I A D I C; // TODO: added manually, fix in docs
 VARYING                              : V A R Y I N G;
 VAR_POP                              : V A R '_' P O P;
 VAR_SAMP                             : V A R '_' S A M P;
@@ -669,7 +670,7 @@ OPEN_BRACKET                         : '[';
 CLOSE_BRACKET                        : '[';
 INTEGER_LITERAL                      : DEC_DIGIT+;
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
-IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]+;
+IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
 
 // json operators
 OP_JSON_GET                          : '->';
@@ -685,10 +686,15 @@ OP_GREATER_THAN_OR_EQ                : '>=';
 OP_EQUAL                             : '=';
 OP_NOT_EQUAL                         : ('<>'|'!=');
 
+// array operators
+OP_CONTAINS                          : '@>';
+OP_CONTAINED_BY                      : '<@';
+OP_OVERLAP                           : '&&';
+OP_CONCAT                            : '||';
+
 // math operators
 OP_ADD                               : '+';
 OP_SUB                               : '-';
-OP_MUL                               : '*';
 OP_DIV                               : '/';
 OP_MOD                               : '%';
 OP_EXP                               : '^';
