@@ -341,6 +341,7 @@ LOCALTIMESTAMP                       : L O C A L T I M E S T A M P;
 LOCATION                             : L O C A T I O N;
 LOCATOR                              : L O C A T O R;
 LOCK                                 : L O C K;
+LOCKED                               : L O C K E D; // TODO: added manually, fix in docs
 LOWER                                : L O W E R;
 M_                                   : M;
 MAP                                  : M A P;
@@ -534,6 +535,7 @@ SHOW                                 : S H O W;
 SIMILAR                              : S I M I L A R;
 SIMPLE                               : S I M P L E;
 SIZE                                 : S I Z E;
+SKIP_                                : S K I P; // TODO: added manually, fix in docs
 SMALLINT                             : S M A L L I N T;
 SOME                                 : S O M E;
 SOURCE                               : S O U R C E;
@@ -659,17 +661,45 @@ ZONE                                 : Z O N E;
 COMMA                                : ',';
 COLON                                : ':';
 DOUBLE_COLON                         : '::';
+DOT                                  : '.';
 STAR                                 : '*';
 OPEN_PAREN                           : '(';
 CLOSE_PAREN                          : ')';
+OPEN_BRACKET                         : '[';
+CLOSE_BRACKET                        : '[';
 INTEGER_LITERAL                      : DEC_DIGIT+;
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]+;
 
-// Operators
+// json operators
 OP_JSON_GET                          : '->';
 OP_JSON_GET_TEXT                     : '->>';
 OP_JSON_GET_PATH                     : '#>';
 OP_JSON_GET_PATH_TEXT                : '#>>';
 
+// boolean operators
+OP_LESS_THAN                         : '<';
+OP_GREATER_THAN                      : '>';
+OP_LESS_THAN_OR_EQ                   : '<=';
+OP_GREATER_THAN_OR_EQ                : '>=';
+OP_EQUAL                             : '=';
+OP_NOT_EQUAL                         : ('<>'|'!=');
 
+// math operators
+OP_ADD                               : '+';
+OP_SUB                               : '-';
+OP_MUL                               : '*';
+OP_DIV                               : '/';
+OP_MOD                               : '%';
+OP_EXP                               : '^';
+OP_SQRT                              : '|/';
+OP_CBRT                              : '||/';
+OP_FACT                              : '!';
+OP_FACT_PFX                          : '!!';
+OP_ABS                               : '@';
+OP_BW_AND                            : '&';
+OP_BW_OR                             : '|';
+OP_BW_XOR                            : '#';
+OP_BW_NOT                            : '~';
+OP_BW_SHIFT_LEFT                     : '<<';
+OP_BW_SHIFT_RIGHT                    : '>>';
