@@ -9,32 +9,32 @@ root
 
 select_stmt
     : SELECT select_selector
-      select_from?
-      select_where?
-      select_group_by?
-      select_having?
+      from_clause?
+      where_clause?
+      group_by_clause?
+      having_clause?
       //select_window?
-      select_combine?
-      select_order_by?
-      select_limit?
-      select_offset?
-      select_fetch?
-      select_for?
+      combine_clause?
+      order_by_clause?
+      limit_clause?
+      offset_clause?
+      fetch_clause?
+      for_clause?
     ;
 
 select_selector
     : (STAR | (expr (AS? output_name)*)) (COMMA select_selector)*
     ;
 
-select_from
+from_clause
     : FROM from_item (COMMA from_item)*
     ;
 
-select_where
+where_clause
     : WHERE predicate
     ;
 
-select_group_by
+group_by_clause
     : GROUP BY grouping_elem (COMMA grouping_elem)*
     ;
 
@@ -50,31 +50,31 @@ grouping_elem_list
     : OPEN_PAREN grouping_elem (COMMA grouping_elem)* CLOSE_PAREN
     ;
 
-select_having
+having_clause
     : HAVING predicate (COMMA predicate)*
     ;
 
-select_combine
+combine_clause
     : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT) select_stmt
     ;
 
-select_order_by
+order_by_clause
     : ORDER BY expr (ASC | DESC | USING oper)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
     ;
 
-select_limit
+limit_clause
     : LIMIT (INTEGER_LITERAL | ALL)
     ;
 
-select_offset
+offset_clause
     : OFFSET INTEGER_LITERAL (ROW | ROWS)?
     ;
 
-select_fetch
+fetch_clause
     : FETCH (FIRST | NEXT) INTEGER_LITERAL? (ROW | ROWS) ONLY
     ;
 
-select_for
+for_clause
     : FOR ( UPDATE | NO KEY UPDATE | SHARE | KEY SHARE ) (OF table_name (COMMA table_name)*)? ( NOWAIT | SKIP_ LOCKED)*
     ;
 
@@ -101,14 +101,13 @@ expr_list
     ;
 
 
-// TODO: change select_order_by and other clauses to *_clause names
 aggregate
-    : OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* select_order_by? CLOSE_PAREN
-      (FILTER OPEN_PAREN WHERE select_where CLOSE_PAREN)?
-    | OPEN_PAREN STAR OPEN_PAREN (FILTER OPEN_PAREN WHERE select_where CLOSE_PAREN)?
+    : OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* order_by_clause? CLOSE_PAREN
+      (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
+    | OPEN_PAREN STAR OPEN_PAREN (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
     | OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN WITHIN GROUP
-      OPEN_PAREN select_order_by CLOSE_PAREN
-      (FILTER OPEN_PAREN WHERE select_where CLOSE_PAREN)?
+      OPEN_PAREN order_by_clause CLOSE_PAREN
+      (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
     ;
 
 aggregate_name
