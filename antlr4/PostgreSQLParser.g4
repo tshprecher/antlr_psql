@@ -114,7 +114,10 @@ expr
     : IDENTIFIER
     | NULL
     | INTEGER_LITERAL
+//    | NUMERIC_LITERAL
     | STRING_LITERAL
+    | DOUBLE_DOLLAR (~DOLLAR)+ DOUBLE_DOLLAR
+    | DOLLAR IDENTIFIER (~DOLLAR)+ DOLLAR IDENTIFIER DOLLAR
     | bool_literal
     | OPEN_PAREN expr CLOSE_PAREN
     | CAST OPEN_PAREN expr AS type_name CLOSE_PAREN
@@ -127,6 +130,7 @@ expr
     | func_call
     | aggregate
     | array_cons
+    | OPEN_PAREN select_stmt CLOSE_PAREN
     ;
 
 expr_list
@@ -285,7 +289,7 @@ predicate
     | NOT predicate
     ;
 
-todo_fill_in        : IDENTIFIER;  // TODO: Fill in with proper identification
+todo_fill_in        : . ;  // TODO: Fill in with proper identification
 column_name         : IDENTIFIER;
 alias               : IDENTIFIER;
 column_alias        : IDENTIFIER;
