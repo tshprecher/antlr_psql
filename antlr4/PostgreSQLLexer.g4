@@ -585,7 +585,9 @@ THAN                                 : T H A N;
 THEN                                 : T H E N;
 TIES                                 : T I E S;
 TIME                                 : T I M E;
+TIME_TZ                              : T I M E T Z; // TODO: added manually, fix in docs
 TIMESTAMP                            : T I M E S T A M P;
+TIMESTAMP_TZ                         : T I M E S T A M P T Z; // TODO: added manually, fix in docs
 TIMEZONE_HOUR                        : T I M E Z O N E '_' H O U R;
 TIMEZONE_MINUTE                      : T I M E Z O N E '_' M I N U T E;
 TO                                   : T O;
@@ -662,13 +664,14 @@ ZONE                                 : Z O N E;
 COMMA                                : ',';
 COLON                                : ':';
 DOUBLE_COLON                         : '::';
-DOT                                  : '.';
 STAR                                 : '*';
 OPEN_PAREN                           : '(';
 CLOSE_PAREN                          : ')';
 OPEN_BRACKET                         : '[';
 CLOSE_BRACKET                        : '[';
 INTEGER_LITERAL                      : DEC_DIGIT+;
+NUMERIC_LITERAL                      : DEC_DIGIT+('.' DEC_DIGIT+)?;
+DOT                                  : '.';
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
 

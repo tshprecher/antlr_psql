@@ -8,12 +8,12 @@ root
     ;
 
 select_stmt
-    : SELECT select_selector
+    : SELECT selector_clause
       from_clause?
       where_clause?
       group_by_clause?
       having_clause?
-      //select_window?
+      window_clause?
       combine_clause?
       order_by_clause?
       limit_clause?
@@ -22,8 +22,9 @@ select_stmt
       for_clause?
     ;
 
-select_selector
-    : (STAR | (expr (AS? output_name)*)) (COMMA select_selector)*
+selector_clause
+    :(ALL | (DISTINCT (ON expr_list)?))?
+     (STAR | (expr (AS? output_name)? (COMMA expr (AS? output_name)?)* ))
     ;
 
 from_clause
@@ -52,6 +53,37 @@ grouping_elem_list
 
 having_clause
     : HAVING predicate (COMMA predicate)*
+    ;
+
+frame
+    : UNBOUNDED PRECEDING
+    | INTEGER_LITERAL PRECEDING
+    | CURRENT ROW
+    | INTEGER_LITERAL FOLLOWING
+    | UNBOUNDED FOLLOWING
+    ;
+
+frame_start
+    : frame
+    ;
+
+frame_end
+    : frame
+    ;
+
+frame_clause
+    : (RANGE | ROWS) frame_start
+    | (RANGE | ROWS) BETWEEN frame_start AND frame_end
+    ;
+
+window_definition
+    : window_name
+    | PARTITION BY expr (COMMA expr)*
+    | order_by_clause
+    ;
+
+window_clause
+    : WINDOW window_name AS OPEN_PAREN window_definition CLOSE_PAREN
     ;
 
 combine_clause
@@ -86,6 +118,7 @@ expr
     | bool_literal
     | OPEN_PAREN expr CLOSE_PAREN
     | CAST OPEN_PAREN expr AS type_name CLOSE_PAREN
+    | type_name expr
     | expr DOUBLE_COLON type_name
     | expr DOT (IDENTIFIER | STAR)
     | expr oper expr
@@ -104,7 +137,7 @@ expr_list
 aggregate
     : OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* order_by_clause? CLOSE_PAREN
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
-    | OPEN_PAREN STAR OPEN_PAREN (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
+    | OPEN_PAREN STAR CLOSE_PAREN (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
     | OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN WITHIN GROUP
       OPEN_PAREN order_by_clause CLOSE_PAREN
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
@@ -120,6 +153,11 @@ output_name
     | IDENTIFIER
     ;
 
+// TODO: properly handle *all* non reserved keywords
+table_name
+    : RESULT
+    | IDENTIFIER;
+
 type_name
     : SMALLINT
     | INTEGER
@@ -129,12 +167,15 @@ type_name
     | REAL
     | FLOAT
     | DOUBLE
+    | BOOLEAN
     | IDENTIFIER
     ;
 
 func_name
     : ANY
     | SOME
+    | EXISTS
+    | IN
     | ALL
     | IDENTIFIER;
 
@@ -171,6 +212,13 @@ oper
     | OP_BW_NOT
     | OP_BW_SHIFT_LEFT
     | OP_BW_SHIFT_RIGHT
+    | DATE
+    | INTERVAL
+    | TIMESTAMP (WITH TIME ZONE)?
+    | TIMESTAMP_TZ
+    | TIME (WITH TIME ZONE)?
+    | TIME_TZ
+    | DOUBLE PRECISION
     ;
 
 bool_literal
@@ -181,6 +229,7 @@ bool_literal
 func_call
     : func_name OPEN_PAREN VARIADIC expr CLOSE_PAREN
     | func_name OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN
+    | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN    // for EXTRACT()
     ;
 
 array_cons
@@ -199,26 +248,31 @@ from_item
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
       (AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN)? CLOSE_PAREN
-    | from_item NATURAL? join_type from_item (ON join_condition)
+    | from_item NATURAL? join_type from_item ON join_condition
     ;
 
 with_column_alias
     : AS? alias (column_alias (COMMA column_alias)*)?
     ;
 
-// TODO: fill in
 join_type
-    : JOIN
+    : INNER? JOIN
+    | LEFT OUTER? JOIN
+    | RIGHT OUTER? JOIN
+    | FULL OUTER? JOIN
+    | CROSS JOIN
     ;
 
 // TODO: fill in
 join_condition
-    : TRUE
+    : NATURAL
+    | ON predicate
+    | USING OPEN_PAREN column_name (COMMA column_name)* CLOSE_PAREN
     ;
 
 // TODO: fill in
 predicate
-    : NOT expr
+    : expr
     | expr OP_LESS_THAN expr
     | expr OP_GREATER_THAN expr
     | expr OP_LESS_THAN_OR_EQ expr
@@ -232,7 +286,7 @@ predicate
     ;
 
 todo_fill_in        : IDENTIFIER;  // TODO: Fill in with proper identification
-table_name          : IDENTIFIER;
+column_name         : IDENTIFIER;
 alias               : IDENTIFIER;
 column_alias        : IDENTIFIER;
 column_definition   : IDENTIFIER;
