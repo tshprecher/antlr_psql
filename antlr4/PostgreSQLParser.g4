@@ -87,7 +87,7 @@ window_clause
     ;
 
 combine_clause
-    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT) select_stmt
+    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? select_stmt
     ;
 
 order_by_clause
@@ -111,19 +111,22 @@ for_clause
     ;
 
 expr
-    : IDENTIFIER
+    : identifier
     | NULL
     | INTEGER_LITERAL
-//    | NUMERIC_LITERAL
+    | NUMERIC_LITERAL
     | STRING_LITERAL
     | DOUBLE_DOLLAR (~DOLLAR)+ DOUBLE_DOLLAR
-    | DOLLAR IDENTIFIER (~DOLLAR)+ DOLLAR IDENTIFIER DOLLAR
+    | DOLLAR identifier (~DOLLAR)+ DOLLAR identifier DOLLAR
     | bool_literal
     | OPEN_PAREN expr CLOSE_PAREN
     | CAST OPEN_PAREN expr AS type_name CLOSE_PAREN
     | type_name expr
+    | correlation_name DOT column_name
+    | expr OPEN_BRACKET expr CLOSE_BRACKET
+    | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
     | expr DOUBLE_COLON type_name
-    | expr DOT (IDENTIFIER | STAR)
+    | expr DOT (identifier | STAR)
     | expr oper expr
     | oper expr
     | expr oper
@@ -147,20 +150,15 @@ aggregate
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
     ;
 
-aggregate_name
-    : COUNT
-    | IDENTIFIER
-    ;
-
 output_name
     : STRING_LITERAL // TODO: restrict to only double quoted
-    | IDENTIFIER
+    | identifier
     ;
 
 // TODO: properly handle *all* non reserved keywords
 table_name
-    : RESULT
-    | IDENTIFIER;
+    : identifier
+    ;
 
 type_name
     : SMALLINT
@@ -172,22 +170,34 @@ type_name
     | FLOAT
     | DOUBLE
     | BOOLEAN
+    | TIME
+    | TIME_TZ
+    | TIMESTAMP
+    | TIMESTAMP_TZ
     | IDENTIFIER
     ;
 
 func_name
+    : builtin_func
+    | IDENTIFIER;
+
+builtin_func
     : ANY
     | SOME
     | EXISTS
     | IN
     | ALL
-    | IDENTIFIER;
+    | ABS
+    ;
 
 oper
     : OP_JSON_GET
     | OP_JSON_GET_PATH
     | OP_JSON_GET_TEXT
     | OP_JSON_GET_PATH_TEXT
+    | OP_JSON_EXIST
+    | OP_JSON_EXIST_ANY
+    | OP_JSON_EXIST_ALL
     | NOT
     | OP_LESS_THAN
     | OP_GREATER_THAN
@@ -247,7 +257,7 @@ row_cons
 from_item
     : ONLY? table_name STAR? with_column_alias?
       (TABLESAMPLE todo_fill_in OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN (REPEATABLE OPEN_PAREN todo_fill_in CLOSE_PAREN)?)?
-    | LATERAL? (select_stmt) AS? alias (OPEN_PAREN column_alias (COMMA column_alias)* CLOSE_PAREN)?
+    | LATERAL? OPEN_PAREN select_stmt CLOSE_PAREN AS? alias (OPEN_PAREN column_alias (COMMA column_alias)* CLOSE_PAREN)?
     | LATERAL? func_call (WITH ORDINALITY)? with_column_alias?
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
@@ -289,9 +299,19 @@ predicate
     | NOT predicate
     ;
 
+// allowable reserved words first
+identifier
+    : A_
+    | COUNT
+    | EXP
+    | RESULT
+    | IDENTIFIER
+    ;
+
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
-column_name         : IDENTIFIER;
-alias               : IDENTIFIER;
-column_alias        : IDENTIFIER;
-column_definition   : IDENTIFIER;
-window_name         : IDENTIFIER;
+correlation_name    : identifier;
+column_name         : identifier;
+alias               : identifier;
+column_alias        : identifier;
+column_definition   : identifier;
+window_name         : identifier;

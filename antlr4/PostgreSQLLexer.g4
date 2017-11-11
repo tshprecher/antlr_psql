@@ -671,8 +671,8 @@ OPEN_PAREN                           : '(';
 CLOSE_PAREN                          : ')';
 OPEN_BRACKET                         : '[';
 CLOSE_BRACKET                        : ']';
+NUMERIC_LITERAL                      : DEC_DIGIT+ '.' DEC_DIGIT+;
 INTEGER_LITERAL                      : DEC_DIGIT+;
-//NUMERIC_LITERAL                      : DEC_DIGIT+ ('\\.' DEC_DIGIT+)?;
 DOT                                  : '.';
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
@@ -682,6 +682,9 @@ OP_JSON_GET                          : '->';
 OP_JSON_GET_TEXT                     : '->>';
 OP_JSON_GET_PATH                     : '#>';
 OP_JSON_GET_PATH_TEXT                : '#>>';
+OP_JSON_EXIST                        : '?';
+OP_JSON_EXIST_ANY                    : '?|';
+OP_JSON_EXIST_ALL                    : '?&';
 
 // boolean operators
 OP_LESS_THAN                         : '<';

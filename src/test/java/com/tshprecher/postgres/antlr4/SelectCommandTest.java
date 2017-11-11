@@ -1,19 +1,17 @@
 package com.tshprecher.postgres.antlr4;
 
-import org.antlr.v4.runtime.BaseErrorListener;
+import org.antlr.v4.runtime.*;
 import org.junit.Assert;
 import org.junit.Test;
-import org.antlr.v4.runtime.Recognizer;
-import org.antlr.v4.runtime.RecognitionException;
-import org.antlr.v4.runtime.ANTLRInputStream;
-import org.antlr.v4.runtime.CommonTokenStream;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 
@@ -62,5 +60,30 @@ public class SelectCommandTest {
                 }
             }
         }
+    }
+
+    //@Test
+    public void testLexerSpecific() throws IOException {
+        // TODO: remove when ready
+        System.err.println("DEBUG: BEGIN token specific");
+        String resourcePath = getClass().getResource("/sql/select/0cb6888a.sql").getPath();
+
+
+        try (FileInputStream fio = new FileInputStream(resourcePath)) {
+            PostgreSQLLexer lexer = new PostgreSQLLexer(new ANTLRInputStream(fio));
+            TokenStream tokenStream = new CommonTokenStream(lexer);
+            System.err.println("DEBUG: tokens stream size -> " + tokenStream.size());
+
+            int i = 1;
+            while (true) {
+                Token tkn = tokenStream.LT(i);
+                if (tkn.getType() == Token.EOF) {
+                    break;
+                }
+                System.err.println("DEBUG: token: " + tkn + "\tname: " + lexer.getRuleNames()[tkn.getType()+30]);
+                i++;
+            }
+        }
+        System.err.println("DEBUG: END token specific");
     }
 }
