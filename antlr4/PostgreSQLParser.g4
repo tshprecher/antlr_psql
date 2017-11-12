@@ -130,8 +130,8 @@ expr
     | expr oper expr
     | oper expr
     | expr oper
-    | func_call
     | aggregate
+    | func_call
     | array_cons
     | OPEN_PAREN select_stmt CLOSE_PAREN
     ;
@@ -142,10 +142,10 @@ expr_list
 
 
 aggregate
-    : OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* order_by_clause? CLOSE_PAREN
+    : identifier OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* order_by_clause? CLOSE_PAREN
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
-    | OPEN_PAREN STAR CLOSE_PAREN (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
-    | OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN WITHIN GROUP
+    | identifier OPEN_PAREN STAR CLOSE_PAREN (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
+    | identifier OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN WITHIN GROUP
       OPEN_PAREN order_by_clause CLOSE_PAREN
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
     ;
@@ -155,7 +155,6 @@ output_name
     | identifier
     ;
 
-// TODO: properly handle *all* non reserved keywords
 table_name
     : identifier
     ;
@@ -178,16 +177,7 @@ type_name
     ;
 
 func_name
-    : builtin_func
-    | IDENTIFIER;
-
-builtin_func
-    : ANY
-    | SOME
-    | EXISTS
-    | IN
-    | ALL
-    | ABS
+    : identifier
     ;
 
 oper
@@ -402,7 +392,6 @@ non_reserved_keyword
     |  WHITESPACE |  WIDTH_BUCKET |  WITHIN |  WITHOUT |  WORK
     |  WRITE |  YEAR |  ZONE
     ;
-
 
 identifier
     : non_reserved_keyword
