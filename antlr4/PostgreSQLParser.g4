@@ -159,21 +159,10 @@ table_name
     : identifier
     ;
 
+// TODO: can we remove in favor of just 'identifier' and the array case?
 type_name
-    : SMALLINT
-    | INTEGER
-    | BIGINT
-    | DECIMAL
-    | NUMERIC
-    | REAL
-    | FLOAT
-    | DOUBLE
-    | BOOLEAN
-    | TIME
-    | TIME_TZ
-    | TIMESTAMP
-    | TIMESTAMP_TZ
-    | IDENTIFIER
+    : identifier
+    | type_name OPEN_BRACKET CLOSE_BRACKET
     ;
 
 func_name
@@ -232,7 +221,7 @@ bool_literal
 
 func_call
     : func_name OPEN_PAREN VARIADIC expr CLOSE_PAREN
-    | func_name OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN
+    | func_name OPEN_PAREN (expr (COMMA expr)* (COMMA VARIADIC expr)?)? CLOSE_PAREN
     | func_name OPEN_PAREN identifier
     | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN    // for EXTRACT()
     ;
