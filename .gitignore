@@ -2,3 +2,5 @@ target/*
 .idea/*
 *.iml
 gen-java/*
+AntlrTest.*
+*.tokens

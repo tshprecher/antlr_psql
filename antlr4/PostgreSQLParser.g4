@@ -7,6 +7,14 @@ root
     : select_stmt EOF
     ;
 
+values_stmt
+    : (VALUES expr_list_list) | (VALUES expr_list)
+      order_by_clause?
+      limit_clause?
+      offset_clause?
+      fetch_clause?
+    ;
+
 select_stmt
     : SELECT selector_clause
       from_clause?
@@ -24,7 +32,7 @@ select_stmt
 
 selector_clause
     :(ALL | (DISTINCT (ON expr_list)?))?
-     (STAR | (expr (AS? output_name)? (COMMA expr (AS? output_name)?)* ))
+     (STAR | (expr (AS? output_name)? (COMMA (STAR | expr (AS? output_name)?))* ))?
     ;
 
 from_clause
@@ -123,6 +131,8 @@ expr
     | CAST OPEN_PAREN expr AS type_name CLOSE_PAREN
     | type_name expr
     | correlation_name DOT column_name
+    | CASE WHEN predicate THEN expr (ELSE expr)? END
+    | values_stmt
     | expr OPEN_BRACKET expr CLOSE_BRACKET
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
     | expr DOUBLE_COLON type_name
@@ -140,6 +150,9 @@ expr_list
     : OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN
     ;
 
+expr_list_list
+    : OPEN_PAREN expr_list (COMMA expr_list)* CLOSE_PAREN
+    ;
 
 aggregate
     : identifier OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* order_by_clause? CLOSE_PAREN
@@ -177,6 +190,10 @@ oper
     | OP_JSON_EXIST
     | OP_JSON_EXIST_ANY
     | OP_JSON_EXIST_ALL
+    | OP_TS_MATCHES
+    | OP_TS_FOLLOWED_BY
+    | OP_TS_CONTAINS
+    | OP_TS_CONTAINED
     | NOT
     | OP_LESS_THAN
     | OP_GREATER_THAN
@@ -207,9 +224,11 @@ oper
     | OP_BW_SHIFT_RIGHT
     | DATE
     | INTERVAL
-    | TIMESTAMP (WITH TIME ZONE)?
+    | TIMESTAMP ((WITH | AT) TIME ZONE)?
+    | TIMESTAMP (WITHOUT TIME ZONE)?
     | TIMESTAMP_TZ
     | TIME (WITH TIME ZONE)?
+    | TIME (WITHOUT TIME ZONE)?
     | TIME_TZ
     | DOUBLE PRECISION
     ;
@@ -222,7 +241,6 @@ bool_literal
 func_call
     : func_name OPEN_PAREN VARIADIC expr CLOSE_PAREN
     | func_name OPEN_PAREN (expr (COMMA expr)* (COMMA VARIADIC expr)?)? CLOSE_PAREN
-    | func_name OPEN_PAREN identifier
     | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN    // for EXTRACT()
     ;
 
@@ -238,6 +256,7 @@ from_item
     : ONLY? table_name STAR? with_column_alias?
       (TABLESAMPLE todo_fill_in OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN (REPEATABLE OPEN_PAREN todo_fill_in CLOSE_PAREN)?)?
     | LATERAL? OPEN_PAREN select_stmt CLOSE_PAREN AS? alias (OPEN_PAREN column_alias (COMMA column_alias)* CLOSE_PAREN)?
+//    | OPEN_PAREN values_stmt CLOSE_PAREN AS? alias
     | LATERAL? func_call (WITH ORDINALITY)? with_column_alias?
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
@@ -265,21 +284,27 @@ join_condition
     ;
 
 // TODO: fill in
+// TODO: have explicity binary operator completion?
 predicate
     : expr
-    | expr OP_LESS_THAN expr
-    | expr OP_GREATER_THAN expr
-    | expr OP_LESS_THAN_OR_EQ expr
-    | expr OP_GREATER_THAN_OR_EQ expr
-    | expr OP_EQUAL expr
-    | expr OP_NOT_EQUAL expr
+    | expr oper expr
+//    | expr OP_LESS_THAN expr
+//    | expr OP_GREATER_THAN expr
+//    | expr OP_LESS_THAN_OR_EQ expr
+//    | expr OP_GREATER_THAN_OR_EQ expr
+//    | expr OP_EQUAL expr
+//    | expr OP_NOT_EQUAL expr
+    | expr (IS NOT? NULL)
     | OPEN_PAREN predicate CLOSE_PAREN
+    | IN expr_list
+    | EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
     | predicate AND predicate
     | predicate OR predicate
     | NOT predicate
     ;
 
 // allow non-reserved keywords as identifiers
+// TODO: is this necessary?
 non_reserved_keyword
     :  A_ |  ABORT |  ABS |  ABSOLUTE |  ACCESS
     |  ACTION |  ADA |  ADD |  ADMIN |  AFTER
@@ -324,7 +349,7 @@ non_reserved_keyword
     |  INSTANCE |  INSTANTIABLE |  INSTEAD |  INT |  INTEGER
     |  INTERSECTION |  INTERVAL |  INVOKER |  ISOLATION
     |  KEY |  KEY_MEMBER |  KEY_TYPE |  LANGUAGE |  LARGE
-    |  LAST |  LENGTH |  LEVEL |  LISTEN |  LN
+    |  LAST |  LEFT | LENGTH |  LEVEL |  LISTEN |  LN
     |  LOAD |  LOCAL |  LOCATION |  LOCATOR |  LOCK
     |  LOCKED |  LOWER |  M_ |  MAP |  MATCH
     |  MATCHED |  MAX |  MAXVALUE |  MEMBER |  MERGE
@@ -352,7 +377,7 @@ non_reserved_keyword
     |  RELEASE |  RENAME |  REPEATABLE |  REPLACE |  RESET
     |  RESTART |  RESTRICT |  RESULT |  RETURN |  RETURNED_CARDINALITY
     |  RETURNED_LENGTH |  RETURNED_OCTET_LENGTH |  RETURNED_SQLSTATE |  RETURNS |  REVOKE
-    |  ROLE |  ROLLBACK |  ROLLUP |  ROUTINE |  ROUTINE_CATALOG
+    |  RIGHT | ROLE |  ROLLBACK |  ROLLUP |  ROUTINE |  ROUTINE_CATALOG
     |  ROUTINE_NAME |  ROUTINE_SCHEMA |  ROW |  ROWS |  ROW_COUNT
     |  ROW_NUMBER |  RULE |  SAVEPOINT |  SCALE |  SCHEMA
     |  SCHEMA_NAME |  SCOPE |  SCOPE_CATALOG |  SCOPE_NAME |  SCOPE_SCHEMA

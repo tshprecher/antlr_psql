@@ -364,7 +364,7 @@ MODIFIES                             : M O D I F I E S;
 MODIFY                               : M O D I F Y;
 MODULE                               : M O D U L E;
 MONTH                                : M O N T H;
-MORE                                 : M O R E;
+MORE_                                : M O R E;
 MOVE                                 : M O V E;
 MULTISET                             : M U L T I S E T;
 MUMPS                                : M U M P S;
@@ -677,6 +677,13 @@ DOT                                  : '.';
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
 
+// text search operators
+OP_TS_MATCHES                        : '@@';
+OP_TS_FOLLOWED_BY                    : '<->';
+OP_TS_CONTAINS                       : '@>';
+OP_TS_CONTAINED                      : '<@';
+
+
 // json operators
 OP_JSON_GET                          : '->';
 OP_JSON_GET_TEXT                     : '->>';
@@ -698,7 +705,7 @@ OP_NOT_EQUAL                         : ('<>'|'!=');
 OP_CONTAINS                          : '@>';
 OP_CONTAINED_BY                      : '<@';
 OP_OVERLAP                           : '&&';
-OP_CONCAT                            : '||';
+OP_CONCAT                            : '||'; // TODO: also used in text search
 
 // math operators
 OP_ADD                               : '+';
@@ -709,7 +716,7 @@ OP_EXP                               : '^';
 OP_SQRT                              : '|/';
 OP_CBRT                              : '||/';
 OP_FACT                              : '!';
-OP_FACT_PFX                          : '!!';
+OP_FACT_PFX                          : '!!'; // TODO: also used in text search
 OP_ABS                               : '@';
 OP_BW_AND                            : '&';
 OP_BW_OR                             : '|';
