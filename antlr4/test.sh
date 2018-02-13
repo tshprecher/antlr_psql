@@ -151,7 +151,7 @@ check_antlr_jar "$antlr_jar"
 java -cp "$antlr_jar" org.antlr.v4.Tool "$grammar_file"
 
 # Generate a main class
-write_main_class "$main_class_file" "$lexer_name" "$grammar_name" "$input" "$rule_name"
+write_main_class "$main_class_file" "$lexer_name" "$grammar_name" "../src/test/resources/sql/$input" "$rule_name"
 
 # Compile all .java source files and run the main class
 javac -cp "../target/classes/:$antlr_jar:." *.java

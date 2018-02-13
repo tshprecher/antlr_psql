@@ -1,0 +1,7 @@
+1) run test.sh to get the parse tree of a specific sql query:
+
+  ./test.sh PostgreSQLLexer.g4  PostgreSQLParser.g4 "select 1" "select_stmt" 2>&1 | grep -v warning
+
+2) run test.sh to get the parse tree of a specific sql test in ../src/test/resources:
+
+  ./test.sh PostgreSQLLexer.g4  PostgreSQLParser.g4 select/89be0938.sql "select_stmt" 2>&1 | grep -v warning
