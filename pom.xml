@@ -4,16 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.tshprecher</groupId>
-    <artifactId>dbcache</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>antlr-psql</artifactId>
+    <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
-        <!-- TODO: fix the minor version compiler warnings -->
-        <scala.version>2.12.0</scala.version>
-        <scala.version.tools>2.12</scala.version.tools>
     </properties>
 
     <build>
@@ -35,38 +32,6 @@
                         <id>antlr</id>
                         <goals>
                             <goal>antlr4</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
-                <version>3.2.0</version>
-                <configuration>
-                    <launchers>
-                        <launcher>
-                            <id>main</id>
-                            <mainClass>com.tshprecher.dbcache.Main</mainClass>
-                            <args>
-                                <arg>com.twitter.finagle.toggle.flag.overrides=com.twitter.memcached.UseNetty4=1.0</arg>
-                            </args>
-                            <jvmArgs>
-                                <jvmArg>-Xmx128m</jvmArg>
-                                <jvmArg>-Djava.library.path=...</jvmArg>
-                            </jvmArgs>
-                        </launcher>
-                    </launchers>
-                    <recompileMode>incremental</recompileMode>
-                    <sourceDir>${project.build.sourceDirectory}/../scala</sourceDir>
-                </configuration>
-                <executions>
-                    <execution>
-                        <!-- this is so we don't end with a compile error in maven-compiler-plugin -->
-                        <phase>process-sources</phase>
-                        <goals>
-                            <goal>compile</goal>
-                            <goal>testCompile</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -133,27 +98,6 @@
             <version>2.5</version>
         </dependency>
         <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala-library</artifactId>
-            <version>${scala.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.twitter</groupId>
-            <artifactId>twitter-server_2.12</artifactId>
-            <version>1.31.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.twitter</groupId>
-            <artifactId>finagle-memcached_2.12</artifactId>
-            <version>7.0.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>io.netty</groupId>
-                    <artifactId>netty</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.11</version>
@@ -167,26 +111,9 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.scalacheck</groupId>
-            <artifactId>scalacheck_2.11</artifactId>
-            <version>1.11.4</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.4-1206-jdbc42</version>
-        </dependency>
-        <dependency>
-            <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.11</artifactId>
-            <version>2.2.0</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.thrift</groupId>
-            <artifactId>libthrift</artifactId>
-            <version>0.10.0</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
