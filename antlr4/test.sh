@@ -12,7 +12,7 @@ do
     fi
 done
 
-if [ "$#" -ne "4" ]; then
+if [ "$#" -ne "2" ]; then
     script_name=`basename "$0"`
       cat <<EOF
 
@@ -20,8 +20,6 @@ if [ "$#" -ne "4" ]; then
       $script_name GRAMMAR INPUT RULE
 
       PARAMETERS
-      LEXER      the name of the ANTLR lexer
-      GRAMMAR    the name of the ANTLR grammar
       INPUT      either the name of the file to parse, or the (string)
       source for the parser to process
       RULE       the name of the parser rule to invoke
@@ -32,17 +30,6 @@ if [ "$#" -ne "4" ]; then
 EOF
       exit 1
 fi
-
-if [ ! -f "$1" ]; then
-    echo "no such lexer: $1"
-    exit
-fi
-
-if [ ! -f "$2" ]; then
-    echo "no such grammar: $2"
-    exit
-fi
-
 
 function get_script_path
 {
@@ -132,14 +119,12 @@ EOL
 }
 
 # Declare some variables
-lexer_file="$1"
-grammar_file="$2"
-input="$3"
-rule_name="$4"
+input="$1"
+rule_name="$2"
 main_class_name="AntlrTest"
 main_class_file="$main_class_name.java"
-grammar_name=${grammar_file%.*}
-lexer_name=${lexer_file%.*}
+grammar_name="PostgreSQLParser"
+lexer_name="PostgreSQLLexer"
 antlr_version="4.7"
 script_path=$(get_script_path)
 antlr_jar="/tmp/antlr-$antlr_version-complete.jar"
@@ -151,7 +136,7 @@ check_antlr_jar "$antlr_jar"
 java -cp "$antlr_jar" org.antlr.v4.Tool "$grammar_file"
 
 # Generate a main class
-write_main_class "$main_class_file" "$lexer_name" "$grammar_name" "../src/test/resources/sql/$input" "$rule_name"
+write_main_class "$main_class_file" "$lexer_name" "$grammar_name" "$input" "$rule_name"
 
 # Compile all .java source files and run the main class
 javac -cp "../target/classes/:$antlr_jar:." *.java
