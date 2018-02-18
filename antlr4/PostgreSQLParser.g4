@@ -116,12 +116,17 @@ window_clause
     : WINDOW window_name AS OPEN_PAREN window_definition CLOSE_PAREN
     ;
 
+// TODO: order or operations: see test cb011d6e.sql
 combine_clause
     : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? select_stmt
     ;
 
 order_by_clause
-    : ORDER BY expr (ASC | DESC | USING oper)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
+    : ORDER BY order_by_expr (COMMA order_by_expr)*
+    ;
+
+order_by_expr
+    : expr (ASC | DESC | USING oper)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
     ;
 
 limit_clause
@@ -140,6 +145,7 @@ for_clause
     : FOR ( UPDATE | NO KEY UPDATE | SHARE | KEY SHARE ) (OF table_name (COMMA table_name)*)? ( NOWAIT | SKIP_ LOCKED)*
     ;
 
+// TODO: split into more granular expression types
 expr
     : identifier
     | NULL
@@ -162,6 +168,7 @@ expr
     | expr oper expr
     | oper expr
     | expr oper
+    | expr_list
     | aggregate
     | func_call
     | array_cons
@@ -176,6 +183,7 @@ expr_list_list
     : OPEN_PAREN expr_list (COMMA expr_list)* CLOSE_PAREN
     ;
 
+// TODO: explicit aggregate list or no?
 aggregate
     : identifier OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* order_by_clause? CLOSE_PAREN
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
@@ -192,11 +200,17 @@ output_name
 
 table_name
     : identifier
+    | identifier DOT identifier
     ;
 
 // TODO: can we remove in favor of just 'identifier' and the array case?
+// TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type_name of SUM
 type_name
     : identifier
+    | TIMESTAMP
+    | TIMESTAMP_TZ
+    | TIME
+    | TIME_TZ
     | type_name OPEN_BRACKET CLOSE_BRACKET
     ;
 
@@ -252,7 +266,9 @@ oper
     | TIME (WITH TIME ZONE)?
     | TIME (WITHOUT TIME ZONE)?
     | TIME_TZ
+    | LIKE
     | DOUBLE PRECISION
+    | IN
     ;
 
 bool_literal
@@ -283,7 +299,7 @@ from_item
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
       (AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN)? CLOSE_PAREN
-    | from_item NATURAL? join_type from_item ON join_condition
+    | from_item NATURAL? join_type from_item ON join_condition // TODO: fix 'left' being treated as an alias
     ;
 
 with_column_alias
@@ -310,15 +326,9 @@ join_condition
 predicate
     : expr
     | expr oper expr
-//    | expr OP_LESS_THAN expr
-//    | expr OP_GREATER_THAN expr
-//    | expr OP_LESS_THAN_OR_EQ expr
-//    | expr OP_GREATER_THAN_OR_EQ expr
-//    | expr OP_EQUAL expr
-//    | expr OP_NOT_EQUAL expr
     | expr (IS NOT? NULL)
     | OPEN_PAREN predicate CLOSE_PAREN
-    | IN expr_list
+//    | expr IN expr_list
     | EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
     | predicate AND predicate
     | predicate OR predicate
@@ -377,7 +387,7 @@ non_reserved_keyword
     |  MATCHED |  MAX |  MAXVALUE |  MEMBER |  MERGE
     |  MESSAGE_LENGTH |  MESSAGE_OCTET_LENGTH |  MESSAGE_TEXT |  METHOD |  MIN
     |  MINUTE |  MINVALUE |  MOD |  MODE |  MODIFIES
-    |  MODULE |  MONTH |  MORE |  MOVE |  MULTISET
+    |  MODULE |  MONTH |  MORE_ |  MOVE |  MULTISET
     |  MUMPS |  NAME |  NAMES |  NATIONAL |  NCHAR
     |  NCLOB |  NESTING |  NEW |  NEXT |  NO
     |  NONE |  NORMALIZE |  NORMALIZED |  NOTHING |  NOTIFY
