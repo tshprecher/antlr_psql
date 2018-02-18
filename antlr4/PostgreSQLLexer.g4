@@ -693,18 +693,23 @@ OPEN_PAREN                           : '(';
 CLOSE_PAREN                          : ')';
 OPEN_BRACKET                         : '[';
 CLOSE_BRACKET                        : ']';
-NUMERIC_LITERAL                      : DEC_DIGIT+ '.' DEC_DIGIT+ (E DEC_DIGIT+)?;
+NUMERIC_LITERAL                      : DEC_DIGIT+ '.' DEC_DIGIT+ (E ('-')* DEC_DIGIT+)?;
 INTEGER_LITERAL                      : DEC_DIGIT+ (E DEC_DIGIT+)?;
 DOT                                  : '.';
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
 
+// TODO: be more literal with operators
 // text search operators
 OP_TS_MATCHES                        : '@@';
 OP_TS_FOLLOWED_BY                    : '<->';
 OP_TS_CONTAINS                       : '@>';
 OP_TS_CONTAINED                      : '<@';
-
+OP_DOUBLE_TIL                        : '~~';
+OP_TIL_LT_TIL                        : '~<~';
+OP_TIL_LTE_TIL                       : '~<=~';
+OP_TIL_GT_TIL                        : '~>~';
+OP_TIL_GTE_TIL                       : '~>=~';
 
 // json operators
 OP_JSON_GET                          : '->';

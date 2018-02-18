@@ -122,10 +122,10 @@ combine_clause
     ;
 
 order_by_clause
-    : ORDER BY order_by_expr (COMMA order_by_expr)*
+    : ORDER BY order_by_item (COMMA order_by_item)*
     ;
 
-order_by_expr
+order_by_item
     : expr (ASC | DESC | USING oper)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
     ;
 
@@ -149,6 +149,11 @@ for_clause
 expr
     : identifier
     | NULL
+    | CURRENT_DATE
+    | CURRENT_ROLE
+    | CURRENT_TIME
+    | CURRENT_TIMESTAMP
+    | CURRENT_USER
     | INTEGER_LITERAL
     | NUMERIC_LITERAL
     | STRING_LITERAL
@@ -171,7 +176,7 @@ expr
     | expr_list
     | aggregate
     | func_call
-    | array_cons
+    | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
     ;
 
@@ -230,7 +235,11 @@ oper
     | OP_TS_FOLLOWED_BY
     | OP_TS_CONTAINS
     | OP_TS_CONTAINED
-    | NOT
+    | OP_DOUBLE_TIL
+    | OP_TIL_LT_TIL
+    | OP_TIL_LTE_TIL
+    | OP_TIL_GT_TIL
+    | OP_TIL_GTE_TIL
     | OP_LESS_THAN
     | OP_GREATER_THAN
     | OP_LESS_THAN_OR_EQ
@@ -258,6 +267,8 @@ oper
     | OP_BW_NOT
     | OP_BW_SHIFT_LEFT
     | OP_BW_SHIFT_RIGHT
+    | NOT
+    | IS OF
     | DATE
     | INTERVAL
     | TIMESTAMP ((WITH | AT) TIME ZONE)?
@@ -269,6 +280,7 @@ oper
     | LIKE
     | DOUBLE PRECISION
     | IN
+    | ALL
     ;
 
 bool_literal
@@ -282,12 +294,8 @@ func_call
     | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN    // for EXTRACT()
     ;
 
-array_cons
+array_cons_expr
     : ARRAY OPEN_BRACKET (expr (COMMA expr)*)? CLOSE_BRACKET
-    ;
-
-row_cons
-    : SELECT ROW OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN
     ;
 
 from_item
@@ -299,7 +307,7 @@ from_item
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
       (AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN)? CLOSE_PAREN
-    | from_item NATURAL? join_type from_item ON join_condition // TODO: fix 'left' being treated as an alias
+    | from_item NATURAL? join_type from_item join_clause // TODO: fix 'left' being treated as an alias
     ;
 
 with_column_alias
@@ -314,10 +322,8 @@ join_type
     | CROSS JOIN
     ;
 
-// TODO: fill in
-join_condition
-    : NATURAL
-    | ON predicate
+join_clause
+    : ON predicate
     | USING OPEN_PAREN column_name (COMMA column_name)* CLOSE_PAREN
     ;
 
@@ -328,7 +334,6 @@ predicate
     | expr oper expr
     | expr (IS NOT? NULL)
     | OPEN_PAREN predicate CLOSE_PAREN
-//    | expr IN expr_list
     | EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
     | predicate AND predicate
     | predicate OR predicate
