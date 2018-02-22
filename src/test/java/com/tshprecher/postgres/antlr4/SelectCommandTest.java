@@ -22,8 +22,8 @@ public class SelectCommandTest {
         String markerPath = getClass().getResource("/sql/select/00021135.sql").getPath();
         File dir = new File(markerPath.substring(0, markerPath.lastIndexOf('/')));
         File[] testFiles = dir.listFiles();
-        int successfulCount = 0;
         int failureCount = 0;
+        int fileCount = 0;
 
         Set<String> exclude = new HashSet<String>();
         exclude.add("/00321018.sql");
@@ -33,8 +33,8 @@ public class SelectCommandTest {
             if (exclude.contains(name)) {
                 continue;
             }
-            System.out.println("DEBUG: running on file: " + name);
             try (FileInputStream fio = new FileInputStream(f)) {
+                fileCount++;
                 PostgreSQLLexer lexer = new PostgreSQLLexer(new ANTLRInputStream(fio));
                 PostgreSQLParser parser = new PostgreSQLParser(new CommonTokenStream(lexer));
 
@@ -50,16 +50,13 @@ public class SelectCommandTest {
                 parser.root();
                 if (!success.get()) {
                     failureCount++;
-                    System.err.println("DEBUG: error failed on file: " + name);
-                    if (failureCount >= 200) {
-                        System.err.printf("DEBUG: ran %d successful out of %d total\n", successfulCount, testFiles.length );
-                        Assert.fail();
-                    }
-                } else {
-                    successfulCount++;
+                    System.err.println("error failed on file: " + name);
                 }
             }
         }
+        if (failureCount > 0)
+            System.err.printf("succeeded on %d files out of %d\n", fileCount-failureCount, fileCount);
+            Assert.fail();
     }
 
     //@Test
