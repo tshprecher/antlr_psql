@@ -145,7 +145,8 @@ for_clause
     : FOR ( UPDATE | NO KEY UPDATE | SHARE | KEY SHARE ) (OF table_name (COMMA table_name)*)? ( NOWAIT | SKIP_ LOCKED)*
     ;
 
-// TODO: split into more granular expression types
+// TODO: split into more granular expression types?
+// TODO: handle operators like BETWEEN in a more normalized way
 expr
     : identifier
     | NULL
@@ -157,14 +158,15 @@ expr
     | INTEGER_LITERAL
     | NUMERIC_LITERAL
     | STRING_LITERAL
+    | BIT_STRING
     | DOUBLE_DOLLAR (~DOLLAR)+ DOUBLE_DOLLAR
     | DOLLAR identifier (~DOLLAR)+ DOLLAR identifier DOLLAR
     | bool_literal
     | OPEN_PAREN expr CLOSE_PAREN
     | CAST OPEN_PAREN expr AS type_name CLOSE_PAREN
-    | type_name expr
     | correlation_name DOT column_name
     | CASE WHEN predicate THEN expr (ELSE expr)? END
+    | expr BETWEEN expr AND expr
     | values_stmt
     | expr OPEN_BRACKET expr CLOSE_BRACKET
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET

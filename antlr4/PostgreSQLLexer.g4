@@ -693,6 +693,8 @@ OPEN_PAREN                           : '(';
 CLOSE_PAREN                          : ')';
 OPEN_BRACKET                         : '[';
 CLOSE_BRACKET                        : ']';
+BIT_STRING                           : B '\'' ('0'|'1')* '\'';
+REGEX_STRING                         : E SQUOTA_STRING;
 NUMERIC_LITERAL                      : DEC_DIGIT+ '.' DEC_DIGIT+ (E ('-')* DEC_DIGIT+)?;
 INTEGER_LITERAL                      : DEC_DIGIT+ (E DEC_DIGIT+)?;
 DOT                                  : '.';
