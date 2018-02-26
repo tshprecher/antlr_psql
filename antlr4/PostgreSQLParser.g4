@@ -126,7 +126,7 @@ order_by_clause
     ;
 
 order_by_item
-    : expr (ASC | DESC | USING oper)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
+    : (expr | STRING_LITERAL_DOUBLE_Q) (ASC | DESC | USING expr)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
     ;
 
 limit_clause
@@ -148,38 +148,66 @@ for_clause
 // TODO: split into more granular expression types?
 // TODO: handle operators like BETWEEN in a more normalized way
 expr
-    : identifier
-    | NULL
+    : NULL
     | CURRENT_DATE
     | CURRENT_ROLE
     | CURRENT_TIME
     | CURRENT_TIMESTAMP
     | CURRENT_USER
     | INTEGER_LITERAL
+    | HEX_INTEGER_LITERAL
     | NUMERIC_LITERAL
-    | STRING_LITERAL
+    | STRING_LITERAL_SINGLE_Q
     | BIT_STRING
-    | DOUBLE_DOLLAR (~DOLLAR)+ DOUBLE_DOLLAR
+    | REGEX_STRING
+    | DOLLAR_DOLLAR (~DOLLAR)+ DOLLAR_DOLLAR
     | DOLLAR identifier (~DOLLAR)+ DOLLAR identifier DOLLAR
-    | bool_literal
+    | bool_expr
+    | values_stmt
+    | expr_list
+    // order of these terms implies order of operations
+    // see: https://www.postgresql.org/docs/10/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS
+    | expr OPEN_BRACKET expr CLOSE_BRACKET
     | OPEN_PAREN expr CLOSE_PAREN
+    | type_literal STRING_LITERAL_SINGLE_Q
+    | op=(BANG_BANG | AT_SIGN | PLUS | MINUS) expr
+    | op=(TIL | QMARK_HYPHEN) expr
+    | expr op=BANG
+    | expr op=(CARET | PIPE_SLASH | PIPE_PIPE_SLASH) expr
+    | expr op=(STAR | SLASH | PERCENT) expr
+    | expr op=(PLUS | MINUS) expr
+    | expr op=(
+             AMP | PIPE | HASH | TIL | LT_LT | LT_LT_EQ | GT_GT |
+             AT_AT | LT_HYPHEN_GT | AT_GT | LT_AT | TIL_EQ | TIL_STAR| TIL_TIL | TIL_LT_TIL | TIL_GT_TIL | TIL_LTE_TIL |
+             TIL_GTE_TIL | LT_QMARK_GT | HYPHEN_GT | HYPHEN_GT_GT | HASH_HASH | HASH_GT | HASH_GT_GT | QMARK | QMARK_PIPE |
+             QMARK_AMP | QMARK_HASH | LT_CARET | AMP_LT | HYPHEN_PIPE_HYPHEN | HASH_EQ | AMP_AMP | PIPE_PIPE | EQUAL_GT
+             ) expr
+    | expr NOT? LIKE expr //(STRING_LITERAL_SINGLE_Q | REGEX_STRING)
+    | expr NOT? BETWEEN expr AND expr
+    | expr IN expr
+    | expr op=(LT | GT | EQUAL | LTE | GTE | LT_GT | BANG_EQUAL) expr
+    | expr op=IS (bool_expr | NULL)
+    | expr op=(ISNULL | NOTNULL)
+    | op=(NOT | ALL) expr
+    | identifier
     | CAST OPEN_PAREN expr AS type_name CLOSE_PAREN
     | correlation_name DOT column_name
     | CASE WHEN predicate THEN expr (ELSE expr)? END
-    | expr BETWEEN expr AND expr
-    | values_stmt
-    | expr OPEN_BRACKET expr CLOSE_BRACKET
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
-    | expr DOUBLE_COLON type_name
+    | expr COLON_COLON type_name
     | expr DOT (identifier | STAR)
-    | expr oper expr
-    | oper expr
-    | expr oper
-    | expr_list
     | aggregate
     | func_call
     | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
+    ;
+
+bool_expr
+    : TRUE
+    | FALSE
+    | NOT bool_expr
+    | bool_expr AND bool_expr
+    | bool_expr OR bool_expr
     ;
 
 expr_list
@@ -188,6 +216,46 @@ expr_list
 
 expr_list_list
     : OPEN_PAREN expr_list (COMMA expr_list)* CLOSE_PAREN
+    ;
+
+// TODO: is type_literal necessary or can we just have this be an identifier and match (identifier STRING_LITERAL)?
+// TODO: rename prefix notation type casts
+type_literal
+    : ABSTIME
+    | BOOL
+    | BOX
+    | DATE
+    | FLOAT4
+    | FLOAT8
+    | INTERVAL
+    | JSON
+    | JSONB
+    | LINE
+    | POINT
+    | NAME
+    | TEXT
+    | TIMESTAMP ((WITH | AT) TIME ZONE)?
+    | TIMESTAMP (WITHOUT TIME ZONE)?
+    | TIMESTAMP_TZ
+    | TIME (WITH TIME ZONE)?
+    | TIME (WITHOUT TIME ZONE)?
+    | TIME_TZ
+    | INT2
+    | INT4
+    | INT8
+    | INTERVAL
+    | RELTIME
+    ;
+
+// TODO: what to do with this?
+oper
+    :
+    | IS OF
+    | DATE
+    | INTERVAL
+    | DOUBLE PRECISION
+    | IN
+    | ALL
     ;
 
 // TODO: explicit aggregate list or no?
@@ -201,7 +269,7 @@ aggregate
     ;
 
 output_name
-    : STRING_LITERAL // TODO: restrict to only double quoted
+    : STRING_LITERAL_DOUBLE_Q
     | identifier
     ;
 
@@ -213,80 +281,14 @@ table_name
 // TODO: can we remove in favor of just 'identifier' and the array case?
 // TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type_name of SUM
 type_name
-    : identifier
-    | TIMESTAMP
-    | TIMESTAMP_TZ
-    | TIME
-    | TIME_TZ
+    : type_literal
+    | identifier
     | type_name OPEN_BRACKET CLOSE_BRACKET
     ;
 
 func_name
-    : identifier
-    ;
-
-oper
-    : STAR
-    | AT_AT
-    | LT_HYPHEN_GT
-    | AT_GT
-    | LT_AT
-    | TIL_TIL
-    | TIL_LT_TIL
-    | TIL_LTE_TIL
-    | TIL_GT_TIL
-    | TIL_GTE_TIL
-    | HYPHEN_GT
-    | HYPHEN_GT_GT
-    | HASH_GT
-    | HASH_GT_GT
-    | QMARK
-    | QMARK_PIPE
-    | QMARK_AMP
-    | LT
-    | GT
-    | LTE
-    | GTE
-    | LT_LT
-    | GT_GT
-    | EQUAL
-    | LT_GT
-    | BANG_EQUAL
-    | AMP_AMP
-    | PIPE_PIPE
-    | PLUS
-    | HYPHEN
-    | SLASH
-    | PERCENT
-    | CARET
-    | PIPE_SLASH
-    | PIPE_PIPE_SLASH
-    | BANG
-    | BANG_BANG
-    | AT_SIGN
-    | AMP
-    | PIPE
-    | HASH
-    | TIL
-    | NOT
-    | IS OF
-    | DATE
-    | INTERVAL
-    | TIMESTAMP ((WITH | AT) TIME ZONE)?
-    | TIMESTAMP (WITHOUT TIME ZONE)?
-    | TIMESTAMP_TZ
-    | TIME (WITH TIME ZONE)?
-    | TIME (WITHOUT TIME ZONE)?
-    | TIME_TZ
-    | LIKE
-    | DOUBLE PRECISION
-    | IN
-    | ALL
-    ;
-
-bool_literal
-    : TRUE
-    | FALSE
+    : type_name
+    | identifier
     ;
 
 func_call
