@@ -682,12 +682,20 @@ WRITE                                : W R I T E;
 YEAR                                 : Y E A R;
 ZONE                                 : Z O N E;
 
+// builtin types that are not reserved keywords
+ABSTIME                              : A B S T I M E;
+RELTIME                              : R E L T I M E;
+INT4                                 : I N T '4';
+INT8                                 : I N T '8';
+JSON                                 : J S O N;
+JSONB                                : J S O N B;
+
 // language tokens
 COMMA                                : ',';
 COLON                                : ':';
-DOUBLE_COLON                         : '::';
+COLON_COLON                          : '::';
 DOLLAR                               : '$';
-DOUBLE_DOLLAR                        : '$$';
+DOLLAR_DOLLAR                        : '$$';
 STAR                                 : '*';
 OPEN_PAREN                           : '(';
 CLOSE_PAREN                          : ')';
@@ -698,7 +706,8 @@ REGEX_STRING                         : E SQUOTA_STRING;
 NUMERIC_LITERAL                      : DEC_DIGIT+ '.' DEC_DIGIT+ (E ('-')* DEC_DIGIT+)?;
 INTEGER_LITERAL                      : DEC_DIGIT+ (E DEC_DIGIT+)?;
 DOT                                  : '.';
-STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
+STRING_LITERAL_SINGLE_Q              : SQUOTA_STRING;
+STRING_LITERAL_DOUBLE_Q              : DQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
 
 // operator tokens
@@ -718,6 +727,7 @@ HASH_GT_GT                           : '#>>';
 QMARK                                : '?';
 QMARK_PIPE                           : '?|';
 QMARK_AMP                            : '?&';
+LT_CARET                             : '<^';
 LT                                   : '<';
 GT                                   : '>';
 LTE                                  : '<=';
@@ -730,7 +740,7 @@ BANG_EQUAL                           : '!=';
 AMP_AMP                              : '&&';
 PIPE_PIPE                            : '||';
 PLUS                                 : '+';
-HYPHEN                               : '-';
+MINUS                                : '-';
 SLASH                                : '/';
 PERCENT                              : '%';
 CARET                                : '^';
