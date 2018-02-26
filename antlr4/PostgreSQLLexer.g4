@@ -682,7 +682,7 @@ WRITE                                : W R I T E;
 YEAR                                 : Y E A R;
 ZONE                                 : Z O N E;
 
-// Literal
+// language tokens
 COMMA                                : ',';
 COLON                                : ':';
 DOUBLE_COLON                         : '::';
@@ -701,55 +701,45 @@ DOT                                  : '.';
 STRING_LITERAL                       : DQUOTA_STRING | SQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
 
-// TODO: be more literal with operators
-// text search operators
-OP_TS_MATCHES                        : '@@';
-OP_TS_FOLLOWED_BY                    : '<->';
-OP_TS_CONTAINS                       : '@>';
-OP_TS_CONTAINED                      : '<@';
-OP_DOUBLE_TIL                        : '~~';
-OP_TIL_LT_TIL                        : '~<~';
-OP_TIL_LTE_TIL                       : '~<=~';
-OP_TIL_GT_TIL                        : '~>~';
-OP_TIL_GTE_TIL                       : '~>=~';
-
-// json operators
-OP_JSON_GET                          : '->';
-OP_JSON_GET_TEXT                     : '->>';
-OP_JSON_GET_PATH                     : '#>';
-OP_JSON_GET_PATH_TEXT                : '#>>';
-OP_JSON_EXIST                        : '?';
-OP_JSON_EXIST_ANY                    : '?|';
-OP_JSON_EXIST_ALL                    : '?&';
-
-// boolean operators
-OP_LESS_THAN                         : '<';
-OP_GREATER_THAN                      : '>';
-OP_LESS_THAN_OR_EQ                   : '<=';
-OP_GREATER_THAN_OR_EQ                : '>=';
-OP_EQUAL                             : '=';
-OP_NOT_EQUAL                         : ('<>'|'!=');
-
-// array operators
-OP_CONTAINS                          : '@>';
-OP_CONTAINED_BY                      : '<@';
-OP_OVERLAP                           : '&&';
-OP_CONCAT                            : '||'; // TODO: also used in text search
-
-// math operators
-OP_ADD                               : '+';
-OP_SUB                               : '-';
-OP_DIV                               : '/';
-OP_MOD                               : '%';
-OP_EXP                               : '^';
-OP_SQRT                              : '|/';
-OP_CBRT                              : '||/';
-OP_FACT                              : '!';
-OP_FACT_PFX                          : '!!'; // TODO: also used in text search
-OP_ABS                               : '@';
-OP_BW_AND                            : '&';
-OP_BW_OR                             : '|';
-OP_BW_XOR                            : '#';
-OP_BW_NOT                            : '~';
-OP_BW_SHIFT_LEFT                     : '<<';
-OP_BW_SHIFT_RIGHT                    : '>>';
+// operator tokens
+AT_AT                                : '@@';
+LT_HYPHEN_GT                         : '<->';
+AT_GT                                : '@>';
+LT_AT                                : '<@';
+TIL_TIL                              : '~~';
+TIL_LT_TIL                           : '~<~';
+TIL_LTE_TIL                          : '~<=~';
+TIL_GT_TIL                           : '~>~';
+TIL_GTE_TIL                          : '~>=~';
+HYPHEN_GT                            : '->';
+HYPHEN_GT_GT                         : '->>';
+HASH_GT                              : '#>';
+HASH_GT_GT                           : '#>>';
+QMARK                                : '?';
+QMARK_PIPE                           : '?|';
+QMARK_AMP                            : '?&';
+LT                                   : '<';
+GT                                   : '>';
+LTE                                  : '<=';
+GTE                                  : '>=';
+LT_LT                                : '<<';
+GT_GT                                : '>>';
+EQUAL                                : '=';
+LT_GT                                : '<>';
+BANG_EQUAL                           : '!=';
+AMP_AMP                              : '&&';
+PIPE_PIPE                            : '||';
+PLUS                                 : '+';
+HYPHEN                               : '-';
+SLASH                                : '/';
+PERCENT                              : '%';
+CARET                                : '^';
+PIPE_SLASH                           : '|/';
+PIPE_PIPE_SLASH                      : '||/';
+BANG                                 : '!';
+BANG_BANG                            : '!!';
+AT_SIGN                              : '@';
+AMP                                  : '&';
+PIPE                                 : '|';
+HASH                                 : '#';
+TIL                                  : '~';
