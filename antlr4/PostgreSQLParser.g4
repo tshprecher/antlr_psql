@@ -126,7 +126,7 @@ order_by_clause
     ;
 
 order_by_item
-    : (expr | STRING_LITERAL_DOUBLE_Q) (ASC | DESC | USING expr)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
+    : (expr | DOUBLEQ_STRING_LITERAL) (ASC | DESC | USING expr)? ( (NULLS (FIRST | LAST)) (COMMA (NULLS (FIRST | LAST)))*)?
     ;
 
 limit_clause
@@ -157,7 +157,7 @@ expr
     | INTEGER_LITERAL
     | HEX_INTEGER_LITERAL
     | NUMERIC_LITERAL
-    | STRING_LITERAL_SINGLE_Q
+    | SINGLEQ_STRING_LITERAL
     | BIT_STRING
     | REGEX_STRING
     | DOLLAR_DOLLAR (~DOLLAR)+ DOLLAR_DOLLAR
@@ -169,7 +169,7 @@ expr
     // see: https://www.postgresql.org/docs/10/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS
     | expr OPEN_BRACKET expr CLOSE_BRACKET
     | OPEN_PAREN expr CLOSE_PAREN
-    | type_literal STRING_LITERAL_SINGLE_Q
+    | type_literal SINGLEQ_STRING_LITERAL
     | op=(BANG_BANG | AT_SIGN | PLUS | MINUS) expr
     | op=(TIL | QMARK_HYPHEN) expr
     | expr op=BANG
@@ -269,7 +269,7 @@ aggregate
     ;
 
 output_name
-    : STRING_LITERAL_DOUBLE_Q
+    : DOUBLEQ_STRING_LITERAL
     | identifier
     ;
 
