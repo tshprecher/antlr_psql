@@ -196,7 +196,7 @@ expr
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
     | expr COLON_COLON type_name
     | expr DOT (identifier | STAR)
-    | aggregate
+    | aggregate // TODO: should there be a difference between an aggregate and a func_call?
     | func_call
     | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
