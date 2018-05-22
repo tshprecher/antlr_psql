@@ -42,7 +42,7 @@ public abstract class CommandTest {
                                             }
                                         }
                 );
-                parser.root();
+                parser.stmt();
                 if (!success.get()) {
                     failureCount++;
                     System.err.println("error failed on file: " + name);
@@ -51,6 +51,7 @@ public abstract class CommandTest {
         }
         if (failureCount > 0) {
             System.out.printf("%s result: %d / %d (%f%%)\n", getCommandName(), fileCount - failureCount, fileCount, (double) (fileCount - failureCount) / fileCount * 100);
+            System.out.flush();
             Assert.fail();
         }
     }
