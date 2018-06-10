@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 26
+-- file:errors.sql ln:26 expect:true
 select nonesuch from pg_database

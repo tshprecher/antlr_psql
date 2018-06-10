@@ -1,3 +1,2 @@
--- file: btree_index.sql
--- line: 84
+-- file:btree_index.sql ln:84 expect:true
 vacuum btree_tall_tbl

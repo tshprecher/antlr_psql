@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 77
+-- file:transactions.sql ln:77 expect:true
 SAVEPOINT y

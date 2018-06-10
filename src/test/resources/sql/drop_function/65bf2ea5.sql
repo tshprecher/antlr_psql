@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 579
+-- file:foreign_data.sql ln:585 expect:true
 DROP FUNCTION dummy_trigger()

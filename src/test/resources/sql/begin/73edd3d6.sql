@@ -1,5 +1,4 @@
--- file: event_trigger.sql
--- line: 206
+-- file:event_trigger.sql ln:217 expect:false
 BEGIN
     FOR obj IN SELECT * FROM pg_event_trigger_dropped_objects()
     LOOP

@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 272
+-- file:transactions.sql ln:272 expect:true
 RELEASE SAVEPOINT two

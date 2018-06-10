@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 159
+-- file:rowtypes.sql ln:162 expect:true
 insert into cc values('("(1,2)",3)')

@@ -1,3 +1,2 @@
--- file: expressions.sql
--- line: 16
+-- file:expressions.sql ln:16 expect:true
 SELECT now()::time::text = localtime::text

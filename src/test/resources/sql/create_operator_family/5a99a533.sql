@@ -1,3 +1,2 @@
--- file: alter_generic.sql
--- line: 344
+-- file:alter_generic.sql ln:344 expect:true
 CREATE OPERATOR FAMILY alt_opf10 USING btree

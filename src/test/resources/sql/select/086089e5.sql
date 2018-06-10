@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 172
+-- file:enum.sql ln:172 expect:true
 SELECT max(col) FROM enumtest WHERE col < 'green'

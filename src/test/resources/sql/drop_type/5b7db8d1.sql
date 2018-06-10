@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2084
+-- file:alter_table.sql ln:2116 expect:true
 DROP TYPE mytype CASCADE

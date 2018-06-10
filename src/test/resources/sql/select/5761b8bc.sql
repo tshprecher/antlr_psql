@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 507
+-- file:create_view.sql ln:507 expect:true
 select f1, f3 from tt14v

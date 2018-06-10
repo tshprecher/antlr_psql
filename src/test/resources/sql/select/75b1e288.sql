@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 282
+-- file:date.sql ln:282 expect:true
 SELECT DATE_TRUNC('DECADE', DATE '0004-12-25')

@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 182
+-- file:guc.sql ln:182 expect:true
 SELECT current_user = 'regress_guc_user'

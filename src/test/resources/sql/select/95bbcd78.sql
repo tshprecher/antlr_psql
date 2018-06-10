@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 226
+-- file:rowsecurity.sql ln:226 expect:true
 SELECT * FROM category

@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 952
+-- file:numeric.sql ln:982 expect:true
 select ln(1.2345678e-28)

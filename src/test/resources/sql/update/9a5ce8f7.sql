@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 56
+-- file:updatable_views.sql ln:56 expect:true
 UPDATE ro_view8 SET a=a+1

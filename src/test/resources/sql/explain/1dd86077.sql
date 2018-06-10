@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1415
+-- file:join.sql ln:1486 expect:true
 explain (costs off)
 select t1.* from
   uniquetbl as t1

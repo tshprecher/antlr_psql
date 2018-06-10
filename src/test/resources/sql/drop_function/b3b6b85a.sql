@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3053
+-- file:plpgsql.sql ln:2840 expect:true
 drop function exc_using(int)

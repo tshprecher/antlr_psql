@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 660
+-- file:oidjoins.sql ln:668 expect:true
 SELECT	ctid, conffeqop
 FROM	(SELECT ctid, unnest(conffeqop) AS conffeqop FROM pg_catalog.pg_constraint) fk
 WHERE	conffeqop != 0 AND

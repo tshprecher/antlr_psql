@@ -1,5 +1,4 @@
--- file: numeric_big.sql
--- line: 641
+-- file:numeric_big.sql ln:641 expect:true
 INSERT INTO num_result SELECT id, 0, POW(numeric '10', LN(ABS(round(val,1000))))
     FROM num_data
     WHERE val != '0.0'

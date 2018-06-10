@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 155
+-- file:window.sql ln:155 expect:true
 SELECT four, ten,
 	sum(ten) over (partition by four order by ten),
 	last_value(ten) over (partition by four order by ten)

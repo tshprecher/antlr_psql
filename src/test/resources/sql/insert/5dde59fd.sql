@@ -1,3 +1,2 @@
--- file: name.sql
--- line: 27
+-- file:name.sql ln:27 expect:true
 INSERT INTO NAME_TBL(f1) VALUES ('')

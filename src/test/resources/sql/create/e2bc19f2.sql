@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 5
+-- file:window.sql ln:5 expect:true
 CREATE TEMPORARY TABLE empsalary (
     depname varchar,
     empno bigint,

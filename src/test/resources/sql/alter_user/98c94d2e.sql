@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 126
+-- file:rolenames.sql ln:126 expect:true
 ALTER USER PUBLIC WITH NOREPLICATION

@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1907
+-- file:plpgsql.sql ln:1907 expect:true
 copy rc_test from stdin

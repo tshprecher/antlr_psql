@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 790
+-- file:updatable_views.sql ln:866 expect:true
 CREATE VIEW rw_view1 AS SELECT a FROM base_tbl WHERE a < b

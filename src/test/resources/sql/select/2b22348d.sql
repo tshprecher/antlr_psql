@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3547
+-- file:plpgsql.sql ln:3334 expect:true
 select raise_test()

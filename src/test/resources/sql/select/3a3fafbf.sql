@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 184
+-- file:transactions.sql ln:184 expect:true
 SELECT * FROM savepoints

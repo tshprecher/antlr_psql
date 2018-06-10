@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 428
+-- file:oidjoins.sql ln:436 expect:true
 SELECT	ctid, rngsubdiff
 FROM	pg_catalog.pg_range fk
 WHERE	rngsubdiff != 0 AND

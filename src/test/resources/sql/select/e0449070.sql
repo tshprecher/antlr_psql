@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 540
+-- file:oidjoins.sql ln:548 expect:true
 SELECT	ctid, mapcfg
 FROM	pg_catalog.pg_ts_config_map fk
 WHERE	mapcfg != 0 AND

@@ -1,3 +1,2 @@
--- file: hash_func.sql
--- line: 203
+-- file:hash_func.sql ln:203 expect:true
 DROP TYPE mood

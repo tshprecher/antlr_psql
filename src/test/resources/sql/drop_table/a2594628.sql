@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 239
+-- file:domain.sql ln:239 expect:true
 drop table pitable

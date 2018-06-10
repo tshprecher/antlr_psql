@@ -1,3 +1,2 @@
--- file: hs_standby_allowed.sql
--- line: 110
+-- file:hs_standby_allowed.sql ln:110 expect:true
 LOCK hs1 IN ROW EXCLUSIVE MODE

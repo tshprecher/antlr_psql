@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 368
+-- file:json.sql ln:649 expect:true
 INSERT INTO foo VALUES (847002,'t16','GE1043')

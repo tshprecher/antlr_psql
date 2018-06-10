@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 147
+-- file:sequence.sql ln:147 expect:true
 SELECT * FROM serialTest1

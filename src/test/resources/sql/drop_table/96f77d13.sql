@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 1155
+-- file:rules.sql ln:1155 expect:true
 drop table hats

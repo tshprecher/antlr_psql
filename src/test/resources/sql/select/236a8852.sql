@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1180
+-- file:alter_table.sql ln:1199 expect:true
 select oid > 0, * from altstartwith

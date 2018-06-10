@@ -1,3 +1,2 @@
--- file: combocid.sql
--- line: 49
+-- file:combocid.sql ln:49 expect:true
 DELETE FROM combocidtest

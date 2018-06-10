@@ -1,5 +1,4 @@
--- file: transactions.sql
--- line: 7
+-- file:transactions.sql ln:7 expect:true
 SELECT *
    INTO TABLE xacttest
    FROM aggtest

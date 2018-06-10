@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 108
+-- file:subselect.sql ln:108 expect:true
 select 1 = all (select (select 1))

@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 521
+-- file:aggregates.sql ln:521 expect:true
 drop table bytea_test_table

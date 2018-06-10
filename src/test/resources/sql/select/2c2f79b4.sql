@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 613
+-- file:json.sql ln:619 expect:true
 SELECT json_build_object(NULL, 'a')

@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1624
+-- file:rowsecurity.sql ln:1624 expect:true
 CREATE POLICY p1 ON r2 USING (false)

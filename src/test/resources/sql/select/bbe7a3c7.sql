@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 126
+-- file:json.sql ln:126 expect:true
 select to_json(timestamp 'Infinity')

@@ -1,5 +1,4 @@
--- file: inherit.sql
--- line: 142
+-- file:inherit.sql ln:142 expect:true
 update parted_tab set b = 'b'
 from
   (select a from some_tab union all select a+1 from some_tab) ss (a)

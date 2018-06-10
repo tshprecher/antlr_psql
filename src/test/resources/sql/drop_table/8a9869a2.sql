@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1062
+-- file:rowsecurity.sql ln:1062 expect:true
 DROP TABLE t1 CASCADE

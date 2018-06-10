@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1310
+-- file:rowsecurity.sql ln:1310 expect:true
 COPY copy_t FROM STDIN

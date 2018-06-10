@@ -1,3 +1,2 @@
--- file: with.sql
--- line: 1041
+-- file:with.sql ln:1041 expect:true
 drop table test

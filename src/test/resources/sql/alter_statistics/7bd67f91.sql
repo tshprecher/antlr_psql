@@ -1,3 +1,2 @@
--- file: alter_generic.sql
--- line: 456
+-- file:alter_generic.sql ln:456 expect:false
 ALTER STATISTICS alt_stat1 RENAME TO alt_stat4

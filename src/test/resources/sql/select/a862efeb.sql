@@ -1,3 +1,2 @@
--- file: json_encoding.sql
--- line: 19
+-- file:json_encoding.sql ln:19 expect:true
 select json '{ "a":  "\ude04X" }' -> 'a'

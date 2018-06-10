@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 262
+-- file:create_table.sql ln:266 expect:true
 DROP TABLE unlogged2

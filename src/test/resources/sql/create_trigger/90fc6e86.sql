@@ -1,4 +1,3 @@
--- file: triggers.sql
--- line: 556
+-- file:triggers.sql ln:555 expect:true
 CREATE TRIGGER serializable_update_trig BEFORE UPDATE ON serializable_update_tab
 	FOR EACH ROW EXECUTE PROCEDURE serializable_update_trig()

@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 12
+-- file:window.sql ln:12 expect:true
 INSERT INTO empsalary VALUES
 ('develop', 10, 5200, '2007-08-01'),
 ('sales', 1, 5000, '2006-10-01'),

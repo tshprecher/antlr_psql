@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 861
+-- file:create_index.sql ln:897 expect:true
 INSERT INTO onek_with_null (unique1,unique2) VALUES (NULL, -1), (NULL, NULL)

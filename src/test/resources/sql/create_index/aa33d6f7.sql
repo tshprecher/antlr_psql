@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 10
+-- file:temp.sql ln:10 expect:true
 CREATE INDEX i_temptest ON temptest(col)

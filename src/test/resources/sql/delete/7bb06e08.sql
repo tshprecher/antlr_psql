@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1416
+-- file:plpgsql.sql ln:1416 expect:true
 delete from HSlot

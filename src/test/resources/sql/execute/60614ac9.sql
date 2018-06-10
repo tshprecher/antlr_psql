@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 305
+-- file:portals.sql ln:305 expect:true
 EXECUTE cprep

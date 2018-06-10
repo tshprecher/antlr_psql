@@ -1,5 +1,4 @@
--- file: functional_deps.sql
--- line: 163
+-- file:functional_deps.sql ln:163 expect:true
 CREATE TEMP VIEW fdv2 AS
 SELECT a.id, a.keywords, a.title, aic.category_id, aic.changed
 FROM articles AS a JOIN articles_in_category AS aic ON a.id = aic.article_id

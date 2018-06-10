@@ -1,5 +1,4 @@
--- file: int2.sql
--- line: 107
+-- file:int2.sql ln:107 expect:true
 SELECT x, x::int2 AS int2_value
 FROM (VALUES (-2.5::numeric),
              (-1.5::numeric),

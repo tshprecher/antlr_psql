@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 788
+-- file:join.sql ln:848 expect:true
 explain (costs off)
 select nt3.id
 from nt3 as nt3

@@ -1,3 +1,2 @@
--- file: select_views.sql
--- line: 15
+-- file:select_views.sql ln:15 expect:true
 CREATE ROLE regress_alice

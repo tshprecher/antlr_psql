@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 259
+-- file:strings.sql ln:259 expect:true
 SELECT 'h%wkeye' NOT LIKE 'h#%%' ESCAPE '#' AS "false"

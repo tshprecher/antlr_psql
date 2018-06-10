@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 391
+-- file:copy2.sql ln:391 expect:true
 CREATE TABLE instead_of_insert_tbl(id serial, name text)

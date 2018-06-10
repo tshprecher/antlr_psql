@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 745
+-- file:jsonb.sql ln:751 expect:true
 SELECT count(*) FROM testjsonb WHERE j ?| ARRAY['public','disabled']

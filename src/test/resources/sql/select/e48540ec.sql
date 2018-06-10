@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 132
+-- file:oidjoins.sql ln:132 expect:true
 SELECT	ctid, castfunc
 FROM	pg_catalog.pg_cast fk
 WHERE	castfunc != 0 AND

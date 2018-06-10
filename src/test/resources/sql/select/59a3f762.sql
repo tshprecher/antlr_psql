@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 801
+-- file:privileges.sql ln:833 expect:true
 SELECT lo_unlink(2002)

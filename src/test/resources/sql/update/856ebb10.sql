@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 421
+-- file:updatable_views.sql ln:421 expect:true
 UPDATE rw_view1 SET bb=bb, cc=cc

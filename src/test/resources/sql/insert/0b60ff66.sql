@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 37
+-- file:join.sql ln:37 expect:true
 INSERT INTO J2_TBL VALUES (NULL, NULL)

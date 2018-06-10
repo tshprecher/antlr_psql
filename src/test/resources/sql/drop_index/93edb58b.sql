@@ -1,3 +1,2 @@
--- file: equivclass.sql
--- line: 200
+-- file:equivclass.sql ln:200 expect:true
 drop index ec1_expr3

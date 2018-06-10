@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 379
+-- file:arrays.sql ln:379 expect:true
 create temp table arr_tbl (f1 int[] unique)

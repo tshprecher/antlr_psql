@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 145
+-- file:domain.sql ln:145 expect:true
 insert into dcomptable (d1.r) values(99)

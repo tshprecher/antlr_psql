@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 764
+-- file:alter_table.sql ln:783 expect:true
 alter table atacc1 alter test set not null

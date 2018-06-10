@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 959
+-- file:join.sql ln:1019 expect:true
 explain (costs off)
 select b.unique1 from
   tenk1 a join tenk1 b on a.unique1 = b.unique2

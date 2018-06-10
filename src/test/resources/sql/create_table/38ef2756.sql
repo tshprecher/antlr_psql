@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1030
+-- file:alter_table.sql ln:1049 expect:true
 create table dropColumnChild (c int) inherits (dropColumn)

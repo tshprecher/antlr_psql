@@ -1,5 +1,4 @@
--- file: boolean.sql
--- line: 212
+-- file:boolean.sql ln:212 expect:true
 SELECT
     d,
     b IS TRUE AS istrue,

@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 120
+-- file:sequence.sql ln:120 expect:true
 SELECT setval('sequence_test'::text, 32)

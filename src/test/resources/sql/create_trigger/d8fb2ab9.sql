@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 57
+-- file:triggers.sql ln:57 expect:true
 create trigger check_pkeys_fkey_cascade
 	before delete or update on pkeys
 	for each row

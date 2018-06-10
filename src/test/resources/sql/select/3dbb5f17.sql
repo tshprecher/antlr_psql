@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 733
+-- file:privileges.sql ln:765 expect:true
 SELECT dogrant_fails()

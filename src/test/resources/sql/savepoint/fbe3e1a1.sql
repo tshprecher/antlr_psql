@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 95
+-- file:plpgsql.sql ln:3572 expect:true
 SAVEPOINT a

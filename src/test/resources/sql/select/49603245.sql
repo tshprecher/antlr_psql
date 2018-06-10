@@ -1,3 +1,2 @@
--- file: uuid.sql
--- line: 75
+-- file:uuid.sql ln:75 expect:true
 SELECT COUNT(*) FROM guid1 g1 INNER JOIN guid2 g2 ON g1.guid_field = g2.guid_field

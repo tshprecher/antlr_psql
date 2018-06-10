@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 598
+-- file:plpgsql.sql ln:598 expect:true
 insert into HSlot (
 		    slotname,
 		    hubname,

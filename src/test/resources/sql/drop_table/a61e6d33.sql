@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 111
+-- file:matview.sql ln:111 expect:true
 DROP TABLE mvtest_t CASCADE

@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 465
+-- file:horology.sql ln:471 expect:true
 SELECT to_date('2011 12 18', 'YYYY  MM DD')

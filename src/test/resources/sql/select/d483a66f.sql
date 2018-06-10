@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 714
+-- file:domain.sql ln:714 expect:true
 select 1::inotnull

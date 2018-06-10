@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1402
+-- file:rowsecurity.sql ln:1402 expect:true
 CREATE ROLE regress_rls_eve

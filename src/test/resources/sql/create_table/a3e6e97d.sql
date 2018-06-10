@@ -1,5 +1,4 @@
--- file: stats_ext.sql
--- line: 96
+-- file:stats_ext.sql ln:96 expect:true
 \set VERBOSITY default
 
 CREATE TABLE ndistinct (

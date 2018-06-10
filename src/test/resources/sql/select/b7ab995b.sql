@@ -1,5 +1,4 @@
--- file: json.sql
--- line: 606
+-- file:json.sql ln:612 expect:true
 SELECT json_build_object(
        'a', json_build_object('b',false,'c',99),
        'd', json_build_object('e',array[9,8,7]::int[],

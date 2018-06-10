@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 500
+-- file:horology.sql ln:506 expect:true
 SELECT to_timestamp('2015-02-29 15:50:55', 'YYYY-MM-DD HH24:MI:SS')

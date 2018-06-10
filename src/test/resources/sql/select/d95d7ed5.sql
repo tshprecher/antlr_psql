@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 531
+-- file:tsearch.sql ln:531 expect:true
 select * from pendtest where 'ipt:*'::tsquery @@ ts

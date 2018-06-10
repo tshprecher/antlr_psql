@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 60
+-- file:json.sql ln:60 expect:true
 SELECT '    '::json

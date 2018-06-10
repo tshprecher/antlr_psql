@@ -1,5 +1,4 @@
--- file: int2.sql
--- line: 97
+-- file:int2.sql ln:97 expect:true
 SELECT x, x::int2 AS int2_value
 FROM (VALUES (-2.5::float8),
              (-1.5::float8),

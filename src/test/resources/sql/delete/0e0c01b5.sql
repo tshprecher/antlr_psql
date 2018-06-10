@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 85
+-- file:inherit.sql ln:85 expect:true
 DELETE FROM a

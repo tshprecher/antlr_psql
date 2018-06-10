@@ -1,3 +1,2 @@
--- file: subscription.sql
--- line: 11
+-- file:subscription.sql ln:11 expect:false
 CREATE SUBSCRIPTION testsub CONNECTION 'foo'

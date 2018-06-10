@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 532
+-- file:rowsecurity.sql ln:532 expect:true
 SELECT * FROM rec1

@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 466
+-- file:create_view.sql ln:466 expect:true
 alter table tt14t drop column f2

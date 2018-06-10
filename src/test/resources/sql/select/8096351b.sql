@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 149
+-- file:create_table_like.sql ln:152 expect:true
 SELECT oid FROM like_test5

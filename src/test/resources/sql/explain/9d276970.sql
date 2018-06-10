@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1917
+-- file:join.sql ln:1998 expect:true
 explain (verbose, costs off)
 select t1.unique1, t2.hundred
 from onek t1, tenk1 t2

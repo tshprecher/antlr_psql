@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1864
+-- file:plpgsql.sql ln:1864 expect:true
 create temp table users(login text, id serial)

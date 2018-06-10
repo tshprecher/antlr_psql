@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 337
+-- file:json.sql ln:337 expect:true
 select '"foo"'::json #> '{}'

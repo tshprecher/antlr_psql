@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 351
+-- file:foreign_data.sql ln:357 expect:true
 ALTER FOREIGN TABLE ft1 ALTER COLUMN c8 SET DATA TYPE integer

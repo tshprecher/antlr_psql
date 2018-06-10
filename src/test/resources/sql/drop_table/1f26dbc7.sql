@@ -1,3 +1,2 @@
--- file: bitmapops.sql
--- line: 41
+-- file:bitmapops.sql ln:41 expect:true
 DROP TABLE bmscantest

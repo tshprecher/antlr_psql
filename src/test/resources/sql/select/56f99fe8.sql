@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3159
+-- file:plpgsql.sql ln:2946 expect:true
 select * from return_dquery()

@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 209
+-- file:join.sql ln:218 expect:true
 INSERT INTO t1 VALUES ( 'bb', 11 )

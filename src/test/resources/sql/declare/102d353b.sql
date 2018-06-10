@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 471
+-- file:portals.sql ln:481 expect:true
 DECLARE c1 NO SCROLL CURSOR FOR SELECT * FROM cursor FOR UPDATE

@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 186
+-- file:interval.sql ln:186 expect:true
 SELECT interval '1 2:03' day to minute

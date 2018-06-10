@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 77
+-- file:rowsecurity.sql ln:77 expect:true
 INSERT INTO document VALUES
     ( 1, 11, 1, 'regress_rls_bob', 'my first novel'),
     ( 2, 11, 2, 'regress_rls_bob', 'my second novel'),

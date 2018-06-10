@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 310
+-- file:enum.sql ln:310 expect:true
 DROP TYPE rainbow

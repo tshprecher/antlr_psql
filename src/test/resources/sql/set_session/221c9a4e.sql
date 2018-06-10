@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1493
+-- file:rowsecurity.sql ln:1493 expect:true
 SET SESSION AUTHORIZATION regress_rls_bob

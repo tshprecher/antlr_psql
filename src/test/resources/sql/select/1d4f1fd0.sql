@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 579
+-- file:create_view.sql ln:579 expect:true
 select pg_get_viewdef('tt23v', true)

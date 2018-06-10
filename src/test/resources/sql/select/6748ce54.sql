@@ -1,5 +1,4 @@
--- file: psql.sql
--- line: 119
+-- file:psql.sql ln:119 expect:true
 select format('create index on gexec_test(%I)', attname)
 from pg_attribute
 where attrelid = 'gexec_test'::regclass and attnum > 0

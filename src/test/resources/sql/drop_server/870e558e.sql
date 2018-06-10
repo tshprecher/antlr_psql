@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 211
+-- file:foreign_data.sql ln:211 expect:true
 DROP SERVER IF EXISTS nonexistent

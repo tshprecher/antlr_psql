@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 1695
+-- file:plpgsql.sql ln:1695 expect:false
 begin
 	begin			raise notice 'should see this'

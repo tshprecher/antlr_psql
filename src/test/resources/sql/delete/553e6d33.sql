@@ -1,3 +1,2 @@
--- file: timestamp.sql
--- line: 47
+-- file:timestamp.sql ln:47 expect:true
 DELETE FROM TIMESTAMP_TBL

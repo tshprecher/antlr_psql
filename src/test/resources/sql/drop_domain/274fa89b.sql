@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 112
+-- file:domain.sql ln:112 expect:true
 drop domain domainint4arr restrict

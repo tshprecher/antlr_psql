@@ -1,3 +1,2 @@
--- file: partition_join.sql
--- line: 255
+-- file:partition_join.sql ln:287 expect:true
 ANALYZE prt2_l

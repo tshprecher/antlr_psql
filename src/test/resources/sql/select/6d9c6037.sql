@@ -1,5 +1,4 @@
--- file: geometry.sql
--- line: 150
+-- file:geometry.sql ln:150 expect:true
 SELECT '' AS twentyfour, c1.f1 AS circle, p1.f1 AS point, (p1.f1 <-> c1.f1) AS distance
    FROM CIRCLE_TBL c1, POINT_TBL p1
    WHERE (p1.f1 <-> c1.f1) > 0

@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 303
+-- file:create_view.sql ln:303 expect:true
 ALTER TABLE tmp1 RENAME TO tx1

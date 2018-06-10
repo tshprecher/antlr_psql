@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 630
+-- file:join.sql ln:670 expect:true
 create temp table b (x integer, y integer)

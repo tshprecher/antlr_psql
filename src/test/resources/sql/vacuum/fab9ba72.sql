@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 83
+-- file:vacuum.sql ln:83 expect:false
 VACUUM ANALYZE vactst, vacparted (a)

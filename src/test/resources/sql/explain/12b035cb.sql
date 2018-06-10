@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 334
+-- file:groupingsets.sql ln:360 expect:true
 explain (costs off)
   select *
     from (values (1),(2)) v(x),

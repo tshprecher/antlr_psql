@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 700
+-- file:rowsecurity.sql ln:700 expect:true
 SELECT * FROM b1

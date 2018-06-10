@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 429
+-- file:strings.sql ln:446 expect:true
 SELECT strpos('abcdef', 'xy') AS "pos_0"

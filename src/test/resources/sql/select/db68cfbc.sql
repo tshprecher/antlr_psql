@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 189
+-- file:tsearch.sql ln:189 expect:true
 SELECT to_tsquery('english', '(a <3> 1) <-> 2')

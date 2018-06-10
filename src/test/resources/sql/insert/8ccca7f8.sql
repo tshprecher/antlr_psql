@@ -1,5 +1,4 @@
--- file: create_index.sql
--- line: 1058
+-- file:create_index.sql ln:1105 expect:true
 INSERT INTO reindex_before
 SELECT oid, 'pg_toast_TABLE_index', relfilenode, relkind, reltoastrelid
 FROM pg_class where oid in

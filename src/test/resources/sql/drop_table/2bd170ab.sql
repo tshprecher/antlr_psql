@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 613
+-- file:triggers.sql ln:612 expect:true
 DROP TABLE min_updates_test

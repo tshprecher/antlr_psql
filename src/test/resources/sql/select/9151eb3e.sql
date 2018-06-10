@@ -1,3 +1,2 @@
--- file: tablesample.sql
--- line: 59
+-- file:tablesample.sql ln:59 expect:true
 select count(*) from person

@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 575
+-- file:polymorphism.sql ln:575 expect:true
 select dfunc('Hi', 'City')

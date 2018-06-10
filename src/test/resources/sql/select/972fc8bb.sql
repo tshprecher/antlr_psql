@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 390
+-- file:timestamptz.sql ln:394 expect:true
 SELECT make_timestamptz(2014, 10, 26, 0, 0, 0, 'MSK')

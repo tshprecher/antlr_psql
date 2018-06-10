@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2391
+-- file:alter_table.sql ln:2477 expect:true
 ALTER TABLE ONLY list_parted2 DROP CONSTRAINT check_b

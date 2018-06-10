@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 213
+-- file:event_trigger.sql ln:90 expect:true
 reset role

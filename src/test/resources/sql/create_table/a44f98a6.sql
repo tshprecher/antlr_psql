@@ -1,3 +1,2 @@
--- file: tidscan.sql
--- line: 3
+-- file:tidscan.sql ln:3 expect:true
 CREATE TABLE tidscan(id integer)

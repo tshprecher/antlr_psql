@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 48
+-- file:json.sql ln:48 expect:true
 RESET max_stack_depth

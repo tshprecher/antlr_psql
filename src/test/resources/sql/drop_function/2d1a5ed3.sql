@@ -1,3 +1,2 @@
--- file: select.sql
--- line: 251
+-- file:select.sql ln:251 expect:true
 drop function sillysrf(int)

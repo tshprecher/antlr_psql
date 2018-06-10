@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 1110
+-- file:rules.sql ln:1110 expect:true
 CREATE RULE hat_upsert AS ON INSERT TO hats
     DO INSTEAD
     INSERT INTO hat_data VALUES (

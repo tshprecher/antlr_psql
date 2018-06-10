@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1580
+-- file:alter_table.sql ln:1615 expect:true
 drop table alterlock

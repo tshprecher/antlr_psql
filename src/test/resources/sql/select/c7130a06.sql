@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 616
+-- file:oidjoins.sql ln:624 expect:true
 SELECT	ctid, typinput
 FROM	pg_catalog.pg_type fk
 WHERE	typinput != 0 AND

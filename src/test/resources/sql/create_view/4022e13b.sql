@@ -1,5 +1,4 @@
--- file: create_view.sql
--- line: 237
+-- file:create_view.sql ln:237 expect:true
 CREATE VIEW tt1 AS
   SELECT * FROM (
     VALUES

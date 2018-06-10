@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 516
+-- file:subselect.sql ln:526 expect:true
 select nextval('ts1')

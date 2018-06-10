@@ -1,5 +1,4 @@
--- file: event_trigger.sql
--- line: 261
+-- file:event_trigger.sql ln:272 expect:true
 CREATE SCHEMA evttrig
 	CREATE TABLE one (col_a SERIAL PRIMARY KEY, col_b text DEFAULT 'forty two')
 	CREATE INDEX one_idx ON one (col_b)

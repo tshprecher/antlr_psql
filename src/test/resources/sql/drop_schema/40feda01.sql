@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 53
+-- file:select_into.sql ln:53 expect:true
 DROP SCHEMA selinto_schema CASCADE

@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 59
+-- file:tsearch.sql ln:59 expect:true
 SET enable_bitmapscan=OFF

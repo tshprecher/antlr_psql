@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 787
+-- file:enum.sql ln:157 expect:true
 SET enable_seqscan = off

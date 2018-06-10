@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 296
+-- file:triggers.sql ln:290 expect:true
 DROP TRIGGER delete_a ON main_table

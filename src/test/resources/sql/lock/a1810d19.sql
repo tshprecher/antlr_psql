@@ -1,3 +1,2 @@
--- file: hs_standby_disallowed.sql
--- line: 76
+-- file:hs_standby_disallowed.sql ln:76 expect:true
 LOCK hs1 IN SHARE MODE

@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 234
+-- file:insert.sql ln:293 expect:true
 insert into part_default values (1)

@@ -1,5 +1,4 @@
--- file: sanity_check.sql
--- line: 25
+-- file:sanity_check.sql ln:25 expect:true
 \a\t
 
 SELECT relname, nspname

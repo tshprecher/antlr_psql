@@ -1,4 +1,3 @@
--- file: event_trigger.sql
--- line: 364
+-- file:event_trigger.sql ln:375 expect:true
 CREATE EVENT TRIGGER end_rls_command ON ddl_command_end
     WHEN TAG IN ('CREATE POLICY', 'ALTER POLICY', 'DROP POLICY') EXECUTE PROCEDURE end_command()

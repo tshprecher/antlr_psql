@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1775
+-- file:alter_table.sql ln:1810 expect:true
 ALTER TABLE tt4 OF tt_t0

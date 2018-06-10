@@ -1,4 +1,3 @@
--- file: aggregates.sql
--- line: 68
+-- file:aggregates.sql ln:68 expect:true
 select ten, count(*), sum(four) from onek
 group by ten order by ten

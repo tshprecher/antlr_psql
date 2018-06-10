@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 126
+-- file:regex.sql ln:126 expect:true
 select 'a' ~ '()+\1'

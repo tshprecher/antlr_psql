@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 484
+-- file:alter_table.sql ln:503 expect:true
 ALTER TABLE FKTABLE ALTER CONSTRAINT fkdi2 DEFERRABLE INITIALLY IMMEDIATE

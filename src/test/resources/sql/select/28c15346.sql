@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 70
+-- file:xml.sql ln:70 expect:true
 SELECT xmlparse(content '<relativens xmlns=''relative''/>')

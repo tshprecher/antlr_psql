@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 1128
+-- file:rowsecurity.sql ln:1128 expect:true
 INSERT INTO blog VALUES
     (1, 'alice', 'blog #1'),
     (2, 'bob', 'blog #1'),

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2423
+-- file:alter_table.sql ln:2509 expect:true
 SELECT * FROM list_parted

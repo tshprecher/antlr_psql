@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 66
+-- file:rolenames.sql ln:66 expect:true
 CREATE ROLE regress_testrolx SUPERUSER LOGIN

@@ -1,3 +1,2 @@
--- file: union.sql
--- line: 347
+-- file:union.sql ln:390 expect:true
 analyze t3

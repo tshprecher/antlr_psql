@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 152
+-- file:oidjoins.sql ln:152 expect:true
 SELECT	ctid, relam
 FROM	pg_catalog.pg_class fk
 WHERE	relam != 0 AND

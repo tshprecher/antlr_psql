@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 949
+-- file:foreign_key.sql ln:949 expect:true
 SELECT * FROM tasks

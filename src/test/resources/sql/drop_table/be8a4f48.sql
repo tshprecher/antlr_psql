@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 199
+-- file:inherit.sql ln:199 expect:true
 drop table oid_child

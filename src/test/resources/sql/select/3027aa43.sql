@@ -1,5 +1,4 @@
--- file: type_sanity.sql
--- line: 80
+-- file:type_sanity.sql ln:80 expect:true
 SELECT p1.oid, p1.typname, p1.typalign, p2.typname, p2.typalign
 FROM pg_type as p1
      LEFT JOIN pg_range as r ON rngtypid = p1.oid

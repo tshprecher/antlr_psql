@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 678
+-- file:inherit.sql ln:705 expect:true
 explain (costs off) select * from mcrparted where a = 20 and abs(b) = 10 and c > 10

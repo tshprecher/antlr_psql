@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 988
+-- file:foreign_key.sql ln:988 expect:true
 select * from defc

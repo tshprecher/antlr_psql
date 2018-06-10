@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 543
+-- file:strings.sql ln:578 expect:true
 SELECT translate('', '14', 'ax')

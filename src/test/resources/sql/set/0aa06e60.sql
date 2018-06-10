@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 289
+-- file:interval.sql ln:289 expect:true
 SET IntervalStyle to postgres_verbose

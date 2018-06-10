@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 653
+-- file:domain.sql ln:653 expect:true
 create temp table op (f1 orderedpair)

@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 62
+-- file:regex.sql ln:62 expect:true
 select 'xz' ~ 'x(?![xy])'

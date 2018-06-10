@@ -1,5 +1,4 @@
--- file: arrays.sql
--- line: 50
+-- file:arrays.sql ln:50 expect:true
 SELECT a[1:3],
           b[1:1][1:2][1:2],
           c[1:2],

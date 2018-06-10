@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 141
+-- file:prepared_xacts.sql ln:141 expect:true
 COMMIT PREPARED 'regress-one'

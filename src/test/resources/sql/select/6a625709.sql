@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 77
+-- file:xml.sql ln:77 expect:true
 SELECT xmlparse(document '<invalidentity>&</abc>')

@@ -1,3 +1,2 @@
--- file: bit.sql
--- line: 118
+-- file:bit.sql ln:118 expect:true
 SELECT POSITION(B'' IN B'')

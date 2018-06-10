@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 687
+-- file:updatable_views.sql ln:763 expect:true
 ALTER VIEW rw_view1 SET (check_option=here)

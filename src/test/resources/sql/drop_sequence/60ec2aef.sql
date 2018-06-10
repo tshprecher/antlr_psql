@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 168
+-- file:sequence.sql ln:168 expect:true
 DROP SEQUENCE myseq2

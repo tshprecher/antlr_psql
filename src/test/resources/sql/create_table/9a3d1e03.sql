@@ -1,3 +1,2 @@
--- file: equivclass.sql
--- line: 102
+-- file:equivclass.sql ln:102 expect:true
 create table ec1 (ff int8 primary key, f1 int8alias1, f2 int8alias2)

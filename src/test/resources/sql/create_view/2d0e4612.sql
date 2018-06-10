@@ -1,5 +1,4 @@
--- file: with.sql
--- line: 206
+-- file:with.sql ln:206 expect:true
 CREATE VIEW sums_1_100 AS
 WITH RECURSIVE t(n) AS (
     VALUES (1)

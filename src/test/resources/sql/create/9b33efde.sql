@@ -1,3 +1,2 @@
--- file: collate.sql
--- line: 245
+-- file:collate.sql ln:247 expect:true
 CREATE TEMP TABLE vctable (f1 varchar(25))

@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 14
+-- file:triggers.sql ln:14 expect:true
 insert into pkeys values (20, '2')

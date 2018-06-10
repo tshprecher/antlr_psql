@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 160
+-- file:cluster.sql ln:160 expect:true
 CREATE TABLE clustertest (key int PRIMARY KEY)

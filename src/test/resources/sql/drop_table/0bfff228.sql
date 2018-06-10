@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1314
+-- file:rowsecurity.sql ln:1314 expect:true
 DROP TABLE copy_rel_to CASCADE

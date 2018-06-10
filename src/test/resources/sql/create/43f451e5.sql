@@ -1,5 +1,4 @@
--- file: event_trigger.sql
--- line: 340
+-- file:event_trigger.sql ln:351 expect:true
 CREATE OR REPLACE FUNCTION start_command()
 RETURNS event_trigger AS $$
 BEGIN

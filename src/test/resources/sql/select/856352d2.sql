@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 485
+-- file:polymorphism.sql ln:485 expect:true
 select myleast()

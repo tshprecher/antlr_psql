@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 415
+-- file:strings.sql ln:432 expect:true
 DROP TABLE toasttest

@@ -1,3 +1,2 @@
--- file: misc_functions.sql
--- line: 30
+-- file:misc_functions.sql ln:30 expect:true
 SELECT num_nonnulls()

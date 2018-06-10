@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 291
+-- file:rowtypes.sql ln:393 expect:true
 create temp table tt3 () inherits(tt2)

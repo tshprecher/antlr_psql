@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 170
+-- file:domain.sql ln:170 expect:true
 alter type comptype alter attribute r type varchar

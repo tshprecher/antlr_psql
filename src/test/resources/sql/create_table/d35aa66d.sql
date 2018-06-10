@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1720
+-- file:triggers.sql ln:1952 expect:true
 create table table1 (a int)

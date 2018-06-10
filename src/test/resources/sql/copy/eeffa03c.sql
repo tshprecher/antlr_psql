@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 208
+-- file:aggregates.sql ln:208 expect:true
 COPY bool_test FROM STDIN NULL 'null'

@@ -1,3 +1,2 @@
--- file: spgist.sql
--- line: 58
+-- file:spgist.sql ln:58 expect:true
 reindex index spgist_point_idx

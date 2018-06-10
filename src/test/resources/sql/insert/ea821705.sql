@@ -1,3 +1,2 @@
--- file: create_misc.sql
--- line: 121
+-- file:create_misc.sql ln:126 expect:true
 INSERT INTO d_star (class) VALUES ('d')

@@ -1,3 +1,2 @@
--- file: plancache.sql
--- line: 137
+-- file:plancache.sql ln:137 expect:true
 drop sequence seq

@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 33
+-- file:aggregates.sql ln:33 expect:true
 SELECT stddev_samp(b::numeric) FROM aggtest

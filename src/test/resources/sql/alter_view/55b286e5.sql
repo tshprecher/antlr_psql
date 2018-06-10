@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 890
+-- file:updatable_views.sql ln:966 expect:true
 ALTER VIEW rw_view1 SET (security_barrier = true)

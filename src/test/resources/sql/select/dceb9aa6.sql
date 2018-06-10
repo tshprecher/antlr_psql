@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 595
+-- file:subselect.sql ln:605 expect:true
 select * from explain_sq_limit()

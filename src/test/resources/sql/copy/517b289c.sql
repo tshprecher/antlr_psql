@@ -1,5 +1,4 @@
--- file: copy2.sql
--- line: 322
+-- file:copy2.sql ln:322 expect:false
 1
 \N
 \.

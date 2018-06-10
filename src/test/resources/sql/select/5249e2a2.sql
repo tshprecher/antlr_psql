@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 269
+-- file:arrays.sql ln:269 expect:true
 SELECT array_positions(NULL, NULL::int)

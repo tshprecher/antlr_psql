@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3854
+-- file:plpgsql.sql ln:3575 expect:true
 select error2('public.stuffs')

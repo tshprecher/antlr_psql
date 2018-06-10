@@ -1,5 +1,4 @@
--- file: errors.sql
--- line: 281
+-- file:errors.sql ln:281 expect:false
 CREATE TABLE
 \g
 

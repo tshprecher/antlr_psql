@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 648
+-- file:oidjoins.sql ln:656 expect:true
 SELECT	ctid, typcollation
 FROM	pg_catalog.pg_type fk
 WHERE	typcollation != 0 AND

@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 604
+-- file:oidjoins.sql ln:612 expect:true
 SELECT	ctid, typrelid
 FROM	pg_catalog.pg_type fk
 WHERE	typrelid != 0 AND

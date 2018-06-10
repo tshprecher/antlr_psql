@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 99
+-- file:create_table.sql ln:99 expect:true
 CREATE TABLE city (
 	name		name,
 	location 	box,

@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 268
+-- file:oidjoins.sql ln:272 expect:true
 SELECT	ctid, classoid
 FROM	pg_catalog.pg_init_privs fk
 WHERE	classoid != 0 AND

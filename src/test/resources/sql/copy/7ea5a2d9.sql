@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 60
+-- file:copy2.sql ln:60 expect:true
 COPY x from stdin

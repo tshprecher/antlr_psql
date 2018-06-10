@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 878
+-- file:opr_sanity.sql ln:879 expect:true
 SELECT ctid, aggfnoid::oid
 FROM pg_aggregate as p1
 WHERE aggmtranstype != 0 AND

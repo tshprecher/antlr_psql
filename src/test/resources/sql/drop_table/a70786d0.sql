@@ -1,3 +1,2 @@
--- file: tidscan.sql
--- line: 66
+-- file:tidscan.sql ln:66 expect:true
 DROP TABLE tidscan

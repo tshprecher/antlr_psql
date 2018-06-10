@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 472
+-- file:subselect.sql ln:472 expect:true
 create temp table nocolumns()

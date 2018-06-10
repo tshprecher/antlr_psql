@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 459
+-- file:domain.sql ln:459 expect:true
 drop domain ddef5 restrict

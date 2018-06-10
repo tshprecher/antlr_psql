@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 113
+-- file:prepared_xacts.sql ln:113 expect:true
 PREPARE TRANSACTION 'regress-two'

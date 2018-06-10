@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 4074
+-- file:plpgsql.sql ln:3795 expect:true
 create or replace function unreserved_test() returns int as $$
 declare
   return int := 42

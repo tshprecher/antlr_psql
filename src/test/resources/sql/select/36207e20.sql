@@ -1,5 +1,4 @@
--- file: arrays.sql
--- line: 676
+-- file:arrays.sql ln:676 expect:true
 SELECT
     op,
     width_bucket(op, ARRAY[1, 3, 9, 'NaN', 'NaN']::float8[]) AS wb

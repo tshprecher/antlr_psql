@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 1036
+-- file:triggers.sql ln:1035 expect:true
 create temp table parent (
     aid int not null primary key,
     val1 text,

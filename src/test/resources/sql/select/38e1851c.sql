@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 59
+-- file:rowtypes.sql ln:62 expect:true
 select * from people

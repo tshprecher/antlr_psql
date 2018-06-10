@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2070
+-- file:alter_table.sql ln:2102 expect:false
 ALTER TABLE list_parted ATTACH PARTITION child FOR VALUES IN (1)

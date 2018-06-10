@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 173
+-- file:enum.sql ln:173 expect:true
 DROP INDEX enumtest_btree

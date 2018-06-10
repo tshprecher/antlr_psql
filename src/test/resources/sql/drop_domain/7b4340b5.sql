@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 120
+-- file:domain.sql ln:120 expect:true
 drop domain dia

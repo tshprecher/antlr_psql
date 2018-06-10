@@ -1,5 +1,4 @@
--- file: domain.sql
--- line: 278
+-- file:domain.sql ln:278 expect:true
 create table nulltest
            ( col1 dnotnull
            , col2 dnotnull NULL             , col3 dnull    NOT NULL

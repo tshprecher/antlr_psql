@@ -1,5 +1,4 @@
--- file: collate.linux.utf8.sql
--- line: 352
+-- file:collate.linux.utf8.sql ln:352 expect:true
 do $$
 BEGIN
   EXECUTE 'CREATE COLLATION test1 (lc_collate = ' ||

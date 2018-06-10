@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 865
+-- file:alter_table.sql ln:884 expect:true
 select a from atacc1

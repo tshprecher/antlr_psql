@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 835
+-- file:aggregates.sql ln:835 expect:true
 create aggregate my_half_sum(int4)
 (
    stype = int4,

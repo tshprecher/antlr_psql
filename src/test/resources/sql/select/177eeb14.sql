@@ -1,5 +1,4 @@
--- file: arrays.sql
--- line: 645
+-- file:arrays.sql ln:645 expect:true
 SELECT
     op,
     width_bucket(op::numeric, ARRAY[1, 3, 5, 10.0]::numeric[]) AS wb_n1,

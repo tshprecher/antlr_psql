@@ -1,3 +1,2 @@
--- file: create_aggregate.sql
--- line: 41
+-- file:create_aggregate.sql ln:41 expect:true
 COMMENT ON AGGREGATE nosuchagg (*) IS 'should fail'

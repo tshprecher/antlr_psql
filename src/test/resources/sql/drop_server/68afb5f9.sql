@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 809
+-- file:foreign_data.sql ln:815 expect:true
 DROP SERVER s8 CASCADE

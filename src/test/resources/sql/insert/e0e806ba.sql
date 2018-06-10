@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 415
+-- file:domain.sql ln:415 expect:true
 insert into domcontest values (5)

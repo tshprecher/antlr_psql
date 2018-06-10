@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 144
+-- file:guc.sql ln:144 expect:true
 SHOW datestyle

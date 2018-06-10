@@ -1,5 +1,4 @@
--- file: hash_func.sql
--- line: 205
+-- file:hash_func.sql ln:205 expect:true
 SELECT v as value, jsonb_hash(v)::bit(32) as standard,
 	   jsonb_hash_extended(v, 0)::bit(32) as extended0,
 	   jsonb_hash_extended(v, 1)::bit(32) as extended1

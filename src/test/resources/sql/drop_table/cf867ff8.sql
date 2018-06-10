@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1271
+-- file:triggers.sql ln:1270 expect:true
 drop table upsert

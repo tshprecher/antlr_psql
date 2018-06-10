@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 237
+-- file:jsonb.sql ln:237 expect:true
 SELECT '{ "name": "Bob", "tags": [ "enim", "qui"]}'::jsonb @> '{"tags":["qu"]}'

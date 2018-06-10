@@ -1,3 +1,2 @@
--- file: password.sql
--- line: 7
+-- file:password.sql ln:7 expect:true
 SET password_encryption = true

@@ -1,5 +1,4 @@
--- file: case.sql
--- line: 182
+-- file:case.sql ln:182 expect:true
 SELECT CASE
   (CASE vol('bar')
     WHEN 'foo' THEN 'it was foo!'

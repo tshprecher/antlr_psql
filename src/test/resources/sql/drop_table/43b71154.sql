@@ -1,3 +1,2 @@
--- file: case.sql
--- line: 240
+-- file:case.sql ln:240 expect:true
 DROP TABLE CASE_TBL

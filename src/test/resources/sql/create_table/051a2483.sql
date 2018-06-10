@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 621
+-- file:inherit.sql ln:647 expect:false
 create table part_null_xy partition of list_parted for values in (null, 'xy')

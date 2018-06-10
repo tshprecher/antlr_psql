@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 550
+-- file:strings.sql ln:585 expect:true
 SELECT chr(0)

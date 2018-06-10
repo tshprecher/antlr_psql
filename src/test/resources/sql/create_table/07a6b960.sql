@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1044
+-- file:alter_table.sql ln:1063 expect:true
 create table renameColumn (a int)

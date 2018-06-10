@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 424
+-- file:collate.icu.utf8.sql ln:421 expect:true
 select textrange_c('A','Z') @> 'b'::text

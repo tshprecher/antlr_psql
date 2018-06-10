@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 60
+-- file:horology.sql ln:60 expect:true
 SELECT date 'J1520447' AS "Confucius' Birthday"

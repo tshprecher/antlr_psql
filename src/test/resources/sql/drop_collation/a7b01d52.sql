@@ -1,3 +1,2 @@
--- file: collate.sql
--- line: 240
+-- file:collate.sql ln:240 expect:true
 DROP COLLATION mycoll2

@@ -1,4 +1,3 @@
--- file: create_index.sql
--- line: 469
+-- file:create_index.sql ln:475 expect:true
 EXPLAIN (COSTS OFF)
 SELECT count(*) FROM quad_point_tbl

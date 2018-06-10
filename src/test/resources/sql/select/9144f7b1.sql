@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1096
+-- file:join.sql ln:1167 expect:true
 select t1.* from
   text_tbl t1
   left join (select *, '***'::text as d1 from int8_tbl i8b1) b1

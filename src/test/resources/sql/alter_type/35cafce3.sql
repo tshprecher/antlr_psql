@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 1678
+-- file:alter_table.sql ln:1713 expect:true
 \d test_type
 
 ALTER TYPE test_type ADD ATTRIBUTE b text

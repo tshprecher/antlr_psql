@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1259
+-- file:alter_table.sql ln:1278 expect:true
 drop domain mytype cascade

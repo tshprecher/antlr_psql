@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 385
+-- file:horology.sql ln:385 expect:true
 RESET DateStyle

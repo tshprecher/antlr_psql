@@ -1,5 +1,4 @@
--- file: xml.sql
--- line: 1
+-- file:xml.sql ln:1 expect:true
 CREATE TABLE xmltest (
     id int,
     data xml

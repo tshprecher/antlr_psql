@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 23
+-- file:select_into.sql ln:23 expect:true
 CREATE USER regress_selinto_user

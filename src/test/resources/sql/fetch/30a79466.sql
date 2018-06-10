@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 414
+-- file:transactions.sql ln:414 expect:true
 FETCH ok

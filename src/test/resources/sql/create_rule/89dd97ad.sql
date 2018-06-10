@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 631
+-- file:rules.sql ln:631 expect:true
 CREATE RULE shoelace_upd AS ON UPDATE TO shoelace
         DO INSTEAD
         UPDATE shoelace_data SET

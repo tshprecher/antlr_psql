@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 477
+-- file:rangefuncs.sql ln:477 expect:true
 select * from tt_log

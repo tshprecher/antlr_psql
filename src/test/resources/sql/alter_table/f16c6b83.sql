@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 383
+-- file:strings.sql ln:400 expect:true
 alter table toasttest alter column f1 set storage external

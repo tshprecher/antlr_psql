@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 817
+-- file:alter_table.sql ln:836 expect:true
 insert into def_test default values

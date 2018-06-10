@@ -1,4 +1,3 @@
--- file: polymorphism.sql
--- line: 224
+-- file:polymorphism.sql ln:224 expect:true
 CREATE AGGREGATE myaggn02b(*) (SFUNC = stfnp, STYPE = anyarray,
   INITCOND = '{}')

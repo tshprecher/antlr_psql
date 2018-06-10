@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 404
+-- file:transactions.sql ln:404 expect:true
 END $$

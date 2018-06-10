@@ -1,3 +1,2 @@
--- file: gist.sql
--- line: 54
+-- file:gist.sql ln:54 expect:true
 vacuum analyze gist_tbl

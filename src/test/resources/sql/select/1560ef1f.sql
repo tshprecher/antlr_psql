@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 65
+-- file:union.sql ln:65 expect:true
 SELECT f1 AS five FROM FLOAT8_TBL
   WHERE f1 BETWEEN -1e6 AND 1e6
 UNION

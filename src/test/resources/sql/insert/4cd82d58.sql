@@ -1,3 +1,2 @@
--- file: combocid.sql
--- line: 20
+-- file:combocid.sql ln:20 expect:true
 INSERT INTO combocidtest VALUES (1)

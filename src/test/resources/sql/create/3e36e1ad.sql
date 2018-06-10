@@ -1,5 +1,4 @@
--- file: hs_primary_extremes.sql
--- line: 31
+-- file:hs_primary_extremes.sql ln:31 expect:true
 CREATE OR REPLACE FUNCTION hs_locks_create (n integer)
 RETURNS void
 LANGUAGE plpgsql

@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 310
+-- file:subselect.sql ln:310 expect:true
 create temp table float_table (float_col float8)

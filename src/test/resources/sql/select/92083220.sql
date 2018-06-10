@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 53
+-- file:regex.sql ln:53 expect:true
 select regexp_matches('a', 'a(?<!a)b*')

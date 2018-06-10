@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 373
+-- file:json.sql ln:373 expect:true
 select '"foo"'::json #>> array['z']

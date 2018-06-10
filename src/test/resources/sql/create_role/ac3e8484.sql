@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 50
+-- file:rolenames.sql ln:50 expect:false
 CREATE ROLE current_role

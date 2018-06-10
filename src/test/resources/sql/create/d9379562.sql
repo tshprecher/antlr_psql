@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 427
+-- file:join.sql ln:467 expect:true
 CREATE TEMP TABLE t2 (a int, b int)

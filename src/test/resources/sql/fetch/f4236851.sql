@@ -1,3 +1,2 @@
--- file: tablesample.sql
--- line: 45
+-- file:tablesample.sql ln:45 expect:true
 FETCH NEXT FROM tablesample_cur

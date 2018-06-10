@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 486
+-- file:insert.sql ln:571 expect:true
 drop table returningwrtest

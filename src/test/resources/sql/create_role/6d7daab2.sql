@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 55
+-- file:rolenames.sql ln:55 expect:true
 CREATE ROLE public

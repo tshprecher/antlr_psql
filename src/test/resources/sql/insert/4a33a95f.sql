@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1288
+-- file:join.sql ln:1359 expect:true
 INSERT INTO c VALUES (0), (1)

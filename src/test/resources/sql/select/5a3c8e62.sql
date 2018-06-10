@@ -1,5 +1,4 @@
--- file: type_sanity.sql
--- line: 176
+-- file:type_sanity.sql ln:184 expect:true
 SELECT DISTINCT typtype, typoutput
 FROM pg_type AS p1
 WHERE p1.typtype not in ('b', 'd', 'p')

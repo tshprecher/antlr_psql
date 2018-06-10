@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 603
+-- file:rowsecurity.sql ln:603 expect:true
 EXECUTE p2(2)

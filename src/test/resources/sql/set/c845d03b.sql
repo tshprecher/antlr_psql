@@ -1,3 +1,2 @@
--- file: bitmapops.sql
--- line: 26
+-- file:bitmapops.sql ln:26 expect:true
 set enable_indexscan=false

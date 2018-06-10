@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 347
+-- file:insert_conflict.sql ln:347 expect:true
 select * from capitals

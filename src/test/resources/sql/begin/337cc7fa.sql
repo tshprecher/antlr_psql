@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 215
+-- file:plpgsql.sql ln:215 expect:false
 begin
     select into pfrec * from PField where name = ps.pfname

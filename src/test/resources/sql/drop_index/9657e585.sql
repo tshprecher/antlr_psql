@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 24
+-- file:temp.sql ln:24 expect:true
 DROP INDEX i_temptest

@@ -1,3 +1,2 @@
--- file: point.sql
--- line: 27
+-- file:point.sql ln:27 expect:true
 SELECT '' AS six, * FROM POINT_TBL

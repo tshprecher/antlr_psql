@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2216
+-- file:plpgsql.sql ln:2238 expect:true
 drop type eitype cascade

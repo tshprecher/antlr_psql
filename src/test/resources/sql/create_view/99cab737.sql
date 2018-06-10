@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 798
+-- file:triggers.sql ln:797 expect:true
 CREATE VIEW city_view AS
     SELECT city_id, city_name, population, country_name, continent
     FROM city_table ci

@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 192
+-- file:enum.sql ln:192 expect:true
 SELECT 'red'::rgb

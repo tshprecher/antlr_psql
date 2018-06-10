@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 2241
+-- file:plpgsql.sql ln:2263 expect:true
 create function excpt_test3() returns void as $$
 begin
     begin

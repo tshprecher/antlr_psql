@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1804
+-- file:alter_table.sql ln:1839 expect:true
 CREATE SCHEMA alter2

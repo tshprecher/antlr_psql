@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 909
+-- file:privileges.sql ln:943 expect:true
 CREATE SCHEMA testns5

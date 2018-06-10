@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 342
+-- file:triggers.sql ln:336 expect:true
 UPDATE some_t SET some_col = FALSE

@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1265
+-- file:triggers.sql ln:1264 expect:true
 insert into upsert values(6, 'white') on conflict (key) do update set color = 'updated ' || upsert.color

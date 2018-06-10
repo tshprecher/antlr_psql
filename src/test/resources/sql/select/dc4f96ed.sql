@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 492
+-- file:oidjoins.sql ln:500 expect:true
 SELECT	ctid, trftype
 FROM	pg_catalog.pg_transform fk
 WHERE	trftype != 0 AND

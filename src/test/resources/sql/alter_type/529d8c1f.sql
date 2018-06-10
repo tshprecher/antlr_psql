@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 267
+-- file:enum.sql ln:267 expect:false
 ALTER TYPE rainbow RENAME VALUE 'red' TO 'crimson'

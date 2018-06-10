@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 421
+-- file:domain.sql ln:421 expect:true
 alter domain con drop constraint nonexistent

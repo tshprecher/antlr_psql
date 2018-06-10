@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 329
+-- file:date.sql ln:329 expect:true
 SELECT EXTRACT(MILLENNIUM FROM DATE 'infinity')

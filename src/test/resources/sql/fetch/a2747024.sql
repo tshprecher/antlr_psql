@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 386
+-- file:transactions.sql ln:386 expect:true
 fetch from foo

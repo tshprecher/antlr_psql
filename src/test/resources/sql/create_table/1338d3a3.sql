@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 2262
+-- file:alter_table.sql ln:2295 expect:true
 CREATE TABLE part_6 (
 	c int,
 	LIKE list_parted2,

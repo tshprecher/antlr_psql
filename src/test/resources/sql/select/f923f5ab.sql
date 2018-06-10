@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 130
+-- file:window.sql ln:130 expect:true
 SELECT empno, depname, salary, bonus, depadj, MIN(bonus) OVER (ORDER BY empno), MAX(depadj) OVER () FROM(
 	SELECT *,
 		CASE WHEN enroll_date < '2008-01-01' THEN 2008 - extract(YEAR FROM enroll_date) END * 500 AS bonus,

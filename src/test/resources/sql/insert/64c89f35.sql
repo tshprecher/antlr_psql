@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 1006
+-- file:foreign_key.sql ln:1006 expect:true
 insert into pp values(12)

@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 202
+-- file:triggers.sql ln:190 expect:true
 drop table tttest

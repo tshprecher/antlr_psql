@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 327
+-- file:date.sql ln:327 expect:true
 SELECT EXTRACT(DECADE     FROM DATE 'infinity')

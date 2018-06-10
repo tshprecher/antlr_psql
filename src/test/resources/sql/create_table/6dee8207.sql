@@ -1,5 +1,4 @@
--- file: psql_crosstab.sql
--- line: 5
+-- file:psql_crosstab.sql ln:5 expect:true
 CREATE TABLE ctv_data (v, h, c, i, d) AS
 VALUES
    ('v1','h2','foo', 3, '2015-04-01'::date),

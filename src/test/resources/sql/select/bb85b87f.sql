@@ -1,5 +1,4 @@
--- file: numeric.sql
--- line: 679
+-- file:numeric.sql ln:679 expect:true
 SELECT i as pow,
 	round((-2.5 * 10 ^ i)::numeric, -i),
 	round((-1.5 * 10 ^ i)::numeric, -i),

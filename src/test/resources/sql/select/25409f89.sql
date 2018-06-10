@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 81
+-- file:regproc.sql ln:81 expect:true
 SELECT regnamespace('Nonexistent')

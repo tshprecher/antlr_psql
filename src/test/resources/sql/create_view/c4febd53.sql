@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 537
+-- file:updatable_views.sql ln:613 expect:true
 CREATE VIEW rw_view1 AS SELECT * FROM base_tbl

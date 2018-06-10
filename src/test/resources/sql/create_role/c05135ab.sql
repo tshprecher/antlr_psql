@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 53
+-- file:rolenames.sql ln:53 expect:false
 CREATE ROLE all

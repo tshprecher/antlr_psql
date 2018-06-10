@@ -1,3 +1,2 @@
--- file: tidscan.sql
--- line: 9
+-- file:tidscan.sql ln:9 expect:true
 SELECT ctid, * FROM tidscan

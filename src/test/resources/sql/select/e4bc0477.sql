@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1060
+-- file:updatable_views.sql ln:1136 expect:true
 SELECT * FROM tx1

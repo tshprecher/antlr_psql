@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 27
+-- file:regproc.sql ln:27 expect:true
 SELECT regoper('pg_catalog.||/')

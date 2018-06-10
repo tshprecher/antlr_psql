@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 264
+-- file:sequence.sql ln:264 expect:true
 DISCARD SEQUENCES

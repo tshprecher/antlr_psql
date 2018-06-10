@@ -1,3 +1,2 @@
--- file: lock.sql
--- line: 16
+-- file:lock.sql ln:22 expect:true
 LOCK TABLE lock_tbl1 IN ACCESS SHARE MODE

@@ -1,5 +1,4 @@
--- file: btree_index.sql
--- line: 14
+-- file:btree_index.sql ln:14 expect:true
 SELECT b.*
    FROM bt_i4_heap b
    WHERE b.seqno = 4500

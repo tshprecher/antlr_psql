@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 184
+-- file:window.sql ln:184 expect:true
 SELECT sum(unique1) over (rows between current row and unbounded following),
 	unique1, four
 FROM tenk1 WHERE unique1 < 10

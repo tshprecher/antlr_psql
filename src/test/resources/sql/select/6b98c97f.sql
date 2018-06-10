@@ -1,5 +1,4 @@
--- file: json.sql
--- line: 236
+-- file:json.sql ln:236 expect:true
 select count(*) from
     (select json_object_keys(json_object(array_agg(g)))
      from (select unnest(array['f'||n,n::text])as g

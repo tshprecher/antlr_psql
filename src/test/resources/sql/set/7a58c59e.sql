@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 36
+-- file:date.sql ln:36 expect:true
 SET datestyle TO ymd

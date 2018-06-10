@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 95
+-- file:window.sql ln:95 expect:true
 SELECT * FROM(
   SELECT count(*) OVER (PARTITION BY four ORDER BY ten) +
     sum(hundred) OVER (PARTITION BY two ORDER BY ten) AS total,

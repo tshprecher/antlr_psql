@@ -1,0 +1,3 @@
+-- file:comments.sql ln:33 expect:true
+/* Third level of nesting...
+SELECT 'deepest nest' as n3

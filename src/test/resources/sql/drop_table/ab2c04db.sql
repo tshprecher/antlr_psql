@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 255
+-- file:alter_table.sql ln:2541 expect:true
 drop table p1

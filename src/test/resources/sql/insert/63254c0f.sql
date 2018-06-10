@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 107
+-- file:inherit.sql ln:107 expect:true
 insert into foo values(3,3)

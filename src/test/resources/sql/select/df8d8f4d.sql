@@ -1,3 +1,2 @@
--- file: float4.sql
--- line: 83
+-- file:float4.sql ln:83 expect:true
 SELECT '' AS five, * FROM FLOAT4_TBL

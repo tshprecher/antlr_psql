@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 636
+-- file:arrays.sql ln:636 expect:true
 truncate table src

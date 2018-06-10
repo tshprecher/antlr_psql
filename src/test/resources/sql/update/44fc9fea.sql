@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 759
+-- file:triggers.sql ln:758 expect:true
 UPDATE main_view SET b = 0 WHERE false

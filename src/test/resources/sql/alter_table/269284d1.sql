@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2413
+-- file:alter_table.sql ln:2499 expect:true
 ALTER TABLE part_2 INHERIT inh_test

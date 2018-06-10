@@ -1,3 +1,2 @@
--- file: conversion.sql
--- line: 20
+-- file:conversion.sql ln:20 expect:true
 COMMENT ON CONVERSION myconv_bad IS 'foo'

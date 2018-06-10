@@ -1,5 +1,4 @@
--- file: copy2.sql
--- line: 1
+-- file:copy2.sql ln:1 expect:true
 CREATE TEMP TABLE x (
 	a serial,
 	b int,

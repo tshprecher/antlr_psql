@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 196
+-- file:oidjoins.sql ln:200 expect:true
 SELECT	ctid, conowner
 FROM	pg_catalog.pg_conversion fk
 WHERE	conowner != 0 AND

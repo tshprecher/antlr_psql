@@ -1,3 +1,2 @@
--- file: json_encoding.sql
--- line: 24
+-- file:json_encoding.sql ln:24 expect:true
 select json '{ "a":  "dollar \u0024 character" }' as correct_everywhere

@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 560
+-- file:oidjoins.sql ln:568 expect:true
 SELECT	ctid, prsnamespace
 FROM	pg_catalog.pg_ts_parser fk
 WHERE	prsnamespace != 0 AND

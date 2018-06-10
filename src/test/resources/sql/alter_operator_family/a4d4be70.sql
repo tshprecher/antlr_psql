@@ -1,5 +1,4 @@
--- file: alter_generic.sql
--- line: 276
+-- file:alter_generic.sql ln:276 expect:true
 ALTER OPERATOR FAMILY alt_opf4 USING btree ADD
     OPERATOR 1 < (int4, int2) ,
   OPERATOR 2 <= (int4, int2) ,

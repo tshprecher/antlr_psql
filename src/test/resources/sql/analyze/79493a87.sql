@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1780
+-- file:join.sql ln:1861 expect:true
 analyze fkest1

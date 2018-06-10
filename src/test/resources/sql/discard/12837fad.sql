@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 175
+-- file:guc.sql ln:175 expect:true
 DISCARD ALL

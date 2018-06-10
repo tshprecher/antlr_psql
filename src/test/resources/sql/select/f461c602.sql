@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 697
+-- file:rules.sql ln:697 expect:true
 SELECT count(*) FROM shoe

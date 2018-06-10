@@ -1,5 +1,4 @@
--- file: create_operator.sql
--- line: 107
+-- file:create_operator.sql ln:111 expect:true
 CREATE OPERATOR #@%# (
    leftarg = int8
 )

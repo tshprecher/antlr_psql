@@ -1,3 +1,2 @@
--- file: boolean.sql
--- line: 104
+-- file:boolean.sql ln:104 expect:true
 SELECT '' AS t_3, BOOLTBL1.* FROM BOOLTBL1

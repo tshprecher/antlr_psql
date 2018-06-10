@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 380
+-- file:alter_table.sql ln:399 expect:true
 set constraint_exclusion TO 'partition'

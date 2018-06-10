@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 3786
+-- file:plpgsql.sql ln:3507 expect:false
 BEGIN
   arr := array[array['foo','bar'], array['baz', 'quux']]

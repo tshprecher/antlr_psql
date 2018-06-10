@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 468
+-- file:oidjoins.sql ln:476 expect:true
 SELECT	ctid, staop4
 FROM	pg_catalog.pg_statistic fk
 WHERE	staop4 != 0 AND

@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1164
+-- file:plpgsql.sql ln:1164 expect:true
 insert into WSlot values ('WS.001.1a', '001', '', '')

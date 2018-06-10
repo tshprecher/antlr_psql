@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 51
+-- file:rowsecurity.sql ln:51 expect:true
 GRANT SELECT ON uaccount TO public

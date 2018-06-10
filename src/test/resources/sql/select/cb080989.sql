@@ -1,3 +1,2 @@
--- file: int4.sql
--- line: 46
+-- file:int4.sql ln:46 expect:true
 SELECT '' AS three, i.* FROM INT4_TBL i WHERE i.f1 <= int4 '0'

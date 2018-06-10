@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 26
+-- file:xml.sql ln:26 expect:true
 SELECT xmlconcat('bad', '<syntax')

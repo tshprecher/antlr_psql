@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 344
+-- file:triggers.sql ln:338 expect:true
 DROP TABLE some_t

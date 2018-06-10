@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 174
+-- file:truncate.sql ln:174 expect:true
 TRUNCATE trunc_trigger_test

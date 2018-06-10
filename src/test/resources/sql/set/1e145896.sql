@@ -1,3 +1,2 @@
--- file: hs_standby_disallowed.sql
--- line: 7
+-- file:hs_standby_disallowed.sql ln:7 expect:true
 SET transaction_read_only = off

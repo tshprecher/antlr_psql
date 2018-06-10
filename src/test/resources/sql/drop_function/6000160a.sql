@@ -1,3 +1,2 @@
--- file: with.sql
--- line: 960
+-- file:with.sql ln:960 expect:true
 DROP FUNCTION y_trigger()

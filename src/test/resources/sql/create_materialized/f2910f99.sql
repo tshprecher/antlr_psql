@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 28
+-- file:matview.sql ln:28 expect:true
 CREATE MATERIALIZED VIEW mvtest_tvm AS SELECT * FROM mvtest_tv ORDER BY type

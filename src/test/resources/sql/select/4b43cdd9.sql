@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 53
+-- file:jsonb.sql ln:53 expect:true
 SELECT 'null'::jsonb

@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 236
+-- file:subselect.sql ln:236 expect:true
 DROP TABLE orderstest cascade

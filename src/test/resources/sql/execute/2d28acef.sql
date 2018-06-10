@@ -1,5 +1,4 @@
--- file: psql.sql
--- line: 94
+-- file:psql.sql ln:94 expect:false
 EXECUTE test \gdesc
 EXPLAIN EXECUTE test \gdesc
 

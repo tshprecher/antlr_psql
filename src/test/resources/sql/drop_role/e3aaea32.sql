@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1772
+-- file:rowsecurity.sql ln:1784 expect:true
 DROP ROLE regress_rls_group1

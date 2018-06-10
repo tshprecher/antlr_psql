@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 725
+-- file:plpgsql.sql ln:2375 expect:true
 select * from foo

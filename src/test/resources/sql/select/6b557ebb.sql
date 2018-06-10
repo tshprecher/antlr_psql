@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 264
+-- file:oidjoins.sql ln:268 expect:true
 SELECT	ctid, inhparent
 FROM	pg_catalog.pg_inherits fk
 WHERE	inhparent != 0 AND

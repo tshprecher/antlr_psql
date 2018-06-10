@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 25
+-- file:interval.sql ln:25 expect:true
 INSERT INTO INTERVAL_TBL (f1) VALUES ('@ 14 seconds ago')

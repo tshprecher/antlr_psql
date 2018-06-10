@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 105
+-- file:foreign_data.sql ln:105 expect:true
 DROP FOREIGN DATA WRAPPER nonexistent

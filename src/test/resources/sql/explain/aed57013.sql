@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 293
+-- file:groupingsets.sql ln:318 expect:true
 explain (costs off)
   select unhashable_col, unsortable_col,
          grouping(unhashable_col, unsortable_col),

@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 297
+-- file:jsonb.sql ln:297 expect:true
 SELECT jsonb_typeof('{}') AS object

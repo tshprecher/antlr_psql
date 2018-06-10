@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 102
+-- file:tstypes.sql ln:102 expect:true
 SELECT 'supernova'::tsvector @@ 'super'::tsquery AS "false"

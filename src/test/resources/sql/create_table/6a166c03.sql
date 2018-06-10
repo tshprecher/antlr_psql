@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 56
+-- file:create_table.sql ln:56 expect:true
 CREATE TABLE tenk2 (
 	unique1 	int4,
 	unique2 	int4,

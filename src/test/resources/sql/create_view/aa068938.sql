@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 200
+-- file:subselect.sql ln:200 expect:false
 CREATE VIEW orders_view AS
 SELECT *,
 (SELECT CASE

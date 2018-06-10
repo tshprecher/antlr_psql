@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1225
+-- file:alter_table.sql ln:1244 expect:true
 alter table altwithoid set without oids

@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1051
+-- file:updatable_views.sql ln:1127 expect:true
 CREATE TABLE tx1 (a integer, b integer)

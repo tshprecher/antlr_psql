@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 96
+-- file:transactions.sql ln:96 expect:true
 START TRANSACTION READ WRITE

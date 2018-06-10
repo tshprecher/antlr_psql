@@ -1,5 +1,4 @@
--- file: create_type.sql
--- line: 73
+-- file:create_type.sql ln:73 expect:true
 CREATE TYPE text_w_default (
    internallength = variable,
    input = text_w_default_in,

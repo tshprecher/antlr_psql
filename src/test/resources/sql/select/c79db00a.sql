@@ -1,4 +1,3 @@
--- file: comments.sql
--- line: 19
+-- file:comments.sql ln:19 expect:true
 /*
 SELECT 'trailing' as x1

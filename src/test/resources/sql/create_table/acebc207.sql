@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1552
+-- file:triggers.sql ln:1784 expect:false
 create table child partition of parent for values in ('AAA')

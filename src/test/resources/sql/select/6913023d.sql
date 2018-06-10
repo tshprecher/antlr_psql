@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3839
+-- file:plpgsql.sql ln:3560 expect:true
 select recurse(10)

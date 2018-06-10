@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 64
+-- file:oidjoins.sql ln:64 expect:true
 SELECT	ctid, amoprighttype
 FROM	pg_catalog.pg_amop fk
 WHERE	amoprighttype != 0 AND

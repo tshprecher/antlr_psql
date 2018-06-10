@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 69
+-- file:regproc.sql ln:69 expect:true
 SELECT regproc('ng_catalog.now')

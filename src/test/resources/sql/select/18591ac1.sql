@@ -1,3 +1,2 @@
--- file: xmlmap.sql
--- line: 40
+-- file:xmlmap.sql ln:40 expect:true
 SELECT schema_to_xmlschema('testxmlschema', false, true, '')

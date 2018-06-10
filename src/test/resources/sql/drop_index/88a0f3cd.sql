@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 790
+-- file:create_index.sql ln:820 expect:true
 DROP INDEX CONCURRENTLY IF EXISTS "concur_index2"

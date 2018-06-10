@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1059
+-- file:updatable_views.sql ln:1135 expect:true
 INSERT INTO vx1 VALUES (1)

@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 1053
+-- file:opr_sanity.sql ln:1054 expect:true
 SELECT a.aggfnoid::oid, o.oid
 FROM pg_operator AS o, pg_aggregate AS a, pg_proc AS p
 WHERE a.aggfnoid = p.oid AND a.aggsortop = o.oid AND

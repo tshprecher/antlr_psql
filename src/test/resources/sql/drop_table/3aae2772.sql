@@ -1,3 +1,2 @@
--- file: hash_index.sql
--- line: 186
+-- file:hash_index.sql ln:186 expect:true
 DROP TABLE hash_split_heap

@@ -1,3 +1,2 @@
--- file: text.sql
--- line: 111
+-- file:text.sql ln:111 expect:true
 select format('>>%2$*1$L<<', 10, NULL)

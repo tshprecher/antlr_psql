@@ -1,3 +1,2 @@
--- file: copyselect.sql
--- line: 28
+-- file:copyselect.sql ln:28 expect:true
 copy v_test1 to stdout

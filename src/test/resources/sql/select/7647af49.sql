@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 116
+-- file:oidjoins.sql ln:116 expect:true
 SELECT	ctid, member
 FROM	pg_catalog.pg_auth_members fk
 WHERE	member != 0 AND

@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 128
+-- file:truncate.sql ln:128 expect:true
 DROP TABLE trunc_f CASCADE

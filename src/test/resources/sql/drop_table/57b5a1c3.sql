@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 445
+-- file:insert.sql ln:507 expect:true
 drop table brtrigpartcon

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2069
+-- file:alter_table.sql ln:2101 expect:true
 CREATE TABLE child () INHERITS (parent)

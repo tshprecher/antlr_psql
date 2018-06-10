@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 819
+-- file:updatable_views.sql ln:895 expect:true
 INSERT INTO rw_view2 VALUES (50)

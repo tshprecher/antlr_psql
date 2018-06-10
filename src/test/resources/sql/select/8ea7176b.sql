@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 37
+-- file:horology.sql ln:37 expect:true
 SELECT timestamp with time zone 'J2452271T040506-08'

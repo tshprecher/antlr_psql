@@ -1,3 +1,2 @@
--- file: identity.sql
--- line: 118
+-- file:identity.sql ln:143 expect:true
 INSERT INTO itestv11 VALUES (10, 'xyz')

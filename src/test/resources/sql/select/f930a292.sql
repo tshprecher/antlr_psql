@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 563
+-- file:arrays.sql ln:563 expect:true
 select cardinality('{}'::int[])

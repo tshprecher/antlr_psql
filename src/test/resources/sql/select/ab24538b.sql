@@ -1,5 +1,4 @@
--- file: enum.sql
--- line: 126
+-- file:enum.sql ln:126 expect:false
 blue
 purple
 \.

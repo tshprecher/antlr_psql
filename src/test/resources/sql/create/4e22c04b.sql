@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 277
+-- file:errors.sql ln:277 expect:false
 CREATE foo

@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 971
+-- file:foreign_key.sql ln:971 expect:true
 select a, b from selfref

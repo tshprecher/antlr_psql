@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 126
+-- file:strings.sql ln:126 expect:true
 SELECT SUBSTRING('abcdefg' FROM 'c.e') AS "cde"

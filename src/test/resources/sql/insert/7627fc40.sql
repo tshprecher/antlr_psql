@@ -1,5 +1,4 @@
--- file: with.sql
--- line: 303
+-- file:with.sql ln:303 expect:true
 insert into graph values
 	(1, 2, 'arc 1 -> 2'),
 	(1, 3, 'arc 1 -> 3'),

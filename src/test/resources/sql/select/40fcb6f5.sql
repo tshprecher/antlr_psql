@@ -1,3 +1,2 @@
--- file: macaddr.sql
--- line: 23
+-- file:macaddr.sql ln:23 expect:true
 SELECT * FROM macaddr_data

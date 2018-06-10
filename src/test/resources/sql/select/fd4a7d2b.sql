@@ -1,3 +1,2 @@
--- file: object_address.sql
--- line: 109
+-- file:object_address.sql ln:110 expect:true
 SELECT pg_get_object_address('language', '{one}', '{}')

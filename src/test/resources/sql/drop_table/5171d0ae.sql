@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 221
+-- file:cluster.sql ln:228 expect:true
 DROP TABLE clstr_2

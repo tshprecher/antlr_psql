@@ -1,3 +1,2 @@
--- file: macaddr.sql
--- line: 43
+-- file:macaddr.sql ln:43 expect:true
 DROP TABLE macaddr_data

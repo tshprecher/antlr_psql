@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 866
+-- file:polygon.sql ln:159 expect:true
 SET enable_bitmapscan = ON

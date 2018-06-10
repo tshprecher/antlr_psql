@@ -1,3 +1,2 @@
--- file: functional_deps.sql
--- line: 159
+-- file:functional_deps.sql ln:159 expect:true
 DROP VIEW fdv1

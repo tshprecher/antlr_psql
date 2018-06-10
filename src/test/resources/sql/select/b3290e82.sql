@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 244
+-- file:portals.sql ln:244 expect:true
 SELECT declares_cursor('AB%')

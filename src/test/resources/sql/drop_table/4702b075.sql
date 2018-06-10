@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 1156
+-- file:rules.sql ln:1156 expect:true
 drop table hat_data

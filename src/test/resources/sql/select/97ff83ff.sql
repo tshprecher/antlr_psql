@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1845
+-- file:plpgsql.sql ln:1845 expect:true
 select trap_foreign_key(1)

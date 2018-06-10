@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 13
+-- file:create_table_like.sql ln:13 expect:true
 CREATE TABLE foo (LIKE nonexistent)

@@ -1,5 +1,4 @@
--- file: tinterval.sql
--- line: 85
+-- file:tinterval.sql ln:85 expect:true
 SELECT '' AS five, t1.f1
    FROM TINTERVAL_TBL t1
    WHERE not t1.f1 <<

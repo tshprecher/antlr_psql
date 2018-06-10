@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 588
+-- file:oidjoins.sql ln:596 expect:true
 SELECT	ctid, tmplinit
 FROM	pg_catalog.pg_ts_template fk
 WHERE	tmplinit != 0 AND

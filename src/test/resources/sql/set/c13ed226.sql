@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 349
+-- file:horology.sql ln:349 expect:true
 SET DateStyle TO 'US,SQL'

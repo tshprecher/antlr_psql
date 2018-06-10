@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 302
+-- file:union.sql ln:345 expect:true
 SELECT * FROM
   (SELECT 1 AS t, 2 AS x
    UNION

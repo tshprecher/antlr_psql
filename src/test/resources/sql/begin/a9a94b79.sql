@@ -1,5 +1,4 @@
--- file: stats.sql
--- line: 41
+-- file:stats.sql ln:41 expect:false
 begin
     for i in 1 .. 300 loop
 

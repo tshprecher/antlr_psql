@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 566
+-- file:rangefuncs.sql ln:566 expect:true
 select * from usersview

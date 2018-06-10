@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 200
+-- file:oidjoins.sql ln:204 expect:true
 SELECT	ctid, conproc
 FROM	pg_catalog.pg_conversion fk
 WHERE	conproc != 0 AND

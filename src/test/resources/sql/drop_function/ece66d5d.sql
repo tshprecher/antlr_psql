@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 504
+-- file:polymorphism.sql ln:504 expect:true
 drop function concat(text, anyarray)

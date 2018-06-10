@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 343
+-- file:copy2.sql ln:343 expect:true
 ALTER TABLE rls_t1 ENABLE ROW LEVEL SECURITY

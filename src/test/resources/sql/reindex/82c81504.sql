@@ -1,3 +1,2 @@
--- file: hash_index.sql
--- line: 183
+-- file:hash_index.sql ln:183 expect:true
 REINDEX INDEX hash_split_index

@@ -1,5 +1,4 @@
--- file: hash_func.sql
--- line: 90
+-- file:hash_func.sql ln:90 expect:true
 SELECT v as value, hashmacaddr(v)::bit(32) as standard,
 	   hashmacaddrextended(v, 0)::bit(32) as extended0,
 	   hashmacaddrextended(v, 1)::bit(32) as extended1

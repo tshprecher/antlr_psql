@@ -1,3 +1,2 @@
--- file: without_oid.sql
--- line: 91
+-- file:without_oid.sql ln:91 expect:true
 DROP TABLE execute_with

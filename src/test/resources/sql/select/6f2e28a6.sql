@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 16
+-- file:regproc.sql ln:16 expect:true
 SELECT regtype('int4')

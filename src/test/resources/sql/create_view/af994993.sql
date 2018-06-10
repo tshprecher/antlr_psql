@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 1047
+-- file:rules.sql ln:1047 expect:true
 create view rule_v1 as values(1,2)

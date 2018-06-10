@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 355
+-- file:window.sql ln:917 expect:true
 CREATE FUNCTION logging_minvfunc_strict(text, anyelement) RETURNS text AS
 $$ SELECT $1 || '-' || quote_nullable($2) $$
 LANGUAGE SQL STRICT IMMUTABLE

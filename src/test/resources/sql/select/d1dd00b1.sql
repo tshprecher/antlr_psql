@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 452
+-- file:oidjoins.sql ln:460 expect:true
 SELECT	ctid, starelid
 FROM	pg_catalog.pg_statistic fk
 WHERE	starelid != 0 AND

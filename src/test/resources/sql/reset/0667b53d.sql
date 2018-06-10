@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 421
+-- file:timestamptz.sql ln:425 expect:true
 RESET TimeZone

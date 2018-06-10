@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 25
+-- file:regex.sql ln:25 expect:true
 select substring('a' from '((a))+')

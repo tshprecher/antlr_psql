@@ -1,3 +1,2 @@
--- file: subscription.sql
--- line: 30
+-- file:subscription.sql ln:30 expect:false
 COMMENT ON SUBSCRIPTION testsub IS 'test subscription'

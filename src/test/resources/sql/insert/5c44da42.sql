@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 252
+-- file:rules.sql ln:252 expect:true
 insert into rtest_admin values ('jw', 'notjw')

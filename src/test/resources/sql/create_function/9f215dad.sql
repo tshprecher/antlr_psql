@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 986
+-- file:triggers.sql ln:985 expect:true
 create function depth_b_tf() returns trigger
   language plpgsql as $$
 begin

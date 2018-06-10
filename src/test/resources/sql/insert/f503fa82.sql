@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 52
+-- file:rowsecurity.sql ln:52 expect:true
 INSERT INTO uaccount VALUES
     ('regress_rls_alice', 99),
     ('regress_rls_bob', 1),

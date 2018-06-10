@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 27
+-- file:rangetypes.sql ln:27 expect:true
 select '[,z]'::textrange

@@ -1,3 +1,2 @@
--- file: select_views.sql
--- line: 155
+-- file:select_views.sql ln:155 expect:true
 DROP ROLE regress_alice

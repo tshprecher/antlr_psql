@@ -1,5 +1,4 @@
--- file: tinterval.sql
--- line: 92
+-- file:tinterval.sql ln:92 expect:true
 SELECT '' AS three, t1.f1
    FROM TINTERVAL_TBL t1
    WHERE t1.f1 &&

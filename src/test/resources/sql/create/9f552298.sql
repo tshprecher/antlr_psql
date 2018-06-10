@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 3212
+-- file:plpgsql.sql ln:2999 expect:true
 create or replace function compos() returns compostype as $$
 declare
   v record

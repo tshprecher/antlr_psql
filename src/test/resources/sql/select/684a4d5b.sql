@@ -1,3 +1,2 @@
--- file: txid.sql
--- line: 10
+-- file:txid.sql ln:10 expect:true
 select '0:1:'::txid_snapshot

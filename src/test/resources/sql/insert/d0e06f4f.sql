@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 627
+-- file:plpgsql.sql ln:627 expect:true
 insert into PHone (
 		    slotname,
 		    comment,

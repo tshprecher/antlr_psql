@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 401
+-- file:timestamptz.sql ln:405 expect:true
 SELECT to_timestamp('-Infinity'::float)

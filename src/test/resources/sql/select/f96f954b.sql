@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 16
+-- file:subselect.sql ln:16 expect:true
 (SELECT 2) UNION SELECT 2

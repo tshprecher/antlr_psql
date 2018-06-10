@@ -1,3 +1,2 @@
--- file: hash_index.sql
--- line: 166
+-- file:create_am.sql ln:44 expect:true
 SET enable_bitmapscan = OFF

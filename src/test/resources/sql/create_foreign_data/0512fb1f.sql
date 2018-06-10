@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 136
+-- file:foreign_data.sql ln:136 expect:true
 CREATE FOREIGN DATA WRAPPER foo OPTIONS ("test wrapper" 'true')

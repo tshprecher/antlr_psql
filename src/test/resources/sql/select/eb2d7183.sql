@@ -1,3 +1,2 @@
--- file: comments.sql
--- line: 5
+-- file:comments.sql ln:5 expect:true
 SELECT 'trailing' AS first

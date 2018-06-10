@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 383
+-- file:horology.sql ln:383 expect:true
 SELECT '' AS seven, f1 AS european_sql FROM ABSTIME_TBL

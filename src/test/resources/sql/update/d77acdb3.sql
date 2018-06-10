@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 418
+-- file:tsearch.sql ln:418 expect:true
 UPDATE test_tsquery SET keyword = to_tsquery('english', txtkeyword)

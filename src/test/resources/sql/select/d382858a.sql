@@ -1,5 +1,4 @@
--- file: xml.sql
--- line: 260
+-- file:xml.sql ln:296 expect:true
 \set VERBOSITY default
 
 SELECT xpath('/*', '<nosuchprefix:tag/>')

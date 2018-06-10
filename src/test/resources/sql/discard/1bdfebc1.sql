@@ -1,3 +1,2 @@
--- file: hs_standby_allowed.sql
--- line: 121
+-- file:hs_standby_allowed.sql ln:121 expect:true
 discard all

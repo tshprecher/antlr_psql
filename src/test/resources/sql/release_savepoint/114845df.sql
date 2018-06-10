@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 470
+-- file:transactions.sql ln:470 expect:true
 RELEASE SAVEPOINT sp\

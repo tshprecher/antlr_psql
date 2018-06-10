@@ -1,5 +1,4 @@
--- file: insert.sql
--- line: 249
+-- file:insert.sql ln:308 expect:true
 select attrelid::regclass, attname, attnum
 from pg_attribute
 where attname = 'a'

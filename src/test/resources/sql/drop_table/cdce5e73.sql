@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 459
+-- file:create_table.sql ln:454 expect:true
 DROP TABLE bools

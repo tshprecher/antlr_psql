@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 805
+-- file:foreign_data.sql ln:811 expect:true
 DROP SERVER t1 CASCADE

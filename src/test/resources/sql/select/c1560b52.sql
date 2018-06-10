@@ -1,3 +1,2 @@
--- file: sysviews.sql
--- line: 16
+-- file:sysviews.sql ln:16 expect:true
 select count(*) > 20 as ok from pg_config

@@ -1,5 +1,4 @@
--- file: foreign_data.sql
--- line: 228
+-- file:foreign_data.sql ln:228 expect:true
 \des
 \deu
 

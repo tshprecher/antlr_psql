@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 376
+-- file:sequence.sql ln:376 expect:true
 SAVEPOINT save

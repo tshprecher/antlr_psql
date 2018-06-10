@@ -1,5 +1,4 @@
--- file: subscription.sql
--- line: 77
+-- file:subscription.sql ln:77 expect:false
 \dRs
 
 ALTER SUBSCRIPTION testsub DISABLE

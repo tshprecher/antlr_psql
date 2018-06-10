@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 412
+-- file:triggers.sql ln:411 expect:true
 insert into trigtest default values

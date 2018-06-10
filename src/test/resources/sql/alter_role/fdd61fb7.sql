@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 81
+-- file:rolenames.sql ln:81 expect:true
 ALTER ROLE SESSION_USER WITH REPLICATION

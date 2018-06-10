@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4217
+-- file:plpgsql.sql ln:3938 expect:true
 select arrayassign1()

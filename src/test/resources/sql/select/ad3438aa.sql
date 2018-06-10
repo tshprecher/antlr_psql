@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 242
+-- file:xml.sql ln:278 expect:true
 SELECT xml_is_well_formed('<twoerrors>&idontexist

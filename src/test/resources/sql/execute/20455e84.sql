@@ -1,3 +1,2 @@
--- file: plancache.sql
--- line: 122
+-- file:plancache.sql ln:122 expect:true
 execute p1

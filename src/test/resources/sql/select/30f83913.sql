@@ -1,5 +1,4 @@
--- file: int4.sql
--- line: 140
+-- file:int4.sql ln:140 expect:true
 SELECT x, x::int4 AS int4_value
 FROM (VALUES (-2.5::float8),
              (-1.5::float8),

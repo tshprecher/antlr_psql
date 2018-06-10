@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 1079
+-- file:create_index.sql ln:1126 expect:true
 CREATE ROLE regress_reindexuser NOLOGIN

@@ -1,3 +1,2 @@
--- file: timestamp.sql
--- line: 52
+-- file:timestamp.sql ln:52 expect:true
 INSERT INTO TIMESTAMP_TBL VALUES ('epoch')

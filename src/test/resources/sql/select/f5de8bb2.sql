@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 358
+-- file:arrays.sql ln:358 expect:true
 select null::int >= all ('{}')

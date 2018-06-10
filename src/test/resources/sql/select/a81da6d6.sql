@@ -1,4 +1,3 @@
--- file: privileges.sql
--- line: 640
+-- file:privileges.sql ln:672 expect:true
 select has_table_privilege(current_user,t1.oid,'references')
 from (select oid from pg_class where relname = 'pg_class') as t1

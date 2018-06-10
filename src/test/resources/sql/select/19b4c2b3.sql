@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 380
+-- file:xml.sql ln:416 expect:false
 SELECT xmltable.* FROM xmldata, LATERAL xmltable('/ROWS/ROW[COUNTRY_NAME="Japan" or COUNTRY_NAME="India"]' PASSING data COLUMNS id int PATH '@id', "COUNTRY_NAME" text, "REGION_ID" int)

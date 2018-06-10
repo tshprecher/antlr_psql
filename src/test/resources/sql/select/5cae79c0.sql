@@ -1,5 +1,4 @@
--- file: domain.sql
--- line: 99
+-- file:domain.sql ln:99 expect:false
 {3,4}	{qwerty,w,e}
 \.
 

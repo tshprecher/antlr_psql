@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 43
+-- file:prepared_xacts.sql ln:43 expect:true
 COMMIT PREPARED 'foo2'

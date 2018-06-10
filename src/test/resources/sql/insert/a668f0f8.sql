@@ -1,3 +1,2 @@
--- file: time.sql
--- line: 8
+-- file:time.sql ln:8 expect:true
 INSERT INTO TIME_TBL VALUES ('01:00')

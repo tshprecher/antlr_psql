@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 119
+-- file:rolenames.sql ln:119 expect:true
 SELECT * FROM chkrolattr()

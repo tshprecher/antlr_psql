@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 194
+-- file:subselect.sql ln:194 expect:true
 INSERT INTO orderstest VALUES (66, 1, false)

@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 50
+-- file:timestamptz.sql ln:50 expect:true
 INSERT INTO TIMESTAMPTZ_TBL VALUES ('infinity')

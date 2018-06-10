@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 524
+-- file:polymorphism.sql ln:524 expect:true
 select pg_typeof('x')

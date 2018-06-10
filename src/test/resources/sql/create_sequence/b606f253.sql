@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 29
+-- file:sequence.sql ln:259 expect:true
 CREATE SEQUENCE seq

@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 294
+-- file:enum.sql ln:294 expect:true
 DROP TYPE bogus

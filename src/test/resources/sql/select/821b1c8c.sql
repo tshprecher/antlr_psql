@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 616
+-- file:json.sql ln:622 expect:true
 SELECT json_build_object(VARIADIC '{}'::text[])

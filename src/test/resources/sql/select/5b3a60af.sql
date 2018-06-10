@@ -1,5 +1,4 @@
--- file: misc_sanity.sql
--- line: 31
+-- file:misc_sanity.sql ln:31 expect:true
 SELECT *
 FROM pg_shdepend as d1
 WHERE refclassid = 0 OR refobjid = 0 OR

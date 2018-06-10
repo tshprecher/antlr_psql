@@ -1,5 +1,4 @@
--- file: arrays.sql
--- line: 209
+-- file:arrays.sql ln:209 expect:true
 INSERT INTO arrtest2 VALUES(
   ARRAY[[[113,142],[1,147]]],
   ARRAY[1.1,1.2,1.3]::float8[],

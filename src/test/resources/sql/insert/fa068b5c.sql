@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 54
+-- file:rangetypes.sql ln:54 expect:true
 INSERT INTO numrange_test VALUES('[, 5)')

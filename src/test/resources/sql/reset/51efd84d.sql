@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 125
+-- file:rangefuncs.sql ln:487 expect:true
 reset work_mem

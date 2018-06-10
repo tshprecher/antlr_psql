@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2812
+-- file:plpgsql.sql ln:2599 expect:true
 drop function shadowtest(int)

@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 973
+-- file:create_index.sql ln:1009 expect:true
 vacuum tenk1

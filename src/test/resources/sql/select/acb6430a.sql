@@ -1,5 +1,4 @@
--- file: create_function_3.sql
--- line: 154
+-- file:create_function_3.sql ln:169 expect:true
 SELECT routine_name, ordinal_position, parameter_name, parameter_default
     FROM information_schema.parameters JOIN information_schema.routines USING (specific_schema, specific_name)
     WHERE routine_schema = 'temp_func_test' AND routine_name ~ '^functest_is_'

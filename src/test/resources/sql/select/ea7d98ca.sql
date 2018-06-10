@@ -1,3 +1,2 @@
--- file: int4.sql
--- line: 137
+-- file:int4.sql ln:137 expect:true
 SELECT (-2147483648)::int4 % (-1)::int2

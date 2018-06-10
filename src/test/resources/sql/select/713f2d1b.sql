@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 249
+-- file:date.sql ln:249 expect:true
 SELECT EXTRACT(MILLENNIUM FROM CURRENT_DATE)

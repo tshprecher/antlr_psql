@@ -1,4 +1,3 @@
--- file: create_function_3.sql
--- line: 30
+-- file:create_function_3.sql ln:37 expect:true
 CREATE FUNCTION functest_B_1(int) RETURNS bool LANGUAGE 'sql'
        AS 'SELECT $1 > 0'

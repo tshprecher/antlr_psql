@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 341
+-- file:strings.sql ln:341 expect:true
 CREATE TABLE toasttest(f1 text)

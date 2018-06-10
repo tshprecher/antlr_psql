@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1001
+-- file:alter_table.sql ln:1020 expect:true
 drop table child

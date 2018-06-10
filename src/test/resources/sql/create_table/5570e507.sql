@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 334
+-- file:create_table.sql ln:322 expect:false
 CREATE TABLE partitioned (
 	a int,
 	b int

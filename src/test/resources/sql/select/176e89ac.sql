@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 315
+-- file:transactions.sql ln:315 expect:true
 select * from xacttest

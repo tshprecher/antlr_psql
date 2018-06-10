@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1640
+-- file:plpgsql.sql ln:1640 expect:true
 drop function duplic(anyelement)

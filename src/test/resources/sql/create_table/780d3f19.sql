@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 227
+-- file:inherit.sql ln:227 expect:true
 create table c1 () inherits (p1)

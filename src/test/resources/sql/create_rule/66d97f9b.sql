@@ -1,3 +1,2 @@
--- file: copydml.sql
--- line: 56
+-- file:copydml.sql ln:56 expect:true
 create rule qqq as on delete to copydml_test do instead nothing

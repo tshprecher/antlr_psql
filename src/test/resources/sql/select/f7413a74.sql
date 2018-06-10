@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 47
+-- file:jsonb.sql ln:47 expect:true
 SELECT repeat('{"a":', 10000)::jsonb

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 551
+-- file:alter_table.sql ln:570 expect:true
 drop table atacc3

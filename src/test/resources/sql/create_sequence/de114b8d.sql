@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 23
+-- file:sequence.sql ln:23 expect:false
 CREATE SEQUENCE sequence_test5 AS integer

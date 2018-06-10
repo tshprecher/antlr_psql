@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 398
+-- file:domain.sql ln:398 expect:true
 select * from domdeftest

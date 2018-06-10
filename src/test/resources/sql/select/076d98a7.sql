@@ -1,5 +1,4 @@
--- file: select.sql
--- line: 131
+-- file:select.sql ln:131 expect:true
 select * from onek,
   (values ((select i from
     (values(10000), (2), (389), (1000), (2000), ((select 10029))) as foo(i)

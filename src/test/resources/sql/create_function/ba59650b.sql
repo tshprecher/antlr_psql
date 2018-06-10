@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 4732
+-- file:plpgsql.sql ln:4462 expect:true
 CREATE FUNCTION alter_table_under_transition_tables_upd_func()
   RETURNS TRIGGER
   LANGUAGE plpgsql

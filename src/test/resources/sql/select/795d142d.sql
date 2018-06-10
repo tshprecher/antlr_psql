@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 600
+-- file:oidjoins.sql ln:608 expect:true
 SELECT	ctid, typowner
 FROM	pg_catalog.pg_type fk
 WHERE	typowner != 0 AND

@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 313
+-- file:create_table.sql ln:301 expect:false
 CREATE TABLE partitioned (
 	a int,
 	EXCLUDE USING gist (a WITH &&)

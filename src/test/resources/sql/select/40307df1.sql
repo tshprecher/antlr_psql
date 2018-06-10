@@ -1,3 +1,2 @@
--- file: random.sql
--- line: 7
+-- file:random.sql ln:7 expect:true
 SELECT count(*) FROM onek

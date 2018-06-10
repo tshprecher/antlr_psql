@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 43
+-- file:plpgsql.sql ln:43 expect:true
 create table PField (
     name	text,
     comment	text

@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 59
+-- file:tstypes.sql ln:59 expect:true
 SELECT 'a:* & nbb:*ac | doo:a* | goo'::tsquery

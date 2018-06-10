@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 42
+-- file:json.sql ln:42 expect:true
 SELECT '{"abc":1,3}'::json

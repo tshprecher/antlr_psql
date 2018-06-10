@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 16
+-- file:jsonb.sql ln:16 expect:true
 SELECT '0.1'::jsonb

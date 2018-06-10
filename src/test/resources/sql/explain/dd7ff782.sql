@@ -1,4 +1,3 @@
--- file: create_index.sql
--- line: 457
+-- file:create_index.sql ln:463 expect:true
 EXPLAIN (COSTS OFF)
 SELECT * FROM point_tbl WHERE f1 <@ '(-10,-10),(10,10)':: box ORDER BY f1 <-> '0,1'

@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 259
+-- file:create_table.sql ln:263 expect:true
 REINDEX INDEX unlogged1_pkey

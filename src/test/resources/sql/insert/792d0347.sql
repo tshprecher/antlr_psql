@@ -1,3 +1,2 @@
--- file: timestamp.sql
--- line: 54
+-- file:timestamp.sql ln:54 expect:true
 INSERT INTO TIMESTAMP_TBL VALUES ('invalid')

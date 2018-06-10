@@ -1,3 +1,2 @@
--- file: hash_func.sql
--- line: 196
+-- file:hash_func.sql ln:196 expect:true
 CREATE TYPE mood AS ENUM ('sad', 'ok', 'happy')

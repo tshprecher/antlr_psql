@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 240
+-- file:oidjoins.sql ln:244 expect:true
 SELECT	ctid, fdwowner
 FROM	pg_catalog.pg_foreign_data_wrapper fk
 WHERE	fdwowner != 0 AND

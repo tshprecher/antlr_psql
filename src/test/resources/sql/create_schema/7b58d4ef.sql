@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 22
+-- file:select_into.sql ln:22 expect:true
 CREATE SCHEMA selinto_schema

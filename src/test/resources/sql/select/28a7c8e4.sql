@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1176
+-- file:alter_table.sql ln:1195 expect:true
 select * from altstartwith

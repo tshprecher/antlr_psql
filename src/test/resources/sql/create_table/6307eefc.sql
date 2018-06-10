@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 404
+-- file:domain.sql ln:404 expect:true
 create table domcontest (col1 con)

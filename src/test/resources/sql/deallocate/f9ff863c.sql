@@ -1,3 +1,2 @@
--- file: psql.sql
--- line: 425
+-- file:psql.sql ln:425 expect:true
 deallocate q

@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 655
+-- file:numeric.sql ln:655 expect:true
 SELECT * FROM fract_only

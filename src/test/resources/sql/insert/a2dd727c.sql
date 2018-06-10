@@ -1,3 +1,2 @@
--- file: partition_join.sql
--- line: 254
+-- file:partition_join.sql ln:286 expect:true
 INSERT INTO prt2_l SELECT i % 25, i, to_char(i % 4, 'FM0000') FROM generate_series(0, 599, 3) i

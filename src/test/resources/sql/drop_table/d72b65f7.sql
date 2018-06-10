@@ -1,3 +1,2 @@
--- file: hs_primary_setup.sql
--- line: 11
+-- file:hs_primary_setup.sql ln:11 expect:true
 drop table if exists hs2

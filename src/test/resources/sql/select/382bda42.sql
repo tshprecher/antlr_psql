@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 483
+-- file:jsonb.sql ln:483 expect:true
 select '{"a": {"b":{"c": "foo"}}}'::jsonb #>> array['a', null]

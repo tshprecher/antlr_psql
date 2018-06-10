@@ -1,3 +1,2 @@
--- file: partition_join.sql
--- line: 148
+-- file:partition_join.sql ln:148 expect:true
 SET enable_nestloop TO off

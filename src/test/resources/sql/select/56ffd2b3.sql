@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 234
+-- file:subselect.sql ln:234 expect:true
 SELECT * FROM orders_view

@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 158
+-- file:rolenames.sql ln:158 expect:true
 ALTER USER SESSION_USER SET application_name to 'BAR'

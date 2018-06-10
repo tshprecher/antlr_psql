@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 396
+-- file:oidjoins.sql ln:404 expect:true
 SELECT	ctid, provariadic
 FROM	pg_catalog.pg_proc fk
 WHERE	provariadic != 0 AND

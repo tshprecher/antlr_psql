@@ -1,3 +1,2 @@
--- file: copyselect.sql
--- line: 16
+-- file:copyselect.sql ln:16 expect:true
 insert into test2 (t) values ('E')

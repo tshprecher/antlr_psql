@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 262
+-- file:sequence.sql ln:262 expect:true
 SELECT setval('seq', 99)

@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 237
+-- file:errors.sql ln:237 expect:true
 drop rule nonesuch on noplace

@@ -1,4 +1,3 @@
--- file: alter_table.sql
--- line: 1741
+-- file:alter_table.sql ln:1776 expect:true
 \d test_tblx
 DROP TABLE test_tblx

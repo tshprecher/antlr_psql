@@ -1,5 +1,4 @@
--- file: rowtypes.sql
--- line: 104
+-- file:rowtypes.sql ln:107 expect:true
 select unique1, unique2 from tenk1
 where (unique1, unique2) < any (select ten, ten from tenk1 where hundred < 3)
       and unique1 <= 20

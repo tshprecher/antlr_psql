@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 4531
+-- file:plpgsql.sql ln:4261 expect:false
 FOR l IN EXECUTE
            $q$
              EXPLAIN (TIMING off, COSTS off, VERBOSE on)

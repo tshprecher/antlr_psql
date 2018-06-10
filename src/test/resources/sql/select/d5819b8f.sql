@@ -1,3 +1,2 @@
--- file: prepare.sql
--- line: 30
+-- file:prepare.sql ln:30 expect:true
 SELECT name, statement, parameter_types FROM pg_prepared_statements

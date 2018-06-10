@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1864
+-- file:triggers.sql ln:2129 expect:true
 drop function dump_insert()

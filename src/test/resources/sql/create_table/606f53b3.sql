@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 317
+-- file:rowsecurity.sql ln:317 expect:false
 CREATE TABLE part_document (
     did         int,
     cid         int,

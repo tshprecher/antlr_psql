@@ -1,5 +1,4 @@
--- file: rangetypes.sql
--- line: 317
+-- file:rangetypes.sql ln:317 expect:true
 create table test_range_excl(
   room int4range,
   speaker int4range,

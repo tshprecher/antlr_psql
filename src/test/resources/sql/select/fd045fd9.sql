@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 312
+-- file:oidjoins.sql ln:316 expect:true
 SELECT	ctid, opcfamily
 FROM	pg_catalog.pg_opclass fk
 WHERE	opcfamily != 0 AND

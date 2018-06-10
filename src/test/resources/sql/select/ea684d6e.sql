@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 354
+-- file:json.sql ln:354 expect:true
 select '42'::json #> array['0']

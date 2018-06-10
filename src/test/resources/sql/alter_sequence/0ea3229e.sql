@@ -1,4 +1,3 @@
--- file: sequence.sql
--- line: 225
+-- file:sequence.sql ln:225 expect:true
 ALTER SEQUENCE IF EXISTS sequence_test2 RESTART WITH 32 START WITH 32
   INCREMENT BY 4 MAXVALUE 36 MINVALUE 5 CYCLE

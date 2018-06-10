@@ -1,5 +1,4 @@
--- file: truncate.sql
--- line: 149
+-- file:truncate.sql ln:149 expect:true
 CREATE TRIGGER t
 BEFORE TRUNCATE ON trunc_trigger_test
 FOR EACH STATEMENT

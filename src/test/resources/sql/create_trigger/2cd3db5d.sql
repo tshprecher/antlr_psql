@@ -1,4 +1,3 @@
--- file: triggers.sql
--- line: 1201
+-- file:triggers.sql ln:1200 expect:true
 create trigger trigger_ddl_func before insert on trigger_ddl_table for each row
   execute procedure trigger_ddl_func()

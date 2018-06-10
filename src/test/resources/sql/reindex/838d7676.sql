@@ -1,4 +1,3 @@
--- file: create_index.sql
--- line: 1032
+-- file:create_index.sql ln:1079 expect:true
 \set VERBOSITY terse
 REINDEX (VERBOSE) TABLE reindex_verbose

@@ -1,3 +1,2 @@
--- file: delete.sql
--- line: 9
+-- file:delete.sql ln:9 expect:true
 INSERT INTO delete_test (a) VALUES (100)

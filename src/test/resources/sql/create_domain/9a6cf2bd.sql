@@ -1,3 +1,2 @@
--- file: case.sql
--- line: 193
+-- file:case.sql ln:193 expect:true
 CREATE DOMAIN foodomain AS text

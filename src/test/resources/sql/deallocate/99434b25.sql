@@ -1,3 +1,2 @@
--- file: prepare.sql
--- line: 75
+-- file:prepare.sql ln:75 expect:true
 DEALLOCATE ALL

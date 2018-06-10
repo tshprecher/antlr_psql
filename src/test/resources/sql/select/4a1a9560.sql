@@ -1,5 +1,4 @@
--- file: enum.sql
--- line: 262
+-- file:enum.sql ln:262 expect:true
 SELECT enumlabel, enumsortorder
 FROM pg_enum
 WHERE enumtypid = 'rainbow'::regtype

@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 28
+-- file:prepared_xacts.sql ln:28 expect:true
 ROLLBACK PREPARED 'foo1'

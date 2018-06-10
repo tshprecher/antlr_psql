@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1927
+-- file:join.sql ln:2008 expect:true
 create unique index on j3(unique1, tenthous)

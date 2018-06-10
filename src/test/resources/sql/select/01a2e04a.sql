@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 100
+-- file:strings.sql ln:100 expect:true
 SELECT TRIM(BOTH FROM '  bunch o blanks  ') = 'bunch o blanks' AS "bunch o blanks"

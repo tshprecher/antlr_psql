@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 23
+-- file:portals.sql ln:23 expect:true
 DECLARE foo9 SCROLL CURSOR FOR SELECT * FROM tenk1 ORDER BY unique2

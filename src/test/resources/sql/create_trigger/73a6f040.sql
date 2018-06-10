@@ -1,4 +1,3 @@
--- file: triggers.sql
--- line: 717
+-- file:triggers.sql ln:716 expect:true
 CREATE TRIGGER instead_of_update_trig INSTEAD OF UPDATE ON main_view
 FOR EACH ROW EXECUTE PROCEDURE view_trigger('instead_of_upd')

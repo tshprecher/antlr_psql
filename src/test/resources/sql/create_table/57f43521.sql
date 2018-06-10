@@ -1,5 +1,4 @@
--- file: replica_identity.sql
--- line: 1
+-- file:replica_identity.sql ln:1 expect:true
 CREATE TABLE test_replica_identity (
        id serial primary key,
        keya text not null,

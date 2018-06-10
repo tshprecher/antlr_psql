@@ -1,5 +1,4 @@
--- file: drop_operator.sql
--- line: 51
+-- file:drop_operator.sql ln:51 expect:true
 SELECT  ctid, oprnegate
 FROM    pg_catalog.pg_operator fk
 WHERE   oprnegate != 0 AND

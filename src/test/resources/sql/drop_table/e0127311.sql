@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1964
+-- file:alter_table.sql ln:1999 expect:true
 DROP TABLE logged2

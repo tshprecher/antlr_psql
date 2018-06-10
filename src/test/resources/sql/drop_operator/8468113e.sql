@@ -1,3 +1,2 @@
--- file: drop_if_exists.sql
--- line: 165
+-- file:drop_if_exists.sql ln:165 expect:true
 DROP OPERATOR IF EXISTS @#@ (int, int)

@@ -1,3 +1,2 @@
--- file: reloptions.sql
--- line: 43
+-- file:reloptions.sql ln:43 expect:true
 ALTER TABLE reloptions_test RESET (fillfactor)

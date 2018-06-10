@@ -1,4 +1,3 @@
--- file: triggers.sql
--- line: 695
+-- file:triggers.sql ln:694 expect:true
 CREATE TRIGGER invalid_trig INSTEAD OF UPDATE ON main_table
 FOR EACH ROW EXECUTE PROCEDURE view_trigger('instead_of_upd')

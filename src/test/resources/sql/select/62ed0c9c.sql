@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 628
+-- file:opr_sanity.sql ln:629 expect:true
 SELECT p1.oid, p1.oprname
 FROM pg_operator AS p1
 WHERE p1.oprcanmerge AND NOT EXISTS

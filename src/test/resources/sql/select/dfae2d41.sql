@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 265
+-- file:strings.sql ln:265 expect:true
 SELECT 'indio' NOT LIKE '_ndio' ESCAPE '$' AS "false"

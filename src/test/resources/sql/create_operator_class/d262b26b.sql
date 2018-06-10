@@ -1,5 +1,4 @@
--- file: create_am.sql
--- line: 13
+-- file:create_am.sql ln:13 expect:true
 CREATE OPERATOR CLASS box_ops DEFAULT
 	FOR TYPE box USING gist2 AS
 	OPERATOR 1	<<,

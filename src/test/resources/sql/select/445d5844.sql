@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4222
+-- file:plpgsql.sql ln:3943 expect:true
 select '{1,2}'::orderedarray

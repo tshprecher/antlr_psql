@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 92
+-- file:vacuum.sql ln:96 expect:true
 DROP TABLE vaccluster

@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 333
+-- file:jsonb.sql ln:333 expect:true
 SELECT jsonb_build_object('a', 'b', 'c')

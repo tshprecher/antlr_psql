@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 169
+-- file:transactions.sql ln:169 expect:true
 DELETE FROM savepoints WHERE a=1

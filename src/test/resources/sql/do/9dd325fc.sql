@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 4402
+-- file:plpgsql.sql ln:4132 expect:true
 do $$
 begin
   assert NULL

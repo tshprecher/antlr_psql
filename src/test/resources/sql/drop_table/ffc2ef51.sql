@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 95
+-- file:select_into.sql ln:95 expect:true
 DROP TABLE created_table

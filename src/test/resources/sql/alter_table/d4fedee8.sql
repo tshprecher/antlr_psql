@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1499
+-- file:alter_table.sql ln:1534 expect:true
 alter table alterlock set (autovacuum_enabled = off)

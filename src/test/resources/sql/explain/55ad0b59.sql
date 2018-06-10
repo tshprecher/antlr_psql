@@ -1,4 +1,3 @@
--- file: select_parallel.sql
--- line: 29
+-- file:select_parallel.sql ln:81 expect:true
 explain (costs off)
 	select length(stringu1) from tenk1 group by length(stringu1)

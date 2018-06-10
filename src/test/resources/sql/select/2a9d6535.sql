@@ -1,5 +1,4 @@
--- file: jsonb.sql
--- line: 327
+-- file:jsonb.sql ln:327 expect:true
 SELECT jsonb_build_object(
        'a', jsonb_build_object('b',false,'c',99),
        'd', jsonb_build_object('e',array[9,8,7]::int[],

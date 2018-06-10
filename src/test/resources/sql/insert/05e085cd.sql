@@ -1,3 +1,2 @@
--- file: pg_lsn.sql
--- line: 8
+-- file:pg_lsn.sql ln:8 expect:true
 INSERT INTO PG_LSN_TBL VALUES ('0/0')

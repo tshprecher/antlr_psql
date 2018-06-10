@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 446
+-- file:insert.sql ln:508 expect:true
 drop function brtrigpartcon1trigf()

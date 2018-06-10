@@ -1,5 +1,4 @@
--- file: collate.linux.utf8.sql
--- line: 18
+-- file:collate.linux.utf8.sql ln:18 expect:true
 \d collate_test1
 
 CREATE TABLE collate_test_fail (

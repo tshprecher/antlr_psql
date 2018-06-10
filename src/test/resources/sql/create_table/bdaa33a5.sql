@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1763
+-- file:alter_table.sql ln:1798 expect:true
 CREATE TABLE tt2 (x int, y numeric(9,2))

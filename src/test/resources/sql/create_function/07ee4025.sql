@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 2054
+-- file:plpgsql.sql ln:2076 expect:true
 create function namedparmcursor_test8() returns int4 as $$
 declare
   c1 cursor (p1 int, p2 int) for

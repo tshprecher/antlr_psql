@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 2806
+-- file:plpgsql.sql ln:2593 expect:false
 begin
 	declare
 	in1 int

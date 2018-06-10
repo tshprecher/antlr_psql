@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 466
+-- file:strings.sql ln:483 expect:true
 select md5('a') = '0cc175b9c0f1b6a831c399e269772661' AS "TRUE"

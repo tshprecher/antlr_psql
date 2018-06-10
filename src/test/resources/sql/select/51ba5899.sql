@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 298
+-- file:date.sql ln:298 expect:true
 SELECT EXTRACT(HOUR FROM TIMESTAMPTZ 'infinity')

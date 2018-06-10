@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 507
+-- file:updatable_views.sql ln:583 expect:true
 select * from base_tbl

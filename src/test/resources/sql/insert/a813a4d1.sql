@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 320
+-- file:aggregates.sql ln:320 expect:true
 insert into minmaxtest2 values(15), (16)

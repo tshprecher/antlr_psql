@@ -1,5 +1,4 @@
--- file: publication.sql
--- line: 27
+-- file:publication.sql ln:27 expect:true
 \dRp
 
 CREATE SCHEMA pub_test

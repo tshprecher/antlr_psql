@@ -1,4 +1,3 @@
--- file: misc_sanity.sql
--- line: 48
+-- file:misc_sanity.sql ln:48 expect:true
 do $$
 declare relnm text

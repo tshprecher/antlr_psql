@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 625
+-- file:jsonb.sql ln:625 expect:true
 SELECT rec FROM jsonb_populate_record(NULL::jsbrec, '{"rec": 123}') q

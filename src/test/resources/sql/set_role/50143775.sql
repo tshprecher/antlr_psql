@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1054
+-- file:rowsecurity.sql ln:1054 expect:true
 SET ROLE regress_rls_bob

@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 484
+-- file:strings.sql ln:501 expect:true
 select md5('message digest'::bytea) = 'f96b697d7cb7938d525a2f31aaf161d0' AS "TRUE"

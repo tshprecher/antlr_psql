@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 264
+-- file:json.sql ln:264 expect:true
 select '{"a": [{"b": "c"}, {"b": "cc"}]}'::json -> -1

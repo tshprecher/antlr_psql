@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1066
+-- file:updatable_views.sql ln:1142 expect:true
 DROP TABLE tx3

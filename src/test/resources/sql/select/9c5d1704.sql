@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 498
+-- file:subselect.sql ln:508 expect:true
 select (select q from
          (select 1,2,3 where f1 > 0
           union all

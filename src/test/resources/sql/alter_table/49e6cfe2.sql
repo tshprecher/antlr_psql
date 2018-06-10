@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 315
+-- file:insert.sql ln:374 expect:true
 alter table mlparted add c text

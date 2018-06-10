@@ -1,3 +1,2 @@
--- file: limit.sql
--- line: 72
+-- file:limit.sql ln:72 expect:true
 fetch all in c4

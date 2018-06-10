@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 112
+-- file:regproc.sql ln:112 expect:true
 SELECT to_regrole('foo.bar')

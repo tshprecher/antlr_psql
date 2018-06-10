@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 298
+-- file:inherit.sql ln:298 expect:true
 create table ac (a int constraint check_a check (a <> 0))

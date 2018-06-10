@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 977
+-- file:rules.sql ln:977 expect:true
 select * from only t1_1

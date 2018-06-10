@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 96
+-- file:horology.sql ln:96 expect:true
 SELECT (timestamp without time zone 'tomorrow' = (timestamp without time zone 'yesterday' + interval '2 days')) as "True"

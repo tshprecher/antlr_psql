@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 252
+-- file:enum.sql ln:252 expect:true
 DELETE FROM enumtest_parent

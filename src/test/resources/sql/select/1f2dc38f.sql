@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 25
+-- file:aggregates.sql ln:25 expect:true
 SELECT max(student.gpa) AS max_3_7 FROM student

@@ -1,5 +1,4 @@
--- file: transactions.sql
--- line: 396
+-- file:transactions.sql ln:396 expect:true
 CREATE FUNCTION create_temp_tab() RETURNS text
 LANGUAGE plpgsql AS $$
 BEGIN

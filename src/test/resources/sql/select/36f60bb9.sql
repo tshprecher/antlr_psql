@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 25
+-- file:jsonb.sql ln:25 expect:true
 SELECT '[]'::jsonb

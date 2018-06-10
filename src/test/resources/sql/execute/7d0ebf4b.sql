@@ -1,3 +1,2 @@
--- file: prepare.sql
--- line: 47
+-- file:prepare.sql ln:47 expect:true
 EXECUTE q3('bool')

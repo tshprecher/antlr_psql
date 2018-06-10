@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 84
+-- file:horology.sql ln:84 expect:true
 SELECT timestamp without time zone 'Jan 1, 4713 BC' + interval '106000000 days' AS "Feb 23, 285506"

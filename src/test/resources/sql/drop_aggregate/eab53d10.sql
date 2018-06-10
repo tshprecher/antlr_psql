@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 146
+-- file:errors.sql ln:146 expect:false
 drop aggregate 314159 (int)

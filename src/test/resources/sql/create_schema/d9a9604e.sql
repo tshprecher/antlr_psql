@@ -1,3 +1,2 @@
--- file: stats_ext.sql
--- line: 59
+-- file:stats_ext.sql ln:59 expect:true
 CREATE schema tststats

@@ -1,3 +1,2 @@
--- file: tablesample.sql
--- line: 92
+-- file:tablesample.sql ln:92 expect:true
 SELECT id FROM test_tablesample TABLESAMPLE BERNOULLI (200)

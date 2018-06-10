@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1614
+-- file:alter_table.sql ln:1649 expect:true
 create domain alter1.posint integer check (value > 0)

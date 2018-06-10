@@ -1,5 +1,4 @@
--- file: interval.sql
--- line: 279
+-- file:interval.sql ln:279 expect:true
 select  interval 'P0002'                  AS "year only",
         interval 'P0002-10'               AS "year month",
         interval 'P0002-10-15'            AS "year month day",

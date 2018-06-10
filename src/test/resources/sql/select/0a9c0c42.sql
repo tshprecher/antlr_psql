@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1357
+-- file:join.sql ln:1428 expect:true
 select p.*, linked from parent p
   left join (select c.*, true as linked from child c) as ss
   on (p.k = ss.k)

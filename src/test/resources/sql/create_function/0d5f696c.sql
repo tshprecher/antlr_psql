@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 1073
+-- file:triggers.sql ln:1072 expect:true
 create function child_ins_func()
   returns trigger language plpgsql as
 $$

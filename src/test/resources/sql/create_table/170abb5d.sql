@@ -1,5 +1,4 @@
--- file: xmlmap.sql
--- line: 50
+-- file:xmlmap.sql ln:50 expect:true
 CREATE TABLE testxmlschema.test3
     AS SELECT true c1,
               true::testboolxmldomain c2,

@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 404
+-- file:oidjoins.sql ln:412 expect:true
 SELECT	ctid, prorettype
 FROM	pg_catalog.pg_proc fk
 WHERE	prorettype != 0 AND

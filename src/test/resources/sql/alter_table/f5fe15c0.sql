@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 398
+-- file:triggers.sql ln:392 expect:true
 alter table trigtest disable trigger trigtest_b_row_tg

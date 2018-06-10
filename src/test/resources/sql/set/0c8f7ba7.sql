@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 35
+-- file:guc.sql ln:35 expect:true
 SET datestyle = 'German'

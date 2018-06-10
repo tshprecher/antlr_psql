@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 467
+-- file:insert_conflict.sql ln:467 expect:true
 begin transaction isolation level serializable

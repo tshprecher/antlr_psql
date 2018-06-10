@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 390
+-- file:collate.icu.utf8.sql ln:387 expect:true
 DROP SCHEMA test_schema

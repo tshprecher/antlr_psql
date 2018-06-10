@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 246
+-- file:create_view.sql ln:246 expect:true
 DROP VIEW tt1

@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 768
+-- file:rules.sql ln:768 expect:true
 drop table cchild

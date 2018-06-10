@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 1820
+-- file:alter_table.sql ln:1855 expect:true
 CREATE TABLE comment_test (
   id int,
   positive_col int CHECK (positive_col > 0),

@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 821
+-- file:rules.sql ln:821 expect:true
 create table rule_and_refint_t3 (
 	id3a integer,
 	id3b integer,

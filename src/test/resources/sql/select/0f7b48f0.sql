@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 652
+-- file:privileges.sql ln:684 expect:true
 select has_table_privilege('pg_class','truncate')

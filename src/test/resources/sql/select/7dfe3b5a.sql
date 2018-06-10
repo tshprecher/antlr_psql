@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 9
+-- file:jsonb.sql ln:9 expect:true
 SELECT '"\v"'::jsonb

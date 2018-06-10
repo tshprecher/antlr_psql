@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 646
+-- file:aggregates.sql ln:646 expect:true
 create view aggordview1 as
 select ten,
        percentile_disc(0.5) within group (order by thousand) as p50,

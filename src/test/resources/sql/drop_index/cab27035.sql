@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 224
+-- file:insert_conflict.sql ln:224 expect:true
 drop index partial_key_index

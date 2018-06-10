@@ -1,5 +1,4 @@
--- file: json.sql
--- line: 133
+-- file:json.sql ln:133 expect:true
 SELECT json_agg(q)
   FROM ( SELECT $$a$$ || x AS b, y AS c,
                ARRAY[ROW(x.*,ARRAY[1,2,3]),

@@ -1,3 +1,2 @@
--- file: drop_operator.sql
--- line: 44
+-- file:drop_operator.sql ln:44 expect:true
 DROP OPERATOR |>(bigint, bigint)

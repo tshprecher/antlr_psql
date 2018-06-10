@@ -1,3 +1,2 @@
--- file: select_distinct.sql
--- line: 13
+-- file:select_distinct.sql ln:13 expect:true
 SELECT DISTINCT ten FROM tmp ORDER BY 1

@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 860
+-- file:jsonb.sql ln:866 expect:true
 SELECT '{"n":null,"a":1,"b":[1,2],"c":{"1":2},"d":{"1":[2,3]}}'::jsonb -> 'c'

@@ -1,5 +1,4 @@
--- file: rowtypes.sql
--- line: 308
+-- file:rowtypes.sql ln:410 expect:true
 explain (verbose, costs off)
 with r(a,b) as
   (values (1,row(1,2)), (1,row(null,null)), (1,null),

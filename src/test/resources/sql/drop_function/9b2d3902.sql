@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 242
+-- file:enum.sql ln:242 expect:true
 DROP FUNCTION echo_me(rainbow)

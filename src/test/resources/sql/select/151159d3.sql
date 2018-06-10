@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 397
+-- file:jsonb.sql ln:397 expect:true
 SELECT jsonb_object('{{a},{b}}')

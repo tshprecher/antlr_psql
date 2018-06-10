@@ -1,3 +1,2 @@
--- file: returning.sql
--- line: 154
+-- file:returning.sql ln:154 expect:true
 SELECT * FROM joinview

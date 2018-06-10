@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 340
+-- file:subselect.sql ln:340 expect:true
 select
   ( select min(tb.id) from tb
     where tb.aval = (select ta.val from ta where ta.id = tc.aid) ) as min_tb_id

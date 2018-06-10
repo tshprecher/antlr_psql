@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 71
+-- file:transactions.sql ln:71 expect:true
 SET TRANSACTION READ WRITE

@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1455
+-- file:rowsecurity.sql ln:1455 expect:true
 SAVEPOINT q

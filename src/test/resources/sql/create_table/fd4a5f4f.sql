@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 1999
+-- file:alter_table.sql ln:2034 expect:false
 CREATE TABLE partitioned (
 	a int,
 	b int

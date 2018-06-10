@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 442
+-- file:domain.sql ln:442 expect:true
 alter domain dom set not null

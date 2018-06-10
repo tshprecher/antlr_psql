@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 316
+-- file:rules.sql ln:316 expect:true
 delete from rtest_t5

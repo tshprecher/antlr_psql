@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1677
+-- file:join.sql ln:1758 expect:true
 explain (verbose, costs off)
 select * from
   (values (0,9998), (1,1000)) v(id,x),

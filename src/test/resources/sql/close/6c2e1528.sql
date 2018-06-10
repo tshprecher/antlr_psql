@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 315
+-- file:portals.sql ln:315 expect:true
 CLOSE ALL

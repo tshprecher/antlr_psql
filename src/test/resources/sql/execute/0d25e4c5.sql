@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 155
+-- file:xml.sql ln:155 expect:true
 EXECUTE foo ('good')

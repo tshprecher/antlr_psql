@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 472
+-- file:domain.sql ln:472 expect:true
 select 'xz23'::dtop

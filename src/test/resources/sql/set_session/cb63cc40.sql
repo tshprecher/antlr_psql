@@ -1,3 +1,2 @@
--- file: event_trigger.sql
--- line: 144
+-- file:event_trigger.sql ln:155 expect:true
 SET SESSION AUTHORIZATION regress_evt_user

@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 170
+-- file:enum.sql ln:170 expect:true
 SELECT min(col) FROM enumtest

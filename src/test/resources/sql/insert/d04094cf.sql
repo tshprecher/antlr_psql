@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 573
+-- file:domain.sql ln:573 expect:true
 insert into ddtest2 values('{(-1)}')

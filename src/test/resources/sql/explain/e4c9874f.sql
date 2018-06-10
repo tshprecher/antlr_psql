@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 377
+-- file:groupingsets.sql ln:403 expect:true
 explain (costs off)
   select unique1,
          count(two), count(four), count(ten),

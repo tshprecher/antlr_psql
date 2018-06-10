@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 402
+-- file:timestamptz.sql ln:406 expect:true
 SELECT to_timestamp('NaN'::float)

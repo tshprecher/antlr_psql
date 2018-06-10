@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 2561
+-- file:plpgsql.sql ln:2348 expect:false
 begin
     insert into foo values(7,8),(9,10) returning * into x

@@ -1,5 +1,4 @@
--- file: rowtypes.sql
--- line: 194
+-- file:rowtypes.sql ln:296 expect:true
 UPDATE price
     SET active = true, price = input_prices.price
     FROM unnest(ARRAY[(10, 123.00), (11, 99.99)]::price_input[]) input_prices

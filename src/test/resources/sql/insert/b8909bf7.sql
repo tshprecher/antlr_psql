@@ -1,5 +1,4 @@
--- file: brin.sql
--- line: 106
+-- file:brin.sql ln:106 expect:true
 INSERT INTO brinopers VALUES
 	('byteacol', 'bytea',
 	 '{>, >=, =, <=, <}',

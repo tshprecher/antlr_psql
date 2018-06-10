@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 418
+-- file:copy2.sql ln:418 expect:true
 DROP FUNCTION truncate_in_subxact()

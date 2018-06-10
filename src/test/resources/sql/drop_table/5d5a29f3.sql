@@ -1,3 +1,2 @@
--- file: numerology.sql
--- line: 96
+-- file:numerology.sql ln:96 expect:true
 DROP TABLE TEMP_FLOAT

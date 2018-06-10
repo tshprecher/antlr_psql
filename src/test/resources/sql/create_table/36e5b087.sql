@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 92
+-- file:create_table_like.sql ln:94 expect:true
 CREATE TABLE ctlt4 (a text, c text)

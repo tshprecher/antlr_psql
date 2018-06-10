@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 1040
+-- file:foreign_key.sql ln:1050 expect:true
 delete from fktable2

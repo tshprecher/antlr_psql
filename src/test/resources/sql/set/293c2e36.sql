@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 46
+-- file:guc.sql ln:46 expect:true
 SET datestyle = 'MDY'

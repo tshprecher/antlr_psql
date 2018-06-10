@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 228
+-- file:oidjoins.sql ln:232 expect:true
 SELECT	ctid, enumtypid
 FROM	pg_catalog.pg_enum fk
 WHERE	enumtypid != 0 AND

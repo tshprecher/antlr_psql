@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 220
+-- file:foreign_data.sql ln:220 expect:true
 DROP SERVER s2

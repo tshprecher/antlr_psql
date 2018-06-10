@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 117
+-- file:strings.sql ln:117 expect:true
 SELECT SUBSTRING('abcdefg' FROM '#"(b_d)#"%' FOR '#') IS NULL AS "True"

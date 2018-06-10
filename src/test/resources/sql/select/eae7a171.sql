@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4013
+-- file:plpgsql.sql ln:3734 expect:true
 select scope_test()

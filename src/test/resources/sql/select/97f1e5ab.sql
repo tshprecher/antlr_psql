@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 931
+-- file:numeric.sql ln:961 expect:true
 select * from generate_series('nan'::numeric, 100::numeric, 10::numeric)

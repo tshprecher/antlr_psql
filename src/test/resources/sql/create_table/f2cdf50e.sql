@@ -1,5 +1,4 @@
--- file: event_trigger.sql
--- line: 163
+-- file:event_trigger.sql ln:174 expect:true
 CREATE TABLE undroppable_objs (
 	object_type text,
 	object_identity text

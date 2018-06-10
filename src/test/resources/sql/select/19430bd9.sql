@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 306
+-- file:interval.sql ln:306 expect:true
 select make_interval(years := 'inf'::float::int)

@@ -1,5 +1,4 @@
--- file: foreign_data.sql
--- line: 131
+-- file:foreign_data.sql ln:131 expect:true
 \dew+
 \des+
 \deu+

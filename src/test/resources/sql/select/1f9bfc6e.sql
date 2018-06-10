@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 769
+-- file:jsonb.sql ln:775 expect:true
 SELECT distinct * FROM (values (jsonb '{}' || ''::text),('{}')) v(j)

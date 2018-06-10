@@ -1,5 +1,4 @@
--- file: updatable_views.sql
--- line: 867
+-- file:updatable_views.sql ln:943 expect:true
 CREATE FUNCTION snoop(anyelement)
 RETURNS boolean AS
 $$

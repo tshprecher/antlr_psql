@@ -1,3 +1,2 @@
--- file: select_views.sql
--- line: 150
+-- file:select_views.sql ln:150 expect:true
 EXECUTE p1

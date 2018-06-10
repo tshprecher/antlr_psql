@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 416
+-- file:oidjoins.sql ln:424 expect:true
 SELECT	ctid, rngcollation
 FROM	pg_catalog.pg_range fk
 WHERE	rngcollation != 0 AND

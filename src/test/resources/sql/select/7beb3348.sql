@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 65
+-- file:select_into.sql ln:65 expect:true
 SELECT * FROM ctas_nodata

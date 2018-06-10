@@ -1,3 +1,2 @@
--- file: partition_join.sql
--- line: 147
+-- file:partition_join.sql ln:147 expect:true
 SET enable_hashjoin TO off

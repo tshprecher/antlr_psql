@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 175
+-- file:create_view.sql ln:175 expect:true
 CREATE TEMP TABLE tmptbl (i int, j int)

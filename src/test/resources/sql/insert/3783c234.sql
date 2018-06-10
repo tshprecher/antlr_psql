@@ -1,3 +1,2 @@
--- file: with.sql
--- line: 112
+-- file:with.sql ln:112 expect:true
 INSERT INTO department VALUES (6, 4, 'F')

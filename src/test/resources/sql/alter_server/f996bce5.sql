@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 173
+-- file:foreign_data.sql ln:173 expect:true
 ALTER SERVER s1 VERSION '1.0' OPTIONS (servername 's1')

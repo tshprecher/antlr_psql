@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 60
+-- file:tstypes.sql ln:60 expect:true
 SELECT '!!b'::tsquery

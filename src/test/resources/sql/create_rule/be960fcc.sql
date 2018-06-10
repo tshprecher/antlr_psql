@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 114
+-- file:rules.sql ln:114 expect:true
 create rule rtest_order_r3 as on insert to rtest_order1 do instead
 	insert into rtest_order2 values (new.a, nextval('rtest_seq'),
 		'rule 3 - this should run 3rd')

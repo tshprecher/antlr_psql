@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3178
+-- file:plpgsql.sql ln:2965 expect:true
 alter table tabwithcols drop column b

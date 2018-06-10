@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 13
+-- file:regproc.sql ln:13 expect:true
 SELECT regproc('now')

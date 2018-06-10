@@ -1,3 +1,2 @@
--- file: groupingsets.sql
--- line: 369
+-- file:groupingsets.sql ln:395 expect:true
 set enable_indexscan = false

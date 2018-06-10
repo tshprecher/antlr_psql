@@ -1,3 +1,2 @@
--- file: limit.sql
--- line: 70
+-- file:limit.sql ln:70 expect:true
 fetch backward all in c4

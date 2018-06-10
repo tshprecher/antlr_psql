@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 62
+-- file:rowsecurity.sql ln:62 expect:true
 GRANT ALL ON category TO public

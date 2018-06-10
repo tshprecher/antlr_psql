@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2332
+-- file:alter_table.sql ln:2365 expect:false
 CREATE TABLE quuux2 PARTITION OF quuux FOR VALUES IN (2)

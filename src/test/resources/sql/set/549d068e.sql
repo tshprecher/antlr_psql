@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 47
+-- file:strings.sql ln:512 expect:true
 SET bytea_output TO hex

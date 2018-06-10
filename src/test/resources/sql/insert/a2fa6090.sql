@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 246
+-- file:rules.sql ln:246 expect:true
 insert into rtest_interface values ('neptun', 'eth0')

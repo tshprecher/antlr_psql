@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 187
+-- file:jsonb.sql ln:187 expect:true
 SELECT '{"x":"y"}'::jsonb <> '{"x":"y"}'::jsonb

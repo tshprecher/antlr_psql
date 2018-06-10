@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 572
+-- file:oidjoins.sql ln:580 expect:true
 SELECT	ctid, prsend
 FROM	pg_catalog.pg_ts_parser fk
 WHERE	prsend != 0 AND

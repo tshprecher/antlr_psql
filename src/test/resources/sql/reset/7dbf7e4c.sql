@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 92
+-- file:point.sql ln:103 expect:true
 RESET enable_bitmapscan

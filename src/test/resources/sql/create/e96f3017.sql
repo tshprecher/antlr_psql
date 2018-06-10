@@ -1,3 +1,2 @@
--- file: point.sql
--- line: 85
+-- file:point.sql ln:85 expect:true
 CREATE TEMP TABLE point_gist_tbl(f1 point)

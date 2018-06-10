@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 2
+-- file:truncate.sql ln:2 expect:true
 CREATE TABLE truncate_a (col1 integer primary key)

@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 357
+-- file:horology.sql ln:357 expect:true
 SET DateStyle TO 'European,Postgres'

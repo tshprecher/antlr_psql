@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 488
+-- file:oidjoins.sql ln:496 expect:true
 SELECT	ctid, spcowner
 FROM	pg_catalog.pg_tablespace fk
 WHERE	spcowner != 0 AND

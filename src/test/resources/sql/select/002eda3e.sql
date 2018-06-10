@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 107
+-- file:sequence.sql ln:107 expect:true
 SELECT nextval('serialTest2_f3_seq')

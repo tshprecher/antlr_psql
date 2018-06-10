@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1117
+-- file:alter_table.sql ln:1136 expect:true
 create table p1(id int, name text)

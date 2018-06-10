@@ -1,3 +1,2 @@
--- file: oid.sql
--- line: 43
+-- file:oid.sql ln:43 expect:true
 DROP TABLE OID_TBL

@@ -1,5 +1,4 @@
--- file: numerology.sql
--- line: 80
+-- file:numerology.sql ln:80 expect:true
 SELECT f1 AS two, (max(f3) + 1) AS max_plus_1, (min(f3) - 1) AS min_minus_1
   FROM TEMP_GROUP
   GROUP BY f1

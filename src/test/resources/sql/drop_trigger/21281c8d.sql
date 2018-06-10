@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1676
+-- file:triggers.sql ln:1908 expect:true
 drop trigger child2_insert_trig on child2

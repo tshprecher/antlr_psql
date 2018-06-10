@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1121
+-- file:triggers.sql ln:1120 expect:true
 select * from child

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1911
+-- file:alter_table.sql ln:1946 expect:true
 ALTER TABLE old_system_table DROP CONSTRAINT new_system_table_pkey

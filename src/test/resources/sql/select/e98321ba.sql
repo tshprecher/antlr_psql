@@ -1,5 +1,4 @@
--- file: abstime.sql
--- line: 61
+-- file:abstime.sql ln:61 expect:true
 SELECT '' AS four, f1 AS abstime,
   date_part('year', f1) AS year, date_part('month', f1) AS month,
   date_part('day',f1) AS day, date_part('hour', f1) AS hour,

@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1066
+-- file:rowsecurity.sql ln:1066 expect:true
 ALTER TABLE t1 ENABLE ROW LEVEL SECURITY

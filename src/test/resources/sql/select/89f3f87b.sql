@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 483
+-- file:create_index.sql ln:489 expect:true
 SELECT count(*) FROM quad_point_tbl WHERE p << '(5000, 4000)'

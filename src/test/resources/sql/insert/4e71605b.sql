@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 218
+-- file:xml.sql ln:254 expect:true
 INSERT INTO query VALUES ('/menu/beers/cost[text() = ''lots'']')

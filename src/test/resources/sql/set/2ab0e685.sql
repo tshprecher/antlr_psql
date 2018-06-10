@@ -1,3 +1,2 @@
--- file: password.sql
--- line: 6
+-- file:password.sql ln:6 expect:true
 SET password_encryption = 'novalue'

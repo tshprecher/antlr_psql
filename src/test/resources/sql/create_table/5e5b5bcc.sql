@@ -1,5 +1,4 @@
--- file: collate.linux.utf8.sql
--- line: 68
+-- file:collate.icu.utf8.sql ln:66 expect:true
 CREATE TABLE collate_test4 (
     a int,
     b testdomain_sv

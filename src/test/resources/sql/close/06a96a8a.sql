@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3046
+-- file:plpgsql.sql ln:2833 expect:true
 close c

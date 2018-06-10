@@ -1,5 +1,4 @@
--- file: select_views.sql
--- line: 21
+-- file:select_views.sql ln:21 expect:true
 CREATE TABLE customer (
        cid      int primary key,
        name     text not null,

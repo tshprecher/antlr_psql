@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 778
+-- file:aggregates.sql ln:778 expect:true
 create aggregate my_avg_init2(int4)
 (
    stype = avg_state,

@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 176
+-- file:select_parallel.sql ln:310 expect:true
 reset max_parallel_workers

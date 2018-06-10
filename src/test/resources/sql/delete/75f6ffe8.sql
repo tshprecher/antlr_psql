@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 39
+-- file:vacuum.sql ln:39 expect:true
 DELETE FROM vactst

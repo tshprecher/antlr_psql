@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 178
+-- file:tstypes.sql ln:178 expect:true
 SELECT ts_rank_cd(' a:1 b:2 s:3A d:2A g'::tsvector, 'a <2> s:A')

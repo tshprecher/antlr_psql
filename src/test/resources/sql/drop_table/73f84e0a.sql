@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1170
+-- file:updatable_views.sql ln:1246 expect:true
 drop table wcowrtest, sometable

@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 230
+-- file:jsonb.sql ln:230 expect:true
 SELECT '[5]'::jsonb @> '5'

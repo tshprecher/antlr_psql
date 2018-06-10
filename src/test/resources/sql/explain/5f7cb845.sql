@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 738
+-- file:join.sql ln:798 expect:true
 EXPLAIN (COSTS OFF)
 SELECT qq, unique1
   FROM

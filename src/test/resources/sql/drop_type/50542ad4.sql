@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4199
+-- file:plpgsql.sql ln:3920 expect:true
 drop type xy_tuple

@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1699
+-- file:triggers.sql ln:1931 expect:true
 alter table child no inherit parent

@@ -1,3 +1,2 @@
--- file: returning.sql
--- line: 59
+-- file:returning.sql ln:59 expect:true
 INSERT INTO foochild VALUES(123,'child',999,-123)

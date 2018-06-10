@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 173
+-- file:domain.sql ln:173 expect:true
 alter type comptype drop attribute r

@@ -1,5 +1,4 @@
--- file: hash_func.sql
--- line: 149
+-- file:hash_func.sql ln:149 expect:true
 SELECT v as value, timetz_hash(v)::bit(32) as standard,
 	   timetz_hash_extended(v, 0)::bit(32) as extended0,
 	   timetz_hash_extended(v, 1)::bit(32) as extended1

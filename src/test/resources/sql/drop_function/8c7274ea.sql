@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 570
+-- file:rangefuncs.sql ln:570 expect:true
 drop function get_users()

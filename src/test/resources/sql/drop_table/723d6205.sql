@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 357
+-- file:insert_conflict.sql ln:357 expect:true
 drop table cities

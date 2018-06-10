@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 111
+-- file:portals.sql ln:111 expect:true
 FETCH backward 7 in foo17

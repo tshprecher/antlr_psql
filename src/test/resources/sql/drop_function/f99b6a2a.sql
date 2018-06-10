@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2270
+-- file:plpgsql.sql ln:2292 expect:true
 drop function excpt_test2()

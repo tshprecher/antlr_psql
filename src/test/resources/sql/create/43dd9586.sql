@@ -1,5 +1,4 @@
--- file: jsonb.sql
--- line: 113
+-- file:jsonb.sql ln:113 expect:true
 CREATE TEMP TABLE test_jsonb (
        json_type text,
        test_json jsonb

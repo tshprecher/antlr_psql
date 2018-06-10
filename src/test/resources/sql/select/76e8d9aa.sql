@@ -1,5 +1,4 @@
--- file: create_index.sql
--- line: 1067
+-- file:create_index.sql ln:1114 expect:true
 SELECT  b.relname,
         b.relkind,
         CASE WHEN a.relfilenode = b.relfilenode THEN 'relfilenode is unchanged'

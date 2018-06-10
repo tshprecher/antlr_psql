@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 307
+-- file:strings.sql ln:307 expect:true
 SELECT 'Hawkeye' ILIKE 'h%' AS "true"

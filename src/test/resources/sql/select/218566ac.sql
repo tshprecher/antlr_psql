@@ -1,5 +1,4 @@
--- file: amutils.sql
--- line: 53
+-- file:amutils.sql ln:53 expect:true
 select prop,
        pg_index_has_property('onek_hundred'::regclass, prop) as btree,
        pg_index_has_property('hash_i4_index'::regclass, prop) as hash,

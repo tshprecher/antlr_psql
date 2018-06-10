@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 160
+-- file:truncate.sql ln:160 expect:true
 DROP TRIGGER t ON trunc_trigger_test

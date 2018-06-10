@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 1085
+-- file:create_index.sql ln:1132 expect:true
 DROP ROLE regress_reindexuser

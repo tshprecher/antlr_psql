@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 627
+-- file:updatable_views.sql ln:703 expect:true
 UPDATE ONLY rw_view2 SET a = a*10 WHERE a IN (-4, 4)

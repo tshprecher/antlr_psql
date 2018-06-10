@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 201
+-- file:matview.sql ln:201 expect:true
 drop materialized view mvtest_error

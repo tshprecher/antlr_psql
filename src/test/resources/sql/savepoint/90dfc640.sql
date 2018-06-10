@@ -1,3 +1,2 @@
--- file: stats.sql
--- line: 122
+-- file:stats.sql ln:122 expect:true
 SAVEPOINT p1

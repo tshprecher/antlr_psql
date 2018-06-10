@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 476
+-- file:create_table.sql ln:471 expect:true
 DROP TABLE bigintp

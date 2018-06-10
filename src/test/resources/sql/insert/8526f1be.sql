@@ -1,4 +1,3 @@
--- file: create_misc.sql
--- line: 166
+-- file:create_misc.sql ln:171 expect:true
 INSERT INTO f_star (class, a, f)
    VALUES ('f', 26, '(11111,33333),(22222,44444)'::polygon)

@@ -1,3 +1,2 @@
--- file: without_oid.sql
--- line: 29
+-- file:without_oid.sql ln:29 expect:true
 INSERT INTO wo SELECT i+60 FROM wo

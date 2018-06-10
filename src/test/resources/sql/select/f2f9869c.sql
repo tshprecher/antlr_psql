@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 80
+-- file:oidjoins.sql ln:80 expect:true
 SELECT	ctid, amprocfamily
 FROM	pg_catalog.pg_amproc fk
 WHERE	amprocfamily != 0 AND

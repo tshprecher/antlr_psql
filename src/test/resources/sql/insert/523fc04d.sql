@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 1135
+-- file:rowsecurity.sql ln:1135 expect:true
 INSERT INTO comment VALUES
     (1, 'cool blog'),
     (1, 'fun blog'),

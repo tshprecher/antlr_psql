@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 325
+-- file:json.sql ln:325 expect:true
 select '{"f2":{"f3":1},"f4":{"f5":99,"f6":"stringy"}}'::json#>array['f2']

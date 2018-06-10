@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2190
+-- file:plpgsql.sql ln:2212 expect:true
 create table eifoo (i integer, y integer)

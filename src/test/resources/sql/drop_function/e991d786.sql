@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 542
+-- file:polymorphism.sql ln:542 expect:true
 drop function dfunc()

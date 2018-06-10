@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 685
+-- file:join.sql ln:745 expect:true
 select c.name, ss.code, ss.b_cnt, ss.const
 from c left join
   (select a.code, coalesce(b_grp.cnt, 0) as b_cnt, -1 as const

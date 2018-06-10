@@ -1,3 +1,2 @@
--- file: event_trigger.sql
--- line: 87
+-- file:event_trigger.sql ln:87 expect:true
 set role regress_evt_user

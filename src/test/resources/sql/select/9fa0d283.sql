@@ -1,5 +1,4 @@
--- file: case.sql
--- line: 54
+-- file:case.sql ln:54 expect:true
 SELECT '6' AS "One",
   CASE
     WHEN 1 > 2 THEN 3

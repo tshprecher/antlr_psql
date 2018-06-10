@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 96
+-- file:prepared_xacts.sql ln:96 expect:true
 INSERT INTO pxtest2 VALUES (2)

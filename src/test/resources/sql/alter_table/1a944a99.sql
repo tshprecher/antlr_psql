@@ -1,3 +1,2 @@
--- file: identity.sql
--- line: 185
+-- file:identity.sql ln:221 expect:false
 ALTER TABLE itest7 ALTER COLUMN a DROP IDENTITY

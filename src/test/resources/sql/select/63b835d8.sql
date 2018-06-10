@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 212
+-- file:oidjoins.sql ln:216 expect:true
 SELECT	ctid, setdatabase
 FROM	pg_catalog.pg_db_role_setting fk
 WHERE	setdatabase != 0 AND

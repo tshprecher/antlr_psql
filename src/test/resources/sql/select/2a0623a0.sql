@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 483
+-- file:rangetypes.sql ln:483 expect:true
 select * from outparam_succeed(int4range(1,2))

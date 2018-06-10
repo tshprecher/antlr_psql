@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 148
+-- file:date.sql ln:148 expect:true
 SELECT date '990108'

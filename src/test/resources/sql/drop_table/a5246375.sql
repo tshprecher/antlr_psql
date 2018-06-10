@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 385
+-- file:inherit.sql ln:385 expect:true
 DROP TABLE test_constraints

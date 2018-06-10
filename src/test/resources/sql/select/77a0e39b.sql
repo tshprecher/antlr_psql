@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 103
+-- file:select_into.sql ln:103 expect:true
 SELECT * FROM (SELECT 1 INTO f) bar

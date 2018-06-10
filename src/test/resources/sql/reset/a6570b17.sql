@@ -1,3 +1,2 @@
--- file: hs_standby_allowed.sql
--- line: 76
+-- file:hs_standby_allowed.sql ln:76 expect:true
 reset synchronous_commit

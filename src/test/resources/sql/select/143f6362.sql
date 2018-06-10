@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 486
+-- file:arrays.sql ln:486 expect:true
 select * from comptable

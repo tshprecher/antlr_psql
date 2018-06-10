@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 974
+-- file:alter_table.sql ln:993 expect:true
 insert into atacc1(id, value) values (null, 0)

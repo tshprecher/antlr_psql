@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 788
+-- file:updatable_views.sql ln:864 expect:true
 CREATE TABLE base_tbl (a int, b int)

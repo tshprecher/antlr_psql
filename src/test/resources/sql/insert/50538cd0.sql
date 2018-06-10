@@ -1,5 +1,4 @@
--- file: create_misc.sql
--- line: 50
+-- file:create_misc.sql ln:55 expect:true
 INSERT INTO shighway
    SELECT *
    FROM road

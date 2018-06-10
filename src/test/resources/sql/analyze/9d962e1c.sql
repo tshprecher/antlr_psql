@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1588
+-- file:join.sql ln:1659 expect:true
 analyze dual

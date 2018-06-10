@@ -1,3 +1,2 @@
--- file: float8.sql
--- line: 32
+-- file:float8.sql ln:32 expect:true
 SELECT '   NAN  '::float8

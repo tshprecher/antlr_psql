@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1063
+-- file:updatable_views.sql ln:1139 expect:true
 DROP VIEW vx1

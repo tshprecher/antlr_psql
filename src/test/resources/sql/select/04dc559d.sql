@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 165
+-- file:window.sql ln:165 expect:true
 SELECT four, ten,
 	sum(ten) over (partition by four order by ten range between unbounded preceding and unbounded following),
 	last_value(ten) over (partition by four order by ten range between unbounded preceding and unbounded following)

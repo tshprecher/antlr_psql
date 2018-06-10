@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 92
+-- file:transactions.sql ln:92 expect:true
 EXECUTE test

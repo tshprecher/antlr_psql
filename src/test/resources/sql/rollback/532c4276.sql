@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 128
+-- file:transactions.sql ln:128 expect:true
 ROLLBACK TO one

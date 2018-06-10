@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 391
+-- file:portals.sql ln:391 expect:true
 CREATE TEMP TABLE ucchild () inherits (uctest)

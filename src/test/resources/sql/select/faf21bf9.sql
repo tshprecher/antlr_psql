@@ -1,4 +1,3 @@
--- file: geometry.sql
--- line: 118
+-- file:geometry.sql ln:118 expect:true
 SELECT '' AS four, polygon(f1)
    FROM BOX_TBL

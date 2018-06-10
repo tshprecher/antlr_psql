@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 28
+-- file:domain.sql ln:28 expect:true
 create domain domaintext text

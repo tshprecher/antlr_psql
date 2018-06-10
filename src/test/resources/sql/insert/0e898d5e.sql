@@ -1,3 +1,2 @@
--- file: int8.sql
--- line: 10
+-- file:int8.sql ln:10 expect:true
 INSERT INTO INT8_TBL VALUES(+4567890123456789,'4567890123456789')

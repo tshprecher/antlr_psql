@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1685
+-- file:plpgsql.sql ln:1685 expect:true
 drop table perform_test

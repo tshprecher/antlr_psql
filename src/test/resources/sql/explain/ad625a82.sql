@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1187
+-- file:join.sql ln:1258 expect:true
 explain (verbose, costs off)
 select 1 from
   text_tbl as tt1

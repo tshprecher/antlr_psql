@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 505
+-- file:foreign_data.sql ln:511 expect:true
 CREATE SERVER s9 FOREIGN DATA WRAPPER foo

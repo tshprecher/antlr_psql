@@ -1,3 +1,2 @@
--- file: create_am.sql
--- line: 65
+-- file:create_am.sql ln:65 expect:true
 DROP ACCESS METHOD gist2

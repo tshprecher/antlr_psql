@@ -1,5 +1,4 @@
--- file: returning.sql
--- line: 41
+-- file:returning.sql ln:41 expect:true
 UPDATE foo SET f3 = f3*2
   FROM int4_tbl i
   WHERE foo.f1 + 123455 = i.f1

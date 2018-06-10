@@ -1,4 +1,3 @@
--- file: foreign_key.sql
--- line: 607
+-- file:foreign_key.sql ln:607 expect:true
 create table pktable(ptest1 inet, ptest2 inet, primary key(base1, ptest1), foreign key(base2, ptest2) references
                                              pktable(ptest1, base1)) inherits (pktable_base)

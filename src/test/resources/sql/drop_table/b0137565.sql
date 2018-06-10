@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 340
+-- file:rowtypes.sql ln:442 expect:true
 DROP TABLE compositetable

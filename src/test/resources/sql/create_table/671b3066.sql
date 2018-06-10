@@ -1,3 +1,2 @@
--- file: event_trigger.sql
--- line: 148
+-- file:event_trigger.sql ln:159 expect:true
 CREATE TABLE schema_one.table_three(a int)

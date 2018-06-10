@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 664
+-- file:numeric.sql ln:664 expect:true
 SELECT '-Infinity'::float4::numeric

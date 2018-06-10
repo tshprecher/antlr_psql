@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 244
+-- file:oidjoins.sql ln:248 expect:true
 SELECT	ctid, srvowner
 FROM	pg_catalog.pg_foreign_server fk
 WHERE	srvowner != 0 AND

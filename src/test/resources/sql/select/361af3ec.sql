@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 50
+-- file:create_view.sql ln:50 expect:true
 SELECT * FROM viewtest

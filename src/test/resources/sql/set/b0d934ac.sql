@@ -1,3 +1,2 @@
--- file: point.sql
--- line: 89
+-- file:point.sql ln:89 expect:true
 SET enable_seqscan TO true

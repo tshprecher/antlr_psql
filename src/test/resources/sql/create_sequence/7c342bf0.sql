@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 132
+-- file:create_view.sql ln:132 expect:true
 CREATE SEQUENCE seq1

@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 109
+-- file:aggregates.sql ln:109 expect:true
 select s1, s2, sm
 from generate_series(1, 3) s1,
      lateral (select s2, sum(s1 + s2) sm

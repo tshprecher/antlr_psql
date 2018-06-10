@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 307
+-- file:subselect.sql ln:307 expect:true
 create temp table numeric_table (num_col numeric)

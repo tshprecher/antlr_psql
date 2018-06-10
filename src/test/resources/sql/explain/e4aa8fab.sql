@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 623
+-- file:inherit.sql ln:649 expect:true
 explain (costs off) select * from list_parted

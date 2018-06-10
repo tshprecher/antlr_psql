@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 379
+-- file:horology.sql ln:379 expect:true
 SHOW DateStyle

@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 540
+-- file:plpgsql.sql ln:540 expect:true
 insert into PLine (
 		    slotname,
 		    phonenumber,

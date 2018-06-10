@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 68
+-- file:regex.sql ln:68 expect:true
 select 'zyy' ~ '(?<![xy])yy+'

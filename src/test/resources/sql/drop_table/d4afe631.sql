@@ -1,4 +1,3 @@
--- file: dependency.sql
--- line: 43
+-- file:dependency.sql ln:43 expect:true
 \set VERBOSITY default
 DROP TABLE deptest

@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 315
+-- file:date.sql ln:315 expect:true
 SELECT EXTRACT(TIMEZONE_H    FROM DATE 'infinity')

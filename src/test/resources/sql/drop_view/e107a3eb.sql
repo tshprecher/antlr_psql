@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 1059
+-- file:privileges.sql ln:1123 expect:true
 DROP VIEW atestv4

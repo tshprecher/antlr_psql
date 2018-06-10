@@ -1,5 +1,4 @@
--- file: alter_generic.sql
--- line: 33
+-- file:alter_generic.sql ln:33 expect:true
 CREATE AGGREGATE alt_agg1 (
   sfunc1 = int4pl, basetype = int4, stype1 = int4, initcond = 0
 )

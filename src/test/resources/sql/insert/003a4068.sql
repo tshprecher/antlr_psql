@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 338
+-- file:subselect.sql ln:338 expect:true
 insert into tc values(2,2)

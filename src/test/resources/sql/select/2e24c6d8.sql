@@ -1,5 +1,4 @@
--- file: drop_operator.sql
--- line: 46
+-- file:drop_operator.sql ln:46 expect:true
 SELECT  ctid, oprcom
 FROM    pg_catalog.pg_operator fk
 WHERE   oprcom != 0 AND

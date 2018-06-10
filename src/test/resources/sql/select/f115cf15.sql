@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 536
+-- file:oidjoins.sql ln:544 expect:true
 SELECT	ctid, cfgparser
 FROM	pg_catalog.pg_ts_config fk
 WHERE	cfgparser != 0 AND

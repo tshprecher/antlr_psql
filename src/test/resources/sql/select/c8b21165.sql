@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 307
+-- file:jsonb.sql ln:307 expect:true
 SELECT jsonb_typeof('true') AS boolean

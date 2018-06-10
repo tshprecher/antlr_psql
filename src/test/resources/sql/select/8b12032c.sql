@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 141
+-- file:returning.sql ln:155 expect:true
 SELECT * FROM foo

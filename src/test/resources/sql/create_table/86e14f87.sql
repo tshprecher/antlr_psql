@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 469
+-- file:portals.sql ln:479 expect:true
 CREATE TABLE cursor (a int)

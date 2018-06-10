@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 3841
+-- file:plpgsql.sql ln:3562 expect:true
 create function error1(text) returns text language sql as
 $$ SELECT relname::text FROM pg_class c WHERE c.oid = $1::regclass $$

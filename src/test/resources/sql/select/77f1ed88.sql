@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 380
+-- file:json.sql ln:380 expect:true
 select * from json_array_elements('[1,true,[1,[2,3]],null,{"f1":1,"f2":[7,8,9]},false,"stringy"]') q

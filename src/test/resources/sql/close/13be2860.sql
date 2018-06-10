@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 165
+-- file:portals.sql ln:165 expect:true
 CLOSE foo11

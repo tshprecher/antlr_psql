@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1461
+-- file:plpgsql.sql ln:1461 expect:true
 delete from found_test_tbl where a = 9999

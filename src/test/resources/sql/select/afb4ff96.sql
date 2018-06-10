@@ -1,3 +1,2 @@
--- file: float8.sql
--- line: 137
+-- file:float8.sql ln:143 expect:true
 SELECT '' AS bad, ln(f.f1) from FLOAT8_TBL f where f.f1 < '0.0' 

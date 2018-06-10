@@ -1,4 +1,3 @@
--- file: aggregates.sql
--- line: 377
+-- file:aggregates.sql ln:377 expect:true
 select array_agg(a order by a desc)
   from (values (1,4),(2,3),(3,1),(4,2)) v(a,b)

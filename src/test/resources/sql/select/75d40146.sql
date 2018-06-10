@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 205
+-- file:enum.sql ln:205 expect:true
 SELECT 'red' = ALL ('{red,red}'::rainbow[])

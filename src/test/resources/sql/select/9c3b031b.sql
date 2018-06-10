@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 340
+-- file:date.sql ln:340 expect:true
 select make_date(2013, 7, 15)

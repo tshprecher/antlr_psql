@@ -1,3 +1,2 @@
--- file: bit.sql
--- line: 175
+-- file:bit.sql ln:175 expect:true
 INSERT INTO VARBIT_SHIFT_TABLE SELECT CAST(v || B'0' AS BIT VARYING(6)) >>1 FROM VARBIT_SHIFT_TABLE

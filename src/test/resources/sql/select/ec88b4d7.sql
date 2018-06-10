@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 223
+-- file:aggregates.sql ln:223 expect:true
 SELECT
   EVERY(b1)     AS "f",
   EVERY(b2)     AS "t",

@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1021
+-- file:updatable_views.sql ln:1097 expect:true
 DROP FUNCTION snoop(anyelement)

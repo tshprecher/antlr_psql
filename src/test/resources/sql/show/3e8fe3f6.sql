@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 180
+-- file:guc.sql ln:180 expect:true
 SHOW vacuum_cost_delay

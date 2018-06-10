@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 872
+-- file:foreign_key.sql ln:872 expect:true
 SAVEPOINT savept1

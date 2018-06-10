@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 456
+-- file:transactions.sql ln:456 expect:true
 select 2

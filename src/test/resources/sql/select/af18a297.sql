@@ -1,5 +1,4 @@
--- file: psql.sql
--- line: 107
+-- file:psql.sql ln:107 expect:false
 SELECT 1 AS x, 'Hello', 2 AS y, true AS "dirty\name"
 \gdesc
 \g

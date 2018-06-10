@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 398
+-- file:rolenames.sql ln:398 expect:true
 REVOKE ALL PRIVILEGES ON FUNCTION testagg5(int2) FROM PUBLIC

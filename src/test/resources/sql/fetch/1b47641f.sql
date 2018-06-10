@@ -1,3 +1,2 @@
--- file: limit.sql
--- line: 52
+-- file:limit.sql ln:52 expect:true
 fetch 1 in c2

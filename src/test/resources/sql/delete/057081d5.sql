@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1016
+-- file:updatable_views.sql ln:1092 expect:true
 DELETE FROM v1 WHERE snoop(a) AND leakproof(a)

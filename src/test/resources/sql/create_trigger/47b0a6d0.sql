@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 143
+-- file:triggers.sql ln:131 expect:true
 create trigger ttdummy
 	before delete or update on tttest
 	for each row

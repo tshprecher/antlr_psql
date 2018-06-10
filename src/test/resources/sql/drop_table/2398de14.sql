@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 126
+-- file:select_parallel.sql ln:220 expect:true
 drop table bmscantest

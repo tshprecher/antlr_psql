@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1346
+-- file:alter_table.sql ln:1381 expect:true
 alter table test_storage alter a set storage plain

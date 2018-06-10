@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 380
+-- file:oidjoins.sql ln:388 expect:true
 SELECT	ctid, polrelid
 FROM	pg_catalog.pg_policy fk
 WHERE	polrelid != 0 AND

@@ -1,3 +1,2 @@
--- file: copydml.sql
--- line: 66
+-- file:copydml.sql ln:66 expect:true
 copy (delete from copydml_test) to stdout

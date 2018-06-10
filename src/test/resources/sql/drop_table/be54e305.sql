@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 145
+-- file:insert.sql ln:149 expect:true
 drop table part_default

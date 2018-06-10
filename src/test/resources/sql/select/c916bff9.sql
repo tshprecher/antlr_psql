@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 954
+-- file:join.sql ln:1014 expect:true
 select count(*) from
   tenk1 a join tenk1 b on a.unique1 = b.unique2
   left join tenk1 c on a.unique2 = b.unique1 and c.thousand = a.thousand

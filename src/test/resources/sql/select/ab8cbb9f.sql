@@ -1,3 +1,2 @@
--- file: json_encoding.sql
--- line: 38
+-- file:json_encoding.sql ln:38 expect:true
 SELECT '"\u"'::jsonb

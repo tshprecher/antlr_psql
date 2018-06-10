@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 171
+-- file:aggregates.sql ln:171 expect:true
 SELECT
       booland_statefunc(NULL, NULL)  IS NULL AS "t",
   booland_statefunc(TRUE, NULL)  IS NULL AS "t",

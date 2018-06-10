@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 271
+-- file:rolenames.sql ln:271 expect:true
 ALTER AGGREGATE testagg4(int2) OWNER TO regress_testrolx

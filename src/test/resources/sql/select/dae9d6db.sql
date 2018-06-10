@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 51
+-- file:strings.sql ln:51 expect:true
 SELECT E'\\xDeAdBeEx'::bytea

@@ -1,5 +1,4 @@
--- file: create_misc.sql
--- line: 25
+-- file:create_misc.sql ln:25 expect:true
 INSERT INTO hobbies_r (name, person)
    SELECT 'basketball', p.name
    FROM person p

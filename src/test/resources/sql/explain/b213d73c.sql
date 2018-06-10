@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 103
+-- file:aggregates.sql ln:103 expect:true
 explain (verbose, costs off)
 select s1, s2, sm
 from generate_series(1, 3) s1,

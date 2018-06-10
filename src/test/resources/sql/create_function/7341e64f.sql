@@ -1,4 +1,3 @@
--- file: create_function_3.sql
--- line: 18
+-- file:create_function_3.sql ln:25 expect:true
 CREATE FUNCTION functest_A_2(text[]) RETURNS int LANGUAGE 'sql'
        AS 'SELECT $1[0]::int'

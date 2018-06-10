@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 365
+-- file:insert.sql ln:424 expect:true
 insert into key_desc values (2, 1)

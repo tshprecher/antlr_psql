@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 417
+-- file:copy2.sql ln:417 expect:true
 DROP TABLE vistest

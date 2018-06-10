@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 267
+-- file:domain.sql ln:267 expect:true
 drop table dposintatable

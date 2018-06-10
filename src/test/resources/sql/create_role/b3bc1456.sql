@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1403
+-- file:rowsecurity.sql ln:1403 expect:true
 CREATE ROLE regress_rls_frank

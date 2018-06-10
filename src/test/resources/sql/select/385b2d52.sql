@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 546
+-- file:aggregates.sql ln:546 expect:true
 select (select count(inner_c) filter (where outer_c <> 0)
         from (values (1)) t0(inner_c))
 from (values (2),(3)) t1(outer_c)

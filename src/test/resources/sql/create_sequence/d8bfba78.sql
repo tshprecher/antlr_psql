@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 112
+-- file:rules.sql ln:112 expect:true
 create sequence rtest_seq

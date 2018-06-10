@@ -1,3 +1,2 @@
--- file: subscription.sql
--- line: 5
+-- file:subscription.sql ln:5 expect:true
 CREATE ROLE regress_subscription_user LOGIN SUPERUSER

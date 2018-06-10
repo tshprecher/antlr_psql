@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 25
+-- file:inherit.sql ln:25 expect:true
 INSERT INTO c(aa) VALUES('ccccc')

@@ -1,3 +1,2 @@
--- file: varchar.sql
--- line: 26
+-- file:varchar.sql ln:26 expect:true
 SELECT '' AS seven, * FROM VARCHAR_TBL

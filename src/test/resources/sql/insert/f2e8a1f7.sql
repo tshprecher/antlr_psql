@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 193
+-- file:insert.sql ln:197 expect:true
 insert into range_parted values ('b', 20)

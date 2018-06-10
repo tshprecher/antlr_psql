@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1307
+-- file:rowsecurity.sql ln:1307 expect:true
 SET row_security TO OFF

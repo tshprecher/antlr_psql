@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 146
+-- file:rolenames.sql ln:146 expect:true
 ALTER ROLE ALL RESET application_name

@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 225
+-- file:rowsecurity.sql ln:225 expect:true
 SELECT * FROM document

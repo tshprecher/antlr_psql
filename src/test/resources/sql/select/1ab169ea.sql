@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 252
+-- file:oidjoins.sql ln:256 expect:true
 SELECT	ctid, indexrelid
 FROM	pg_catalog.pg_index fk
 WHERE	indexrelid != 0 AND

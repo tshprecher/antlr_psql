@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1535
+-- file:triggers.sql ln:1767 expect:true
 insert into parent values ('AAA', 42), ('BBB', 42), ('CCC', 66)

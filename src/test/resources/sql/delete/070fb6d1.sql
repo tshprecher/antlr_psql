@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 456
+-- file:updatable_views.sql ln:456 expect:true
 DELETE FROM rw_view2 WHERE aa=4

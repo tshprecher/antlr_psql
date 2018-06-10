@@ -1,4 +1,3 @@
--- file: numeric_big.sql
--- line: 536
+-- file:numeric_big.sql ln:536 expect:true
 INSERT INTO num_result SELECT t1.id, t2.id, round(t1.val + t2.val, 10)
     FROM num_data t1, num_data t2

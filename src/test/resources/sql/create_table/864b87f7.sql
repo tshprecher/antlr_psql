@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 405
+-- file:tsearch.sql ln:405 expect:true
 CREATE TABLE test_tsquery (txtkeyword TEXT, txtsample TEXT)

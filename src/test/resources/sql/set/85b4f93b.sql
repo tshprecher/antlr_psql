@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 154
+-- file:interval.sql ln:154 expect:true
 SET DATESTYLE = 'ISO'

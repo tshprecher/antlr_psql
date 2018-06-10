@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 213
+-- file:window.sql ln:260 expect:true
 SELECT first_value(unique1) over w,
 	nth_value(unique1, 2) over w AS nth_2,
 	last_value(unique1) over w, unique1, four

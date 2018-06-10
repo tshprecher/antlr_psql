@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1185
+-- file:rowsecurity.sql ln:1185 expect:true
 SELECT * FROM t1

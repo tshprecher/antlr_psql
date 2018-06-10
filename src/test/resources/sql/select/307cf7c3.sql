@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 926
+-- file:jsonb.sql ln:932 expect:true
 select jsonb_concat('{"d": "test", "a": [1, 2]}', '{"g": "test2", "c": {"c1":1, "c2":2}}')

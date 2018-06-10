@@ -1,3 +1,2 @@
--- file: brin.sql
--- line: 354
+-- file:brin.sql ln:354 expect:true
 SET enable_seqscan = 1

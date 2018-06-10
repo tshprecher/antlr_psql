@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 4
+-- file:jsonb.sql ln:4 expect:true
 SELECT '"abc"'::jsonb

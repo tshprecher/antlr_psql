@@ -1,4 +1,3 @@
--- file: alter_table.sql
--- line: 1272
+-- file:alter_table.sql ln:1291 expect:true
 create table anothertab (atcol1 serial8, atcol2 boolean,
 	constraint anothertab_chk check (atcol1 <= 3))

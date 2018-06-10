@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 354
+-- file:xml.sql ln:390 expect:true
 SELECT * FROM xmltableview2

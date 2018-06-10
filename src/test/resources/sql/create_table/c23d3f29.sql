@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 194
+-- file:inherit.sql ln:194 expect:true
 create table oid_parent (a int) with oids

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2091
+-- file:alter_table.sql ln:2123 expect:true
 ALTER TABLE list_parted SET WITHOUT OIDS

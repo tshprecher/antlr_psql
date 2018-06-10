@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 173
+-- file:matview.sql ln:173 expect:true
 ALTER TABLE mvtest_v RENAME COLUMN i TO x

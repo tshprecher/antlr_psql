@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1621
+-- file:join.sql ln:1692 expect:true
 explain (verbose, costs off)
 select * from int4_tbl a,
   lateral (

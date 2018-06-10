@@ -1,3 +1,2 @@
--- file: geometry.sql
--- line: 7
+-- file:geometry.sql ln:7 expect:true
 SET extra_float_digits TO -3

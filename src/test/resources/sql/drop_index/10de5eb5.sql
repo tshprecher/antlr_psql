@@ -1,3 +1,2 @@
--- file: gist.sql
--- line: 102
+-- file:gist.sql ln:102 expect:true
 drop index gist_tbl_point_index

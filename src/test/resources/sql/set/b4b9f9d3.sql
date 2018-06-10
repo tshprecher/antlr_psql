@@ -1,3 +1,2 @@
--- file: plancache.sql
--- line: 108
+-- file:plancache.sql ln:108 expect:true
 set search_path = s1

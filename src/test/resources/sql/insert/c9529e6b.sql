@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 34
+-- file:inherit.sql ln:34 expect:true
 INSERT INTO d(aa) VALUES('ddddddd')

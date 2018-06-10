@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 384
+-- file:join.sql ln:393 expect:true
 select count(*)
 from
   (select t3.tenthous as x1, coalesce(t1.stringu1, t2.stringu1) as x2

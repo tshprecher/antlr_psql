@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 284
+-- file:foreign_data.sql ln:284 expect:false
 CREATE FOREIGN TABLE ft1 ()

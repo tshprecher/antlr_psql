@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 36
+-- file:cluster.sql ln:36 expect:true
 INSERT INTO clstr_tst (b, c) VALUES (4, 'cuatro')

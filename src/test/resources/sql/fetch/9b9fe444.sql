@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 273
+-- file:transactions.sql ln:273 expect:true
 FETCH 10 FROM c

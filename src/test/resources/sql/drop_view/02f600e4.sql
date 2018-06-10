@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 301
+-- file:insert_conflict.sql ln:301 expect:true
 drop view insertconflictv

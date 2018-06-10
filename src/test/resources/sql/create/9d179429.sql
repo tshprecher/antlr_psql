@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 6
+-- file:sequence.sql ln:6 expect:true
 CREATE UNLOGGED SEQUENCE sequence_testx

@@ -1,3 +1,2 @@
--- file: brin.sql
--- line: 355
+-- file:brin.sql ln:355 expect:true
 SET enable_bitmapscan = 0

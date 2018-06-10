@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 152
+-- file:errors.sql ln:152 expect:true
 drop aggregate nonesuch (int4)

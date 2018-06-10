@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 584
+-- file:join.sql ln:624 expect:true
 insert into zt1 values(53)

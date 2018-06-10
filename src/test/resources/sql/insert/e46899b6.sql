@@ -1,5 +1,4 @@
--- file: select_views.sql
--- line: 48
+-- file:select_views.sql ln:48 expect:true
 INSERT INTO credit_usage
        VALUES (101, '2011-09-15', 120),
 	      (101, '2011-10-05',  90),

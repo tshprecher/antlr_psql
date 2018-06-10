@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 979
+-- file:alter_table.sql ln:998 expect:true
 insert into parent values (1, 2, 3)

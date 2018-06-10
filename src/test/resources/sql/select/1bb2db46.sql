@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 45
+-- file:regproc.sql ln:45 expect:true
 SELECT regnamespace('"pg_catalog"')

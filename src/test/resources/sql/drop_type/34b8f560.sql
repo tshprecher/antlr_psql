@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 718
+-- file:jsonb.sql ln:724 expect:true
 DROP TYPE jb_unordered_pair

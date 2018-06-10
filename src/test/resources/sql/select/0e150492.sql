@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 502
+-- file:polymorphism.sql ln:502 expect:true
 select concat('|', variadic array[]::int[])

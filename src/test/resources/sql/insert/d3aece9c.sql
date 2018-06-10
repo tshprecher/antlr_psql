@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 661
+-- file:create_index.sql ln:671 expect:true
 INSERT INTO array_gin_test SELECT ARRAY[1, g%5, g] FROM generate_series(1, 10000) g

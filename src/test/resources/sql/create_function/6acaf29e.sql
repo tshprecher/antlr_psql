@@ -1,4 +1,3 @@
--- file: polymorphism.sql
--- line: 386
+-- file:polymorphism.sql ln:386 expect:true
 create function sql_if(bool, anyelement, anyelement) returns anyelement as $$
 select case when $1 then $2 else $3 end $$ language sql

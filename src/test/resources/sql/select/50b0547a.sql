@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 655
+-- file:opr_sanity.sql ln:656 expect:true
 SELECT p1.oid, p1.oprname, p.amopfamily
 FROM pg_operator AS p1, pg_amop p
 WHERE amopopr = p1.oid

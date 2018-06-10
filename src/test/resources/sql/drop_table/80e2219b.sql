@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 151
+-- file:rangetypes.sql ln:151 expect:true
 DROP TABLE numrange_test

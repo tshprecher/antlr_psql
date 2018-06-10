@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 324
+-- file:timestamptz.sql ln:328 expect:true
 SET TimeZone to 'UTC'

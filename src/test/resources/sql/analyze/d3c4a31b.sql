@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 917
+-- file:alter_table.sql ln:936 expect:true
 analyze atacc1("........pg.dropped.1........")

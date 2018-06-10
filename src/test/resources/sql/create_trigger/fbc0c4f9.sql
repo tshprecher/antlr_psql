@@ -1,4 +1,3 @@
--- file: triggers.sql
--- line: 230
+-- file:triggers.sql ln:218 expect:true
 CREATE TRIGGER after_ins_stmt_trig AFTER INSERT ON main_table
 FOR EACH STATEMENT EXECUTE PROCEDURE trigger_func('after_ins_stmt')

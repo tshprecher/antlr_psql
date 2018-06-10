@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 12
+-- file:regproc.sql ln:12 expect:true
 SELECT regoperator('+(int4,int4)')

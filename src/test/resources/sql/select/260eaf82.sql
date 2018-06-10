@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 272
+-- file:copy2.sql ln:272 expect:true
 SELECT * FROM vistest

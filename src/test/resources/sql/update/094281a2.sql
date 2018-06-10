@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 318
+-- file:triggers.sql ln:312 expect:true
 UPDATE main_table SET b = 10

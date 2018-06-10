@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 115
+-- file:domain.sql ln:115 expect:true
 create domain dia as int[]

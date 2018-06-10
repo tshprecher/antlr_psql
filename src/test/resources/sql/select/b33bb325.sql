@@ -1,3 +1,2 @@
--- file: boolean.sql
--- line: 51
+-- file:boolean.sql ln:51 expect:true
 SELECT bool 'on_' AS error

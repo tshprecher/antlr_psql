@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2942
+-- file:plpgsql.sql ln:2729 expect:false
 fetch next from c into x

@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 822
+-- file:numeric.sql ln:845 expect:true
 INSERT INTO num_input_test(n1) VALUES ('   1234   %')

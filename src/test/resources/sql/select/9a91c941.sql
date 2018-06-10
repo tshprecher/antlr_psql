@@ -1,5 +1,4 @@
--- file: create_misc.sql
--- line: 15
+-- file:create_misc.sql ln:15 expect:true
 SELECT *
    INTO TABLE Bprime
    FROM tenk1

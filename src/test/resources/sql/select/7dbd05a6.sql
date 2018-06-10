@@ -1,5 +1,4 @@
--- file: interval.sql
--- line: 255
+-- file:interval.sql ln:255 expect:true
 select  interval '0'                                AS "zero",
         interval '1-2'                              AS "a year 2 months",
         interval '1 2:03:04'                        AS "a bit over a day",

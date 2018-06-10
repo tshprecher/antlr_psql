@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 913
+-- file:alter_table.sql ln:932 expect:true
 drop view myview

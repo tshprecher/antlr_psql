@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 228
+-- file:tstypes.sql ln:228 expect:true
 SELECT array_to_tsvector(ARRAY['foo','bar','baz','bar'])

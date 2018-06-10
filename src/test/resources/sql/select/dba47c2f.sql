@@ -1,5 +1,4 @@
--- file: inet.sql
--- line: 51
+-- file:inet.sql ln:51 expect:true
 SELECT '' AS ten, i, c,
   i < c AS lt, i <= c AS le, i = c AS eq,
   i >= c AS ge, i > c AS gt, i <> c AS ne,

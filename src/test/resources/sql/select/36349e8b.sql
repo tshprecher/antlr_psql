@@ -1,4 +1,3 @@
--- file: window.sql
--- line: 302
+-- file:window.sql ln:864 expect:true
 SELECT nth_value_def(n := 2, val := ten) OVER (PARTITION BY four), ten, four
   FROM (SELECT * FROM tenk1 WHERE unique2 < 10 ORDER BY four, ten) s

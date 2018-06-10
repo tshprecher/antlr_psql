@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 728
+-- file:create_index.sql ln:738 expect:true
 INSERT INTO func_index_heap VALUES('QWE','RTY')

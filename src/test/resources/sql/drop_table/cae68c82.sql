@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 936
+-- file:create_index.sql ln:972 expect:true
 DROP TABLE onek_with_null

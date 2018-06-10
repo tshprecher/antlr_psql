@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 908
+-- file:jsonb.sql ln:914 expect:true
 select jsonb_strip_nulls('"a string"')

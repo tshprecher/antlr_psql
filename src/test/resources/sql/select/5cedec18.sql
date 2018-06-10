@@ -1,5 +1,4 @@
--- file: with.sql
--- line: 168
+-- file:with.sql ln:168 expect:true
 SELECT count(*) FROM (
     WITH RECURSIVE t(n) AS (
         SELECT 1 UNION ALL SELECT n + 1 FROM t WHERE n < 500

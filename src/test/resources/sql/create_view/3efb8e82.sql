@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 565
+-- file:rules.sql ln:565 expect:true
 CREATE VIEW shoe_ready AS
 	SELECT rsh.shoename,
 		   rsh.sh_avail,

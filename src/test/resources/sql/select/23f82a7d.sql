@@ -1,5 +1,4 @@
--- file: type_sanity.sql
--- line: 345
+-- file:type_sanity.sql ln:353 expect:true
 SELECT t.oid, t.typname, t.typanalyze
 FROM pg_type t
 WHERE t.typbasetype = 0 AND

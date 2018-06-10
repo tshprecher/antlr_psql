@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1305
+-- file:fast_default.sql ln:51 expect:false
 end if

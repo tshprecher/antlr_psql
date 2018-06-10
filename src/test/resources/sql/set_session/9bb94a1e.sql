@@ -1,3 +1,2 @@
--- file: equivclass.sql
--- line: 242
+-- file:equivclass.sql ln:242 expect:true
 set session authorization regress_user_ectest

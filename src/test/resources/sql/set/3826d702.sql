@@ -1,3 +1,2 @@
--- file: union.sql
--- line: 249
+-- file:partition_prune.sql ln:318 expect:true
 set enable_indexonlyscan = off

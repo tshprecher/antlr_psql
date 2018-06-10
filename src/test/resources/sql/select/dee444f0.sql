@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 430
+-- file:rangefuncs.sql ln:430 expect:true
 select insert_tt('foo')

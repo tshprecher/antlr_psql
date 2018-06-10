@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 575
+-- file:create_index.sql ln:581 expect:true
 SELECT count(*) FROM radix_text_tbl WHERE t >    'Worth                         St  '

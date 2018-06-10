@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 421
+-- file:foreign_key.sql ln:421 expect:true
 SELECT * from PKTABLE

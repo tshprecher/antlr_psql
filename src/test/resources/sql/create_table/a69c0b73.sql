@@ -1,5 +1,4 @@
--- file: uuid.sql
--- line: 8
+-- file:uuid.sql ln:8 expect:true
 CREATE TABLE guid2
 (
 	guid_field UUID,

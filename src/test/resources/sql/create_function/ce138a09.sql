@@ -1,5 +1,4 @@
--- file: updatable_views.sql
--- line: 792
+-- file:updatable_views.sql ln:868 expect:true
 CREATE FUNCTION rw_view1_trig_fn()
 RETURNS trigger AS
 $$

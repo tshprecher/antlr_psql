@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 431
+-- file:arrays.sql ln:431 expect:true
 select array[]

@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 386
+-- file:opr_sanity.sql ln:387 expect:true
 \a\t
 
 select proname, oid from pg_catalog.pg_proc

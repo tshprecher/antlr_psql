@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 30
+-- file:json.sql ln:30 expect:true
 SELECT '[1,[2]'::json

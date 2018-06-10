@@ -1,5 +1,4 @@
--- file: tsearch.sql
--- line: 34
+-- file:tsearch.sql ln:34 expect:true
 SELECT * FROM
   ( SELECT oid AS cfgid, (ts_token_type(cfgparser)).tokid AS tokid
     FROM pg_ts_config ) AS tt

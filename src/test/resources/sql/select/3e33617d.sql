@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 33
+-- file:regex.sql ln:33 expect:true
 select regexp_match('abc', 'Bd', 'ig')

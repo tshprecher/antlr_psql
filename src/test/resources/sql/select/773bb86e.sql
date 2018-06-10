@@ -1,5 +1,4 @@
--- file: numerology.sql
--- line: 85
+-- file:numerology.sql ln:85 expect:true
 SELECT f1 AS two,
        max(f2) + min(f2) AS max_plus_min,
        min(f3) - 1 AS min_minus_1

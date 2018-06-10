@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 516
+-- file:create_view.sql ln:516 expect:true
 select * from tt15v

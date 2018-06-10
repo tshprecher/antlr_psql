@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 547
+-- file:updatable_views.sql ln:623 expect:true
 CREATE TABLE base_tbl(a float)

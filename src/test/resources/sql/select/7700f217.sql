@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 392
+-- file:strings.sql ln:409 expect:true
 SELECT substr(f1, 5, -1) from toasttest

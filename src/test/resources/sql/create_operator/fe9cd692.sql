@@ -1,5 +1,4 @@
--- file: alter_operator.sql
--- line: 7
+-- file:alter_operator.sql ln:7 expect:true
 CREATE OPERATOR === (
     LEFTARG = boolean,
     RIGHTARG = boolean,

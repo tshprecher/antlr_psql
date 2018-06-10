@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 656
+-- file:aggregates.sql ln:656 expect:true
 drop view aggordview1

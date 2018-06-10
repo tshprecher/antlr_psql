@@ -1,3 +1,2 @@
--- file: select.sql
--- line: 65
+-- file:select.sql ln:65 expect:true
 ANALYZE onek2

@@ -1,3 +1,2 @@
--- file: copydml.sql
--- line: 90
+-- file:copydml.sql ln:90 expect:true
 drop table copydml_test

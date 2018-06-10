@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 247
+-- file:copy2.sql ln:247 expect:true
 TRUNCATE vistest

@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 258
+-- file:union.sql ln:301 expect:true
 SELECT * FROM
   (SELECT a || b AS ab FROM t1
    UNION ALL

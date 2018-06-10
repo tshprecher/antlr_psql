@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 134
+-- file:subselect.sql ln:134 expect:true
 select count(*) from
   (select 1 from tenk1 a
    where unique1 IN (select distinct hundred from tenk1 b)) ss

@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 268
+-- file:errors.sql ln:268 expect:true
 select 1/0::float4

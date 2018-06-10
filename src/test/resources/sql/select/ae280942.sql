@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 304
+-- file:oidjoins.sql ln:308 expect:true
 SELECT	ctid, opcnamespace
 FROM	pg_catalog.pg_opclass fk
 WHERE	opcnamespace != 0 AND

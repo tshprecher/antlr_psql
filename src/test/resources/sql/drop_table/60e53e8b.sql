@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 174
+-- file:inherit.sql ln:174 expect:true
 drop table some_tab cascade

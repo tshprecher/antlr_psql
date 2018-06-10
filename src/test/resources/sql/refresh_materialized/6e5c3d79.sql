@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 161
+-- file:matview.sql ln:161 expect:true
 REFRESH MATERIALIZED VIEW CONCURRENTLY mvtest_boxmv

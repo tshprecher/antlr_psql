@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 65
+-- file:publication.sql ln:65 expect:false
 CREATE PUBLICATION testpub_fortbl FOR TABLE testpub_tbl1, pub_test.testpub_nopk

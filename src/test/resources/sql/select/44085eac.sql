@@ -1,3 +1,2 @@
--- file: expressions.sql
--- line: 35
+-- file:expressions.sql ln:35 expect:true
 SELECT current_schema

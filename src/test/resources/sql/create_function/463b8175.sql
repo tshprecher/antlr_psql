@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 1090
+-- file:plpgsql.sql ln:1090 expect:true
 create function wslot_slotlink_view(bpchar)
 returns text as '
 declare

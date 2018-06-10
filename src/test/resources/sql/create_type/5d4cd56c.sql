@@ -1,5 +1,4 @@
--- file: create_type.sql
--- line: 64
+-- file:create_type.sql ln:64 expect:true
 CREATE TYPE int42 (
    internallength = 4,
    input = int42_in,

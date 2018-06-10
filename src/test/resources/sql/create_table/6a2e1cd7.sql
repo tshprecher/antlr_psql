@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 312
+-- file:aggregates.sql ln:312 expect:true
 create table minmaxtest3() inherits (minmaxtest)

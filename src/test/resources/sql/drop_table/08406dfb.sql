@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 307
+-- file:inherit.sql ln:307 expect:true
 drop table bc

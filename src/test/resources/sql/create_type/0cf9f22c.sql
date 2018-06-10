@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2191
+-- file:plpgsql.sql ln:2213 expect:true
 create type eitype as (i integer, y integer)

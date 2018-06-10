@@ -1,5 +1,4 @@
--- file: xml.sql
--- line: 323
+-- file:xml.sql ln:359 expect:false
 CREATE VIEW xmltableview1 AS SELECT  xmltable.*
    FROM (SELECT data FROM xmldata) x,
         LATERAL XMLTABLE('/ROWS/ROW'

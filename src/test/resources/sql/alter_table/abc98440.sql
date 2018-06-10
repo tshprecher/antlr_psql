@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1512
+-- file:alter_table.sql ln:1547 expect:true
 alter table alterlock alter column f2 set storage extended

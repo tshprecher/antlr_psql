@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 525
+-- file:opr_sanity.sql ln:526 expect:true
 SELECT p1.oid, p1.conname
 FROM pg_conversion as p1
 WHERE condefault AND

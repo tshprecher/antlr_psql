@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 756
+-- file:aggregates.sql ln:756 expect:true
 select
   rank(4) within group (order by a),
   dense_rank(4) within group (order by a)

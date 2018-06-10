@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 821
+-- file:alter_table.sql ln:840 expect:true
 alter table def_test alter column c1 set default 'wrong_datatype'

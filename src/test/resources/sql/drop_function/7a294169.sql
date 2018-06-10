@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1858
+-- file:plpgsql.sql ln:1858 expect:true
 drop function trap_foreign_key_2()

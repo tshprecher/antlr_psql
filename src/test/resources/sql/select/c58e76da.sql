@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 90
+-- file:strings.sql ln:90 expect:true
 SELECT CAST(f1 AS varchar) AS "varchar(char)" FROM CHAR_TBL

@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4083
+-- file:plpgsql.sql ln:3804 expect:true
 select unreserved_test()

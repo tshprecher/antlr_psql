@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1237
+-- file:alter_table.sql ln:1256 expect:true
 alter table p1 add column a1 int check (a1 > 0)

@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 52
+-- file:oidjoins.sql ln:52 expect:true
 SELECT	ctid, amhandler
 FROM	pg_catalog.pg_am fk
 WHERE	amhandler != 0 AND

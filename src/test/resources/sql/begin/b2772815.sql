@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 2978
+-- file:plpgsql.sql ln:2765 expect:false
 begin
   <<innerblock>>
   declare

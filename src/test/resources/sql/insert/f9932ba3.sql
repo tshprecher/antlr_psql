@@ -1,3 +1,2 @@
--- file: select_distinct.sql
--- line: 57
+-- file:select_distinct.sql ln:57 expect:true
 INSERT INTO DISTTABLE VALUES(NULL)

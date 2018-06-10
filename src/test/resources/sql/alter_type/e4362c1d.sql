@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1646
+-- file:alter_table.sql ln:1681 expect:true
 alter type alter1.ctype set schema alter2

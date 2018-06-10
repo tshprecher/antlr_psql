@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 63
+-- file:xml.sql ln:63 expect:true
 SELECT xmlparse(content '')

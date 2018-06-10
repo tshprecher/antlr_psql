@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 184
+-- file:oidjoins.sql ln:184 expect:true
 SELECT	ctid, conindid
 FROM	pg_catalog.pg_constraint fk
 WHERE	conindid != 0 AND

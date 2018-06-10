@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 99
+-- file:select_parallel.sql ln:168 expect:true
 set enable_indexscan to off

@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 612
+-- file:join.sql ln:652 expect:true
 prepare foo(bool) as
   select count(*) from tenk1 a left join tenk1 b
     on (a.unique2 = b.unique1 and exists

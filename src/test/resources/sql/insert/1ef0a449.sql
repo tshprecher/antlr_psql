@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 58
+-- file:sequence.sql ln:58 expect:true
 INSERT INTO serialTest1 VALUES ('bar')

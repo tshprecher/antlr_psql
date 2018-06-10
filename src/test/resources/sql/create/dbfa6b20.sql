@@ -1,5 +1,4 @@
--- file: hs_primary_extremes.sql
--- line: 10
+-- file:hs_primary_extremes.sql ln:10 expect:true
 CREATE OR REPLACE FUNCTION hs_subxids (n integer)
 RETURNS void
 LANGUAGE plpgsql

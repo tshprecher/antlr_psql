@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 386
+-- file:subselect.sql ln:386 expect:true
 delete from road
 where exists (
   select 1

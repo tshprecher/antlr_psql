@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 67
+-- file:errors.sql ln:67 expect:false
 alter table rename

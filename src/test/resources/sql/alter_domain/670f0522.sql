@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 690
+-- file:domain.sql ln:690 expect:true
 alter domain di add constraint pos check (value > 0)

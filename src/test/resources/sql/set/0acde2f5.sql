@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 58
+-- file:horology.sql ln:58 expect:true
 SET DateStyle = 'Postgres, MDY'

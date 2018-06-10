@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 80
+-- file:tstypes.sql ln:80 expect:true
 SELECT 'foo & bar'::tsquery || 'asd & fg'

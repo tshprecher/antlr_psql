@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 232
+-- file:plpgsql.sql ln:232 expect:true
 create function tg_system_au() returns trigger as '
 begin
     if new.name != old.name then

@@ -1,5 +1,4 @@
--- file: xml.sql
--- line: 107
+-- file:xml.sql ln:107 expect:true
 SELECT xmlroot (
   xmlelement (
     name gazonk,

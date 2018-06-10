@@ -1,3 +1,2 @@
--- file: plancache.sql
--- line: 179
+-- file:plancache.sql ln:179 expect:true
 deallocate pstmt_def_insert

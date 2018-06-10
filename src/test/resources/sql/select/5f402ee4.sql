@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 450
+-- file:transactions.sql ln:450 expect:true
 select 1\

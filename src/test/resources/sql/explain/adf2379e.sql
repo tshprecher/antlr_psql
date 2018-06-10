@@ -1,5 +1,4 @@
--- file: inherit.sql
--- line: 568
+-- file:inherit.sql ln:582 expect:true
 explain (costs off)
 SELECT min(x) FROM
   (SELECT unique1 AS x FROM tenk1 a

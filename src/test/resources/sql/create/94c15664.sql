@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 666
+-- file:join.sql ln:726 expect:true
 create temp table b (
      a char not null,
      num integer not null,

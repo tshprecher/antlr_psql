@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1573
+-- file:rowsecurity.sql ln:1573 expect:true
 DELETE FROM r2

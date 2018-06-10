@@ -1,5 +1,4 @@
--- file: select_views.sql
--- line: 34
+-- file:select_views.sql ln:34 expect:true
 CREATE TABLE credit_usage (
        cid      int references customer(cid),
        ymd      date,

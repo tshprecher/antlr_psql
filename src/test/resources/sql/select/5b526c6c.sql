@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 96
+-- file:rowtypes.sql ln:99 expect:true
 select ROW('ABC','DEF') ~~ ROW('DEF','ABC') as fail

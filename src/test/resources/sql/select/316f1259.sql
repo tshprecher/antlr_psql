@@ -1,3 +1,2 @@
--- file: name.sql
--- line: 38
+-- file:name.sql ln:38 expect:true
 SELECT '' AS three, c.f1 FROM NAME_TBL c WHERE c.f1 < '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ABCDEFGHIJKLMNOPQR'

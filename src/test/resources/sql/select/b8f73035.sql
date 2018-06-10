@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 125
+-- file:collate.linux.utf8.sql ln:125 expect:true
 SELECT 'bıt' ILIKE 'BIT' COLLATE "en_US" AS "false"

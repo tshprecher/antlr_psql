@@ -1,5 +1,4 @@
--- file: returning.sql
--- line: 25
+-- file:returning.sql ln:25 expect:true
 INSERT INTO foo SELECT f1+10, f2, f3+99 FROM foo
   RETURNING *, f1+112 IN (SELECT q1 FROM int8_tbl) AS subplan,
     EXISTS(SELECT * FROM int4_tbl) AS initplan

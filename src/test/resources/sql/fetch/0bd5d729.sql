@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 71
+-- file:portals.sql ln:71 expect:true
 FETCH 10 in foo10

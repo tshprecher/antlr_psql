@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 34
+-- file:transactions.sql ln:34 expect:true
 SELECT * FROM aggtest

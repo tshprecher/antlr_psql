@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 483
+-- file:domain.sql ln:483 expect:true
 drop table dtest

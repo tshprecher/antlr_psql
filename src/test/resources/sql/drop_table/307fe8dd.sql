@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 115
+-- file:publication.sql ln:115 expect:true
 DROP TABLE testpub_parted

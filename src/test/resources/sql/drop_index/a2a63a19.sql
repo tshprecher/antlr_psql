@@ -1,3 +1,2 @@
--- file: inet.sql
--- line: 94
+-- file:inet.sql ln:94 expect:true
 DROP INDEX inet_idx2

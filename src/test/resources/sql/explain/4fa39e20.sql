@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1294
+-- file:join.sql ln:1365 expect:true
 explain (costs off)
   SELECT a.* FROM a LEFT JOIN (b left join c on b.c_id = c.id)
   ON (a.b_id = b.id)

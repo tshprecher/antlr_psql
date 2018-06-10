@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 537
+-- file:create_view.sql ln:537 expect:true
 explain (costs off) select * from tt18v

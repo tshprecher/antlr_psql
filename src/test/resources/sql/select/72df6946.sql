@@ -1,5 +1,4 @@
--- file: timestamptz.sql
--- line: 201
+-- file:timestamptz.sql ln:201 expect:true
 SELECT '' AS "54", d1 as timestamptz,
    date_part( 'year', d1) AS year, date_part( 'month', d1) AS month,
    date_part( 'day', d1) AS day, date_part( 'hour', d1) AS hour,

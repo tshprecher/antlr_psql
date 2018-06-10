@@ -1,5 +1,4 @@
--- file: psql_crosstab.sql
--- line: 43
+-- file:psql_crosstab.sql ln:43 expect:true
 \crosstabview
 
 SELECT v, to_char(d, 'Mon') AS "month name", EXTRACT(month FROM d) AS num,

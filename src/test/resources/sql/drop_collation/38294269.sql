@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 386
+-- file:collate.icu.utf8.sql ln:383 expect:true
 DROP COLLATION IF EXISTS test0

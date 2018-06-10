@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 8
+-- file:xml.sql ln:8 expect:true
 INSERT INTO xmltest VALUES (3, '<wrong')

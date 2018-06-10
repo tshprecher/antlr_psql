@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 3340
+-- file:plpgsql.sql ln:3127 expect:true
 create or replace function raise_test() returns void as $$
 begin
   raise notice '% % %', 1, 2, 3

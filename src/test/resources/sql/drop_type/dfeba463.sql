@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 133
+-- file:create_table_like.sql ln:136 expect:true
 DROP TYPE ctlty1

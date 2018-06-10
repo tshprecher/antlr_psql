@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 97
+-- file:plpgsql.sql ln:3574 expect:true
 ROLLBACK TO a

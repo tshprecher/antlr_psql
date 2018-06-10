@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 93
+-- file:domain.sql ln:93 expect:true
 COPY domarrtest FROM stdin

@@ -1,3 +1,2 @@
--- file: timestamp.sql
--- line: 27
+-- file:timestamp.sql ln:27 expect:true
 INSERT INTO TIMESTAMP_TBL VALUES ('tomorrow zulu')

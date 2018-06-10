@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 2247
+-- file:plpgsql.sql ln:2269 expect:false
 begin
 	        raise notice '% %', sqlstate, sqlerrm

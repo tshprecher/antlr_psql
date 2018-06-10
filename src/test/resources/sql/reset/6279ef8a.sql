@@ -1,4 +1,3 @@
--- file: foreign_data.sql
--- line: 166
+-- file:foreign_data.sql ln:166 expect:true
 \des+
 RESET ROLE

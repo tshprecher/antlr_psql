@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 315
+-- file:domain.sql ln:315 expect:true
 SELECT cast(col4 as dnotnull) from nulltest

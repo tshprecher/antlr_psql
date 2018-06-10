@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 3651
+-- file:plpgsql.sql ln:3372 expect:true
 create or replace function vari(variadic int[])
 returns void as $$
 begin

@@ -1,3 +1,2 @@
--- file: hs_standby_allowed.sql
--- line: 89
+-- file:hs_standby_allowed.sql ln:89 expect:true
 fetch last from hsc

@@ -1,3 +1,2 @@
--- file: bit.sql
--- line: 59
+-- file:bit.sql ln:59 expect:true
 COPY varbit_table FROM stdin

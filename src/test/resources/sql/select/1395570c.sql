@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 301
+-- file:jsonb.sql ln:301 expect:true
 SELECT jsonb_typeof('null') AS "null"

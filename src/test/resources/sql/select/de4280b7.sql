@@ -1,5 +1,4 @@
--- file: json.sql
--- line: 80
+-- file:json.sql ln:80 expect:true
 SELECT row_to_json(q)
 FROM (SELECT $$a$$ || x AS b,
          y AS c,

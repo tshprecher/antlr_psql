@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 70
+-- file:errors.sql ln:70 expect:true
 alter table nonesuch rename to newnonesuch

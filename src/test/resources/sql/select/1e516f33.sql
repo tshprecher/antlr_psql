@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3188
+-- file:plpgsql.sql ln:2975 expect:true
 select * from returnqueryf()

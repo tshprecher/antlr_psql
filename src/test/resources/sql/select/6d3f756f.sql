@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 611
+-- file:arrays.sql ln:611 expect:true
 select array_replace(array['AB',NULL,'CDE'],NULL,'12')

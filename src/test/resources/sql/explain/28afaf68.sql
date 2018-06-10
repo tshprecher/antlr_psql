@@ -1,5 +1,4 @@
--- file: xml.sql
--- line: 475
+-- file:xml.sql ln:511 expect:false
 EXPLAIN (VERBOSE, COSTS OFF)
 SELECT  xmltable.*
    FROM (SELECT data FROM xmldata) x,

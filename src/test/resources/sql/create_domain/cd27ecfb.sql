@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 364
+-- file:rangetypes.sql ln:364 expect:true
 create domain mydomain as int4

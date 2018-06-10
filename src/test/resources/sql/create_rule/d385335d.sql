@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 918
+-- file:triggers.sql ln:917 expect:true
 \set QUIET true
 
 CREATE RULE european_city_insert_rule AS ON INSERT TO european_city_view

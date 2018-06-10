@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1701
+-- file:join.sql ln:1782 expect:true
 select * from (values (0), (1)) v(id),
 lateral (select * from int8_tbl t1,
          lateral (select * from

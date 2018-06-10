@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 99
+-- file:insert.sql ln:103 expect:true
 insert into part1 values ('a', 11)

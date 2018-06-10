@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 208
+-- file:equivclass.sql ln:251 expect:true
 reset session authorization

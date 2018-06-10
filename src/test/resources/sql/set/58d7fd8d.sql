@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1676
+-- file:rowsecurity.sql ln:1676 expect:true
 SET row_security = on

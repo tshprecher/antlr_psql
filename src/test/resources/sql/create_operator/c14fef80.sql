@@ -1,5 +1,4 @@
--- file: drop_operator.sql
--- line: 8
+-- file:drop_operator.sql ln:8 expect:true
 CREATE OPERATOR !== (
         PROCEDURE = int8ne,
         LEFTARG = bigint,

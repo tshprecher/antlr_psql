@@ -1,5 +1,4 @@
--- file: jsonb.sql
--- line: 514
+-- file:jsonb.sql ln:514 expect:true
 CREATE TYPE jsbrec AS (
 	i	int,
 	ia	_int4,

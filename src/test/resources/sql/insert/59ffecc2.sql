@@ -1,5 +1,4 @@
--- file: box.sql
--- line: 198
+-- file:box.sql ln:198 expect:true
 INSERT INTO quad_box_tbl
 	VALUES
 		(NULL),

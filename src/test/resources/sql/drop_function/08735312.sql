@@ -1,3 +1,2 @@
--- file: union.sql
--- line: 358
+-- file:union.sql ln:401 expect:true
 drop function expensivefunc(int)

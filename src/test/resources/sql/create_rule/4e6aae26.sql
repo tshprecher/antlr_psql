@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 966
+-- file:rules.sql ln:966 expect:true
 create rule t1_upd_2 as on update to t1
 	where old.a >= 10 and old.a < 20
 	do instead

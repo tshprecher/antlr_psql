@@ -1,3 +1,2 @@
--- file: pg_lsn.sql
--- line: 9
+-- file:pg_lsn.sql ln:9 expect:true
 INSERT INTO PG_LSN_TBL VALUES ('FFFFFFFF/FFFFFFFF')

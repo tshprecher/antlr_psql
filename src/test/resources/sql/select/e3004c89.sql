@@ -1,3 +1,2 @@
--- file: select_views.sql
--- line: 6
+-- file:select_views.sql ln:6 expect:true
 SELECT * FROM street

@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 123
+-- file:create_table_like.sql ln:126 expect:true
 CREATE TABLE ctlt10 (LIKE ctlseq1)

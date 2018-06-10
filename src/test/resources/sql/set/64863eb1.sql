@@ -1,3 +1,2 @@
--- file: gist.sql
--- line: 57
+-- file:gist.sql ln:57 expect:true
 set enable_bitmapscan=off

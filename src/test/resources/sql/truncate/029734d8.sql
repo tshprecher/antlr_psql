@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 34
+-- file:truncate.sql ln:34 expect:true
 TRUNCATE TABLE truncate_a CASCADE

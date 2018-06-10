@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1029
+-- file:triggers.sql ln:1028 expect:true
 drop function depth_c_tf()

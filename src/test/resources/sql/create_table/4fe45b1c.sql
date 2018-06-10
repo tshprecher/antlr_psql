@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 57
+-- file:select_into.sql ln:57 expect:true
 CREATE TABLE ctas_base (i int, j int)

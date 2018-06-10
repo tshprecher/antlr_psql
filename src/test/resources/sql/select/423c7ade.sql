@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 76
+-- file:strings.sql ln:76 expect:true
 SELECT CAST(name 'namefield' AS text) AS "text(name)"

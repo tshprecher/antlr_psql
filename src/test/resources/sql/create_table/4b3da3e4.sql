@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 18
+-- file:create_table.sql ln:18 expect:true
 CREATE TABLE onek (
 	unique1		int4,
 	unique2		int4,

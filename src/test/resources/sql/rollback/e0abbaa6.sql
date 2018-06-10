@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 93
+-- file:guc.sql ln:93 expect:true
 ROLLBACK TO sp

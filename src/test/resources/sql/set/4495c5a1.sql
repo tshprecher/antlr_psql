@@ -1,3 +1,2 @@
--- file: btree_index.sql
--- line: 61
+-- file:btree_index.sql ln:61 expect:true
 set enable_bitmapscan to false

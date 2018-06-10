@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 539
+-- file:subselect.sql ln:549 expect:true
 alter function tattle(x int, y int) stable

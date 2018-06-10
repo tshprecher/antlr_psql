@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 206
+-- file:select_parallel.sql ln:340 expect:true
 create role regress_parallel_worker

@@ -1,3 +1,2 @@
--- file: async.sql
--- line: 7
+-- file:async.sql ln:7 expect:true
 SELECT pg_notify('notify_async1','')

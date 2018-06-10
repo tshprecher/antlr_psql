@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 268
+-- file:rules.sql ln:268 expect:true
 delete from rtest_system where sysname = 'orion'

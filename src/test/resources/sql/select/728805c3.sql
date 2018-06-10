@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 332
+-- file:union.sql ln:375 expect:true
 SELECT * FROM
   (SELECT 1 AS t, (random()*3)::int AS x
    UNION

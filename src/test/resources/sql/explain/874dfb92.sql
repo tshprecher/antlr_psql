@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1594
+-- file:join.sql ln:1665 expect:true
 explain (verbose, costs off)
 select * from
   int8_tbl a left join

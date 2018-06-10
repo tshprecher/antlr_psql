@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 281
+-- file:inherit.sql ln:281 expect:true
 alter table bc no inherit ac

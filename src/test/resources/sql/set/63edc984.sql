@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 244
+-- file:xml.sql ln:280 expect:true
 SET xmloption TO CONTENT

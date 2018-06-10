@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 3057
+-- file:plpgsql.sql ln:2844 expect:true
 create or replace function forc01() returns void as $$
 declare
   c cursor(r1 integer, r2 integer)

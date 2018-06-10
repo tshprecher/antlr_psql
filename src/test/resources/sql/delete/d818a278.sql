@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 406
+-- file:triggers.sql ln:405 expect:true
 delete from trigtest where i=2

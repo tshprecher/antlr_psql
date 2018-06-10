@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1208
+-- file:join.sql ln:1279 expect:true
 explain (verbose, costs off)
 select ss2.* from
   int4_tbl i41

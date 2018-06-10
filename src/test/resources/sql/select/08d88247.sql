@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3131
+-- file:plpgsql.sql ln:2918 expect:true
 select forc01()

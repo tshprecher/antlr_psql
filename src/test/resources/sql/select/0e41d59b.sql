@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 296
+-- file:oidjoins.sql ln:300 expect:true
 SELECT	ctid, nspowner
 FROM	pg_catalog.pg_namespace fk
 WHERE	nspowner != 0 AND

@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1801
+-- file:join.sql ln:1882 expect:true
 insert into j2 values(1),(2),(3)

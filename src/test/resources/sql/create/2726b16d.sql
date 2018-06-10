@@ -1,5 +1,4 @@
--- file: with.sql
--- line: 42
+-- file:with.sql ln:42 expect:true
 CREATE OR REPLACE RECURSIVE VIEW nums (n) AS
     VALUES (1)
 UNION ALL

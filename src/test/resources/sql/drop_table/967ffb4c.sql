@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1939
+-- file:alter_table.sql ln:1974 expect:true
 DROP TABLE unlogged1

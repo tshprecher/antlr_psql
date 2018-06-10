@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2968
+-- file:plpgsql.sql ln:2755 expect:true
 select * from sc_test()

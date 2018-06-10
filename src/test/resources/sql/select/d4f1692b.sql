@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 960
+-- file:triggers.sql ln:959 expect:true
 \set QUIET true
 
 SELECT * FROM city_view

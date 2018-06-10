@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 796
+-- file:aggregates.sql ln:796 expect:true
 begin work

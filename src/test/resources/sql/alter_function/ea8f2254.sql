@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 213
+-- file:guc.sql ln:213 expect:true
 alter function report_guc(text) reset all

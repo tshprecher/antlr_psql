@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 179
+-- file:cluster.sql ln:179 expect:true
 UPDATE clustertest SET key = 70 WHERE key = 60

@@ -1,3 +1,2 @@
--- file: collate.icu.utf8.sql
--- line: 359
+-- file:collate.icu.utf8.sql ln:359 expect:true
 CREATE COLLATION testx (provider = icu, locale = 'nonsense')

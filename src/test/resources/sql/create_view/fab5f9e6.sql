@@ -1,5 +1,4 @@
--- file: create_view.sql
--- line: 419
+-- file:create_view.sql ln:419 expect:true
 create view vv2a as
 select * from (values(now(),2,3,now(),5)) v(a,b,c,d,e)
 union all

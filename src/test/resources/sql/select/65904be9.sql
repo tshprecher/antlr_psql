@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 3
+-- file:jsonb.sql ln:3 expect:true
 SELECT $$''$$::jsonb

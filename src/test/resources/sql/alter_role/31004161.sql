@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 99
+-- file:rolenames.sql ln:99 expect:true
 ALTER ROLE NONE WITH NOREPLICATION

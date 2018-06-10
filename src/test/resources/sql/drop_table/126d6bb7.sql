@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 506
+-- file:create_table.sql ln:526 expect:true
 DROP TABLE temp_parted

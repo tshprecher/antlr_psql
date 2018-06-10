@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 183
+-- file:guc.sql ln:183 expect:true
 DROP ROLE regress_guc_user

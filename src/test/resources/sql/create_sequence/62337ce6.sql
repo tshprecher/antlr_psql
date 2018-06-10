@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 33
+-- file:sequence.sql ln:33 expect:false
 CREATE SEQUENCE sequence_testx AS text

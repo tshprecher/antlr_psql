@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 61
+-- file:inherit.sql ln:61 expect:true
 UPDATE b SET aa='new'

@@ -1,3 +1,2 @@
--- file: int4.sql
--- line: 119
+-- file:int4.sql ln:119 expect:true
 SELECT !!3 AS six

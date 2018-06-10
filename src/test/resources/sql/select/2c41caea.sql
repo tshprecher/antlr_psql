@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 324
+-- file:date.sql ln:324 expect:true
 SELECT EXTRACT(EPOCH FROM TIMESTAMPTZ '-infinity')

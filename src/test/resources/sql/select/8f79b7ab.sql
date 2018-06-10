@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3006
+-- file:plpgsql.sql ln:2793 expect:true
 select * from ret_query1()

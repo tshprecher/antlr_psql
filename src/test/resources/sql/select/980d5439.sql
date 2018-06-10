@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 10
+-- file:interval.sql ln:10 expect:true
 SELECT INTERVAL '+02:00' AS "Two hours"

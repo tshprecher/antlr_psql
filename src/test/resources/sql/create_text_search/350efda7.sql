@@ -1,5 +1,4 @@
--- file: tsdicts.sql
--- line: 28
+-- file:tsdicts.sql ln:28 expect:true
 CREATE TEXT SEARCH DICTIONARY hunspell (
                         Template=ispell,
                         DictFile=ispell_sample,

@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 746
+-- file:json.sql ln:752 expect:true
 select json_strip_nulls('[1,{"a":1,"b":null,"c":2},3]')

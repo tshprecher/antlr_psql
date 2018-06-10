@@ -1,3 +1,2 @@
--- file: inet.sql
--- line: 120
+-- file:inet.sql ln:120 expect:true
 SELECT i, ~i AS "~i" FROM inet_tbl

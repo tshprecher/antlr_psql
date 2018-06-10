@@ -1,3 +1,2 @@
--- file: text.sql
--- line: 11
+-- file:text.sql ln:11 expect:true
 INSERT INTO TEXT_TBL VALUES ('doh!')

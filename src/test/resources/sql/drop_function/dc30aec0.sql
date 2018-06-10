@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 536
+-- file:triggers.sql ln:535 expect:true
 DROP FUNCTION mytrigger()

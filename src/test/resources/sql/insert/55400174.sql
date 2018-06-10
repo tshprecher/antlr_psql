@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 880
+-- file:triggers.sql ln:879 expect:true
 INSERT INTO city_view(city_id, city_name) VALUES(123456, 'New York') RETURNING *

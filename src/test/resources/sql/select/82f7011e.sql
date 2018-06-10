@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 76
+-- file:prepared_xacts.sql ln:76 expect:true
 SELECT * FROM pxtest1

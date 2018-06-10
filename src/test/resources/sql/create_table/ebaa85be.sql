@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 123
+-- file:enum.sql ln:123 expect:true
 CREATE TABLE enumtest (col rainbow)

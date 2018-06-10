@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 368
+-- file:rangetypes.sql ln:368 expect:true
 drop domain mydomain cascade

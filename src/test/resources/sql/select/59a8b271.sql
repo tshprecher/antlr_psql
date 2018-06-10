@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 437
+-- file:window.sql ln:999 expect:true
 SELECT
 	i::text || ':' || COALESCE(v::text, 'NULL') as row,
 	logging_agg_strict(v::text) filter(where true)

@@ -1,3 +1,2 @@
--- file: with.sql
--- line: 407
+-- file:with.sql ln:407 expect:true
 DROP TABLE y

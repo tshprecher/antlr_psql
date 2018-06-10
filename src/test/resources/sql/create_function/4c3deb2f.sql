@@ -1,5 +1,4 @@
--- file: transactions.sql
--- line: 338
+-- file:transactions.sql ln:338 expect:true
 create function inverse(int) returns float8 as
 $$
 begin

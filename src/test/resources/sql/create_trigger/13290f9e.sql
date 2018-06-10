@@ -1,4 +1,3 @@
--- file: triggers.sql
--- line: 394
+-- file:triggers.sql ln:388 expect:true
 create trigger trigtest_a_stmt_tg after insert or update or delete on trigtest
 for each statement execute procedure trigtest()

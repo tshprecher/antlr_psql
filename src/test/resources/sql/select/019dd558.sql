@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 125
+-- file:xml.sql ln:125 expect:true
 SELECT xmlserialize(content 'good' as char(10))

@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 553
+-- file:strings.sql ln:588 expect:true
 SELECT repeat('Pg', -4)

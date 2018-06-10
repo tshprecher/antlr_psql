@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 964
+-- file:jsonb.sql ln:970 expect:true
 select jsonb_delete('{"a":1 , "b":2, "c":3}'::jsonb, 'd')

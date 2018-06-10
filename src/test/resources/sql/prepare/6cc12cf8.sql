@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 59
+-- file:prepared_xacts.sql ln:59 expect:true
 PREPARE TRANSACTION 'foo3'

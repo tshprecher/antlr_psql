@@ -1,3 +1,2 @@
--- file: name.sql
--- line: 34
+-- file:name.sql ln:34 expect:true
 SELECT '' AS six, c.f1 FROM NAME_TBL c WHERE c.f1 <> '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890ABCDEFGHIJKLMNOPQR'

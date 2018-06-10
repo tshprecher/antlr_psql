@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 77
+-- file:temp.sql ln:77 expect:true
 DROP TABLE temptest

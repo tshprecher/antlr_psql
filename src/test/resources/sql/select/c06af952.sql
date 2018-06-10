@@ -1,3 +1,2 @@
--- file: tidscan.sql
--- line: 58
+-- file:tidscan.sql ln:58 expect:true
 SELECT * FROM tidscan

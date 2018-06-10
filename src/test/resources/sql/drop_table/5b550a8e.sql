@@ -1,3 +1,2 @@
--- file: reloptions.sql
--- line: 79
+-- file:reloptions.sql ln:79 expect:true
 DROP TABLE reloptions_test

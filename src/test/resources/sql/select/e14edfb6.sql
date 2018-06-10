@@ -1,5 +1,4 @@
--- file: float8.sql
--- line: 209
+-- file:float8.sql ln:215 expect:true
 SELECT x, y,
        atan2d(y, x),
        atan2d(y, x) IN (-90,0,90,180) AS atan2d_exact

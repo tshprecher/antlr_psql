@@ -1,3 +1,2 @@
--- file: dependency.sql
--- line: 80
+-- file:dependency.sql ln:80 expect:true
 CREATE SCHEMA deptest

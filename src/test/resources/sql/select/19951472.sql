@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 203
+-- file:aggregates.sql ln:203 expect:true
 SELECT
   BOOL_AND(b1)   AS "n",
   BOOL_OR(b3)    AS "n"

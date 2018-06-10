@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 36
+-- file:groupingsets.sql ln:36 expect:true
 insert into gstest4
 values (1,1,b'0000','1'), (2,2,b'0001','1'),
        (3,4,b'0010','2'), (4,8,b'0011','2'),

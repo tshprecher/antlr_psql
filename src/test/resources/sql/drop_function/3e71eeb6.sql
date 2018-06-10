@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3190
+-- file:plpgsql.sql ln:2977 expect:true
 drop function returnqueryf()

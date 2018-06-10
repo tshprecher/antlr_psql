@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 420
+-- file:join.sql ln:460 expect:true
 DROP TABLE J1_TBL

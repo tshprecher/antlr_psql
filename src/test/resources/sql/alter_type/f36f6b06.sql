@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 171
+-- file:domain.sql ln:171 expect:true
 alter type comptype alter attribute r type bigint

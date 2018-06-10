@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 701
+-- file:aggregates.sql ln:701 expect:true
 create function sum_finalfn(state avg_state) returns int4 as
 $$
 begin

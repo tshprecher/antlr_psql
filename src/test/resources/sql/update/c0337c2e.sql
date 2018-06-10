@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1264
+-- file:alter_table.sql ln:1283 expect:true
 update foo set f3 = 'zz'

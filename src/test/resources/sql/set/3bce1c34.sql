@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 268
+-- file:guc.sql ln:268 expect:true
 set nosuch.setting = 'nada'

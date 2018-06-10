@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 57
+-- file:jsonb.sql ln:57 expect:true
 SELECT 'truf'::jsonb

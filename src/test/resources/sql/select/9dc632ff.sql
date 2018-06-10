@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1436
+-- file:join.sql ln:1507 expect:true
 select t0.*
 from
  text_tbl t0

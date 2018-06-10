@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 264
+-- file:interval.sql ln:264 expect:true
 SET IntervalStyle to sql_standard

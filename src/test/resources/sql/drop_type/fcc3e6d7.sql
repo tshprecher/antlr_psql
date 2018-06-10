@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 390
+-- file:rangetypes.sql ln:390 expect:true
 drop type textrange2

@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 232
+-- file:aggregates.sql ln:232 expect:true
 SELECT
   BOOL_OR(b1)      AS "t",
   BOOL_OR(b2)      AS "t",

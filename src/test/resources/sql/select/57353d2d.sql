@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 504
+-- file:opr_sanity.sql ln:505 expect:true
 SELECT p.oid, p.proname, c.oid, c.conname
 FROM pg_proc p, pg_conversion c
 WHERE p.oid = c.conproc AND

@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 931
+-- file:rowsecurity.sql ln:931 expect:true
 INSERT INTO x1 VALUES
     (1, 'abc', 'regress_rls_bob'),
     (2, 'bcd', 'regress_rls_bob'),

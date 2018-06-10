@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 7
+-- file:guc.sql ln:7 expect:true
 SET datestyle = 'ISO, YMD'

@@ -1,3 +1,2 @@
--- file: float8.sql
--- line: 172
+-- file:float8.sql ln:178 expect:true
 SET extra_float_digits = 3

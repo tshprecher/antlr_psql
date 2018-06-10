@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 361
+-- file:union.sql ln:404 expect:true
 explain (costs off)
 select * from
   (select *, 0 as x from int8_tbl a

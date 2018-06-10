@@ -1,3 +1,2 @@
--- file: timetz.sql
--- line: 12
+-- file:timetz.sql ln:12 expect:true
 INSERT INTO TIMETZ_TBL VALUES ('11:59 PDT')

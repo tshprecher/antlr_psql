@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 89
+-- file:transactions.sql ln:89 expect:true
 DELETE FROM temptest

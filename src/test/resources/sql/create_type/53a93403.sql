@@ -1,5 +1,4 @@
--- file: create_type.sql
--- line: 10
+-- file:create_type.sql ln:10 expect:true
 CREATE TYPE widget (
    internallength = 24,
    input = widget_in,

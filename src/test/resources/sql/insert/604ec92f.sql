@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 241
+-- file:rules.sql ln:241 expect:true
 insert into rtest_system values ('neptun', 'Fileserver')

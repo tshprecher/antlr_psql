@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 194
+-- file:errors.sql ln:194 expect:false
 drop operator ===

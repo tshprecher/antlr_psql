@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 246
+-- file:truncate.sql ln:246 expect:true
 DROP TABLE truncparted

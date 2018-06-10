@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 23
+-- file:create_view.sql ln:23 expect:true
 COMMENT ON VIEW noview IS 'no view'

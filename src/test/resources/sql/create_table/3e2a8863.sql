@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 136
+-- file:triggers.sql ln:124 expect:true
 create table tttest (
 	price_id	int4,
 	price_val	int4,

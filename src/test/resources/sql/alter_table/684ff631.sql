@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1953
+-- file:alter_table.sql ln:1988 expect:true
 ALTER TABLE logged2 SET UNLOGGED

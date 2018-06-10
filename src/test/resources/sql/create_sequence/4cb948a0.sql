@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 12
+-- file:sequence.sql ln:12 expect:true
 CREATE SEQUENCE sequence_testx CACHE 0

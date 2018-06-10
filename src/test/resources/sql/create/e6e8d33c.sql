@@ -1,5 +1,4 @@
--- file: functional_deps.sql
--- line: 109
+-- file:functional_deps.sql ln:109 expect:true
 CREATE TEMP TABLE node (
     nid SERIAL,
     vid integer NOT NULL default '0',

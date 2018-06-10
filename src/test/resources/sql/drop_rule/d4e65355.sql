@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 234
+-- file:errors.sql ln:234 expect:false
 drop rule 314159

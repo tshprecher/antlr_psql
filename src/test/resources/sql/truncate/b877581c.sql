@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1910
+-- file:alter_table.sql ln:1945 expect:true
 TRUNCATE old_system_table

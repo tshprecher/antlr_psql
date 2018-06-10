@@ -1,3 +1,2 @@
--- file: security_label.sql
--- line: 20
+-- file:security_label.sql ln:20 expect:true
 CREATE DOMAIN seclabel_domain AS text

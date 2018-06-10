@@ -1,4 +1,3 @@
--- file: alter_table.sql
--- line: 1587
+-- file:alter_table.sql ln:1622 expect:true
 create function test_strict(text) returns text as
     'select coalesce($1, ''got passed a null'')

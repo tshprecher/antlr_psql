@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 993
+-- file:create_index.sql ln:1029 expect:true
 SET enable_indexonlyscan = OFF

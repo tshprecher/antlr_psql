@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 911
+-- file:alter_table.sql ln:930 expect:true
 select * from myview

@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 238
+-- file:inherit.sql ln:238 expect:true
 create table base (i integer)

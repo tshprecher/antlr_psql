@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 171
+-- file:interval.sql ln:171 expect:true
 SELECT interval '999' month

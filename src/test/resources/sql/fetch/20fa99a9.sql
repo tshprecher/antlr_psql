@@ -1,3 +1,2 @@
--- file: tidscan.sql
--- line: 41
+-- file:tidscan.sql ln:41 expect:true
 FETCH ALL FROM c

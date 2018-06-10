@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2350
+-- file:alter_table.sql ln:2433 expect:false
 ALTER TABLE list_parted2 DETACH PARTITION part_1

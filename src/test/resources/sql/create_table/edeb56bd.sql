@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 807
+-- file:rules.sql ln:807 expect:true
 create table rule_and_refint_t1 (
 	id1a integer,
 	id1b integer,

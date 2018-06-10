@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 493
+-- file:point.sql ln:101 expect:true
 RESET enable_seqscan

@@ -1,5 +1,4 @@
--- file: event_trigger.sql
--- line: 354
+-- file:event_trigger.sql ln:365 expect:true
 CREATE OR REPLACE FUNCTION drop_sql_command()
 RETURNS event_trigger AS $$
 BEGIN

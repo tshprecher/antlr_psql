@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 115
+-- file:portals.sql ln:115 expect:true
 FETCH backward 9 in foo15

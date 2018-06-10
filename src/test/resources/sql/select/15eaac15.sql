@@ -1,5 +1,4 @@
--- file: select.sql
--- line: 30
+-- file:select.sql ln:30 expect:true
 SELECT onek.unique1, onek.string4 FROM onek
    WHERE onek.unique1 > 980
    ORDER BY string4 using <, unique1 using >

@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 185
+-- file:domain.sql ln:185 expect:true
 create domain dcomptypea as comptype[]

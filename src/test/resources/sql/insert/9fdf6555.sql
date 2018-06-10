@@ -1,3 +1,2 @@
--- file: line.sql
--- line: 10
+-- file:line.sql ln:10 expect:true
 INSERT INTO LINE_TBL VALUES ('(0,0),(6,6)')

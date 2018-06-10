@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 96
+-- file:oidjoins.sql ln:96 expect:true
 SELECT	ctid, adrelid
 FROM	pg_catalog.pg_attrdef fk
 WHERE	adrelid != 0 AND

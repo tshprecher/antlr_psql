@@ -1,5 +1,4 @@
--- file: brin.sql
--- line: 62
+-- file:brin.sql ln:62 expect:true
 INSERT INTO brintest (inetcol, cidrcol, int4rangecol) SELECT
 	inet 'fe80::6e40:8ff:fea9:8c46' + tenthous,
 	cidr 'fe80::6e40:8ff:fea9:8c46' + tenthous,

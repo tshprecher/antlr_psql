@@ -1,5 +1,4 @@
--- file: dependency.sql
--- line: 103
+-- file:dependency.sql ln:103 expect:true
 \dt deptest
 
 SELECT typowner = relowner

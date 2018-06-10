@@ -1,3 +1,2 @@
--- file: stats_ext.sql
--- line: 27
+-- file:stats_ext.sql ln:27 expect:true
 CREATE SCHEMA regress_schema_2

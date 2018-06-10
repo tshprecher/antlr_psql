@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 308
+-- file:join.sql ln:317 expect:true
 select * from y

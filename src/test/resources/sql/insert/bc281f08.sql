@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 531
+-- file:foreign_key.sql ln:531 expect:true
 insert into pktable(base1) values (3)

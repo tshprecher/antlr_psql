@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 599
+-- file:domain.sql ln:599 expect:true
 drop domain posint cascade

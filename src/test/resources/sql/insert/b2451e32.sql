@@ -1,3 +1,2 @@
--- file: timestamp.sql
--- line: 51
+-- file:timestamp.sql ln:51 expect:true
 INSERT INTO TIMESTAMP_TBL VALUES ('infinity')

@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 86
+-- file:enum.sql ln:86 expect:true
 alter type insenum add value 'i8' before 'L2'

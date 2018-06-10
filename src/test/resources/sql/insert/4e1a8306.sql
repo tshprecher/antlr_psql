@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1587
+-- file:join.sql ln:1658 expect:true
 insert into dual default values

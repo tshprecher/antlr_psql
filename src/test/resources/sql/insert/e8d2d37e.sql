@@ -1,3 +1,2 @@
--- file: line.sql
--- line: 9
+-- file:line.sql ln:9 expect:true
 INSERT INTO LINE_TBL VALUES ('{1,-1,1}')

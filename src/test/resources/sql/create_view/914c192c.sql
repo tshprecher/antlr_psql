@@ -1,4 +1,3 @@
--- file: tablesample.sql
--- line: 18
+-- file:tablesample.sql ln:18 expect:true
 CREATE VIEW test_tablesample_v1 AS
   SELECT id FROM test_tablesample TABLESAMPLE SYSTEM (10*2) REPEATABLE (2)

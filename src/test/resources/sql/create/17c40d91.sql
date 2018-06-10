@@ -1,5 +1,4 @@
--- file: functional_deps.sql
--- line: 11
+-- file:functional_deps.sql ln:11 expect:true
 CREATE TEMP TABLE articles_in_category (
     article_id int,
     category_id int,

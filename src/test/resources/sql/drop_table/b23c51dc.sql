@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 246
+-- file:domain.sql ln:246 expect:true
 drop table vc4table

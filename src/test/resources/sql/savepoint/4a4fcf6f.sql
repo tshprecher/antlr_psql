@@ -1,3 +1,2 @@
--- file: combocid.sql
--- line: 105
+-- file:combocid.sql ln:105 expect:true
 SAVEPOINT subxact

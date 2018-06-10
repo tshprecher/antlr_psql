@@ -1,3 +1,2 @@
--- file: union.sql
--- line: 265
+-- file:cluster.sql ln:222 expect:true
 reset enable_indexscan

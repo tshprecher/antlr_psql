@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3858
+-- file:plpgsql.sql ln:3579 expect:true
 drop function error1(text)

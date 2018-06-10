@@ -1,5 +1,4 @@
--- file: privileges.sql
--- line: 125
+-- file:privileges.sql ln:125 expect:false
 bar	true
 \.
 SELECT * FROM atest1

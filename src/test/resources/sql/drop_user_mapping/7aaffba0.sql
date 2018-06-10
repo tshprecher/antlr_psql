@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 381
+-- file:rolenames.sql ln:381 expect:true
 DROP USER MAPPING IF EXISTS FOR nonexistent SERVER sv9

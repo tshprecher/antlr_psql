@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 370
+-- file:create_table.sql ln:358 expect:false
 CREATE TABLE partitioned (
 	a int
 ) PARTITION BY RANGE (immut_func(a))

@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3879
+-- file:plpgsql.sql ln:3600 expect:true
 savepoint s1

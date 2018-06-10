@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 250
+-- file:enum.sql ln:250 expect:true
 INSERT INTO enumtest_child VALUES ('red')

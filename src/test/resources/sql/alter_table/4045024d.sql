@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 562
+-- file:rangefuncs.sql ln:562 expect:true
 alter table users drop column moredrop

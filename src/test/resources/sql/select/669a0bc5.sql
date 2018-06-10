@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 1001
+-- file:opr_sanity.sql ln:1002 expect:true
 SELECT aggfnoid, aggtranstype, aggserialfn, aggdeserialfn
 FROM pg_aggregate
 WHERE (aggserialfn != 0 OR aggdeserialfn != 0)

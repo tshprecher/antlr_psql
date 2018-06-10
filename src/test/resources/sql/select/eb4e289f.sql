@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 31
+-- file:rangetypes.sql ln:31 expect:true
 select '["",""]'::textrange

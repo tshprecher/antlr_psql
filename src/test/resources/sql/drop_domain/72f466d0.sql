@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 67
+-- file:domain.sql ln:67 expect:true
 drop domain domainvarchar restrict

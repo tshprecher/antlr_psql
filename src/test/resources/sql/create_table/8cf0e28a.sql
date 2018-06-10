@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 180
+-- file:inherit.sql ln:180 expect:true
 CREATE TABLE jointchild () INHERITS (firstparent, secondparent)

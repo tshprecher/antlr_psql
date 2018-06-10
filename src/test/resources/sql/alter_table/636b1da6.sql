@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1281
+-- file:alter_table.sql ln:1300 expect:true
 alter table anothertab alter column atcol1 type integer

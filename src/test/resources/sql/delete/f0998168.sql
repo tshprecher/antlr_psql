@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 45
+-- file:errors.sql ln:45 expect:false
 delete from

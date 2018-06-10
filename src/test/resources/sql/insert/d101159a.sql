@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 56
+-- file:numeric.sql ln:56 expect:true
 INSERT INTO num_exp_add VALUES (0,8,'74881')

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 591
+-- file:alter_table.sql ln:610 expect:true
 create table atacc1 (test int)

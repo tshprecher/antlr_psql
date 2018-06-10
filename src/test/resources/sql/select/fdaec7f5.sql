@@ -1,5 +1,4 @@
--- file: privileges.sql
--- line: 234
+-- file:privileges.sql ln:234 expect:true
 select * from
   ((select a.q1 as x, random() from int8_tbl a where q1 > 0)
    union all

@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 162
+-- file:errors.sql ln:162 expect:false
 drop function ()

@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 436
+-- file:oidjoins.sql ln:444 expect:true
 SELECT	ctid, seqrelid
 FROM	pg_catalog.pg_sequence fk
 WHERE	seqrelid != 0 AND

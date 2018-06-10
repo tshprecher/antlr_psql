@@ -1,3 +1,2 @@
--- file: float4.sql
--- line: 30
+-- file:float4.sql ln:30 expect:true
 SELECT 'NaN'::float4

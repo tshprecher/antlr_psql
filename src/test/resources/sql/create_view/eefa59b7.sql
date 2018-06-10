@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 241
+-- file:privileges.sql ln:241 expect:true
 CREATE VIEW atestv4 AS SELECT * FROM atestv3

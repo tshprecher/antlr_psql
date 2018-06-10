@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 25
+-- file:domain.sql ln:25 expect:true
 create domain domainvarchar varchar(5)

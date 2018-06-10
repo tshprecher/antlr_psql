@@ -1,4 +1,3 @@
--- file: alter_table.sql
--- line: 482
+-- file:alter_table.sql ln:501 expect:true
 ALTER TABLE FKTABLE ADD CONSTRAINT fkdi2 FOREIGN KEY(ftest1) REFERENCES pktable
   ON DELETE CASCADE ON UPDATE NO ACTION NOT DEFERRABLE

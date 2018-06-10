@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 391
+-- file:sequence.sql ln:391 expect:true
 DROP TABLE serialTest1, serialTest2

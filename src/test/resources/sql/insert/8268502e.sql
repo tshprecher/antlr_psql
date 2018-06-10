@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 470
+-- file:updatable_views.sql ln:546 expect:true
 INSERT INTO base_tbl VALUES (3)

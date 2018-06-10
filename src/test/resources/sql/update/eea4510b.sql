@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 953
+-- file:triggers.sql ln:952 expect:true
 UPDATE city_view v SET population = 599657
     FROM city_table ci, country_table co
     WHERE ci.city_name = 'Washington DC' and co.country_name = 'USA'

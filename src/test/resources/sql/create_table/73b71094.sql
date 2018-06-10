@@ -1,5 +1,4 @@
--- file: insert_conflict.sql
--- line: 311
+-- file:insert_conflict.sql ln:311 expect:true
 create table cities (
 	name		text,
 	population	float8,

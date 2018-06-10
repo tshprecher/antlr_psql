@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 424
+-- file:oidjoins.sql ln:432 expect:true
 SELECT	ctid, rngcanonical
 FROM	pg_catalog.pg_range fk
 WHERE	rngcanonical != 0 AND

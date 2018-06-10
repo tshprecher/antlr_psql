@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 1877
+-- file:alter_table.sql ln:1912 expect:true
 CREATE TEMP TABLE filenode_mapping AS
 SELECT
     oid, mapped_oid, reltablespace, relfilenode, relname

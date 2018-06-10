@@ -1,3 +1,2 @@
--- file: security_label.sql
--- line: 42
+-- file:security_label.sql ln:42 expect:true
 DROP TABLE seclabel_tbl1

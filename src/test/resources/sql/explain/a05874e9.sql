@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1669
+-- file:join.sql ln:1740 expect:true
 explain (verbose, costs off)
 select * from
   (select 1 as x offset 0) x cross join (select 2 as y offset 0) y

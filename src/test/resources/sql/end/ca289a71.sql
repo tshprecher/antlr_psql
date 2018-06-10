@@ -1,3 +1,2 @@
--- file: event_trigger.sql
--- line: 15
+-- file:event_trigger.sql ln:15 expect:true
 END $$ language plpgsql

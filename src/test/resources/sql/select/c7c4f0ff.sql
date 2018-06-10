@@ -1,5 +1,4 @@
--- file: type_sanity.sql
--- line: 114
+-- file:type_sanity.sql ln:114 expect:true
 SELECT oid::regprocedure, provariadic::regtype, proargtypes::regtype[]
 FROM pg_proc
 WHERE provariadic != 0

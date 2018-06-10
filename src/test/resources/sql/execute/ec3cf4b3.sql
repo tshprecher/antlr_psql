@@ -1,4 +1,3 @@
--- file: psql.sql
--- line: 419
+-- file:psql.sql ln:419 expect:true
 \pset border 1
 execute q

@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 152
+-- file:guc.sql ln:152 expect:true
 DISCARD TEMP

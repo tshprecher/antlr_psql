@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 612
+-- file:oidjoins.sql ln:620 expect:true
 SELECT	ctid, typarray
 FROM	pg_catalog.pg_type fk
 WHERE	typarray != 0 AND

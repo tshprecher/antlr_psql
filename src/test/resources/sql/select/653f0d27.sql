@@ -1,5 +1,4 @@
--- file: privileges.sql
--- line: 227
+-- file:privileges.sql ln:227 expect:true
 select * from
   ((select a.q1 as x from int8_tbl a offset 0)
    union all

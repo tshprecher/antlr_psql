@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 478
+-- file:join.sql ln:518 expect:true
 select tt1.*, tt2.* from tt2 right join tt1 on tt1.joincol = tt2.joincol

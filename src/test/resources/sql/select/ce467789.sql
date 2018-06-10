@@ -1,5 +1,4 @@
--- file: domain.sql
--- line: 354
+-- file:domain.sql ln:354 expect:false
 42
 \.
 

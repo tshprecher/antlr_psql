@@ -1,3 +1,2 @@
--- file: gist.sql
--- line: 58
+-- file:gist.sql ln:58 expect:true
 set enable_indexonlyscan=on

@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 422
+-- file:updatable_views.sql ln:422 expect:true
 UPDATE rw_view1 SET aa=aa

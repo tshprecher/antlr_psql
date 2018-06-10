@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 851
+-- file:join.sql ln:911 expect:true
 explain (costs off)
 select * from
   tenk1 join int4_tbl on f1 = twothousand,

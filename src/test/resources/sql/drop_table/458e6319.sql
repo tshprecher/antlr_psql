@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 508
+-- file:alter_table.sql ln:481 expect:true
 DROP TABLE PKTABLE

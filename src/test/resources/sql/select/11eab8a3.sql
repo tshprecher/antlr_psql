@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 657
+-- file:json.sql ln:663 expect:true
 SELECT json_object('{}')

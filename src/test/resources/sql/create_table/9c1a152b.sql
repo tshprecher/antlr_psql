@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1765
+-- file:alter_table.sql ln:1800 expect:true
 CREATE TABLE tt4 (x int)

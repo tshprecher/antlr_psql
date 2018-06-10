@@ -1,3 +1,2 @@
--- file: without_oid.sql
--- line: 89
+-- file:without_oid.sql ln:89 expect:true
 DROP TABLE create_table_test2

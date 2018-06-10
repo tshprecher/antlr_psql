@@ -1,5 +1,4 @@
--- file: enum.sql
--- line: 114
+-- file:enum.sql ln:114 expect:true
 SELECT enumlabel,
        case when enumsortorder > 20 then null else enumsortorder end as so
 FROM pg_enum

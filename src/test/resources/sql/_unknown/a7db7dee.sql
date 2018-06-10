@@ -1,0 +1,3 @@
+-- file:with.sql ln:474 expect:true
+WITH RECURSIVE x(n) AS (SELECT 1 UNION ALL SELECT n+1 FROM x LIMIT 10 OFFSET 1)
+  SELECT * FROM x

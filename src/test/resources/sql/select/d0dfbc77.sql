@@ -1,4 +1,3 @@
--- file: comments.sql
--- line: 12
+-- file:comments.sql ln:12 expect:false
 */
 SELECT 'after multi-line' AS fifth

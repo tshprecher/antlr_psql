@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 481
+-- file:jsonb.sql ln:481 expect:true
 select 'null'::jsonb #>> '{}'

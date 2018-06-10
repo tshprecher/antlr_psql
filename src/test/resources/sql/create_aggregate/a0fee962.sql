@@ -1,5 +1,4 @@
--- file: polymorphism.sql
--- line: 397
+-- file:polymorphism.sql ln:397 expect:true
 CREATE AGGREGATE array_cat_accum (anyarray)
 (
     sfunc = array_cat,

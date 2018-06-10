@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 42
+-- file:vacuum.sql ln:42 expect:true
 VACUUM (FULL, FREEZE) vactst

@@ -1,3 +1,2 @@
--- file: varchar.sql
--- line: 60
+-- file:varchar.sql ln:60 expect:true
 INSERT INTO VARCHAR_TBL (f1) VALUES ('a')

@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 17
+-- file:xml.sql ln:17 expect:false
 SELECT xmlcomment('SELECT xmlcomment('te st')

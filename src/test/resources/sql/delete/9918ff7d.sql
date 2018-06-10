@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 286
+-- file:portals.sql ln:286 expect:true
 delete from tt1

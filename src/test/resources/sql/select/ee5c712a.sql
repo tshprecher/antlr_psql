@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 58
+-- file:aggregates.sql ln:58 expect:true
 SELECT regr_sxy(b, a) FROM aggtest

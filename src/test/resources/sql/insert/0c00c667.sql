@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 679
+-- file:join.sql ln:739 expect:true
 insert into b (a, num) values ('p', 1)

@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 245
+-- file:insert.sql ln:304 expect:true
 alter table mlparted11 add a int

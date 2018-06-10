@@ -1,3 +1,2 @@
--- file: misc_functions.sql
--- line: 26
+-- file:misc_functions.sql ln:26 expect:true
 SELECT num_nulls(VARIADIC NULL::text[])

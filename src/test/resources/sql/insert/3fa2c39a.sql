@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 112
+-- file:temp.sql ln:112 expect:true
 INSERT INTO temptest2 VALUES (1)

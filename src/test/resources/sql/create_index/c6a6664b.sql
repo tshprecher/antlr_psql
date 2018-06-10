@@ -1,5 +1,4 @@
--- file: brin.sql
--- line: 68
+-- file:brin.sql ln:68 expect:true
 CREATE INDEX brinidx ON brintest USING brin (
 	byteacol,
 	charcol,

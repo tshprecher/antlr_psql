@@ -1,3 +1,2 @@
--- file: float4.sql
--- line: 22
+-- file:float4.sql ln:22 expect:true
 INSERT INTO FLOAT4_TBL(f1) VALUES ('xyz')

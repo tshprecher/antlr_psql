@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 509
+-- file:horology.sql ln:515 expect:true
 SELECT to_date('2016 365', 'YYYY DDD')

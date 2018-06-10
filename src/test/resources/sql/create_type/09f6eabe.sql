@@ -1,5 +1,4 @@
--- file: json.sql
--- line: 394
+-- file:json.sql ln:394 expect:true
 CREATE TYPE jsrec AS (
 	i	int,
 	ia	_int4,

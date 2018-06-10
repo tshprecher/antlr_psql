@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 915
+-- file:triggers.sql ln:914 expect:true
 DELETE FROM european_city_view

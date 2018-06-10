@@ -1,5 +1,4 @@
--- file: updatable_views.sql
--- line: 348
+-- file:updatable_views.sql ln:348 expect:true
 SELECT table_name, is_updatable, is_insertable_into,
        is_trigger_updatable, is_trigger_deletable,
        is_trigger_insertable_into

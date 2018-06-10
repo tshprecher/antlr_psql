@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 771
+-- file:join.sql ln:831 expect:true
 create temp table nt3 (
   id int primary key,
   nt2_id int,

@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 260
+-- file:sequence.sql ln:260 expect:true
 SELECT nextval('seq')

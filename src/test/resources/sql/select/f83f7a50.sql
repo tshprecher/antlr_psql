@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 24
+-- file:date.sql ln:24 expect:true
 SELECT f1 AS "Fifteen" FROM DATE_TBL

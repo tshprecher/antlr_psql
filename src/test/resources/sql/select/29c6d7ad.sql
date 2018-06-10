@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 221
+-- file:truncate.sql ln:221 expect:true
 SELECT * FROM truncate_b

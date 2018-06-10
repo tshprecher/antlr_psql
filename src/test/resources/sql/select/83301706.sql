@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 82
+-- file:xml.sql ln:82 expect:true
 SELECT xmlparse(document '<nosuchprefix:tag/>')

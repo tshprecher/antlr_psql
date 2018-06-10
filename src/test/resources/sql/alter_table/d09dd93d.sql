@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 481
+-- file:alter_table.sql ln:500 expect:true
 ALTER TABLE FKTABLE ALTER CONSTRAINT fkdd2 DEFERRABLE INITIALLY DEFERRED

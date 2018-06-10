@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 91
+-- file:errors.sql ln:91 expect:true
 alter table emp rename column salary to manager

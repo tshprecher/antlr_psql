@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1370
+-- file:rowsecurity.sql ln:1370 expect:true
 ANALYZE current_check

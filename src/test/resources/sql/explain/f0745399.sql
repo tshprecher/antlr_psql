@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 658
+-- file:inherit.sql ln:684 expect:true
 explain (costs off) select * from range_list_parted where a is not null and a < 67

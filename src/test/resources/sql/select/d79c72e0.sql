@@ -1,3 +1,2 @@
--- file: returning.sql
--- line: 156
+-- file:returning.sql ln:156 expect:true
 SELECT * FROM voo

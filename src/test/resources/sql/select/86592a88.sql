@@ -1,5 +1,4 @@
--- file: psql.sql
--- line: 627
+-- file:psql.sql ln:627 expect:true
 \r
 \p
 

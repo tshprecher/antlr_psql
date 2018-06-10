@@ -1,3 +1,2 @@
--- file: security_label.sql
--- line: 6
+-- file:object_address.sql ln:6 expect:true
 SET client_min_messages TO 'warning'

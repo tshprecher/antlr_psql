@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2081
+-- file:alter_table.sql ln:2113 expect:true
 CREATE TYPE mytype AS (a int)

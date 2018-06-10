@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 118
+-- file:sequence.sql ln:118 expect:true
 SELECT currval('sequence_test'::text)

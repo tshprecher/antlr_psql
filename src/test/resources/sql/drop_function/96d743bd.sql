@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1273
+-- file:triggers.sql ln:1272 expect:true
 drop function upsert_after_func()

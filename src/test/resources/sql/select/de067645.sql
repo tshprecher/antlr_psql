@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 225
+-- file:strings.sql ln:225 expect:true
 SELECT 'hawkeye' LIKE 'H%' AS "false"

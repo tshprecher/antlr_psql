@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 155
+-- file:tsearch.sql ln:155 expect:true
 SELECT to_tsquery('english', 'qwe & sKies ')

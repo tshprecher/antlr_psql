@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 17
+-- file:create_table_like.sql ln:17 expect:true
 SELECT * FROM inhe

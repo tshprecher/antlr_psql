@@ -1,4 +1,3 @@
--- file: domain.sql
--- line: 634
+-- file:domain.sql ln:634 expect:false
 begin
   x[1] := $1

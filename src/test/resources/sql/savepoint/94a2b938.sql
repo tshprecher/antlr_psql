@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 98
+-- file:prepared_xacts.sql ln:98 expect:true
 SAVEPOINT b

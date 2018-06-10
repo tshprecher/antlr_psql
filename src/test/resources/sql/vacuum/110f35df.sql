@@ -1,3 +1,2 @@
--- file: numeric_big.sql
--- line: 511
+-- file:numeric_big.sql ln:511 expect:true
 VACUUM ANALYZE num_exp_add

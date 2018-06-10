@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 222
+-- file:select_parallel.sql ln:362 expect:true
 SAVEPOINT settings

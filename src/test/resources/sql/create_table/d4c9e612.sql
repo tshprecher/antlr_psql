@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 31
+-- file:create_view.sql ln:31 expect:true
 CREATE TABLE viewtest_tbl (a int, b int)

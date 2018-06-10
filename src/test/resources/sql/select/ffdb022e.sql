@@ -1,5 +1,4 @@
--- file: strings.sql
--- line: 8
+-- file:strings.sql ln:8 expect:true
 SELECT 'first line'
 ' - next line'
 	' - third line'

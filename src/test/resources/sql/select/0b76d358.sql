@@ -1,5 +1,4 @@
--- file: cluster.sql
--- line: 209
+-- file:cluster.sql ln:216 expect:true
 select * from
 (select hundred, lag(hundred) over () as lhundred,
         thousand, lag(thousand) over () as lthousand,

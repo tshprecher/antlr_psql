@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 661
+-- file:polymorphism.sql ln:661 expect:true
 select dfunc('Hi')

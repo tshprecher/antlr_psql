@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 47
+-- file:rolenames.sql ln:47 expect:true
 CREATE ROLE "user"

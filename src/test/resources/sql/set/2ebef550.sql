@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 52
+-- file:xml.sql ln:52 expect:true
 SET xmlbinary TO base64

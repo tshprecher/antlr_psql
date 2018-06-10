@@ -1,4 +1,3 @@
--- file: inherit.sql
--- line: 214
+-- file:inherit.sql ln:214 expect:true
 select attinhcount, attislocal from pg_attribute
   where attrelid = 'oid_child'::regclass and attname = 'oid'

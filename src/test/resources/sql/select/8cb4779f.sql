@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 190
+-- file:xml.sql ln:190 expect:true
 SELECT xpath('/nosuchtag', '<root/>')

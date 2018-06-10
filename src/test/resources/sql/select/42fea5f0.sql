@@ -1,5 +1,4 @@
--- file: truncate.sql
--- line: 70
+-- file:truncate.sql ln:70 expect:true
 SELECT * FROM truncate_a
    UNION ALL
  SELECT * FROM trunc_c

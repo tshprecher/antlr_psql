@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 91
+-- file:privileges.sql ln:91 expect:true
 GRANT ALL ON atest1 TO PUBLIC

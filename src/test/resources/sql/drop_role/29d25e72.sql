@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 443
+-- file:insert.sql ln:505 expect:true
 drop role regress_coldesc_role

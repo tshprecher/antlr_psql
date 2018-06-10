@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 419
+-- file:copy2.sql ln:419 expect:true
 DROP TABLE x, y

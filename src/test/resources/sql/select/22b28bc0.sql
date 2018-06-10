@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 119
+-- file:aggregates.sql ln:119 expect:true
 select array(select sum(x+y) s
             from generate_series(1,3) y group by y order by s)
   from generate_series(1,3) x

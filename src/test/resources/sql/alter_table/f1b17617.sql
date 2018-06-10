@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1035
+-- file:alter_table.sql ln:1054 expect:true
 alter table only dropColumnChild drop column b

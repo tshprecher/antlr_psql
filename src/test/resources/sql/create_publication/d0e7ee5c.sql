@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 14
+-- file:publication.sql ln:14 expect:false
 CREATE PUBLICATION testpib_ins_trunct WITH (publish = insert)

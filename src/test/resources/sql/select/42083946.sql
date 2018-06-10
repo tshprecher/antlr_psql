@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 42
+-- file:timestamptz.sql ln:42 expect:true
 SELECT pg_sleep(0.1)

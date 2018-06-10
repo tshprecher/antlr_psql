@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 618
+-- file:jsonb.sql ln:618 expect:true
 SELECT jsb FROM jsonb_populate_record(NULL::jsbrec, '{"jsb": {"a": "bbb", "b": null, "c": 123.45}}') q

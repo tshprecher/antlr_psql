@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 401
+-- file:window.sql ln:963 expect:true
 SELECT
 	p::text || ',' || i::text || ':' ||
 		CASE WHEN f THEN COALESCE(v::text, 'NULL') ELSE '-' END as row,

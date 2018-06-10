@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 49
+-- file:rowtypes.sql ln:52 expect:true
 alter table fullname add column suffix text default ''

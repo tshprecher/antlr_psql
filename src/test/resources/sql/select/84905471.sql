@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 1177
+-- file:opr_sanity.sql ln:1178 expect:true
 SELECT p1.amopfamily, p1.amopstrategy
 FROM pg_amop as p1
 WHERE NOT ((p1.amoppurpose = 's' AND p1.amopsortfamily = 0) OR

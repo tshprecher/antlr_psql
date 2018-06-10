@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 23
+-- file:guc.sql ln:23 expect:true
 SET LOCAL datestyle = 'SQL'

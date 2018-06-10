@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 196
+-- file:insert_conflict.sql ln:196 expect:true
 create unique index fruit_index on insertconflicttest(fruit)

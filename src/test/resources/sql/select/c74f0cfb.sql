@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3908
+-- file:plpgsql.sql ln:3629 expect:true
 select fail()

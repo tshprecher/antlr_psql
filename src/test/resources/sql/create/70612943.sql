@@ -1,5 +1,4 @@
--- file: rolenames.sql
--- line: 33
+-- file:rolenames.sql ln:33 expect:true
 CREATE OR REPLACE FUNCTION chkumapping()
  RETURNS TABLE (umname name, umserver name, umoptions text[])
  AS $$

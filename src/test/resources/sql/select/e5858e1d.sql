@@ -1,3 +1,2 @@
--- file: text.sql
--- line: 91
+-- file:text.sql ln:91 expect:true
 select format('%s, %s', variadic array[true, false])

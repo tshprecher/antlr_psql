@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 393
+-- file:timestamptz.sql ln:397 expect:true
 SELECT to_timestamp(         0)

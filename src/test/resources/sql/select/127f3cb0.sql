@@ -1,5 +1,4 @@
--- file: cluster.sql
--- line: 101
+-- file:cluster.sql ln:101 expect:true
 SELECT pg_class.relname FROM pg_index, pg_class, pg_class AS pg_class_2
 WHERE pg_class.oid=indexrelid
 	AND indrelid=pg_class_2.oid

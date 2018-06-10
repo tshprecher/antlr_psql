@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 268
+-- file:timestamptz.sql ln:272 expect:true
 CREATE TABLE TIMESTAMPTZ_TST (a int , b timestamptz)

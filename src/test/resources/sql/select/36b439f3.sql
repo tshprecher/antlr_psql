@@ -1,3 +1,2 @@
--- file: dbsize.sql
--- line: 41
+-- file:dbsize.sql ln:41 expect:true
 SELECT pg_size_bytes('')

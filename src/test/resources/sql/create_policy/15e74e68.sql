@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 172
+-- file:rowsecurity.sql ln:172 expect:true
 CREATE POLICY p2 ON category
     USING (CASE WHEN current_user = 'regress_rls_bob' THEN cid IN (11, 33)
            WHEN current_user = 'regress_rls_carol' THEN cid IN (22, 44)

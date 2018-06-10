@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1303
+-- file:alter_table.sql ln:1322 expect:true
 alter table anothertab drop constraint IF EXISTS anothertab_chk

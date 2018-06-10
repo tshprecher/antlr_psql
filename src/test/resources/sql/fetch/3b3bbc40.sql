@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 415
+-- file:transactions.sql ln:415 expect:true
 FETCH ctt

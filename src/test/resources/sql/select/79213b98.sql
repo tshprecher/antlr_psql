@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 132
+-- file:xml.sql ln:132 expect:true
 SELECT xml 'abc' IS NOT DOCUMENT

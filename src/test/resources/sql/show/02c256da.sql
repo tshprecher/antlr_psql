@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 505
+-- file:strings.sql ln:539 expect:true
 show standard_conforming_strings

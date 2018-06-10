@@ -1,3 +1,2 @@
--- file: text.sql
--- line: 103
+-- file:text.sql ln:103 expect:true
 select format('>>%10s<<', NULL)

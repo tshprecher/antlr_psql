@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 19
+-- file:publication.sql ln:19 expect:false
 CREATE PUBLICATION testpub_xxx WITH (foo)

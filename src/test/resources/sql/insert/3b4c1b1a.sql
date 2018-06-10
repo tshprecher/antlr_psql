@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 406
+-- file:insert.sql ln:468 expect:true
 insert into mcrparted values (11, 1, -1)

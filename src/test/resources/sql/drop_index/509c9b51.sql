@@ -1,3 +1,2 @@
--- file: box.sql
--- line: 181
+-- file:box.sql ln:181 expect:true
 DROP INDEX box_spgist

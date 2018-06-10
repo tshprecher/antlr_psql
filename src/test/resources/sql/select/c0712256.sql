@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 29
+-- file:matview.sql ln:29 expect:true
 SELECT * FROM mvtest_tvm

@@ -1,3 +1,2 @@
--- file: update.sql
--- line: 153
+-- file:insert.sql ln:297 expect:true
 drop table list_parted

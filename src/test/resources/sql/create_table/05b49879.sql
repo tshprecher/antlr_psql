@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 942
+-- file:alter_table.sql ln:961 expect:true
 create table atacc2 (id int4 unique)

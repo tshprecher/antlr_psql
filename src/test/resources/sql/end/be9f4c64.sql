@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 634
+-- file:partition_prune.sql ln:420 expect:false
 end loop

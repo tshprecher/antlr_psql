@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 86
+-- file:union.sql ln:86 expect:true
 SELECT f1 AS five FROM TEXT_TBL
 UNION
 SELECT f1 FROM VARCHAR_TBL

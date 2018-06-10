@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 309
+-- file:rangetypes.sql ln:309 expect:true
 drop table test_range_elem

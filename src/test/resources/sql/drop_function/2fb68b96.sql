@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4384
+-- file:plpgsql.sql ln:4114 expect:true
 drop function inner_func(int)

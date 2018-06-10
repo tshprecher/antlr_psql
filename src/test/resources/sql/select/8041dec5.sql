@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 75
+-- file:tstypes.sql ln:75 expect:true
 SELECT numnode( 'new'::tsquery )

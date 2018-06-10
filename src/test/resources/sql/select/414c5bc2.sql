@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1599
+-- file:alter_table.sql ln:1634 expect:true
 select non_strict(NULL)

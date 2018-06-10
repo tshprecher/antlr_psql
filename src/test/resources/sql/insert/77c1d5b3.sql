@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 212
+-- file:join.sql ln:221 expect:true
 INSERT INTO t2 VALUES ( 'ee', 42 )

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1870
+-- file:alter_table.sql ln:1905 expect:true
 SELECT conname as constraint, obj_description(oid, 'pg_constraint') as comment FROM pg_constraint where conrelid = 'comment_test_child'::regclass ORDER BY 1, 2

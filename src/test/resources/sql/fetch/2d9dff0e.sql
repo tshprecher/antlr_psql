@@ -1,3 +1,2 @@
--- file: tidscan.sql
--- line: 60
+-- file:tidscan.sql ln:60 expect:true
 FETCH NEXT FROM c

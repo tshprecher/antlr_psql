@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 163
+-- file:cluster.sql ln:163 expect:true
 INSERT INTO clustertest VALUES (20)

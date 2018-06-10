@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 135
+-- file:copy2.sql ln:135 expect:true
 COPY y TO stdout (FORMAT CSV)

@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 447
+-- file:subselect.sql ln:447 expect:true
 select a.thousand from tenk1 a, tenk1 b
 where a.thousand = b.thousand
   and exists ( select 1 from tenk1 c where b.hundred = c.hundred

@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 71
+-- file:xml.sql ln:71 expect:true
 SELECT xmlparse(content '<twoerrors>&idontexist

@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 29
+-- file:tstypes.sql ln:29 expect:true
 SELECT '!1|!2'::tsquery

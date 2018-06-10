@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 130
+-- file:errors.sql ln:130 expect:false
 drop index 314159

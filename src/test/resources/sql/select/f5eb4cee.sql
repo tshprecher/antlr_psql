@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 629
+-- file:create_index.sql ln:639 expect:true
 SELECT * FROM array_index_op_test WHERE t = '{AAAAAAAAAA646,A87088}' ORDER BY seqno

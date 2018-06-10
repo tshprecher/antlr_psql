@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1150
+-- file:plpgsql.sql ln:1150 expect:true
 insert into Room values ('001', 'Entrance')

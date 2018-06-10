@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 112
+-- file:oidjoins.sql ln:112 expect:true
 SELECT	ctid, roleid
 FROM	pg_catalog.pg_auth_members fk
 WHERE	roleid != 0 AND

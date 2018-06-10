@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 471
+-- file:json.sql ln:471 expect:true
 SELECT ta FROM json_populate_record(NULL::jsrec, '{"ta": [[1, 2, 3], {"k": "v"}]}') q

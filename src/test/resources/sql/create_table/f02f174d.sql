@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 181
+-- file:inherit.sql ln:181 expect:true
 CREATE TABLE thirdparent (tomorrow date default now()::date - 1)

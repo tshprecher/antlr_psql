@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1001
+-- file:updatable_views.sql ln:1077 expect:true
 SELECT * FROM v1 WHERE a=8

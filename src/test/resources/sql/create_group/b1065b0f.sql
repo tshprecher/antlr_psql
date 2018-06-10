@@ -1,3 +1,2 @@
--- file: dependency.sql
--- line: 8
+-- file:dependency.sql ln:8 expect:true
 CREATE GROUP regress_dep_group

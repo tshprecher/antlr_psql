@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 547
+-- file:create_index.sql ln:553 expect:true
 SELECT count(*) FROM radix_text_tbl WHERE t ~<~  'Aztec                         Ct  '

@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2077
+-- file:plpgsql.sql ln:2099 expect:false
 fetch c1 into n

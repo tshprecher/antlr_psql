@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 2129
+-- file:alter_table.sql ln:2161 expect:true
 CREATE TABLE part_1 (
 	a int NOT NULL,
 	b char(2) COLLATE "C",

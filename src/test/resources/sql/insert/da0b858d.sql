@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 376
+-- file:json.sql ln:657 expect:true
 INSERT INTO foo VALUES (999999, NULL, 'bar')

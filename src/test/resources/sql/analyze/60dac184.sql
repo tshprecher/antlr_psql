@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 55
+-- file:vacuum.sql ln:55 expect:true
 ANALYZE vaccluster

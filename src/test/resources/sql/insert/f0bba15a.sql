@@ -1,5 +1,4 @@
--- file: xml.sql
--- line: 276
+-- file:xml.sql ln:312 expect:true
 INSERT INTO xmldata VALUES('<ROWS>
 <ROW id="1">
   <COUNTRY_ID>AU</COUNTRY_ID>

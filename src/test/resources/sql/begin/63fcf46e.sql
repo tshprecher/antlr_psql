@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 805
+-- file:plpgsql.sql ln:805 expect:false
 begin
     if tg_op = ''INSERT'' then
         if new.slotlink != '''' then

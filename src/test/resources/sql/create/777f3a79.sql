@@ -1,3 +1,2 @@
--- file: plancache.sql
--- line: 151
+-- file:plancache.sql ln:151 expect:true
 create temp view vv as select * from temptable

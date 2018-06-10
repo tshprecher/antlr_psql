@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 932
+-- file:alter_table.sql ln:951 expect:true
 alter table atacc1 alter a drop not null

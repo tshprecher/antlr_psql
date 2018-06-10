@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 10
+-- file:xml.sql ln:10 expect:true
 SELECT * FROM xmltest

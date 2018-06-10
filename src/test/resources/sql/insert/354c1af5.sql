@@ -1,3 +1,2 @@
--- file: oid.sql
--- line: 23
+-- file:oid.sql ln:23 expect:true
 INSERT INTO OID_TBL(f1) VALUES ('    5d')

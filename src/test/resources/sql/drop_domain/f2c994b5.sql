@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 367
+-- file:rangetypes.sql ln:367 expect:true
 drop domain mydomain

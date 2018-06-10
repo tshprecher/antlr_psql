@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 201
+-- file:enum.sql ln:201 expect:true
 SELECT ('{red,green,blue}'::rainbow[])[2]

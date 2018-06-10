@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 380
+-- file:domain.sql ln:380 expect:true
 alter domain dnotnulltest drop not null

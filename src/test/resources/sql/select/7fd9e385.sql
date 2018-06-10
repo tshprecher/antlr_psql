@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 696
+-- file:domain.sql ln:696 expect:true
 select dom_check(0)

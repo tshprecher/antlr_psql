@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 871
+-- file:rowsecurity.sql ln:871 expect:true
 EXPLAIN (COSTS OFF) EXECUTE plancache_test3

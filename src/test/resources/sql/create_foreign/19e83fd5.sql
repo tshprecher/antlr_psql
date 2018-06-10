@@ -1,5 +1,4 @@
--- file: foreign_data.sql
--- line: 662
+-- file:foreign_data.sql ln:668 expect:true
 \set VERBOSITY default
 CREATE FOREIGN TABLE ft2 (
 	c1 integer NOT NULL,

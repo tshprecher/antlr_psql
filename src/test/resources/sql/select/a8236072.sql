@@ -1,3 +1,2 @@
--- file: misc_functions.sql
--- line: 16
+-- file:misc_functions.sql ln:16 expect:true
 SELECT num_nulls(NULL::text)

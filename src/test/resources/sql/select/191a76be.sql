@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 659
+-- file:domain.sql ln:659 expect:true
 select * from op

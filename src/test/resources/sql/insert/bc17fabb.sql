@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 138
+-- file:cluster.sql ln:138 expect:true
 INSERT INTO clstr_2 VALUES (1)

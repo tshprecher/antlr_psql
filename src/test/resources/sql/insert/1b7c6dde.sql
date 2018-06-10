@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 434
+-- file:join.sql ln:474 expect:true
 INSERT INTO t2 VALUES (200, 2000)

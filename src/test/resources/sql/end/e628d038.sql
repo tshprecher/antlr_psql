@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 805
+-- file:xml.sql ln:216 expect:false
 END IF

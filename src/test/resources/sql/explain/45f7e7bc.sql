@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1782
+-- file:join.sql ln:1863 expect:true
 explain (costs off)
 select *
 from fkest f

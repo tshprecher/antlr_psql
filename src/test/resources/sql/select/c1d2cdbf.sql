@@ -1,5 +1,4 @@
--- file: alter_generic.sql
--- line: 495
+-- file:alter_generic.sql ln:495 expect:true
 SELECT nspname, dictname, rolname
   FROM pg_ts_dict t, pg_namespace n, pg_authid a
   WHERE t.dictnamespace = n.oid AND t.dictowner = a.oid

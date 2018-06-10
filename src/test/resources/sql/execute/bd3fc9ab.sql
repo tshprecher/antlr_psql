@@ -1,3 +1,2 @@
--- file: hs_standby_allowed.sql
--- line: 101
+-- file:hs_standby_allowed.sql ln:101 expect:true
 EXECUTE hsp

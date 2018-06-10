@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 1009
+-- file:plpgsql.sql ln:1009 expect:true
 create function pslot_backlink_view(bpchar)
 returns text as '
 <<outer>>

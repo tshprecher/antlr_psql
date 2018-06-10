@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 63
+-- file:rowsecurity.sql ln:63 expect:true
 INSERT INTO category VALUES
     (11, 'novel'),
     (22, 'science fiction'),

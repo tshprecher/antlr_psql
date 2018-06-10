@@ -1,5 +1,4 @@
--- file: domain.sql
--- line: 332
+-- file:domain.sql ln:332 expect:true
 create table defaulttest
             ( col1 ddef1
             , col2 ddef2

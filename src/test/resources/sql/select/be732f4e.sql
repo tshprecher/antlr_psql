@@ -1,3 +1,2 @@
--- file: float8.sql
--- line: 133
+-- file:float8.sql ln:139 expect:true
 SELECT 0 ^ 0 + 0 ^ 1 + 0 ^ 0.0 + 0 ^ 0.5

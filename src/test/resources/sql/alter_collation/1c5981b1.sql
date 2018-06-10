@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 374
+-- file:collate.icu.utf8.sql ln:371 expect:true
 ALTER COLLATION test11 OWNER TO nonsense

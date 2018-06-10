@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 412
+-- file:oidjoins.sql ln:420 expect:true
 SELECT	ctid, rngsubtype
 FROM	pg_catalog.pg_range fk
 WHERE	rngsubtype != 0 AND

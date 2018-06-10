@@ -1,3 +1,2 @@
--- file: create_type.sql
--- line: 32
+-- file:create_type.sql ln:32 expect:true
 DROP TYPE shell

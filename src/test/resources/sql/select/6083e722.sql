@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 185
+-- file:xml.sql ln:185 expect:true
 SELECT xpath('''<<invalid>>''', '<root/>')

@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 354
+-- file:rolenames.sql ln:354 expect:true
 CREATE USER MAPPING FOR USER SERVER sv3 OPTIONS (user 'USER')

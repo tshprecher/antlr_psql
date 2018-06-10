@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1542
+-- file:join.sql ln:1613 expect:true
 explain (costs off)
   select * from int8_tbl a,
     int8_tbl x left join lateral (select a.q1 from int4_tbl y) ss(z)

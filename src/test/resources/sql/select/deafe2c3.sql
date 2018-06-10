@@ -1,5 +1,4 @@
--- file: collate.linux.utf8.sql
--- line: 147
+-- file:collate.icu.utf8.sql ln:145 expect:true
 SELECT b,
        b ~ '^[[:alpha:]]+$' AS is_alpha,
        b ~ '^[[:upper:]]+$' AS is_upper,

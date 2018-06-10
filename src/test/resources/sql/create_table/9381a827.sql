@@ -1,5 +1,4 @@
--- file: stats.sql
--- line: 18
+-- file:stats.sql ln:18 expect:true
 CREATE TABLE prevstats AS
 SELECT t.seq_scan, t.seq_tup_read, t.idx_scan, t.idx_tup_fetch,
        (b.heap_blks_read + b.heap_blks_hit) AS heap_blks,

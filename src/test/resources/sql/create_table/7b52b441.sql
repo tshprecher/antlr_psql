@@ -1,5 +1,4 @@
--- file: cluster.sql
--- line: 8
+-- file:cluster.sql ln:8 expect:true
 CREATE TABLE clstr_tst (a SERIAL PRIMARY KEY,
 	b INT,
 	c TEXT,

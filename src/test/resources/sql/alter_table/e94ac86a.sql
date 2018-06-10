@@ -1,4 +1,3 @@
--- file: alter_table.sql
--- line: 1536
+-- file:alter_table.sql ln:1571 expect:true
 alter table alterlock2
 add constraint alterlock2nv foreign key (f1) references alterlock (f1) NOT VALID

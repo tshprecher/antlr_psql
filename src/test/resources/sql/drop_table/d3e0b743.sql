@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 499
+-- file:create_table.sql ln:519 expect:true
 DROP TABLE unparted

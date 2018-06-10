@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 476
+-- file:oidjoins.sql ln:484 expect:true
 SELECT	ctid, stxrelid
 FROM	pg_catalog.pg_statistic_ext fk
 WHERE	stxrelid != 0 AND

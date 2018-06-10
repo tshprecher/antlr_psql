@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2422
+-- file:alter_table.sql ln:2508 expect:true
 ALTER TABLE list_parted DROP COLUMN b

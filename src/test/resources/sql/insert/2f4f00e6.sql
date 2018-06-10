@@ -1,5 +1,4 @@
--- file: with.sql
--- line: 255
+-- file:with.sql ln:255 expect:true
 INSERT INTO tree
 VALUES (1, NULL), (2, 1), (3,1), (4,2), (5,2), (6,2), (7,3), (8,3),
        (9,4), (10,4), (11,7), (12,7), (13,7), (14, 9), (15,11), (16,11)

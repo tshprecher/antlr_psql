@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 144
+-- file:oidjoins.sql ln:144 expect:true
 SELECT	ctid, reloftype
 FROM	pg_catalog.pg_class fk
 WHERE	reloftype != 0 AND

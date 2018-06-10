@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 169
+-- file:interval.sql ln:169 expect:true
 SELECT interval '999' hour

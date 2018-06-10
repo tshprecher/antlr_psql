@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 211
+-- file:enum.sql ln:211 expect:true
 SELECT enum_last('green'::rainbow)

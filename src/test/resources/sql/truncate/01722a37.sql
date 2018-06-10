@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 245
+-- file:truncate.sql ln:245 expect:true
 TRUNCATE truncparted

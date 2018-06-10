@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 118
+-- file:rules.sql ln:118 expect:true
 create rule rtest_order_r4 as on insert to rtest_order1
 		where a < 100 do instead
 	insert into rtest_order2 values (new.a, nextval('rtest_seq'),

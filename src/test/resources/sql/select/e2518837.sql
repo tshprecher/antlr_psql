@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 548
+-- file:arrays.sql ln:548 expect:true
 select array_to_string('{}'::int4[], ',')

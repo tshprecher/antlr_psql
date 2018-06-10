@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 569
+-- file:alter_table.sql ln:588 expect:true
 alter table atacc3 rename test2 to testx

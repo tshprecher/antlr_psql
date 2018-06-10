@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 707
+-- file:updatable_views.sql ln:783 expect:true
 CREATE VIEW rw_view3 AS SELECT * FROM rw_view2 WITH CHECK OPTION

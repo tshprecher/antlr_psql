@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 3
+-- file:json.sql ln:3 expect:true
 SELECT $$''$$::json

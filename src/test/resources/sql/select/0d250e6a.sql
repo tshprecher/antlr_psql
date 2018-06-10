@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 541
+-- file:domain.sql ln:541 expect:true
 select doubledecrement(1)

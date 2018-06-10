@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 126
+-- file:copy2.sql ln:126 expect:true
 INSERT INTO y VALUES ('', NULL)

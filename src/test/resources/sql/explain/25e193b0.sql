@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 274
+-- file:union.sql ln:317 expect:true
 explain (costs off)
 select event_id
  from (select event_id from events

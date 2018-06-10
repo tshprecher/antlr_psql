@@ -1,3 +1,2 @@
--- file: returning.sql
--- line: 140
+-- file:returning.sql ln:140 expect:true
 INSERT INTO joinme VALUES('other', 0)

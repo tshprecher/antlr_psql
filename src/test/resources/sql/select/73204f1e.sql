@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 158
+-- file:tsearch.sql ln:158 expect:true
 SELECT to_tsquery('english', 'asd&(and|fghj)')

@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1654
+-- file:triggers.sql ln:1886 expect:true
 delete from child3

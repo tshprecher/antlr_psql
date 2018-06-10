@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 259
+-- file:domain.sql ln:259 expect:true
 select pg_typeof((f1[1])[1]) from dposintatable

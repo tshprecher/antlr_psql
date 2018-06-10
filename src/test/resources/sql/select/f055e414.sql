@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 110
+-- file:regproc.sql ln:110 expect:true
 SELECT to_regrole('Nonexistent')

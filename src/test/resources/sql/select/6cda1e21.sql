@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1829
+-- file:triggers.sql ln:2094 expect:true
 select * from trig_table

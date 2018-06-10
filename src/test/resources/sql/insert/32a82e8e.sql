@@ -1,3 +1,2 @@
--- file: int4.sql
--- line: 23
+-- file:int4.sql ln:23 expect:true
 INSERT INTO INT4_TBL(f1) VALUES ('     ')

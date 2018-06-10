@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1717
+-- file:plpgsql.sql ln:1717 expect:true
 select trap_zero_divide(100000)

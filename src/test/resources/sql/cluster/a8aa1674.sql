@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 123
+-- file:cluster.sql ln:123 expect:true
 CLUSTER clstr_2

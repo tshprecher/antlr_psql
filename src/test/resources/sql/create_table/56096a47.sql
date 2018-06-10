@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 127
+-- file:create_table_like.sql ln:130 expect:true
 CREATE TABLE ctlt11a (LIKE ctlv1 INCLUDING ALL)

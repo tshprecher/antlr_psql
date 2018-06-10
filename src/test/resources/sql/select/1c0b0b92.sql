@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 548
+-- file:oidjoins.sql ln:556 expect:true
 SELECT	ctid, dictnamespace
 FROM	pg_catalog.pg_ts_dict fk
 WHERE	dictnamespace != 0 AND

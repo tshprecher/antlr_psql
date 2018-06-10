@@ -1,5 +1,4 @@
--- file: object_address.sql
--- line: 55
+-- file:object_address.sql ln:56 expect:false
 BEGIN
 	FOR objtype IN VALUES ('toast table'), ('index column'), ('sequence column'),
 		('toast table column'), ('view column'), ('materialized view column')

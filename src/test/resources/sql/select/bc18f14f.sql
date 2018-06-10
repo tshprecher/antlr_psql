@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 900
+-- file:join.sql ln:960 expect:true
 select ss1.d1 from
   tenk1 as t1
   inner join tenk1 as t2

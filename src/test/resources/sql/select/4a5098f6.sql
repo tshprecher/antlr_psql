@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 238
+-- file:rowtypes.sql ln:340 expect:true
 select text(fullname) from fullname

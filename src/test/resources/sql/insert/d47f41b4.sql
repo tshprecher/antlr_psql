@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 27
+-- file:interval.sql ln:27 expect:true
 INSERT INTO INTERVAL_TBL (f1) VALUES ('6 years')

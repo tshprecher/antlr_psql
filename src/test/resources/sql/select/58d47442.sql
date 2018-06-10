@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 596
+-- file:arrays.sql ln:596 expect:true
 select unnest(array[1,2,3,4.5]::numeric[])

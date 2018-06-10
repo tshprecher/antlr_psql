@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 700
+-- file:foreign_key.sql ln:700 expect:true
 SET CONSTRAINTS ALL IMMEDIATE

@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1361
+-- file:rowsecurity.sql ln:1361 expect:true
 SELECT * FROM current_check

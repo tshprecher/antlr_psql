@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 58
+-- file:regproc.sql ln:58 expect:true
 SELECT regoper('||//')

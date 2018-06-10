@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2020
+-- file:alter_table.sql ln:2052 expect:true
 ALTER TABLE nonpartitioned INHERIT partitioned

@@ -1,5 +1,4 @@
--- file: rowtypes.sql
--- line: 180
+-- file:rowtypes.sql ln:282 expect:true
 CREATE TYPE price_key AS (
     id INTEGER
 )

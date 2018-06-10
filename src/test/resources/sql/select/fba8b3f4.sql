@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 164
+-- file:oidjoins.sql ln:164 expect:true
 SELECT	ctid, collnamespace
 FROM	pg_catalog.pg_collation fk
 WHERE	collnamespace != 0 AND

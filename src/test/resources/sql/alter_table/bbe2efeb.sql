@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1483
+-- file:alter_table.sql ln:1518 expect:true
 alter table alterlock set without cluster

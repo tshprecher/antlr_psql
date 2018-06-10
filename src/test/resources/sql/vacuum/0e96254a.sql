@@ -1,3 +1,2 @@
--- file: brin.sql
--- line: 407
+-- file:brin.sql ln:407 expect:true
 VACUUM brintest

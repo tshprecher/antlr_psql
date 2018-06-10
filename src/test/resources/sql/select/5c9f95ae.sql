@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 548
+-- file:rangefuncs.sql ln:548 expect:true
 SELECT * FROM get_users() WITH ORDINALITY

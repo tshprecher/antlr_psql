@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 235
+-- file:enum.sql ln:235 expect:true
 SELECT echo_me('red'::rainbow)

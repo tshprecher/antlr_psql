@@ -1,3 +1,2 @@
--- file: hs_standby_allowed.sql
--- line: 92
+-- file:hs_standby_allowed.sql ln:92 expect:true
 CLOSE hsc

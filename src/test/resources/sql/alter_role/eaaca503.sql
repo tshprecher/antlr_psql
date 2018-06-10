@@ -1,3 +1,2 @@
--- file: roleattributes.sql
--- line: 16
+-- file:roleattributes.sql ln:16 expect:true
 ALTER ROLE regress_test_inherit WITH INHERIT

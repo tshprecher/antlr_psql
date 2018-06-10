@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 123
+-- file:rowtypes.sql ln:126 expect:true
 insert into test_table values ('b', 'a')

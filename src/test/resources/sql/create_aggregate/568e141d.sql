@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 368
+-- file:window.sql ln:930 expect:true
 CREATE AGGREGATE logging_agg_strict_initcond (anyelement)
 (
 	stype = text,

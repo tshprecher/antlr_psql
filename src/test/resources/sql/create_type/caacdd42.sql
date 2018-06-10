@@ -1,3 +1,2 @@
--- file: create_type.sql
--- line: 43
+-- file:create_type.sql ln:43 expect:true
 CREATE TYPE int42

@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 766
+-- file:rules.sql ln:766 expect:true
 drop view vview

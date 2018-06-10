@@ -1,3 +1,2 @@
--- file: lock.sql
--- line: 6
+-- file:lock.sql ln:6 expect:true
 CREATE SCHEMA lock_schema1

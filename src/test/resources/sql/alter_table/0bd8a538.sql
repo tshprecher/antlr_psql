@@ -1,5 +1,4 @@
--- file: event_trigger.sql
--- line: 305
+-- file:event_trigger.sql ln:316 expect:true
 alter table rewriteme
  add column onemore int default 0,
  add column another int default -1,

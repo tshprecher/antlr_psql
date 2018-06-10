@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 559
+-- file:arrays.sql ln:559 expect:true
 select array_length(array[[1,2,3], [4,5,6]], 2)

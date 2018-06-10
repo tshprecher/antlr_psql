@@ -1,3 +1,2 @@
--- file: with.sql
--- line: 773
+-- file:with.sql ln:773 expect:true
 SELECT * FROM bug6051

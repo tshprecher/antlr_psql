@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 93
+-- file:transactions.sql ln:93 expect:true
 SELECT * FROM writetest, temptest

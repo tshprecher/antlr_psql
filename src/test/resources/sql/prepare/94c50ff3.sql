@@ -1,5 +1,4 @@
--- file: xml.sql
--- line: 362
+-- file:xml.sql ln:398 expect:false
 PREPARE pp AS
 SELECT  xmltable.*
    FROM (SELECT data FROM xmldata) x,

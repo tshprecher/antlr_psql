@@ -1,5 +1,4 @@
--- file: create_operator.sql
--- line: 5
+-- file:create_operator.sql ln:5 expect:true
 CREATE OPERATOR ## (
    leftarg = path,
    rightarg = path,

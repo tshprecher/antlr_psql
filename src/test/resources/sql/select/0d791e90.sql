@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 1160
+-- file:opr_sanity.sql ln:1161 expect:true
 SELECT p1.oid, p1.amname, p2.oid, p2.proname
 FROM pg_am AS p1, pg_proc AS p2
 WHERE p2.oid = p1.amhandler AND

@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 55
+-- file:xml.sql ln:55 expect:true
 SELECT xmlelement(name foo, bytea 'bar')

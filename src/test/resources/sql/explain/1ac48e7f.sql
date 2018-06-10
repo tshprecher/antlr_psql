@@ -1,5 +1,4 @@
--- file: rowtypes.sql
--- line: 110
+-- file:rowtypes.sql ln:113 expect:true
 explain (costs off)
 select thousand, tenthous from tenk1
 where (thousand, tenthous) >= (997, 5000)

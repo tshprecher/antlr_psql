@@ -1,5 +1,4 @@
--- file: type_sanity.sql
--- line: 74
+-- file:type_sanity.sql ln:74 expect:true
 SELECT p1.oid, p1.typname
 FROM pg_type as p1
 WHERE p1.typtype = 'r' AND

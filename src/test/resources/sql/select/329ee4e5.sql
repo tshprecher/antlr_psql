@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 636
+-- file:oidjoins.sql ln:644 expect:true
 SELECT	ctid, typmodout
 FROM	pg_catalog.pg_type fk
 WHERE	typmodout != 0 AND

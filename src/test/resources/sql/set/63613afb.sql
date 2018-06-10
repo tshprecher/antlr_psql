@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 518
+-- file:horology.sql ln:524 expect:true
 SET TIME ZONE '-1.5'

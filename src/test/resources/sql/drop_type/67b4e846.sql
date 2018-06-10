@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 712
+-- file:jsonb.sql ln:718 expect:true
 DROP TYPE jsbrec

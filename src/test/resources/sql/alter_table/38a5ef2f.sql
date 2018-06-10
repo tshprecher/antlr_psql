@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1034
+-- file:alter_table.sql ln:1053 expect:true
 alter table dropColumnchild drop column a

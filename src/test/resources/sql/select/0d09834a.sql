@@ -1,5 +1,4 @@
--- file: interval.sql
--- line: 265
+-- file:interval.sql ln:265 expect:true
 select  interval 'P0Y'                    AS "zero",
         interval 'P1Y2M'                  AS "a year 2 months",
         interval 'P1W'                    AS "a week",

@@ -1,3 +1,2 @@
--- file: collate.sql
--- line: 246
+-- file:collate.sql ln:248 expect:true
 INSERT INTO vctable VALUES ('foo' COLLATE "C")

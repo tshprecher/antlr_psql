@@ -1,3 +1,2 @@
--- file: collate.sql
--- line: 250
+-- file:collate.sql ln:252 expect:true
 SELECT collation for ('foo'::text)

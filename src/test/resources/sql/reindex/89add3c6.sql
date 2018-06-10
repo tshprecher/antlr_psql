@@ -1,3 +1,2 @@
--- file: hs_standby_disallowed.sql
--- line: 102
+-- file:hs_standby_disallowed.sql ln:102 expect:true
 REINDEX TABLE hs2

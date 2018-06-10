@@ -1,5 +1,4 @@
--- file: inherit.sql
--- line: 589
+-- file:inherit.sql ln:603 expect:true
 explain (costs off)
 SELECT
     ARRAY(SELECT f.i FROM (

@@ -1,5 +1,4 @@
--- file: create_view.sql
--- line: 99
+-- file:create_view.sql ln:99 expect:true
 CREATE VIEW v3 AS
     SELECT t1.a AS t1_a, t2.a AS t2_a
     FROM base_table t1, base_table2 t2

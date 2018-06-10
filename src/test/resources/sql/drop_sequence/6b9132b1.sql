@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 132
+-- file:create_table_like.sql ln:135 expect:true
 DROP SEQUENCE ctlseq1

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1214
+-- file:alter_table.sql ln:1233 expect:true
 insert into altinhoid values (1)

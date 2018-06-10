@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 400
+-- file:oidjoins.sql ln:408 expect:true
 SELECT	ctid, protransform
 FROM	pg_catalog.pg_proc fk
 WHERE	protransform != 0 AND

@@ -1,5 +1,4 @@
--- file: drop_operator.sql
--- line: 36
+-- file:drop_operator.sql ln:36 expect:true
 CREATE OPERATOR |> (
         PROCEDURE = int8gt,
         LEFTARG = bigint,

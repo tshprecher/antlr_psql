@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 109
+-- file:plpgsql.sql ln:109 expect:true
 create table PHone (
     slotname	char(20),
     comment	text,

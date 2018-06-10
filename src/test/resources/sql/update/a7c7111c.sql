@@ -1,5 +1,4 @@
--- file: inherit.sql
--- line: 124
+-- file:inherit.sql ln:124 expect:true
 update bar set f2 = f2 + 100
 from
   ( select f1 from foo union all select f1+3 from foo ) ss

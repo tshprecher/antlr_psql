@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 124
+-- file:sequence.sql ln:124 expect:true
 SELECT setval('sequence_test'::regclass, 32)

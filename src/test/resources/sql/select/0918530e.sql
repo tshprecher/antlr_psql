@@ -1,5 +1,4 @@
--- file: arrays.sql
--- line: 295
+-- file:arrays.sql ln:295 expect:true
 SELECT
     array_position(ids, (1, 1)),
     array_positions(ids, (1, 1))

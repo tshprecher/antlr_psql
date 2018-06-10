@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 2278
+-- file:alter_table.sql ln:2311 expect:true
 CREATE TABLE part_7_a_null (
 	c int,
 	d int,

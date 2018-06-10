@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 172
+-- file:oidjoins.sql ln:172 expect:true
 SELECT	ctid, connamespace
 FROM	pg_catalog.pg_constraint fk
 WHERE	connamespace != 0 AND

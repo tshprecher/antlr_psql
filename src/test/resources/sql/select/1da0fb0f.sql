@@ -1,5 +1,4 @@
--- file: bit.sql
--- line: 45
+-- file:bit.sql ln:45 expect:true
 SELECT b,
        SUBSTRING(b FROM 2 FOR 4) AS sub_2_4,
        SUBSTRING(b FROM 7 FOR 13) AS sub_7_13,

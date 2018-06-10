@@ -1,3 +1,2 @@
--- file: bit.sql
--- line: 30
+-- file:bit.sql ln:30 expect:true
 SELECT * FROM VARBIT_TABLE

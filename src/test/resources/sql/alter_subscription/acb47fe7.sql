@@ -1,3 +1,2 @@
--- file: subscription.sql
--- line: 66
+-- file:subscription.sql ln:66 expect:false
 ALTER SUBSCRIPTION testsub SET (slot_name = 'newname')

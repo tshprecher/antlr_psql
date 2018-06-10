@@ -1,5 +1,4 @@
--- file: domain.sql
--- line: 222
+-- file:domain.sql ln:222 expect:true
 \d+ dcomptable
 
 drop table dcomptable

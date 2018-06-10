@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 706
+-- file:updatable_views.sql ln:782 expect:true
 CREATE VIEW rw_view2 AS SELECT * FROM rw_view1 WHERE a > 0

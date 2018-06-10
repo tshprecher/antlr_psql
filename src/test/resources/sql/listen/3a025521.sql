@@ -1,3 +1,2 @@
--- file: async.sql
--- line: 17
+-- file:async.sql ln:17 expect:true
 LISTEN notify_async2

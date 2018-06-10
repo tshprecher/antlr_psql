@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 524
+-- file:inherit.sql ln:538 expect:true
 create table matest0 (a int, b int, c int, d int)

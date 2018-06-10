@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 23
+-- file:transactions.sql ln:23 expect:true
 DELETE FROM aggtest

@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 802
+-- file:foreign_key.sql ln:802 expect:true
 DROP TABLE pktable, fktable

@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 312
+-- file:date.sql ln:312 expect:true
 SELECT EXTRACT(DOY           FROM DATE 'infinity')

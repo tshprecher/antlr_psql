@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 146
+-- file:rowtypes.sql ln:149 expect:true
 select ROW() IS NULL

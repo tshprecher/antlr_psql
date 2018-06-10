@@ -1,3 +1,2 @@
--- file: event_trigger.sql
--- line: 329
+-- file:event_trigger.sql ln:340 expect:true
 create table rewritemetoo3 (a rewritetype)

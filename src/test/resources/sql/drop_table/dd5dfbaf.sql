@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 67
+-- file:create_table_like.sql ln:67 expect:true
 DROP TABLE inhg

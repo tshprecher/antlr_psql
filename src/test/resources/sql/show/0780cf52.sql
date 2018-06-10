@@ -1,3 +1,2 @@
--- file: hs_standby_allowed.sql
--- line: 75
+-- file:hs_standby_allowed.sql ln:75 expect:true
 show synchronous_commit

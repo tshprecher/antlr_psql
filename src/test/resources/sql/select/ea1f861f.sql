@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1894
+-- file:plpgsql.sql ln:1894 expect:true
 select sp_add_user('user1')

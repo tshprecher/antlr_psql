@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 502
+-- file:json.sql ln:502 expect:true
 SELECT jsa FROM json_populate_record(NULL::jsrec, '{"jsa": [1, "2", null, 4]}') q

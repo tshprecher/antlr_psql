@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 55
+-- file:timestamptz.sql ln:55 expect:true
 INSERT INTO TIMESTAMPTZ_TBL VALUES ('current')

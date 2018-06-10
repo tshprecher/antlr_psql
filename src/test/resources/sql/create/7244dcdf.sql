@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 278
+-- file:sequence.sql ln:278 expect:true
 CREATE TEMPORARY SEQUENCE sequence_test_temp1

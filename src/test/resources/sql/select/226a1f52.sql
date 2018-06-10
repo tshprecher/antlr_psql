@@ -1,5 +1,4 @@
--- file: case.sql
--- line: 81
+-- file:case.sql ln:81 expect:true
 SELECT '' AS "Five",
   CASE
     WHEN i >= 3 THEN i

@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1912
+-- file:join.sql ln:1993 expect:true
 drop table j1

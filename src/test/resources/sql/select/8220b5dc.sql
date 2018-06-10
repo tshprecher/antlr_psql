@@ -1,5 +1,4 @@
--- file: sanity_check.sql
--- line: 11
+-- file:sanity_check.sql ln:11 expect:true
 \a\t
 
 SELECT relname, relhasindex

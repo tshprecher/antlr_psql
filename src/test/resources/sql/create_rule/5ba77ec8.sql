@@ -1,4 +1,3 @@
--- file: rules.sql
--- line: 142
+-- file:rules.sql ln:142 expect:true
 create rule rtest_nothn_r2 as on insert to rtest_nothn1
 	where new.a >= 30 and new.a < 40 do instead nothing

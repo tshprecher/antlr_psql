@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 82
+-- file:regex.sql ln:82 expect:true
 select 'a' ~ '($|^)*'

@@ -1,5 +1,4 @@
--- file: arrays.sql
--- line: 5
+-- file:arrays.sql ln:5 expect:true
 CREATE TABLE arrtest (
 	a 			int2[],
 	b 			int4[][][],

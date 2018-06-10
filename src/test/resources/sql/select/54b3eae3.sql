@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 973
+-- file:jsonb.sql ln:979 expect:true
 select '["a","b","c"]'::jsonb - 2

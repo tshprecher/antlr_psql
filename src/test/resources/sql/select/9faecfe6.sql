@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 546
+-- file:rangefuncs.sql ln:546 expect:true
 SELECT get_users()

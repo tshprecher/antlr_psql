@@ -1,5 +1,4 @@
--- file: errors.sql
--- line: 326
+-- file:errors.sql ln:326 expect:false
 CREATE
 TEMPORARY
 TABLE

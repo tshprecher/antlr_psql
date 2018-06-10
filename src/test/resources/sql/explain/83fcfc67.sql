@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 921
+-- file:join.sql ln:981 expect:true
 explain (costs off)
 select * from tenk1 a join tenk1 b on
   (a.unique1 = 1 and b.unique1 = 2) or (a.unique2 = 3 and b.hundred = 4)

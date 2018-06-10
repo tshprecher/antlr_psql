@@ -1,3 +1,2 @@
--- file: prepare.sql
--- line: 28
+-- file:prepare.sql ln:28 expect:true
 DEALLOCATE PREPARE q2

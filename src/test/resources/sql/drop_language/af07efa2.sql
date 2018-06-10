@@ -1,3 +1,2 @@
--- file: alter_generic.sql
--- line: 581
+-- file:alter_generic.sql ln:587 expect:true
 DROP LANGUAGE alt_lang2 CASCADE

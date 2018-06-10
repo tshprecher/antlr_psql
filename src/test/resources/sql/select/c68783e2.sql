@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 169
+-- file:enum.sql ln:169 expect:true
 SELECT * FROM enumtest WHERE col <= 'green' ORDER BY col

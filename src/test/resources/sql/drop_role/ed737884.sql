@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 202
+-- file:foreign_data.sql ln:202 expect:true
 DROP ROLE regress_test_indirect

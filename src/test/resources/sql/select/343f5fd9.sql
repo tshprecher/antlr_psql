@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 29
+-- file:regproc.sql ln:29 expect:true
 SELECT regproc('pg_catalog.now')

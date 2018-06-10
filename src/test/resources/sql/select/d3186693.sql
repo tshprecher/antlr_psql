@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 79
+-- file:aggregates.sql ln:79 expect:true
 SELECT oldcnt(*) AS cnt_1000 FROM onek

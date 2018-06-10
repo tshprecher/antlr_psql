@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 982
+-- file:jsonb.sql ln:988 expect:true
 select '{"a":1 , "b":2, "c":3}'::jsonb - '{c,b}'::text[]

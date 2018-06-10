@@ -1,3 +1,2 @@
--- file: typed_table.sql
--- line: 21
+-- file:typed_table.sql ln:21 expect:true
 ALTER TABLE persons ALTER COLUMN name TYPE varchar

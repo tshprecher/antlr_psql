@@ -1,5 +1,4 @@
--- file: float8.sql
--- line: 186
+-- file:float8.sql ln:192 expect:true
 SELECT x,
        tand(x),
        tand(x) IN ('-Infinity'::float8,-1,0,

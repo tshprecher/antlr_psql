@@ -1,3 +1,2 @@
--- file: numeric_big.sql
--- line: 485
+-- file:numeric_big.sql ln:485 expect:true
 BEGIN TRANSACTION

@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 56
+-- file:foreign_key.sql ln:56 expect:true
 COMMENT ON CONSTRAINT constrname ON FKTABLE IS NULL

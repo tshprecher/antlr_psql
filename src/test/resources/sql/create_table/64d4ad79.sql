@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 2040
+-- file:alter_table.sql ln:2072 expect:false
 CREATE TABLE list_parted (
 	a int NOT NULL,
 	b char(2) COLLATE "C",

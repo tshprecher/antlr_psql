@@ -1,3 +1,2 @@
--- file: subscription.sql
--- line: 37
+-- file:subscription.sql ln:37 expect:true
 SET SESSION AUTHORIZATION 'regress_subscription_user2'

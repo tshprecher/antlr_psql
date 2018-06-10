@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 435
+-- file:rangetypes.sql ln:435 expect:true
 select * from i8r_array

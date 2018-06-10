@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 825
+-- file:rowsecurity.sql ln:825 expect:true
 INSERT INTO z1 VALUES
     (1, 'aba'),
     (2, 'bbb'),

@@ -1,5 +1,4 @@
--- file: type_sanity.sql
--- line: 438
+-- file:type_sanity.sql ln:446 expect:true
 SELECT p1.rngtypid, p1.rngsubtype, p.proname
 FROM pg_range p1 JOIN pg_proc p ON p.oid = p1.rngsubdiff
 WHERE pronargs != 2

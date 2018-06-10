@@ -1,3 +1,2 @@
--- file: bit.sql
--- line: 146
+-- file:bit.sql ln:146 expect:true
 SELECT POSITION(B'111010110' IN B'000000001110101111101011')

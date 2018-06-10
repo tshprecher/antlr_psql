@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 132
+-- file:inherit.sql ln:132 expect:true
 create table some_tab (a int)

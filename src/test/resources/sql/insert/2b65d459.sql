@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 287
+-- file:domain.sql ln:287 expect:true
 insert into nulltest values ('a', 'b', 'c', 'd', 'a')

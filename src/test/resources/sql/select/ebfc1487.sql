@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 17
+-- file:aggregates.sql ln:17 expect:true
 SELECT sum(four) AS sum_1500 FROM onek

@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 3683
+-- file:plpgsql.sql ln:3404 expect:true
 create or replace function pleast(numeric)
 returns numeric as $$
 begin

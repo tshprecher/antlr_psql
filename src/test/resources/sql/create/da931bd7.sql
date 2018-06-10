@@ -1,3 +1,2 @@
--- file: subscription.sql
--- line: 38
+-- file:subscription.sql ln:38 expect:false
 CREATE SUBSCRIPTION testsub2 CONNECTION 'dbname=doesnotexist' PUBLICATION foo WITH (connect = false)

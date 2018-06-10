@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 628
+-- file:triggers.sql ln:627 expect:false
 begin
     for i in 0 .. TG_nargs - 1 loop
         if i > 0 then

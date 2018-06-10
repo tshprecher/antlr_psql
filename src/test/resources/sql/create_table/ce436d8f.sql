@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 239
+-- file:inherit.sql ln:239 expect:true
 create table derived () inherits (base)

@@ -1,3 +1,2 @@
--- file: portals_p2.sql
--- line: 66
+-- file:portals_p2.sql ln:66 expect:true
 FETCH all in foo23

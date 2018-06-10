@@ -1,3 +1,2 @@
--- file: boolean.sql
--- line: 57
+-- file:boolean.sql ln:57 expect:true
 SELECT bool '11' AS error

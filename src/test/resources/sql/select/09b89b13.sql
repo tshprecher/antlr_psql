@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 37
+-- file:rangetypes.sql ln:37 expect:true
 select '(!,()'::textrange

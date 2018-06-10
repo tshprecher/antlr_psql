@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 3972
+-- file:plpgsql.sql ln:3693 expect:false
 BEGIN
     FOR r IN SELECT rtrim(roomno) AS roomno, foo FROM Room ORDER BY roomno
     LOOP

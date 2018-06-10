@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 590
+-- file:privileges.sql ln:622 expect:true
 select has_table_privilege('nosuchuser','pg_authid','select')

@@ -1,3 +1,2 @@
--- file: window.sql
--- line: 249
+-- file:window.sql ln:811 expect:false
 SELECT * FROM rank() OVER (ORDER BY random())

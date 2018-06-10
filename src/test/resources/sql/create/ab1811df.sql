@@ -1,5 +1,4 @@
--- file: rolenames.sql
--- line: 1
+-- file:rolenames.sql ln:1 expect:true
 CREATE OR REPLACE FUNCTION chkrolattr()
  RETURNS TABLE ("role" name, rolekeyword text, canlogin bool, replication bool)
  AS $$

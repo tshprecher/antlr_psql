@@ -1,5 +1,4 @@
--- file: timestamp.sql
--- line: 192
+-- file:timestamp.sql ln:192 expect:true
 SELECT '' AS "54", d1 as "timestamp",
    date_part( 'isoyear', d1) AS isoyear, date_part( 'week', d1) AS week,
    date_part( 'dow', d1) AS dow

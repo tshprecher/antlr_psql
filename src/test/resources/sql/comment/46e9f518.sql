@@ -1,3 +1,2 @@
--- file: create_type.sql
--- line: 99
+-- file:create_type.sql ln:109 expect:true
 COMMENT ON TYPE default_test_row IS 'good comment'

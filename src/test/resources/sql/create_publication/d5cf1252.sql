@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 101
+-- file:publication.sql ln:101 expect:false
 CREATE PUBLICATION testpub2

@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 99
+-- file:temp.sql ln:99 expect:true
 SELECT * FROM temptest

@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 582
+-- file:subselect.sql ln:592 expect:false
 begin
     for ln in
         explain (analyze, summary off, timing off, costs off)

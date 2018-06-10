@@ -1,3 +1,2 @@
--- file: update.sql
--- line: 21
+-- file:update.sql ln:21 expect:true
 UPDATE update_test SET a = DEFAULT, b = DEFAULT

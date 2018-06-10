@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 937
+-- file:rules.sql ln:937 expect:true
 select * from id_ordered

@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 425
+-- file:domain.sql ln:425 expect:true
 create domain things AS INT

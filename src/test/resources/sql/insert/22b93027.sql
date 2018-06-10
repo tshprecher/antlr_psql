@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 127
+-- file:insert.sql ln:131 expect:true
 insert into part_cc_dd values ('cC', 1)

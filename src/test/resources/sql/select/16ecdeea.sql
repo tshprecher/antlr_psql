@@ -1,3 +1,2 @@
--- file: regex.linux.utf8.sql
--- line: 32
+-- file:regex.linux.utf8.sql ln:32 expect:true
 SELECT 'aq' ~ 'a[a-ⓩ]' AS t

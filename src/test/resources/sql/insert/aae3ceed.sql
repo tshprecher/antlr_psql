@@ -1,3 +1,2 @@
--- file: money.sql
--- line: 7
+-- file:money.sql ln:7 expect:true
 INSERT INTO money_data VALUES ('123')

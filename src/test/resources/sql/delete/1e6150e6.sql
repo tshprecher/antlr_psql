@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 151
+-- file:cluster.sql ln:151 expect:true
 DELETE FROM clstr_1

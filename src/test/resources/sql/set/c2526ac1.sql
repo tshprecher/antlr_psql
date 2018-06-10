@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 54
+-- file:xml.sql ln:54 expect:true
 SET xmlbinary TO hex

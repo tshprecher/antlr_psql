@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 492
+-- file:polymorphism.sql ln:492 expect:true
 select myleast(variadic array[]::int[])

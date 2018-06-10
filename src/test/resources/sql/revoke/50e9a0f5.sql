@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 446
+-- file:updatable_views.sql ln:446 expect:true
 REVOKE INSERT, DELETE ON base_tbl FROM regress_view_user2

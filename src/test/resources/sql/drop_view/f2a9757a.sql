@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 426
+-- file:copy2.sql ln:426 expect:true
 DROP VIEW instead_of_insert_tbl_view

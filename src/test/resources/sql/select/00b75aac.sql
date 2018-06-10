@@ -1,5 +1,4 @@
--- file: rowsecurity.sql
--- line: 1407
+-- file:rowsecurity.sql ln:1407 expect:true
 SELECT refclassid::regclass, deptype
   FROM pg_depend
   WHERE classid = 'pg_policy'::regclass

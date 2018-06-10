@@ -1,5 +1,4 @@
--- file: create_cast.sql
--- line: 17
+-- file:create_cast.sql ln:17 expect:true
 CREATE TYPE casttesttype (
    internallength = variable,
    input = casttesttype_in,

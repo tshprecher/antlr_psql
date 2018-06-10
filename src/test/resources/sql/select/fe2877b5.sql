@@ -1,3 +1,2 @@
--- file: typed_table.sql
--- line: 6
+-- file:typed_table.sql ln:6 expect:true
 SELECT * FROM persons

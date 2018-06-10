@@ -1,5 +1,4 @@
--- file: psql.sql
--- line: 401
+-- file:psql.sql ln:401 expect:true
 \pset linestyle ascii
 
 prepare q as select ' | = | lkjsafi\\/ /oeu rio)(!@&*#)*(!&@*) \ (&' as " | 

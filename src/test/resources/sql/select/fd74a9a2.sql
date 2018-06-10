@@ -1,5 +1,4 @@
--- file: amutils.sql
--- line: 81
+-- file:amutils.sql ln:81 expect:true
 select col, prop, pg_index_column_has_property(o, col, prop)
   from (values ('fooindex'::regclass)) v1(o),
        (values (1,'orderable'),(2,'asc'),(3,'desc'),

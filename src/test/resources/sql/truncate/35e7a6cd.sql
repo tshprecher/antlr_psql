@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 582
+-- file:privileges.sql ln:614 expect:true
 TRUNCATE atest2

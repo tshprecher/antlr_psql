@@ -1,3 +1,2 @@
--- file: dependency.sql
--- line: 7
+-- file:dependency.sql ln:7 expect:true
 CREATE USER regress_dep_user3

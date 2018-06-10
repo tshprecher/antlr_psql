@@ -1,3 +1,2 @@
--- file: dependency.sql
--- line: 51
+-- file:dependency.sql ln:51 expect:true
 SET SESSION AUTHORIZATION regress_dep_user0

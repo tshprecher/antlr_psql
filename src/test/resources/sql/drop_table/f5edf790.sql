@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3191
+-- file:plpgsql.sql ln:2978 expect:true
 drop table tabwithcols

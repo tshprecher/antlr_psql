@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 611
+-- file:create_index.sql ln:621 expect:true
 SELECT * FROM array_index_op_test WHERE i <@ '{}' ORDER BY seqno

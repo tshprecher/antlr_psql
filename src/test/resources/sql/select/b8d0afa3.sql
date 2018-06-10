@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 806
+-- file:jsonb.sql ln:812 expect:true
 SELECT '{"ff":["a","aaa"]}'::jsonb

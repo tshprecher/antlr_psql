@@ -1,5 +1,4 @@
--- file: psql.sql
--- line: 609
+-- file:psql.sql ln:609 expect:true
 \set SHOW_CONTEXT always
 do $$
 begin

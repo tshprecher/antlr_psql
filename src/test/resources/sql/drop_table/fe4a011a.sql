@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 400
+-- file:domain.sql ln:400 expect:true
 drop table domdeftest

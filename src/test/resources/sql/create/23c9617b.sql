@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 323
+-- file:insert_conflict.sql ln:323 expect:true
 create unique index cities_names_unique on cities (name)

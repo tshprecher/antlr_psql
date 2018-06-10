@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 397
+-- file:timestamptz.sql ln:401 expect:true
 SELECT to_timestamp(-210866803200)

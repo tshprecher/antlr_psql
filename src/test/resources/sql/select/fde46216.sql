@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 365
+-- file:arrays.sql ln:365 expect:true
 select 33 * any (44)

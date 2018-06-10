@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 114
+-- file:regex.sql ln:114 expect:true
 select 'Programmer' ~ '(\w).*?\1' as t

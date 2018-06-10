@@ -1,5 +1,4 @@
--- file: alter_generic.sql
--- line: 463
+-- file:alter_generic.sql ln:463 expect:true
 SELECT nspname, stxname, rolname
   FROM pg_statistic_ext s, pg_namespace n, pg_authid a
  WHERE s.stxnamespace = n.oid AND s.stxowner = a.oid

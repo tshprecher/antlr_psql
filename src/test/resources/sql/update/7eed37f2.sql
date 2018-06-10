@@ -1,5 +1,4 @@
--- file: returning.sql
--- line: 29
+-- file:returning.sql ln:29 expect:true
 UPDATE foo SET f3 = f3 * 2
   WHERE f1 > 10
   RETURNING *, f1+112 IN (SELECT q1 FROM int8_tbl) AS subplan,

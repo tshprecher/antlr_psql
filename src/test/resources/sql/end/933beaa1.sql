@@ -1,4 +1,3 @@
--- file: foreign_data.sql
--- line: 535
+-- file:event_trigger.sql ln:10 expect:true
 END
 $$ language plpgsql

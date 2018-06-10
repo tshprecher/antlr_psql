@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 287
+-- file:window.sql ln:849 expect:true
 EXPLAIN (COSTS OFF)
 SELECT * FROM
   (SELECT depname,

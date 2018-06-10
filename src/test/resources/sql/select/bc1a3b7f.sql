@@ -1,3 +1,2 @@
--- file: object_address.sql
--- line: 131
+-- file:object_address.sql ln:132 expect:true
 SELECT pg_get_object_address('access method', '{one,two}', '{}')

@@ -1,4 +1,3 @@
--- file: foreign_data.sql
--- line: 341
+-- file:foreign_data.sql ln:347 expect:true
 ALTER FOREIGN TABLE ft1 ALTER COLUMN c7 OPTIONS (ADD p1 'v1', ADD p2 'v2'),
                         ALTER COLUMN c8 OPTIONS (ADD p1 'v1', ADD p2 'v2')

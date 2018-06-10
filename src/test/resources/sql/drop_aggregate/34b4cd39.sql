@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 143
+-- file:errors.sql ln:143 expect:false
 drop aggregate newcnt1

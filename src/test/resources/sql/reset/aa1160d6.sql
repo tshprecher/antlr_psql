@@ -1,3 +1,2 @@
--- file: select.sql
--- line: 91
+-- file:select.sql ln:91 expect:true
 RESET enable_sort

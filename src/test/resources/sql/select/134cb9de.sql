@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 225
+-- file:date.sql ln:225 expect:true
 SELECT EXTRACT(EPOCH FROM TIMESTAMPTZ '1970-01-01+00')

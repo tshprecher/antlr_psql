@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 328
+-- file:create_table.sql ln:316 expect:true
 DROP FUNCTION retset(int)

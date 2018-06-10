@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1044
+-- file:rowsecurity.sql ln:1044 expect:true
 PREPARE role_inval AS SELECT * FROM t1

@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 160
+-- file:insert.sql ln:164 expect:true
 insert into part_ee_ff1 values ('ff', 1)

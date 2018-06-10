@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 165
+-- file:tsearch.sql ln:165 expect:true
 SELECT plainto_tsquery('english', 'foo bar') || plainto_tsquery('english', 'asd fg')

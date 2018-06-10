@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2461
+-- file:alter_table.sql ln:2548 expect:true
 drop table parted_validate_test

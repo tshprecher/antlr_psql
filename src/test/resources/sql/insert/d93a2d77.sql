@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1907
+-- file:alter_table.sql ln:1942 expect:true
 INSERT INTO old_system_table(othercol) VALUES ('somedata'), ('otherdata')

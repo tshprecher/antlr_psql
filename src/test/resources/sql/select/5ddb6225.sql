@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 459
+-- file:jsonb.sql ln:459 expect:true
 select '42'::jsonb #> '{}'

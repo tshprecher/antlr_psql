@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2841
+-- file:plpgsql.sql ln:2628 expect:true
 select shadowtest(1)

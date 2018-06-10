@@ -1,3 +1,2 @@
--- file: identity.sql
--- line: 148
+-- file:identity.sql ln:184 expect:true
 SELECT * FROM itest6

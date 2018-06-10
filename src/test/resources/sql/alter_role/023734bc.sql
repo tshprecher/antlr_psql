@@ -1,3 +1,2 @@
--- file: roleattributes.sql
--- line: 68
+-- file:roleattributes.sql ln:68 expect:true
 ALTER ROLE regress_test_replication WITH REPLICATION

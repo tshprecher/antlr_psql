@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 168
+-- file:errors.sql ln:168 expect:true
 drop function nonesuch()

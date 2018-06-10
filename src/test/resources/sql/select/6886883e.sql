@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 367
+-- file:union.sql ln:410 expect:true
 select * from
   (select *, 0 as x from int8_tbl a
    union all

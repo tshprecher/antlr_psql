@@ -1,5 +1,4 @@
--- file: create_function_3.sql
--- line: 46
+-- file:create_function_3.sql ln:53 expect:true
 SELECT proname, provolatile FROM pg_proc
        WHERE oid in ('functest_B_1'::regproc,
                      'functest_B_2'::regproc,

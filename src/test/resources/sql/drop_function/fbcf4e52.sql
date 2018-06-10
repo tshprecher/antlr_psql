@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 181
+-- file:truncate.sql ln:181 expect:true
 DROP FUNCTION trunctrigger()

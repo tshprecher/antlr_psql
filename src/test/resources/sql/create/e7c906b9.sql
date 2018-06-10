@@ -1,5 +1,4 @@
--- file: copy2.sql
--- line: 274
+-- file:copy2.sql ln:274 expect:true
 CREATE TEMP TABLE forcetest (
     a INT NOT NULL,
     b TEXT NOT NULL,

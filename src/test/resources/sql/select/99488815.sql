@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 350
+-- file:join.sql ln:359 expect:true
 select count(*) from tenk1 x where
   x.unique1 in (select a.f1 from int4_tbl a,float8_tbl b where a.f1=b.f1) and
   x.unique1 = 0 and

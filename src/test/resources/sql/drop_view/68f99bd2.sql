@@ -1,3 +1,2 @@
--- file: lock.sql
--- line: 61
+-- file:lock.sql ln:124 expect:true
 DROP VIEW lock_view1

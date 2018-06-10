@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 320
+-- file:oidjoins.sql ln:324 expect:true
 SELECT	ctid, opckeytype
 FROM	pg_catalog.pg_opclass fk
 WHERE	opckeytype != 0 AND

@@ -1,3 +1,2 @@
--- file: text.sql
--- line: 42
+-- file:text.sql ln:42 expect:true
 select reverse('abcde')

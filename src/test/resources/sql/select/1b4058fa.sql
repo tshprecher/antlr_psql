@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 249
+-- file:jsonb.sql ln:249 expect:true
 SELECT * FROM jsonb_each('{"a":{"b":"c","c":"b","1":"first"},"b":[1,2],"c":"cc","1":"first","n":null}'::jsonb) AS q

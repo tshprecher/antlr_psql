@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 569
+-- file:join.sql ln:609 expect:true
 select yy.pkyy as yy_pkyy, yy.pkxx as yy_pkxx, yya.pkyy as yya_pkyy,
        xxa.pkxx as xxa_pkxx, xxb.pkxx as xxb_pkxx
 from yy

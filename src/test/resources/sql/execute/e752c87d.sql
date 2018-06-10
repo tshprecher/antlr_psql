@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 733
+-- file:updatable_views.sql ln:809 expect:true
 EXECUTE ins(10, ARRAY[4,5])

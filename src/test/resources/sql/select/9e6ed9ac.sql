@@ -1,5 +1,4 @@
--- file: txid.sql
--- line: 25
+-- file:txid.sql ln:25 expect:true
 select  txid_snapshot_xmin(snap),
 	txid_snapshot_xmax(snap),
 	txid_snapshot_xip(snap)

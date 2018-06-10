@@ -1,3 +1,2 @@
--- file: identity.sql
--- line: 170
+-- file:identity.sql ln:206 expect:true
 CREATE TABLE itest7b (a int)

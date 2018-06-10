@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 96
+-- file:triggers.sql ln:103 expect:true
 DROP TABLE fkeys

@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 128
+-- file:temp.sql ln:128 expect:true
 insert into whereami values ('temp')

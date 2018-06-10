@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 950
+-- file:triggers.sql ln:949 expect:true
 DELETE FROM european_city_view WHERE city_name = 'Cambridge' RETURNING *

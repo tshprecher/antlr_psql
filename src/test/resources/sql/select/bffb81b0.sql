@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 288
+-- file:oidjoins.sql ln:292 expect:true
 SELECT	ctid, loid
 FROM	pg_catalog.pg_largeobject fk
 WHERE	loid != 0 AND

@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 244
+-- file:arrays.sql ln:244 expect:true
 SELECT ARRAY[[[[[['hello'],['world']]]]]]

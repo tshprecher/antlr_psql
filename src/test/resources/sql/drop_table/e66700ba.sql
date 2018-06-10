@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 93
+-- file:vacuum.sql ln:97 expect:true
 DROP TABLE vactst

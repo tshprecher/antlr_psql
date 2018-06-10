@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1445
+-- file:plpgsql.sql ln:1445 expect:true
 CREATE TABLE found_test_tbl (a int)

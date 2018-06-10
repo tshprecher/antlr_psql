@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 57
+-- file:vacuum.sql ln:57 expect:true
 VACUUM FULL pg_am

@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 1445
+-- file:alter_table.sql ln:1480 expect:true
 create type lockmodes as enum (
  'SIReadLock'
 ,'AccessShareLock'

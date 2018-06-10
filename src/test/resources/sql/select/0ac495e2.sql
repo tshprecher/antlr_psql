@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 271
+-- file:privileges.sql ln:271 expect:true
 SELECT atest5 FROM atest5

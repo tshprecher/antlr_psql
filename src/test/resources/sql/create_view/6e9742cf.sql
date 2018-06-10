@@ -1,5 +1,4 @@
--- file: updatable_views.sql
--- line: 550
+-- file:updatable_views.sql ln:626 expect:true
 CREATE VIEW rw_view1 AS
   SELECT ctid, sin(a) s, a, cos(a) c
   FROM base_tbl

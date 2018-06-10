@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 93
+-- file:regproc.sql ln:93 expect:true
 SELECT to_regclass('pg_classes')

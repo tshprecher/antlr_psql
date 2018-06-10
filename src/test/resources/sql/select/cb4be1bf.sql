@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 350
+-- file:rules.sql ln:350 expect:true
 select * from rtest_t4

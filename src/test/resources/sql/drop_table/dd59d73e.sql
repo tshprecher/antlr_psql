@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2072
+-- file:alter_table.sql ln:2104 expect:true
 DROP TABLE parent CASCADE

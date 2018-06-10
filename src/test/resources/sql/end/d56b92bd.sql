@@ -1,4 +1,3 @@
--- file: enum.sql
--- line: 233
+-- file:enum.sql ln:233 expect:true
 END
 $$ LANGUAGE plpgsql

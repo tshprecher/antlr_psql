@@ -1,3 +1,2 @@
--- file: oid.sql
--- line: 29
+-- file:oid.sql ln:29 expect:true
 SELECT '' AS six, * FROM OID_TBL

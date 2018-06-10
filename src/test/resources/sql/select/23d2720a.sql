@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2366
+-- file:alter_table.sql ln:2452 expect:true
 SELECT * from part_rp

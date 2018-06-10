@@ -1,3 +1,2 @@
--- file: collate.sql
--- line: 75
+-- file:collate.sql ln:75 expect:true
 SELECT 'bbc' COLLATE "POSIX" < 'Abc' COLLATE "POSIX" AS "false"

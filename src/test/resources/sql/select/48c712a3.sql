@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 330
+-- file:strings.sql ln:330 expect:true
 SELECT text 'text' || ' and unknown' AS "Concat text to unknown type"

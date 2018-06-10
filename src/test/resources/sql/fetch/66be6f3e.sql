@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 231
+-- file:portals.sql ln:231 expect:true
 FETCH FROM foo26

@@ -1,5 +1,4 @@
--- file: typed_table.sql
--- line: 40
+-- file:typed_table.sql ln:40 expect:true
 \d persons3
 
 CREATE TABLE persons4 OF person_type (

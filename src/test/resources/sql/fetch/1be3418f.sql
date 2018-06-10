@@ -1,3 +1,2 @@
--- file: tidscan.sql
--- line: 43
+-- file:tidscan.sql ln:43 expect:true
 FETCH FIRST FROM c

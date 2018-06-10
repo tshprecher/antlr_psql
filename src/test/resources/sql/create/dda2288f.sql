@@ -1,3 +1,2 @@
--- file: subselect.sql
--- line: 147
+-- file:subselect.sql ln:147 expect:true
 CREATE TEMP TABLE foo (id integer)

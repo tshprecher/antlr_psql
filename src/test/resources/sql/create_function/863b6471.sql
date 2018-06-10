@@ -1,5 +1,4 @@
--- file: indirect_toast.sql
--- line: 28
+-- file:indirect_toast.sql ln:28 expect:true
 CREATE FUNCTION update_using_indirect()
         RETURNS trigger
         LANGUAGE plpgsql AS $$

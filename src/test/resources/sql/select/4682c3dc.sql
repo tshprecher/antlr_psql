@@ -1,5 +1,4 @@
--- file: numeric.sql
--- line: 728
+-- file:numeric.sql ln:728 expect:true
 SELECT
     operand_num,
     width_bucket(operand_num, 0, 10, 5) AS wb_1,

@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 396
+-- file:collate.linux.utf8.sql ln:396 expect:false
 ALTER COLLATION "en_US" REFRESH VERSION

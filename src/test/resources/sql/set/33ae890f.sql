@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 262
+-- file:rangetypes.sql ln:262 expect:true
 SET enable_indexscan  = t

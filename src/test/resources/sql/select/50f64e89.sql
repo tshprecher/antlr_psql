@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 763
+-- file:jsonb.sql ln:769 expect:true
 SELECT count(distinct j) FROM testjsonb

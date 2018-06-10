@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1253
+-- file:alter_table.sql ln:1272 expect:true
 create domain mytype as text

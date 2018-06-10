@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 2151
+-- file:alter_table.sql ln:2184 expect:false
 CREATE TABLE list_parted2 (
 	a int,
 	b char

@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 458
+-- file:transactions.sql ln:458 expect:true
 select * from i_table

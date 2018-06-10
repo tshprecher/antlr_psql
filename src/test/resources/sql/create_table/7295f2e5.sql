@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 83
+-- file:create_table.sql ln:83 expect:true
 CREATE TABLE emp (
 	salary 		int4,
 	manager 	name

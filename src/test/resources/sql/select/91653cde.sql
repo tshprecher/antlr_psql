@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 430
+-- file:horology.sql ln:430 expect:true
 SELECT to_timestamp('005527', 'IYYIWID')

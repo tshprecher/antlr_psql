@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 1930
+-- file:alter_table.sql ln:1965 expect:true
 SELECT relname, relkind, relpersistence FROM pg_class WHERE relname ~ '^unlogged1'
 UNION ALL
 SELECT 'toast table', t.relkind, t.relpersistence FROM pg_class r JOIN pg_class t ON t.oid = r.reltoastrelid WHERE r.relname ~ '^unlogged1'

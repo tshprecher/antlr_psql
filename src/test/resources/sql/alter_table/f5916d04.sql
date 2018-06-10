@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2341
+-- file:alter_table.sql ln:2423 expect:false
 ALTER TABLE regular_table DETACH PARTITION any_name

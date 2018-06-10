@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 133
+-- file:create_view.sql ln:133 expect:true
 CREATE TEMPORARY SEQUENCE seq1_temp

@@ -1,3 +1,2 @@
--- file: roleattributes.sql
--- line: 87
+-- file:roleattributes.sql ln:87 expect:true
 DROP ROLE regress_test_createrole

@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 762
+-- file:privileges.sql ln:794 expect:true
 SELECT lo_create(1003)

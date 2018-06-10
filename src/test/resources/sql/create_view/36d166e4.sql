@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 555
+-- file:rules.sql ln:555 expect:true
 CREATE VIEW shoelace AS
 	SELECT s.sl_name,
 		   s.sl_avail,

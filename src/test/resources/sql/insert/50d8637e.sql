@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 482
+-- file:plpgsql.sql ln:482 expect:true
 insert into PSlot (
 		    slotname,
 		    pfname,

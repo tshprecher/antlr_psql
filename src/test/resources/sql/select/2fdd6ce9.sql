@@ -1,5 +1,4 @@
--- file: jsonb.sql
--- line: 97
+-- file:jsonb.sql ln:97 expect:true
 SELECT jsonb_agg(q)
   FROM ( SELECT $$a$$ || x AS b, y AS c,
                ARRAY[ROW(x.*,ARRAY[1,2,3]),

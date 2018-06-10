@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 100
+-- file:cluster.sql ln:100 expect:true
 ALTER TABLE clstr_tst SET WITHOUT CLUSTER

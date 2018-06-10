@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 325
+-- file:triggers.sql ln:319 expect:true
 CREATE FUNCTION dummy_update_func() RETURNS trigger AS $$
 BEGIN
   RAISE NOTICE 'dummy_update_func(%) called: action = %, old = %, new = %',

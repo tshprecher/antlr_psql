@@ -1,3 +1,2 @@
--- file: typed_table.sql
--- line: 57
+-- file:typed_table.sql ln:57 expect:true
 CREATE TABLE persons OF person_type

@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 54
+-- file:updatable_views.sql ln:54 expect:true
 DELETE FROM ro_view6

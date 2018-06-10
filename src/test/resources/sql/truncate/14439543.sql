@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 193
+-- file:truncate.sql ln:193 expect:true
 TRUNCATE truncate_a

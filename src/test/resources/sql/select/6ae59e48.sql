@@ -1,3 +1,2 @@
--- file: name.sql
--- line: 85
+-- file:name.sql ln:85 expect:true
 SELECT parse_ident('.')

@@ -1,3 +1,2 @@
--- file: rangefuncs.sql
--- line: 571
+-- file:rangefuncs.sql ln:571 expect:true
 drop table users

@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 378
+-- file:sequence.sql ln:378 expect:true
 ROLLBACK TO save

@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 98
+-- file:rolenames.sql ln:98 expect:true
 ALTER ROLE "public" WITH NOREPLICATION

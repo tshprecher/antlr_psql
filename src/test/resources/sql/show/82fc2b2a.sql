@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 520
+-- file:horology.sql ln:526 expect:true
 SHOW TIME ZONE

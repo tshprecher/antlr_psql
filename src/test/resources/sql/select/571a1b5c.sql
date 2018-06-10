@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 68
+-- file:subselect.sql ln:68 expect:true
 SELECT '' AS six, f1 AS "Correlated Field", f3 AS "Second Field"
   FROM SUBSELECT_TBL upper
   WHERE f1 IN

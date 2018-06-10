@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 312
+-- file:domain.sql ln:312 expect:true
 SELECT cast('1' as dnotnull)

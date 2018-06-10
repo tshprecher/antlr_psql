@@ -1,5 +1,4 @@
--- file: pg_lsn.sql
--- line: 36
+-- file:pg_lsn.sql ln:36 expect:true
 SELECT DISTINCT (i || '/' || j)::pg_lsn f
   FROM generate_series(1, 10) i,
        generate_series(1, 10) j,

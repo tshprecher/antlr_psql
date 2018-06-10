@@ -1,3 +1,2 @@
--- file: json_encoding.sql
--- line: 9
+-- file:json_encoding.sql ln:9 expect:true
 SELECT '"\u000g"'::json

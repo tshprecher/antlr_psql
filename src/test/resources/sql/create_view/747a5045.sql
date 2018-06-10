@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 910
+-- file:alter_table.sql ln:929 expect:true
 create view myview as select * from atacc1

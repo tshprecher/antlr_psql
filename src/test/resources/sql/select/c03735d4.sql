@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 8
+-- file:jsonb.sql ln:8 expect:true
 SELECT '"\n\"\\"'::jsonb

@@ -1,3 +1,2 @@
--- file: roleattributes.sql
--- line: 32
+-- file:roleattributes.sql ln:32 expect:true
 CREATE ROLE regress_test_def_createdb

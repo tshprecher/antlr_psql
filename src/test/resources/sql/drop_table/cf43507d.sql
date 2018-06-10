@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 373
+-- file:insert_conflict.sql ln:373 expect:true
 drop table excluded

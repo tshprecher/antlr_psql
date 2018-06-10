@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 846
+-- file:create_index.sql ln:882 expect:true
 CREATE INDEX ON oid_table (ctid)

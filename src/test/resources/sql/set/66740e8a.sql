@@ -1,3 +1,2 @@
--- file: hash_index.sql
--- line: 165
+-- file:create_am.sql ln:42 expect:true
 SET enable_seqscan = OFF

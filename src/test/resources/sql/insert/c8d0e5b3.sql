@@ -1,3 +1,2 @@
--- file: truncate.sql
--- line: 4
+-- file:truncate.sql ln:4 expect:true
 INSERT INTO truncate_a VALUES (2)

@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 69
+-- file:foreign_data.sql ln:69 expect:true
 ALTER FOREIGN DATA WRAPPER foo OPTIONS (DROP c)

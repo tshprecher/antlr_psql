@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 330
+-- file:portals.sql ln:330 expect:true
 FETCH 2 FROM c1

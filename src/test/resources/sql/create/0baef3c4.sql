@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 403
+-- file:alter_table.sql ln:422 expect:true
 \d nv_child_2009
 
 

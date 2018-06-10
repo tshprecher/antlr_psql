@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 129
+-- file:rolenames.sql ln:129 expect:true
 ALTER USER "none" WITH NOREPLICATION

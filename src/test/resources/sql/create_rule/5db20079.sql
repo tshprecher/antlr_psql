@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 622
+-- file:rules.sql ln:622 expect:true
 CREATE RULE shoelace_ins AS ON INSERT TO shoelace
         DO INSTEAD
         INSERT INTO shoelace_data VALUES (

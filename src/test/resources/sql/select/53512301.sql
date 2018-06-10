@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 299
+-- file:insert_conflict.sql ln:299 expect:true
 select * from insertconflict

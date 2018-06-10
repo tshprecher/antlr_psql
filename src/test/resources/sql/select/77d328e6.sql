@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1682
+-- file:plpgsql.sql ln:1682 expect:true
 SELECT perform_test_func()

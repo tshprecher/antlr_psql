@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 354
+-- file:timestamptz.sql ln:358 expect:true
 SELECT '2014-10-26 01:00:00 MSK'::timestamptz

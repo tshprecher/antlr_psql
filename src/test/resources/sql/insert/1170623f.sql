@@ -1,5 +1,4 @@
--- file: jsonb.sql
--- line: 118
+-- file:jsonb.sql ln:118 expect:true
 INSERT INTO test_jsonb VALUES
 ('scalar','"a scalar"'),
 ('array','["zero", "one","two",null,"four","five", [1,2,3],{"f1":9}]'),

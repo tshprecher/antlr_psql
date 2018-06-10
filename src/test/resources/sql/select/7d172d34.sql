@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 236
+-- file:join.sql ln:245 expect:true
 SELECT * FROM
 (SELECT * FROM t2) as s2
 FULL JOIN

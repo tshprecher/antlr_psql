@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 75
+-- file:xml.sql ln:75 expect:true
 SELECT xmlparse(document 'abc')

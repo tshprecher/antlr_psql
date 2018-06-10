@@ -1,3 +1,2 @@
--- file: float8.sql
--- line: 38
+-- file:float8.sql ln:38 expect:true
 SELECT ' INFINITY    x'::float8

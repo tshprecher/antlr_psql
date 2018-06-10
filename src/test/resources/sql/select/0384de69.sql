@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 120
+-- file:oidjoins.sql ln:120 expect:true
 SELECT	ctid, grantor
 FROM	pg_catalog.pg_auth_members fk
 WHERE	grantor != 0 AND

@@ -1,5 +1,4 @@
--- file: inherit.sql
--- line: 167
+-- file:inherit.sql ln:167 expect:true
 update mlparted_tab mlp set c = 'xxx'
 from
   (select a from some_tab union all select a+1 from some_tab) ss (a)

@@ -1,3 +1,2 @@
--- file: copy2.sql
--- line: 111
+-- file:copy2.sql ln:111 expect:true
 COPY no_oids FROM stdin WITH OIDS

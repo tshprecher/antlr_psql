@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 1307
+-- file:opr_sanity.sql ln:1308 expect:true
 SELECT indexrelid::regclass, indrelid::regclass, attname, atttypid::regtype, opcname
 FROM (SELECT indexrelid, indrelid, unnest(indkey) as ikey,
              unnest(indclass) as iclass, unnest(indcollation) as icoll

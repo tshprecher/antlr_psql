@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 496
+-- file:opr_sanity.sql ln:497 expect:true
 SELECT p1.oid, p1.conname
 FROM pg_conversion as p1
 WHERE p1.conproc = 0 OR

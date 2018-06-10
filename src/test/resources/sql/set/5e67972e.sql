@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 207
+-- file:cluster.sql ln:214 expect:true
 set maintenance_work_mem = '1MB'

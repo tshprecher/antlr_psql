@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 81
+-- file:matview.sql ln:81 expect:true
 REFRESH MATERIALIZED VIEW mvtest_tvvm

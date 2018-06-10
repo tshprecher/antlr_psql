@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 347
+-- file:domain.sql ln:347 expect:true
 insert into defaulttest(col4) values(0)

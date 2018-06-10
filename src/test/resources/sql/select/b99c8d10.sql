@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 276
+-- file:groupingsets.sql ln:301 expect:true
 select unhashable_col, unsortable_col,
        grouping(unhashable_col, unsortable_col),
        count(*), sum(v)

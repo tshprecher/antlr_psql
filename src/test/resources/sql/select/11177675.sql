@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 338
+-- file:rowtypes.sql ln:440 expect:true
 SELECT (NULL::compositetable).oid

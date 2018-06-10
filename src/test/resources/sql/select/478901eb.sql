@@ -1,3 +1,2 @@
--- file: comments.sql
--- line: 9
+-- file:comments.sql ln:9 expect:true
 SELECT 'before multi-line' AS fourth

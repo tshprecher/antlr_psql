@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 148
+-- file:temp.sql ln:148 expect:true
 select whoami()

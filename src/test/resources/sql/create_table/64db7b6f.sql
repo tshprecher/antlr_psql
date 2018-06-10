@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 1856
+-- file:join.sql ln:1937 expect:true
 create table j1 (id1 int, id2 int, primary key(id1,id2))

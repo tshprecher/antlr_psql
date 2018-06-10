@@ -1,3 +1,2 @@
--- file: aggregates.sql
--- line: 515
+-- file:aggregates.sql ln:515 expect:true
 insert into bytea_test_table values(decode('aa','hex'))

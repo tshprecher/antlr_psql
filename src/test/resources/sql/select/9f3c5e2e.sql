@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 61
+-- file:regproc.sql ln:61 expect:true
 SELECT regprocedure('absinthe(numeric)')

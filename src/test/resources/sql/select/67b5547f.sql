@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 966
+-- file:numeric.sql ln:996 expect:true
 select log(-12.34)

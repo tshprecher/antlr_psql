@@ -1,3 +1,2 @@
--- file: point.sql
--- line: 96
+-- file:point.sql ln:96 expect:true
 SET enable_indexscan TO true

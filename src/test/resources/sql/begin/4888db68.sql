@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 4210
+-- file:plpgsql.sql ln:3931 expect:false
 begin
   r := row(12, '{foo,bar,baz}')::rtype

@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1488
+-- file:rowsecurity.sql ln:1488 expect:true
 CREATE POLICY p2 ON r2 FOR INSERT WITH CHECK (false)

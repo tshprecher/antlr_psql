@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 480
+-- file:domain.sql ln:480 expect:true
 insert into dtest values('yz23')

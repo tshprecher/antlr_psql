@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 993
+-- file:updatable_views.sql ln:1069 expect:true
 ANALYZE t111

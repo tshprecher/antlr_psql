@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 309
+-- file:enum.sql ln:309 expect:true
 DROP TABLE enumtest

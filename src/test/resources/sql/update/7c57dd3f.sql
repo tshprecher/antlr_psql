@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 46
+-- file:inherit.sql ln:46 expect:true
 UPDATE a SET aa='zzzz' WHERE aa='aaaa'

@@ -1,3 +1,2 @@
--- file: abstime.sql
--- line: 27
+-- file:abstime.sql ln:27 expect:true
 INSERT INTO ABSTIME_TBL (f1) VALUES (abstime '-infinity')

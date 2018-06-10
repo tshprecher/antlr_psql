@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 862
+-- file:join.sql ln:922 expect:true
 explain (costs off)
 select * from
   tenk1, int8_tbl a, int8_tbl b

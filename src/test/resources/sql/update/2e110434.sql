@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 532
+-- file:triggers.sql ln:531 expect:true
 UPDATE trigger_test SET f3 = NULL

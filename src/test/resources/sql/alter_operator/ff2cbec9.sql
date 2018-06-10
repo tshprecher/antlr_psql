@@ -1,3 +1,2 @@
--- file: alter_operator.sql
--- line: 82
+-- file:alter_operator.sql ln:82 expect:true
 ALTER OPERATOR === (boolean, boolean) SET (NEGATOR = !==)

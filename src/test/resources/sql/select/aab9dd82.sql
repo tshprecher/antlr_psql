@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 825
+-- file:foreign_data.sql ln:831 expect:true
 SELECT * FROM pg_user_mapping

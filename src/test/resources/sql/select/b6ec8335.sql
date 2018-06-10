@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 1007
+-- file:numeric.sql ln:1037 expect:true
 select scale(-13.000000000000000)

@@ -1,3 +1,2 @@
--- file: dependency.sql
--- line: 116
+-- file:dependency.sql ln:116 expect:true
 DROP USER regress_dep_user2

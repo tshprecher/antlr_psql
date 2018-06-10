@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 278
+-- file:jsonb.sql ln:278 expect:true
 SELECT jsonb '{"a":null, "b":"qq"}' ?| ARRAY['a','b']

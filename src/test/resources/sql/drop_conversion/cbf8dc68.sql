@@ -1,3 +1,2 @@
--- file: conversion.sql
--- line: 26
+-- file:conversion.sql ln:26 expect:true
 DROP CONVERSION myconv

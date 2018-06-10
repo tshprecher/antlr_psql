@@ -1,3 +1,2 @@
--- file: limit.sql
--- line: 108
+-- file:limit.sql ln:108 expect:true
 select currval('testseq')

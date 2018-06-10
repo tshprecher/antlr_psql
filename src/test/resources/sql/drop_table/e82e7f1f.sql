@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 156
+-- file:prepared_xacts.sql ln:156 expect:true
 DROP TABLE pxtest2

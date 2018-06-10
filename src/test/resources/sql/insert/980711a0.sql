@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 511
+-- file:plpgsql.sql ln:511 expect:true
 insert into WSlot (
 		    slotname,
 		    roomno,

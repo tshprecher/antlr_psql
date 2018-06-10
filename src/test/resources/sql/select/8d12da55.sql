@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1091
+-- file:alter_table.sql ln:1110 expect:true
 select f1 from c1

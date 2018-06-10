@@ -1,3 +1,2 @@
--- file: bit.sql
--- line: 19
+-- file:bit.sql ln:19 expect:true
 SELECT * FROM BIT_TABLE

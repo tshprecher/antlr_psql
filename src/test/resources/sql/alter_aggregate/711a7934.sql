@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 275
+-- file:rolenames.sql ln:275 expect:false
 ALTER AGGREGATE testagg5(int2) OWNER TO USER

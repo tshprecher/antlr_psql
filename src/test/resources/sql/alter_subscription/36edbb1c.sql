@@ -1,3 +1,2 @@
--- file: subscription.sql
--- line: 90
+-- file:subscription.sql ln:90 expect:false
 ALTER SUBSCRIPTION testsub RENAME TO testsub_foo

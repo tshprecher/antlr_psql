@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 789
+-- file:jsonb.sql ln:795 expect:true
 SELECT count(*) FROM testjsonb WHERE j @> '{"wait":null}'

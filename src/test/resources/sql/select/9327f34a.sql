@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 170
+-- file:strings.sql ln:170 expect:true
 SELECT regexp_matches('foobarbequebaz', $re$(barbeque$re$)

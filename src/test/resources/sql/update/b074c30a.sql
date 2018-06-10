@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1686
+-- file:rowsecurity.sql ln:1687 expect:true
 UPDATE r1 SET a = 30

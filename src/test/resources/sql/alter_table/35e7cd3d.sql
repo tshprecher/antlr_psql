@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 677
+-- file:alter_table.sql ln:696 expect:true
 alter table atacc1 drop constraint atacc_test1 restrict

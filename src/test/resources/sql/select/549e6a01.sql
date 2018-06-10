@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 539
+-- file:arrays.sql ln:539 expect:true
 select string_to_array('abc', '')

@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 212
+-- file:enum.sql ln:212 expect:true
 SELECT enum_range(NULL::rainbow)

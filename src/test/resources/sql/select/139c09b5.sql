@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 29
+-- file:errors.sql ln:29 expect:false
 select distinct from pg_database

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1439
+-- file:alter_table.sql ln:1474 expect:true
 drop table at_base_table

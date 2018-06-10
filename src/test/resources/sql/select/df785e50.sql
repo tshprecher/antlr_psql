@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 48
+-- file:oidjoins.sql ln:48 expect:true
 SELECT	ctid, aggmtranstype
 FROM	pg_catalog.pg_aggregate fk
 WHERE	aggmtranstype != 0 AND

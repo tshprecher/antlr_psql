@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 158
+-- file:enum.sql ln:158 expect:true
 SET enable_bitmapscan = off

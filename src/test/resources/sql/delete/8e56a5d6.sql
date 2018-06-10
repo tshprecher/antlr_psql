@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2211
+-- file:alter_table.sql ln:2244 expect:true
 DELETE FROM part1

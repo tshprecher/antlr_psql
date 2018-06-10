@@ -1,5 +1,4 @@
--- file: box.sql
--- line: 133
+-- file:box.sql ln:133 expect:true
 INSERT INTO box_temp
 	VALUES (NULL),
 		   ('(0,0)(0,100)'),

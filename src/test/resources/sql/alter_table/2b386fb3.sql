@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 1320
+-- file:alter_table.sql ln:1339 expect:true
 alter table another
   alter f1 type text using f2 || ' more',
   alter f2 type bigint using f1 * 10

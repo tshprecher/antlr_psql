@@ -1,3 +1,2 @@
--- file: date.sql
--- line: 187
+-- file:date.sql ln:187 expect:true
 SELECT date '1999 08 01'

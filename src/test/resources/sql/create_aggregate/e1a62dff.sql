@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 259
+-- file:rolenames.sql ln:259 expect:true
 CREATE AGGREGATE testagg6(int2) (SFUNC = int2_sum, STYPE = int8)

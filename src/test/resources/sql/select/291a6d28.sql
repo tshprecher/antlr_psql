@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 272
+-- file:oidjoins.sql ln:276 expect:true
 SELECT	ctid, lanowner
 FROM	pg_catalog.pg_language fk
 WHERE	lanowner != 0 AND

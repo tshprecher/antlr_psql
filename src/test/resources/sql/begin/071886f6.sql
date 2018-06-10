@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4250
+-- file:plpgsql.sql ln:3971 expect:false
 begin r := array[$1, $1]

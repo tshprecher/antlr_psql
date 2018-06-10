@@ -1,5 +1,4 @@
--- file: numeric_big.sql
--- line: 530
+-- file:numeric_big.sql ln:530 expect:true
 SELECT t1.id1, t1.id2, t1.result, t2.expected
     FROM num_result t1, num_exp_add t2
     WHERE t1.id1 = t2.id1 AND t1.id2 = t2.id2

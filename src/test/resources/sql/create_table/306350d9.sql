@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 1794
+-- file:triggers.sql ln:2059 expect:true
 create table trig_table (a int, b text,
   foreign key (a) references refd_table on update cascade on delete cascade
 )

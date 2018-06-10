@@ -1,5 +1,4 @@
--- file: json.sql
--- line: 170
+-- file:json.sql ln:170 expect:true
 INSERT INTO test_json VALUES
 ('scalar','"a scalar"'),
 ('array','["zero", "one","two",null,"four","five", [1,2,3],{"f1":9}]'),

@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1478
+-- file:rowsecurity.sql ln:1478 expect:true
 CREATE TABLE r2 (a int)

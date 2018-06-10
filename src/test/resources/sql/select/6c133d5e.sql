@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4147
+-- file:plpgsql.sql ln:3868 expect:true
 select foreach_test(ARRAY[1,2,3,4])

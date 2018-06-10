@@ -1,3 +1,2 @@
--- file: vacuum.sql
--- line: 72
+-- file:vacuum.sql ln:72 expect:true
 VACUUM (FREEZE) vacparted

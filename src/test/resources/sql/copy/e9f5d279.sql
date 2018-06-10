@@ -1,5 +1,4 @@
--- file: domain.sql
--- line: 48
+-- file:domain.sql ln:48 expect:false
 notsoshorttext
 \.
 

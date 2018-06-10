@@ -1,3 +1,2 @@
--- file: tsdicts.sql
--- line: 19
+-- file:tsdicts.sql ln:19 expect:true
 SELECT ts_lexize('ispell', 'unbooking')

@@ -1,3 +1,2 @@
--- file: with.sql
--- line: 869
+-- file:with.sql ln:869 expect:true
 CREATE TEMPORARY TABLE yy (a INTEGER)

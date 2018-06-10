@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1141
+-- file:alter_table.sql ln:1160 expect:true
 create table dropColumnExists ()

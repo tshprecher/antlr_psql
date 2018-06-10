@@ -1,3 +1,2 @@
--- file: cluster.sql
--- line: 219
+-- file:cluster.sql ln:226 expect:true
 DROP TABLE clustertest

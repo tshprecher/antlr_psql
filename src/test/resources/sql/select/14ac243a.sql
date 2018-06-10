@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1308
+-- file:alter_table.sql ln:1327 expect:true
 select * from anothertab

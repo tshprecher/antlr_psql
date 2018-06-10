@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 222
+-- file:union.sql ln:265 expect:true
 explain (costs off)
  SELECT * FROM
  (SELECT a || b AS ab FROM t1

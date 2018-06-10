@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 79
+-- file:xml.sql ln:79 expect:true
 SELECT xmlparse(document '<invalidns xmlns=''&lt

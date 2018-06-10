@@ -1,3 +1,2 @@
--- file: stats.sql
--- line: 178
+-- file:stats.sql ln:178 expect:true
 DROP TABLE prevstats

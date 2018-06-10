@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 249
+-- file:triggers.sql ln:237 expect:true
 INSERT INTO main_table DEFAULT VALUES

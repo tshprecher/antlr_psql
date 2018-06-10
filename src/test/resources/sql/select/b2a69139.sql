@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 473
+-- file:jsonb.sql ln:473 expect:true
 select '"foo"'::jsonb #> array['z']

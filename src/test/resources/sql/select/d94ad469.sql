@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 532
+-- file:oidjoins.sql ln:540 expect:true
 SELECT	ctid, cfgowner
 FROM	pg_catalog.pg_ts_config fk
 WHERE	cfgowner != 0 AND

@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 372
+-- file:opr_sanity.sql ln:373 expect:true
 \a\t
 
 SELECT p1.oid::regprocedure

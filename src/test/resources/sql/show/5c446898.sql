@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 81
+-- file:transactions.sql ln:81 expect:true
 SHOW transaction_read_only

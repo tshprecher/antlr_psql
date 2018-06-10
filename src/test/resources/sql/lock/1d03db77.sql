@@ -1,3 +1,2 @@
--- file: lock.sql
--- line: 54
+-- file:lock.sql ln:112 expect:true
 LOCK TABLE ONLY lock_tbl1

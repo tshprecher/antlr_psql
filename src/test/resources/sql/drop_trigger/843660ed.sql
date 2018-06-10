@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 287
+-- file:insert.sql ln:346 expect:true
 drop trigger mlparted11_trig on mlparted11

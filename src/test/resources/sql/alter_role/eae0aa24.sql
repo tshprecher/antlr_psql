@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 101
+-- file:rolenames.sql ln:101 expect:true
 ALTER ROLE nonexistent WITH NOREPLICATION

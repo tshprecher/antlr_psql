@@ -1,3 +1,2 @@
--- file: with.sql
--- line: 990
+-- file:with.sql ln:990 expect:true
 SELECT * FROM parent

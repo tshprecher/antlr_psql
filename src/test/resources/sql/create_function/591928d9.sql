@@ -1,5 +1,4 @@
--- file: create_function_3.sql
--- line: 139
+-- file:create_function_3.sql ln:154 expect:true
 CREATE FUNCTION functest_IS_1(a int, b int default 1, c text default 'foo')
     RETURNS int
     LANGUAGE SQL

@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 664
+-- file:oidjoins.sql ln:672 expect:true
 SELECT	ctid, conexclop
 FROM	(SELECT ctid, unnest(conexclop) AS conexclop FROM pg_catalog.pg_constraint) fk
 WHERE	conexclop != 0 AND

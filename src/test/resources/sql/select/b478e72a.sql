@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3952
+-- file:plpgsql.sql ln:3673 expect:true
 select strtest()

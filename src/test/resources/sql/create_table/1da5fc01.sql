@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 113
+-- file:create_index.sql ln:113 expect:true
 CREATE TABLE kd_point_tbl AS SELECT * FROM quad_point_tbl

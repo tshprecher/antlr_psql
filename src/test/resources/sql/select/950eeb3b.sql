@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 160
+-- file:oidjoins.sql ln:160 expect:true
 SELECT	ctid, reltoastrelid
 FROM	pg_catalog.pg_class fk
 WHERE	reltoastrelid != 0 AND

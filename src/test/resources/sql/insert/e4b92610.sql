@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 732
+-- file:create_index.sql ln:742 expect:true
 INSERT INTO func_index_heap VALUES('QWERTY')

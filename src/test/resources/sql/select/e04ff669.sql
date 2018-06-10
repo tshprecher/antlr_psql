@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 52
+-- file:json.sql ln:52 expect:true
 SELECT 'false'::json

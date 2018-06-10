@@ -1,3 +1,2 @@
--- file: numerology.sql
--- line: 98
+-- file:numerology.sql ln:98 expect:true
 DROP TABLE TEMP_GROUP

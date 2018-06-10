@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 110
+-- file:publication.sql ln:110 expect:false
 DROP PUBLICATION testpub2

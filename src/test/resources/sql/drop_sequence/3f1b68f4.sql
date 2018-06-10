@@ -1,5 +1,4 @@
--- file: privileges.sql
--- line: 1046
+-- file:privileges.sql ln:1108 expect:true
 \c
 
 drop sequence x_seq

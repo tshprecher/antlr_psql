@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 787
+-- file:rules.sql ln:787 expect:true
 \a\t
 
 

@@ -1,5 +1,4 @@
--- file: create_operator.sql
--- line: 12
+-- file:create_operator.sql ln:12 expect:true
 CREATE OPERATOR <% (
    leftarg = point,
    rightarg = widget,

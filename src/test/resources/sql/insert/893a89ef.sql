@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 85
+-- file:domain.sql ln:85 expect:true
 INSERT INTO domarrtest values ('{2,2}', '{{"a"},{"c"}}')

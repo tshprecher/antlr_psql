@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 208
+-- file:oidjoins.sql ln:212 expect:true
 SELECT	ctid, dattablespace
 FROM	pg_catalog.pg_database fk
 WHERE	dattablespace != 0 AND

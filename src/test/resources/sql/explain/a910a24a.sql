@@ -1,5 +1,4 @@
--- file: union.sql
--- line: 324
+-- file:union.sql ln:367 expect:true
 explain (costs off)
 SELECT * FROM
   (SELECT 1 AS t, (random()*3)::int AS x

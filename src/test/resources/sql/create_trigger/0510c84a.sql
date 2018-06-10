@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 69
+-- file:triggers.sql ln:69 expect:true
 create trigger check_fkeys2_fkey_restrict
 	before delete or update on fkeys2
 	for each row

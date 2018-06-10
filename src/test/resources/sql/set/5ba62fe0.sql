@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 109
+-- file:rangefuncs.sql ln:485 expect:true
 set work_mem='64kB'

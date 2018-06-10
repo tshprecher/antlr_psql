@@ -1,3 +1,2 @@
--- file: hs_standby_disallowed.sql
--- line: 19
+-- file:hs_standby_disallowed.sql ln:19 expect:true
 insert into hs1 values (37)

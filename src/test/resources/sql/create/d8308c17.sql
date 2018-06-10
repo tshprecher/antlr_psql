@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 700
+-- file:jsonb.sql ln:706 expect:true
 CREATE TEMP TABLE jsbpoptest (js jsonb)

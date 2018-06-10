@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2181
+-- file:plpgsql.sql ln:2203 expect:true
 select missing_return_expr()

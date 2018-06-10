@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 983
+-- file:join.sql ln:1043 expect:true
 select * from
 (
   select unique1, q1, coalesce(unique1, -1) + q1 as fault

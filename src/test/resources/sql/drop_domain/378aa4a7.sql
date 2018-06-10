@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 70
+-- file:domain.sql ln:70 expect:true
 drop domain domaintext

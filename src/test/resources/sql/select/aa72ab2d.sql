@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 85
+-- file:jsonb.sql ln:85 expect:true
 select to_jsonb(date '-Infinity')

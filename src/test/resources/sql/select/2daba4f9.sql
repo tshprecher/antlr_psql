@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 159
+-- file:rangetypes.sql ln:159 expect:true
 select int4range(1, 2, '()')

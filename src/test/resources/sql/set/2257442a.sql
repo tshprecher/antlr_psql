@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 4019
+-- file:plpgsql.sql ln:3740 expect:true
 set plpgsql.variable_conflict = error

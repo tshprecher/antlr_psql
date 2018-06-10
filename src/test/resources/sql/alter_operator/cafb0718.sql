@@ -1,3 +1,2 @@
--- file: alter_operator.sql
--- line: 63
+-- file:alter_operator.sql ln:63 expect:true
 ALTER OPERATOR === (boolean, boolean) SET (RESTRICT = customcontsel, JOIN = contjoinsel)

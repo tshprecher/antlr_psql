@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3161
+-- file:plpgsql.sql ln:2948 expect:true
 drop function return_dquery()

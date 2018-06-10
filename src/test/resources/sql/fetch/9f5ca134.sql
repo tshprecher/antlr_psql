@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 89
+-- file:portals.sql ln:89 expect:true
 FETCH 19 in foo19

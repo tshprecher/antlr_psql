@@ -1,3 +1,2 @@
--- file: inet.sql
--- line: 8
+-- file:inet.sql ln:8 expect:true
 CREATE TABLE INET_TBL (c cidr, i inet)

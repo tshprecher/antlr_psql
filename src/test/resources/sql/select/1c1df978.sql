@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 484
+-- file:oidjoins.sql ln:492 expect:true
 SELECT	ctid, stxowner
 FROM	pg_catalog.pg_statistic_ext fk
 WHERE	stxowner != 0 AND

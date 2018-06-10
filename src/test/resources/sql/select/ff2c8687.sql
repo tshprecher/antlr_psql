@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 226
+-- file:rowtypes.sql ln:328 expect:true
 select fcompos1(row(1,'one'))

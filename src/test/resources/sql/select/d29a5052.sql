@@ -1,3 +1,2 @@
--- file: object_address.sql
--- line: 127
+-- file:object_address.sql ln:128 expect:true
 SELECT pg_get_object_address('extension', '{one,two}', '{}')

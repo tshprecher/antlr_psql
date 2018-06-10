@@ -1,5 +1,4 @@
--- file: brin.sql
--- line: 1
+-- file:brin.sql ln:1 expect:true
 CREATE TABLE brintest (byteacol bytea,
 	charcol "char",
 	namecol name,

@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 1142
+-- file:join.sql ln:1213 expect:true
 select * from
   text_tbl t1
   inner join int8_tbl i8

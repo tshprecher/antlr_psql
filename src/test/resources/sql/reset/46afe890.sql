@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 66
+-- file:matview.sql ln:66 expect:true
 RESET search_path

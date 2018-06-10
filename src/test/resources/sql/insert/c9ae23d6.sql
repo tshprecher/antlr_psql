@@ -1,3 +1,2 @@
--- file: int8.sql
--- line: 16
+-- file:int8.sql ln:16 expect:true
 INSERT INTO INT8_TBL(q1) VALUES ('3908203590239580293850293850329485')

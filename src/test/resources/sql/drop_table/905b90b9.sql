@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 262
+-- file:insert_conflict.sql ln:262 expect:true
 drop table syscolconflicttest

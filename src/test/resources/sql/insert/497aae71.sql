@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 4655
+-- file:plpgsql.sql ln:4385 expect:true
 INSERT INTO transition_table_level1 (level1_no)
   SELECT generate_series(1,200)

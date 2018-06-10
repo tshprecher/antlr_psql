@@ -1,3 +1,2 @@
--- file: numeric_big.sql
--- line: 512
+-- file:numeric_big.sql ln:512 expect:true
 VACUUM ANALYZE num_exp_sub

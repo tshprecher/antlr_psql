@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 429
+-- file:arrays.sql ln:429 expect:true
 select '{}}'::text[]

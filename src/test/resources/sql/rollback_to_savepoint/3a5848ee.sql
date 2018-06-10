@@ -1,3 +1,2 @@
--- file: stats.sql
--- line: 127
+-- file:stats.sql ln:127 expect:true
 ROLLBACK TO SAVEPOINT p1

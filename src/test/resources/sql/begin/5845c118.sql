@@ -1,4 +1,3 @@
--- file: plpgsql.sql
--- line: 2809
+-- file:plpgsql.sql ln:2596 expect:false
 begin
 	end

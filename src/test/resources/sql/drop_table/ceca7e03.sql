@@ -1,3 +1,2 @@
--- file: boolean.sql
--- line: 231
+-- file:boolean.sql ln:258 expect:true
 DROP TABLE  BOOLTBL2

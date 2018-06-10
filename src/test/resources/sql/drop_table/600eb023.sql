@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 690
+-- file:inherit.sql ln:717 expect:true
 drop table parted_minmax

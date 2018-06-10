@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 56
+-- file:collate.icu.utf8.sql ln:54 expect:true
 SELECT * FROM collate_test2 WHERE b >= 'bbc'

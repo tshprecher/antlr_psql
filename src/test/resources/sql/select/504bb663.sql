@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 607
+-- file:triggers.sql ln:606 expect:true
 \set QUIET true
 
 SELECT * FROM min_updates_test

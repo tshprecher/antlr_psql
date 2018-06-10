@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 111
+-- file:privileges.sql ln:111 expect:true
 SELECT * FROM atest2 FOR UPDATE

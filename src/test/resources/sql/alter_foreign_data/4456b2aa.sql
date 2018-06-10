@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 460
+-- file:foreign_data.sql ln:466 expect:true
 ALTER FOREIGN DATA WRAPPER foo OWNER TO regress_unprivileged_role

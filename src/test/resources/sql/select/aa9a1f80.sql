@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 266
+-- file:xml.sql ln:302 expect:true
 SELECT xpath('/*', '<relativens xmlns=''relative''/>')

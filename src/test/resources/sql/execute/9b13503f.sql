@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 510
+-- file:domain.sql ln:510 expect:true
 execute s1(0)

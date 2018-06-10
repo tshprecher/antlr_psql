@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 888
+-- file:create_index.sql ln:924 expect:true
 CREATE UNIQUE INDEX onek_nulltest ON onek_with_null (unique2 desc nulls last,unique1)

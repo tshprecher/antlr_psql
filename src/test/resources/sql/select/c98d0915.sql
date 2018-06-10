@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 452
+-- file:domain.sql ln:452 expect:true
 select * from domview

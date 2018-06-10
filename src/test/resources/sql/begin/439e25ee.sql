@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 653
+-- file:plpgsql.sql ln:653 expect:false
 begin
     if tg_op = ''INSERT'' then
         if new.backlink != '''' then

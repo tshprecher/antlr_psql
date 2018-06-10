@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 102
+-- file:transactions.sql ln:102 expect:true
 SET SESSION CHARACTERISTICS AS TRANSACTION READ WRITE

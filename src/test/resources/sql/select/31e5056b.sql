@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 154
+-- file:horology.sql ln:154 expect:true
 SELECT time with time zone '01:30-08' - interval '02:01' AS "23:29:00-08"

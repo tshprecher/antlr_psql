@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 77
+-- file:groupingsets.sql ln:77 expect:true
 select grouping(a), a, array_agg(b),
        rank(a) within group (order by b nulls first),
        rank(a) within group (order by b nulls last)

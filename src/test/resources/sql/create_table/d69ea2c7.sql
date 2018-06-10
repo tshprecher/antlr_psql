@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 217
+-- file:xml.sql ln:253 expect:true
 CREATE TABLE query ( expr TEXT )

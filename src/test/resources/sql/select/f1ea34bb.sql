@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 87
+-- file:xml.sql ln:87 expect:true
 SELECT xmlpi(name xmlstuff)

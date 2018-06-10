@@ -1,5 +1,4 @@
--- file: with.sql
--- line: 189
+-- file:with.sql ln:189 expect:true
 CREATE TEMPORARY VIEW vsubdepartment AS
 	WITH RECURSIVE subdepartment AS
 	(

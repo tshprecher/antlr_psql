@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 279
+-- file:create_table.sql ln:283 expect:true
 DROP TABLE oid_pk

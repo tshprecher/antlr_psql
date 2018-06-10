@@ -1,3 +1,2 @@
--- file: replica_identity.sql
--- line: 10
+-- file:replica_identity.sql ln:10 expect:true
 CREATE TABLE test_replica_identity_othertable (id serial primary key)

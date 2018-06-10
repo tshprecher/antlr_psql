@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 473
+-- file:portals.sql ln:483 expect:true
 FETCH ALL FROM c1

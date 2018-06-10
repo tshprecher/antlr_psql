@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 185
+-- file:aggregates.sql ln:185 expect:true
 SELECT
       boolor_statefunc(NULL, NULL)  IS NULL AS "t",
   boolor_statefunc(TRUE, NULL)  IS NULL AS "t",

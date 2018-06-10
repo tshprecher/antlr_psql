@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 101
+-- file:regproc.sql ln:101 expect:true
 SELECT to_regprocedure('ng_catalog.abs(numeric)')

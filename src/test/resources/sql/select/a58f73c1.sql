@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 238
+-- file:domain.sql ln:238 expect:true
 select * from pitable

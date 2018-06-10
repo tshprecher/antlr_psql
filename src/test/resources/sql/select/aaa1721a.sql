@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 452
+-- file:window.sql ln:1014 expect:true
 SELECT
 	logging_agg_strict(v::text) OVER wnd
 FROM (VALUES

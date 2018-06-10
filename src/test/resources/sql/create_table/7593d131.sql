@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 610
+-- file:updatable_views.sql ln:686 expect:true
 CREATE TABLE base_tbl_child (CHECK (a > 0)) INHERITS (base_tbl_parent)

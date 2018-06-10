@@ -1,3 +1,2 @@
--- file: errors.sql
--- line: 250
+-- file:errors.sql ln:250 expect:true
 select 1::int8/0

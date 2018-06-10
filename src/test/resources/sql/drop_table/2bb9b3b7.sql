@@ -1,3 +1,2 @@
--- file: create_table_like.sql
--- line: 68
+-- file:create_table_like.sql ln:68 expect:true
 DROP TABLE inhz

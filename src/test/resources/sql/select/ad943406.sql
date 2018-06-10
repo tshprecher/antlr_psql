@@ -1,3 +1,2 @@
--- file: lseg.sql
--- line: 21
+-- file:lseg.sql ln:21 expect:true
 select * from LSEG_TBL

@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 32
+-- file:triggers.sql ln:32 expect:true
 create trigger check_fkeys_pkey2_exist
 	before insert or update on fkeys
 	for each row

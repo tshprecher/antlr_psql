@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 1801
+-- file:triggers.sql ln:2066 expect:false
 create trigger trig_table_insert_trig
   after insert on trig_table referencing new table as new_table
   for each statement execute procedure dump_insert()

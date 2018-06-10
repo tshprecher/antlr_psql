@@ -1,5 +1,4 @@
--- file: alter_table.sql
--- line: 2438
+-- file:alter_table.sql ln:2525 expect:true
 select attrelid::regclass, attname, attnum
 from pg_attribute
 where attname = 'a'

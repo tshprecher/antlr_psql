@@ -1,5 +1,4 @@
--- file: type_sanity.sql
--- line: 397
+-- file:type_sanity.sql ln:405 expect:true
 SELECT p1.attrelid, p1.attname, p2.oid, p2.typname
 FROM pg_attribute AS p1, pg_type AS p2
 WHERE p1.atttypid = p2.oid AND

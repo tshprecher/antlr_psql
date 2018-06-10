@@ -1,3 +1,2 @@
--- file: without_oid.sql
--- line: 53
+-- file:without_oid.sql ln:53 expect:true
 DROP TABLE wo

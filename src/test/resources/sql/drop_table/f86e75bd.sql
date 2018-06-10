@@ -1,3 +1,2 @@
--- file: combocid.sql
--- line: 111
+-- file:combocid.sql ln:111 expect:true
 DROP TABLE testcase

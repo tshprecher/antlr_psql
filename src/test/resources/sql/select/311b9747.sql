@@ -1,5 +1,4 @@
--- file: comments.sql
--- line: 26
+-- file:comments.sql ln:26 expect:false
 */
 
 SELECT /* Deeply nested comment.

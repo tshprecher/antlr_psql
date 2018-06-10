@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 745
+-- file:aggregates.sql ln:745 expect:true
 select
   percentile_cont(0.5) within group (order by a),
   percentile_disc(0.5) within group (order by a)

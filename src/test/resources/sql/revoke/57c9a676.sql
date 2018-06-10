@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 113
+-- file:publication.sql ln:113 expect:true
 REVOKE CREATE ON DATABASE regression FROM regress_publication_user2

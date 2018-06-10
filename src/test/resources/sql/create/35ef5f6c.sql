@@ -1,5 +1,4 @@
--- file: foreign_key.sql
--- line: 732
+-- file:foreign_key.sql ln:732 expect:true
 CREATE TEMP TABLE pktable (
         id1     INT4 PRIMARY KEY,
         id2     VARCHAR(4) UNIQUE,

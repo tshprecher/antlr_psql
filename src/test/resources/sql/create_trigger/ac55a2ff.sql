@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 4746
+-- file:plpgsql.sql ln:4476 expect:false
 CREATE TRIGGER alter_table_under_transition_tables_upd_trigger
   AFTER TRUNCATE OR UPDATE ON alter_table_under_transition_tables
   REFERENCING OLD TABLE AS d NEW TABLE AS i

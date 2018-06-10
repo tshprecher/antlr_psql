@@ -1,3 +1,2 @@
--- file: xml.sql
--- line: 25
+-- file:xml.sql ln:25 expect:true
 SELECT xmlconcat(1, 2)

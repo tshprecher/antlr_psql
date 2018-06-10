@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 527
+-- file:strings.sql ln:562 expect:true
 SELECT initcap('hi THOMAS')

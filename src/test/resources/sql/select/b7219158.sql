@@ -1,3 +1,2 @@
--- file: regex.sql
--- line: 95
+-- file:regex.sql ln:95 expect:true
 select 'dd x' ~ '(^(?!aa)(?!bb)(?!cc))+'

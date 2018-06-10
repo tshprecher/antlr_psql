@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 571
+-- file:domain.sql ln:571 expect:true
 create domain ddtest1d as ddtest1[]

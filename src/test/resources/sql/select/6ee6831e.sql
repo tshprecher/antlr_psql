@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 584
+-- file:oidjoins.sql ln:592 expect:true
 SELECT	ctid, tmplnamespace
 FROM	pg_catalog.pg_ts_template fk
 WHERE	tmplnamespace != 0 AND

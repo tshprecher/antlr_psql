@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 471
+-- file:insert_conflict.sql ln:471 expect:true
 select * from selfconflict

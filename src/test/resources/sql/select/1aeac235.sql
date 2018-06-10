@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 241
+-- file:inherit.sql ln:241 expect:true
 select derived::base from derived

@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 60
+-- file:regproc.sql ln:60 expect:true
 SELECT regproc('know')

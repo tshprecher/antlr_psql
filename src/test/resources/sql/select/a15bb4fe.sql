@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 199
+-- file:rowtypes.sql ln:301 expect:true
 select * from price

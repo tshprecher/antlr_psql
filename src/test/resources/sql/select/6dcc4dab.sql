@@ -1,3 +1,2 @@
--- file: uuid.sql
--- line: 51
+-- file:uuid.sql ln:51 expect:true
 SELECT COUNT(*) FROM guid1 WHERE guid_field > '22222222-2222-2222-2222-222222222222'

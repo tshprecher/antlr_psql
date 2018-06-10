@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1741
+-- file:plpgsql.sql ln:1741 expect:true
 select trap_matching_test(50)

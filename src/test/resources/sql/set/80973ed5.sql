@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 125
+-- file:horology.sql ln:125 expect:true
 SET TIME ZONE 'CST7CDT'

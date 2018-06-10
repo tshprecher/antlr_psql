@@ -1,3 +1,2 @@
--- file: regproc.sql
--- line: 32
+-- file:regproc.sql ln:32 expect:true
 SELECT regtype('pg_catalog.int4')

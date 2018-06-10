@@ -1,4 +1,3 @@
--- file: create_index.sql
--- line: 268
+-- file:create_index.sql ln:270 expect:true
 EXPLAIN (COSTS OFF)
 SELECT count(*) FROM gcircle_tbl WHERE f1 && '<(500,500),500>'::circle

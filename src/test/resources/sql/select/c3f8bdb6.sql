@@ -1,3 +1,2 @@
--- file: tstypes.sql
--- line: 21
+-- file:tstypes.sql ln:21 expect:true
 SELECT ' 1'::tsquery

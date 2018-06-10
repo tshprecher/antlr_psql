@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 1038
+-- file:jsonb.sql ln:1044 expect:true
 select jsonb_set('{}','{x}','{"foo":123}')

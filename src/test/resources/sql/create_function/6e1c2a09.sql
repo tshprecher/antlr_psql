@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 44
+-- file:groupingsets.sql ln:44 expect:true
 create function gstest_data(v integer, out a integer, out b integer)
   returns setof record
   as $f$

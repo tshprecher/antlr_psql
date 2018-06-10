@@ -1,5 +1,4 @@
--- file: alter_operator.sql
--- line: 68
+-- file:alter_operator.sql ln:68 expect:true
 SELECT pg_describe_object(refclassid,refobjid,refobjsubid) as ref, deptype
 FROM pg_depend
 WHERE classid = 'pg_operator'::regclass AND

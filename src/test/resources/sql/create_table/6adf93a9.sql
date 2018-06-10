@@ -1,3 +1,2 @@
--- file: int4.sql
--- line: 5
+-- file:int4.sql ln:5 expect:true
 CREATE TABLE INT4_TBL(f1 int4)

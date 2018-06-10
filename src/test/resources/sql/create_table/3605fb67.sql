@@ -1,3 +1,2 @@
--- file: insert_conflict.sql
--- line: 258
+-- file:insert_conflict.sql ln:258 expect:true
 create table syscolconflicttest(key int4, data text) WITH OIDS

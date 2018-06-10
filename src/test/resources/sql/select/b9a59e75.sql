@@ -1,3 +1,2 @@
--- file: macaddr8.sql
--- line: 72
+-- file:macaddr8.sql ln:72 expect:true
 SELECT b =  '08:00:2b:ff:fe:01:02:03' FROM macaddr8_data WHERE a = 1

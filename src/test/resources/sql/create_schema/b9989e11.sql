@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 146
+-- file:create_view.sql ln:146 expect:true
 CREATE SCHEMA testviewschm2

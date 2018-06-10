@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 426
+-- file:updatable_views.sql ln:426 expect:true
 DELETE FROM base_tbl

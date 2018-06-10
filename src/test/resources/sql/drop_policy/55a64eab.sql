@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 1460
+-- file:rowsecurity.sql ln:1460 expect:true
 DROP POLICY p ON t

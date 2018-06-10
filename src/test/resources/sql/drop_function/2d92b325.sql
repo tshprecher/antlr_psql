@@ -1,3 +1,2 @@
--- file: create_table.sql
--- line: 414
+-- file:create_table.sql ln:402 expect:true
 DROP FUNCTION plusone(int)

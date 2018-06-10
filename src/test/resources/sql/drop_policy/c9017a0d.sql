@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 414
+-- file:rowsecurity.sql ln:414 expect:true
 DROP POLICY pp1 ON part_document

@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 1256
+-- file:plpgsql.sql ln:1256 expect:true
 insert into PSlot values ('PS.base.ta6', 'PF0_X', '', '')

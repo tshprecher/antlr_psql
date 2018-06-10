@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 51
+-- file:plpgsql.sql ln:51 expect:true
 create table PSlot (
     slotname	char(20),
     pfname	text,

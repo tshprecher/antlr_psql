@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 474
+-- file:jsonb.sql ln:474 expect:true
 select '42'::jsonb #> array['f2']

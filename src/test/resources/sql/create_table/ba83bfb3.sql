@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 33
+-- file:plpgsql.sql ln:33 expect:true
 create table WSlot (
     slotname	char(20),
     roomno	char(8),

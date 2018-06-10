@@ -1,5 +1,4 @@
--- file: limit.sql
--- line: 78
+-- file:limit.sql ln:78 expect:true
 SELECT
   (SELECT n
      FROM (VALUES (1)) AS x,

@@ -1,3 +1,2 @@
--- file: expressions.sql
--- line: 19
+-- file:expressions.sql ln:19 expect:true
 SELECT current_timestamp = NOW()

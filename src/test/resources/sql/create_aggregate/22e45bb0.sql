@@ -1,5 +1,4 @@
--- file: create_aggregate.sql
--- line: 107
+-- file:create_aggregate.sql ln:107 expect:true
 \da test_*
 
 

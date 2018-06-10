@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 1560
+-- file:triggers.sql ln:1792 expect:false
 alter table parent detach partition child

@@ -1,4 +1,3 @@
--- file: event_trigger.sql
--- line: 290
+-- file:event_trigger.sql ln:301 expect:true
 insert into rewriteme
      select x * 1.001 from generate_series(1, 500) as t(x)

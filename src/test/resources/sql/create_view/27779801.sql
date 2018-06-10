@@ -1,5 +1,4 @@
--- file: create_view.sql
--- line: 552
+-- file:create_view.sql ln:552 expect:true
 create view tt20v as
 select * from
   coalesce(1,2) as c,

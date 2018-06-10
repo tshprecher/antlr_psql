@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1739
+-- file:alter_table.sql ln:1774 expect:true
 ALTER TYPE test_typex DROP ATTRIBUTE a

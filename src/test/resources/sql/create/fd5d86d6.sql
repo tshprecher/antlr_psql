@@ -1,5 +1,4 @@
--- file: foreign_key.sql
--- line: 923
+-- file:foreign_key.sql ln:923 expect:true
 CREATE TEMP TABLE tasks (
   id INT PRIMARY KEY,
   owner INT REFERENCES users ON UPDATE CASCADE ON DELETE SET NULL,

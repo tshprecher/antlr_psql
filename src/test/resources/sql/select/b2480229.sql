@@ -1,5 +1,4 @@
--- file: float8.sql
--- line: 174
+-- file:float8.sql ln:180 expect:true
 SELECT x,
        sind(x),
        sind(x) IN (-1,-0.5,0,0.5,1) AS sind_exact

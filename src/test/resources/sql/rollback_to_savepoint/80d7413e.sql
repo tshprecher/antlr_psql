@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 271
+-- file:transactions.sql ln:271 expect:true
 ROLLBACK TO SAVEPOINT two

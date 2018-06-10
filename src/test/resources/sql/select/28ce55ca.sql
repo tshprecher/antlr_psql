@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 628
+-- file:oidjoins.sql ln:636 expect:true
 SELECT	ctid, typsend
 FROM	pg_catalog.pg_type fk
 WHERE	typsend != 0 AND

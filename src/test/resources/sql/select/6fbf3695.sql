@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 1013
+-- file:jsonb.sql ln:1019 expect:true
 select '"a"'::jsonb - 1

@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 945
+-- file:rules.sql ln:945 expect:true
 \set VERBOSITY default
 
 

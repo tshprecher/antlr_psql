@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 450
+-- file:rowsecurity.sql ln:450 expect:true
 SELECT * FROM part_document ORDER by did

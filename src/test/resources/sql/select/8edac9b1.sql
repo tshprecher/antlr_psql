@@ -1,3 +1,2 @@
--- file: matview.sql
--- line: 65
+-- file:matview.sql ln:65 expect:true
 SELECT * FROM mvtest_tvm ORDER BY type

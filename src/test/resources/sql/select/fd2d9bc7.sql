@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 788
+-- file:privileges.sql ln:820 expect:true
 SELECT loread(lo_open(1004, x'40000'::int), 32)

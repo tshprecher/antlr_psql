@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 348
+-- file:join.sql ln:357 expect:true
 set geqo = on

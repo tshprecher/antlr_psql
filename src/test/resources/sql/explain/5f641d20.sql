@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 673
+-- file:inherit.sql ln:700 expect:true
 explain (costs off) select * from mcrparted where a = 0

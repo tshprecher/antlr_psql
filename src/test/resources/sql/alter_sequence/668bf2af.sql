@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 39
+-- file:sequence.sql ln:39 expect:false
 ALTER SEQUENCE sequence_test5 AS smallint

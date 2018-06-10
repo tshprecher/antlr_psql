@@ -1,3 +1,2 @@
--- file: update.sql
--- line: 107
+-- file:update.sql ln:107 expect:true
 DROP TABLE update_test

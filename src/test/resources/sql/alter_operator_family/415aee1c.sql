@@ -1,4 +1,3 @@
--- file: equivclass.sql
--- line: 50
+-- file:equivclass.sql ln:50 expect:true
 alter operator family integer_ops using btree add
   operator 3 = (int8alias1, int8alias1)

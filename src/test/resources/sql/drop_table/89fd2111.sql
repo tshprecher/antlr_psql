@@ -1,3 +1,2 @@
--- file: char.sql
--- line: 61
+-- file:char.sql ln:61 expect:true
 DROP TABLE CHAR_TBL

@@ -1,3 +1,2 @@
--- file: float8.sql
--- line: 41
+-- file:float8.sql ln:41 expect:true
 SELECT 'Infinity'::float8 / 'Infinity'::float8

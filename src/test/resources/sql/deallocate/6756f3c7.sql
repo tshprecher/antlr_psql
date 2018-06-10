@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 734
+-- file:updatable_views.sql ln:810 expect:true
 DEALLOCATE PREPARE ins

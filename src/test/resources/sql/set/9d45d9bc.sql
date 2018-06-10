@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 915
+-- file:create_am.sql ln:43 expect:true
 SET enable_indexscan = ON

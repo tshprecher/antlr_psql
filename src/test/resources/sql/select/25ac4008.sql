@@ -1,3 +1,2 @@
--- file: float8.sql
--- line: 16
+-- file:float8.sql ln:16 expect:true
 SELECT '10e-400'::float8

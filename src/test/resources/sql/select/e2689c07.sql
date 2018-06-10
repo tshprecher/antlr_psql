@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 414
+-- file:strings.sql ln:431 expect:true
 SELECT c FROM toasttest

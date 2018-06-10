@@ -1,5 +1,4 @@
--- file: alter_generic.sql
--- line: 257
+-- file:alter_generic.sql ln:257 expect:true
 SELECT nspname, opfname, amname, rolname
   FROM pg_opfamily o, pg_am m, pg_namespace n, pg_authid a
   WHERE o.opfmethod = m.oid AND o.opfnamespace = n.oid AND o.opfowner = a.oid

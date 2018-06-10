@@ -1,3 +1,2 @@
--- file: text.sql
--- line: 67
+-- file:text.sql ln:67 expect:true
 select format('Hello %x', 20)

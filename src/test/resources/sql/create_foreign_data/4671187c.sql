@@ -1,3 +1,2 @@
--- file: event_trigger.sql
--- line: 107
+-- file:event_trigger.sql ln:118 expect:true
 create foreign data wrapper useless

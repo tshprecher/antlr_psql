@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 862
+-- file:rules.sql ln:862 expect:true
 create rule rule_and_refint_t3_ins as on insert to rule_and_refint_t3
 	where (exists (select 1 from rule_and_refint_t3
 			where (((rule_and_refint_t3.id3a = new.id3a)

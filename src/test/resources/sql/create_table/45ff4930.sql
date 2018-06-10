@@ -1,5 +1,4 @@
--- file: create_index.sql
--- line: 1050
+-- file:create_index.sql ln:1097 expect:true
 CREATE TABLE reindex_before AS
 SELECT oid, relname, relfilenode, relkind, reltoastrelid
 	FROM pg_class

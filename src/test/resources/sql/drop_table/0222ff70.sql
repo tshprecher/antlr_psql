@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2399
+-- file:alter_table.sql ln:2485 expect:true
 DROP TABLE parted_no_parts

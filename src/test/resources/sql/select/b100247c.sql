@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 1034
+-- file:opr_sanity.sql ln:1035 expect:true
 SELECT a.aggfnoid, a.aggcombinefn, a.aggserialfn, a.aggdeserialfn,
        b.aggfnoid, b.aggcombinefn, b.aggserialfn, b.aggdeserialfn
 FROM

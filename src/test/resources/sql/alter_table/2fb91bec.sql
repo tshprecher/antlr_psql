@@ -1,3 +1,2 @@
--- file: typed_table.sql
--- line: 23
+-- file:typed_table.sql ln:23 expect:true
 ALTER TABLE persons INHERIT stuff

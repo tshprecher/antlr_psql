@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2436
+-- file:alter_table.sql ln:2523 expect:true
 alter table p11 add a int not null

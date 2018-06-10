@@ -1,5 +1,4 @@
--- file: join.sql
--- line: 871
+-- file:join.sql ln:931 expect:true
 explain (costs off)
 select t1.unique2, t1.stringu1, t2.unique1, t2.stringu2 from
   tenk1 t1

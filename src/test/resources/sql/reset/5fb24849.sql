@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 132
+-- file:join.sql ln:1991 expect:true
 reset enable_sort

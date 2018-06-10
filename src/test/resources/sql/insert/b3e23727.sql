@@ -1,3 +1,2 @@
--- file: updatable_views.sql
--- line: 1076
+-- file:updatable_views.sql ln:1152 expect:true
 INSERT INTO t2 VALUES (10), (20)

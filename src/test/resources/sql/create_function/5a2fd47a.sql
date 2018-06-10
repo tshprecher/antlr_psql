@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 623
+-- file:plpgsql.sql ln:623 expect:true
 create function tg_phone_bu() returns trigger as '
 begin
     if new.slotname != old.slotname then

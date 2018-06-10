@@ -1,5 +1,4 @@
--- file: matview.sql
--- line: 228
+-- file:matview.sql ln:228 expect:true
 CREATE FUNCTION mvtest_func()
   RETURNS void AS $$
 BEGIN

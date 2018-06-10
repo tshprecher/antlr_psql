@@ -1,5 +1,4 @@
--- file: create_type.sql
--- line: 21
+-- file:create_type.sql ln:21 expect:true
 CREATE TYPE city_budget (
    internallength = 16,
    input = int44in,

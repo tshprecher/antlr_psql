@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 69
+-- file:insert.sql ln:69 expect:true
 select * from inserttest

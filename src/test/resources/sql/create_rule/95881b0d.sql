@@ -1,4 +1,3 @@
--- file: updatable_views.sql
--- line: 835
+-- file:updatable_views.sql ln:911 expect:true
 CREATE RULE rw_view1_upd_rule AS ON UPDATE TO rw_view1
   DO INSTEAD UPDATE base_tbl SET a=NEW.a WHERE a=OLD.a

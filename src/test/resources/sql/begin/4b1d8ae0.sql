@@ -1,4 +1,3 @@
--- file: aggregates.sql
--- line: 671
+-- file:aggregates.sql ln:671 expect:false
 begin
 	raise notice 'avg_transfn called with %', n

@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 437
+-- file:timestamptz.sql ln:441 expect:true
 SELECT '2011-03-26 21:00:00 UTC'::timestamptz AT TIME ZONE 'MSK'

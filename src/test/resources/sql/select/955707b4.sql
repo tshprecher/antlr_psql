@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 69
+-- file:groupingsets.sql ln:69 expect:true
 select a, b, grouping(a,b),
        array_agg(v order by v),
        string_agg(v::text, ':' order by v desc),

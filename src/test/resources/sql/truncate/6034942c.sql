@@ -1,3 +1,2 @@
--- file: hs_standby_disallowed.sql
--- line: 28
+-- file:hs_standby_disallowed.sql ln:28 expect:true
 truncate hs3

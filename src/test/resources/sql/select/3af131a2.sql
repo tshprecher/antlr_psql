@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 147
+-- file:temp.sql ln:147 expect:true
 select * from whereami

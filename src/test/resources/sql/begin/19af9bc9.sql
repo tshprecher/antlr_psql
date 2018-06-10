@@ -1,3 +1,2 @@
--- file: prepared_xacts.sql
--- line: 105
+-- file:prepared_xacts.sql ln:105 expect:true
 BEGIN TRANSACTION ISOLATION LEVEL SERIALIZABLE

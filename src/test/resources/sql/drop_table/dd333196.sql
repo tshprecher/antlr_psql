@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1150
+-- file:alter_table.sql ln:1169 expect:true
 drop table p1, p2 cascade

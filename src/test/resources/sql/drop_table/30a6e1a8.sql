@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2329
+-- file:alter_table.sql ln:2362 expect:true
 DROP TABLE quuux1, quuux2

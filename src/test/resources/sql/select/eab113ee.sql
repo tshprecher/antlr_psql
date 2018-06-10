@@ -1,4 +1,3 @@
--- file: geometry.sql
--- line: 82
+-- file:geometry.sql ln:82 expect:true
 SELECT f1::box
 	FROM POINT_TBL

@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 54
+-- file:timestamptz.sql ln:54 expect:true
 INSERT INTO TIMESTAMPTZ_TBL VALUES ('undefined')

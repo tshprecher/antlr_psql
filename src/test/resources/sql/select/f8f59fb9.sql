@@ -1,5 +1,4 @@
--- file: window.sql
--- line: 380
+-- file:window.sql ln:942 expect:true
 SELECT
 	p::text || ',' || i::text || ':' || COALESCE(v::text, 'NULL') AS row,
 	logging_agg_nonstrict(v) over wnd as nstrict,

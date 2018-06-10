@@ -1,3 +1,2 @@
--- file: float4.sql
--- line: 33
+-- file:float4.sql ln:33 expect:true
 SELECT 'infinity'::float4

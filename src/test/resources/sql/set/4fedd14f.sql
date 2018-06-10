@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 218
+-- file:rolenames.sql ln:218 expect:true
 set client_min_messages to error

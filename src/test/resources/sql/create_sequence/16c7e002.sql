@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 267
+-- file:sequence.sql ln:267 expect:true
 CREATE SEQUENCE seq2

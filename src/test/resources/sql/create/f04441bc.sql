@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 42
+-- file:rowtypes.sql ln:45 expect:true
 create temp table people (fn fullname, bd date)

@@ -1,3 +1,2 @@
--- file: drop_if_exists.sql
--- line: 59
+-- file:drop_if_exists.sql ln:59 expect:true
 DROP SCHEMA test_schema_exists

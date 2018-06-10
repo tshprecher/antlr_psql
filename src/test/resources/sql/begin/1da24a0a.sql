@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 3521
+-- file:plpgsql.sql ln:3308 expect:false
 begin
   get stacked diagnostics
         _message = message_text,

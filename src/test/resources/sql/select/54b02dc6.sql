@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 12
+-- file:oidjoins.sql ln:12 expect:true
 SELECT	ctid, aggfinalfn
 FROM	pg_catalog.pg_aggregate fk
 WHERE	aggfinalfn != 0 AND

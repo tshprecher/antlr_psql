@@ -1,5 +1,4 @@
--- file: int8.sql
--- line: 220
+-- file:int8.sql ln:220 expect:true
 SELECT x, x::int8 AS int8_value
 FROM (VALUES (-2.5::numeric),
              (-1.5::numeric),

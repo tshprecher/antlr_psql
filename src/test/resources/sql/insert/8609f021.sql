@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 468
+-- file:join.sql ln:508 expect:true
 INSERT INTO tt2 VALUES (21, 11)

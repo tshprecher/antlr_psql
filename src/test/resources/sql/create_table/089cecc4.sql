@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 4726
+-- file:plpgsql.sql ln:4456 expect:true
 CREATE TABLE alter_table_under_transition_tables
 (
   id int PRIMARY KEY,

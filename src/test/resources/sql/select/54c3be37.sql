@@ -1,3 +1,2 @@
--- file: numeric.sql
--- line: 892
+-- file:numeric.sql ln:922 expect:true
 select 0.0 ^ (-12.34)

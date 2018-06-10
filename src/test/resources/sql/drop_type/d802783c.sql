@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 640
+-- file:arrays.sql ln:640 expect:true
 drop type textandtext

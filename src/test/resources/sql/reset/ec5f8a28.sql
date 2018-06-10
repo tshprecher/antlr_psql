@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 137
+-- file:join.sql ln:1989 expect:true
 reset enable_nestloop

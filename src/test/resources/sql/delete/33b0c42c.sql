@@ -1,3 +1,2 @@
--- file: privileges.sql
--- line: 50
+-- file:privileges.sql ln:50 expect:true
 DELETE FROM atest1

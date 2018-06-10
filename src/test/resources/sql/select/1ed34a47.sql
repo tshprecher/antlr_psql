@@ -1,3 +1,2 @@
--- file: select.sql
--- line: 120
+-- file:select.sql ln:120 expect:true
 select foo from (select null) as foo

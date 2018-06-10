@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 23
+-- file:horology.sql ln:23 expect:true
 set datestyle to dmy

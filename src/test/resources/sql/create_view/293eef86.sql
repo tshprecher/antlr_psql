@@ -1,5 +1,4 @@
--- file: updatable_views.sql
--- line: 1159
+-- file:updatable_views.sql ln:1235 expect:true
 create view wcowrtest_v2 as
     select *
       from wcowrtest r

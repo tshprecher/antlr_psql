@@ -1,3 +1,2 @@
--- file: collate.linux.utf8.sql
--- line: 428
+-- file:collate.icu.utf8.sql ln:425 expect:true
 drop type textrange_en_us

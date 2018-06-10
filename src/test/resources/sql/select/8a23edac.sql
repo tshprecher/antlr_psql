@@ -1,3 +1,2 @@
--- file: json.sql
--- line: 360
+-- file:json.sql ln:360 expect:true
 select 'null'::json #>> '{}'

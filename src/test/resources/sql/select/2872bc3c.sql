@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 477
+-- file:jsonb.sql ln:477 expect:true
 select '{"a": {"b":{"c": "foo"}}}'::jsonb #>> '{}'

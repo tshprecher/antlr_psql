@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 125
+-- file:enum.sql ln:125 expect:true
 COPY enumtest FROM stdin

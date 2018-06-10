@@ -1,3 +1,2 @@
--- file: interval.sql
--- line: 99
+-- file:interval.sql ln:99 expect:true
 COPY INTERVAL_MULDIV_TBL FROM STDIN

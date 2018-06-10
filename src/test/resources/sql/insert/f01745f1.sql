@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 227
+-- file:transactions.sql ln:227 expect:true
 INSERT INTO savepoints VALUES (19)

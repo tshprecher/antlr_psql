@@ -1,3 +1,2 @@
--- file: timestamptz.sql
--- line: 258
+-- file:timestamptz.sql ln:258 expect:true
 SET timezone = '-00:30'

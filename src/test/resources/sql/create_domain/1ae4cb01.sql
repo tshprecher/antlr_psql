@@ -1,3 +1,2 @@
--- file: collate.icu.utf8.sql
--- line: 64
+-- file:collate.icu.utf8.sql ln:64 expect:true
 CREATE DOMAIN testdomain_sv AS text COLLATE "sv-x-icu"

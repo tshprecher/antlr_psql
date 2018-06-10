@@ -1,3 +1,2 @@
--- file: join.sql
--- line: 506
+-- file:join.sql ln:546 expect:true
 analyze tt3

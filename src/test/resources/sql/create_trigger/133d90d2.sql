@@ -1,5 +1,4 @@
--- file: foreign_data.sql
--- line: 538
+-- file:foreign_data.sql ln:544 expect:true
 CREATE TRIGGER trigtest_before_stmt BEFORE INSERT OR UPDATE OR DELETE
 ON foreign_schema.foreign_table_1
 FOR EACH STATEMENT

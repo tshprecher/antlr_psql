@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 569
+-- file:subselect.sql ln:579 expect:true
 insert into sq_limit values
     (1, 1, 1),
     (2, 2, 2),

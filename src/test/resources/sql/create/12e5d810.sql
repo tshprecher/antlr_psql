@@ -1,5 +1,4 @@
--- file: rolenames.sql
--- line: 17
+-- file:rolenames.sql ln:17 expect:true
 CREATE OR REPLACE FUNCTION chksetconfig()
  RETURNS TABLE (db name, "role" name, rolkeyword text, setconfig text[])
  AS $$

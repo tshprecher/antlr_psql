@@ -1,3 +1,2 @@
--- file: security_label.sql
--- line: 16
+-- file:security_label.sql ln:16 expect:true
 CREATE TABLE seclabel_tbl1 (a int, b text)

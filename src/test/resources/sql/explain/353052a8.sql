@@ -1,3 +1,2 @@
--- file: select_parallel.sql
--- line: 44
+-- file:select_parallel.sql ln:96 expect:true
 explain (costs off) execute tenk1_count(1)

@@ -1,5 +1,4 @@
--- file: triggers.sql
--- line: 1361
+-- file:triggers.sql ln:1411 expect:false
 1
 2
 \.

@@ -1,3 +1,2 @@
--- file: jsonb.sql
--- line: 850
+-- file:jsonb.sql ln:856 expect:true
 select * from nestjsonb where j @> '{"a":[[{"x":2}]]}'::jsonb

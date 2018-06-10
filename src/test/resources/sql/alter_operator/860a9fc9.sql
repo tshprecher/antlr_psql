@@ -1,3 +1,2 @@
--- file: alter_operator.sql
--- line: 81
+-- file:alter_operator.sql ln:81 expect:true
 ALTER OPERATOR === (boolean, boolean) SET (COMMUTATOR = !==)

@@ -1,3 +1,2 @@
--- file: typed_table.sql
--- line: 1
+-- file:typed_table.sql ln:1 expect:true
 CREATE TABLE ttable1 OF nothing

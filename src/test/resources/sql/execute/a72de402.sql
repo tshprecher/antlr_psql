@@ -1,3 +1,2 @@
--- file: plancache.sql
--- line: 40
+-- file:plancache.sql ln:40 expect:true
 EXECUTE prepstmt

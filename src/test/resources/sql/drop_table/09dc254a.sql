@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2427
+-- file:alter_table.sql ln:2513 expect:true
 DROP TABLE fail_def_part

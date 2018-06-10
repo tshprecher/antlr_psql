@@ -1,5 +1,4 @@
--- file: interval.sql
--- line: 64
+-- file:interval.sql ln:64 expect:true
 INSERT INTO INTERVAL_TBL_OF (f1) VALUES
   ('2147483647 days 2147483647 months'),
   ('2147483647 days -2147483648 months'),

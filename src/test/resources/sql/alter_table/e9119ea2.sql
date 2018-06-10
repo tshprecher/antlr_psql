@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 420
+-- file:inherit.sql ln:432 expect:true
 alter table p1 add constraint inh_check_constraint2 check (f1 < 10)

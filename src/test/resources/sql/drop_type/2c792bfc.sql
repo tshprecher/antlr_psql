@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1753
+-- file:alter_table.sql ln:1788 expect:true
 DROP TYPE test_type_empty

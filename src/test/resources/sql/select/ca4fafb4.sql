@@ -1,3 +1,2 @@
--- file: arrays.sql
--- line: 201
+-- file:arrays.sql ln:201 expect:true
 select * from arrtest1

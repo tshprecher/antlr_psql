@@ -1,3 +1,2 @@
--- file: triggers.sql
--- line: 370
+-- file:triggers.sql ln:364 expect:true
 DROP TRIGGER after_upd_a_b_row_trig ON main_table

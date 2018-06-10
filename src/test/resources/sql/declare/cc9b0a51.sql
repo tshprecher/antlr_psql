@@ -1,3 +1,2 @@
--- file: portals.sql
--- line: 428
+-- file:portals.sql ln:428 expect:true
 DECLARE cx CURSOR WITH HOLD FOR SELECT * FROM uctest

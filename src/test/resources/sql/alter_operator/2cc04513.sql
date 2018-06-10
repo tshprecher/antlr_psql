@@ -1,3 +1,2 @@
--- file: alter_operator.sql
--- line: 90
+-- file:alter_operator.sql ln:93 expect:true
 ALTER OPERATOR === (boolean, boolean) SET (RESTRICT = NONE)

@@ -1,5 +1,4 @@
--- file: matview.sql
--- line: 3
+-- file:matview.sql ln:3 expect:true
 INSERT INTO mvtest_t VALUES
   (1, 'x', 2),
   (2, 'x', 3),

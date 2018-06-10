@@ -1,3 +1,2 @@
--- file: txid.sql
--- line: 80
+-- file:txid.sql ln:80 expect:true
 SELECT txid_status(3)

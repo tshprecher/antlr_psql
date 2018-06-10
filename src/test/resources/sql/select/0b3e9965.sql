@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 170
+-- file:tsearch.sql ln:170 expect:true
 SELECT to_tsquery('english', '!(a & !b) & c')

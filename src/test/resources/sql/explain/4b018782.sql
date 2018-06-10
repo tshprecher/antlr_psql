@@ -1,5 +1,4 @@
--- file: plpgsql.sql
--- line: 4259
+-- file:plpgsql.sql ln:3982 expect:true
 explain (verbose, costs off)
 select i, a from
   (select returns_rw_array(1) as a offset 0) ss,

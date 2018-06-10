@@ -1,3 +1,2 @@
--- file: domain.sql
--- line: 12
+-- file:domain.sql ln:12 expect:true
 drop domain domaindroptest

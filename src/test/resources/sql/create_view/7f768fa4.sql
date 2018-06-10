@@ -1,5 +1,4 @@
--- file: polymorphism.sql
--- line: 790
+-- file:polymorphism.sql ln:790 expect:true
 CREATE VIEW dfview AS
    SELECT q1, q2,
      dfunc(q1,q2, flag := q1>q2) as c3,

@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 184
+-- file:rolenames.sql ln:184 expect:true
 CREATE SCHEMA newschema4 AUTHORIZATION regress_testrolx

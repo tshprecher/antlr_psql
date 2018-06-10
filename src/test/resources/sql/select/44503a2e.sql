@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 368
+-- file:sequence.sql ln:368 expect:true
 SELECT lastval()

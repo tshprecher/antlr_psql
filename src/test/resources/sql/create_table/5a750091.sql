@@ -1,5 +1,4 @@
--- file: create_table.sql
--- line: 330
+-- file:create_table.sql ln:318 expect:false
 CREATE TABLE partitioned (
 	a int
 ) PARTITION BY RANGE ((avg(a)))

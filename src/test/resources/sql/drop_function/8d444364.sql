@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 3273
+-- file:plpgsql.sql ln:3060 expect:true
 drop function composrec()

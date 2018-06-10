@@ -1,3 +1,2 @@
--- file: event_trigger.sql
--- line: 127
+-- file:event_trigger.sql ln:138 expect:true
 drop event trigger regress_event_trigger

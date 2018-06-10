@@ -1,5 +1,4 @@
--- file: foreign_key.sql
--- line: 962
+-- file:foreign_key.sql ln:962 expect:true
 insert into selfref (a, b)
 values
     (0, 0),

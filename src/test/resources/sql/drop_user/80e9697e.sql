@@ -1,3 +1,2 @@
--- file: conversion.sql
--- line: 36
+-- file:conversion.sql ln:36 expect:true
 DROP USER regress_conversion_user

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 351
+-- file:alter_table.sql ln:370 expect:true
 alter table parent_noinh_convalid add constraint check_a_is_2 check (a = 2) no inherit not valid

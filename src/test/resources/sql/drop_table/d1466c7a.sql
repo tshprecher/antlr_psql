@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 70
+-- file:select_into.sql ln:70 expect:true
 DROP TABLE ctas_nodata

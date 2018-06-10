@@ -1,5 +1,4 @@
--- file: float8.sql
--- line: 196
+-- file:float8.sql ln:202 expect:true
 SELECT x,
        asind(x),
        asind(x) IN (-90,-30,0,30,90) AS asind_exact,

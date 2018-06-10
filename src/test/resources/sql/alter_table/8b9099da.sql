@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2388
+-- file:alter_table.sql ln:2474 expect:true
 ALTER TABLE list_parted2 ALTER b SET NOT NULL

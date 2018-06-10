@@ -1,5 +1,4 @@
--- file: foreign_key.sql
--- line: 955
+-- file:foreign_key.sql ln:955 expect:true
 create temp table selfref (
     a int primary key,
     b int,

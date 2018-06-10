@@ -1,3 +1,2 @@
--- file: rowsecurity.sql
--- line: 475
+-- file:rowsecurity.sql ln:475 expect:true
 DROP TABLE dependee CASCADE

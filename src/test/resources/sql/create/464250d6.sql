@@ -1,5 +1,4 @@
--- file: aggregates.sql
--- line: 126
+-- file:aggregates.sql ln:126 expect:true
 CREATE TEMPORARY TABLE bitwise_test(
   i2 INT2,
   i4 INT4,

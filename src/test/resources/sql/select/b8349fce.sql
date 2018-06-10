@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2173
+-- file:plpgsql.sql ln:2195 expect:true
 select void_return_expr()

@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 40
+-- file:strings.sql ln:40 expect:true
 SELECT U&'wrong: \061'

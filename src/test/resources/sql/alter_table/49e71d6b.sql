@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1769
+-- file:alter_table.sql ln:1804 expect:true
 ALTER TABLE tt7 DROP q

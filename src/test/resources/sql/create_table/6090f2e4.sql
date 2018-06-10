@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 2082
+-- file:alter_table.sql ln:2114 expect:true
 CREATE TABLE fail_part OF mytype

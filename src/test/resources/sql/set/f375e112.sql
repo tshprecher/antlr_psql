@@ -1,3 +1,2 @@
--- file: horology.sql
--- line: 43
+-- file:horology.sql ln:43 expect:true
 SET DateStyle = 'German'

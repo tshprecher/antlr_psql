@@ -1,3 +1,2 @@
--- file: select_into.sql
--- line: 96
+-- file:select_into.sql ln:96 expect:true
 DROP TABLE easi

@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 113
+-- file:guc.sql ln:113 expect:true
 RELEASE SAVEPOINT sp

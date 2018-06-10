@@ -1,3 +1,2 @@
--- file: create_view.sql
--- line: 154
+-- file:create_view.sql ln:154 expect:true
 CREATE VIEW temporal1 AS SELECT * FROM t1 CROSS JOIN tt

@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 748
+-- file:rules.sql ln:748 expect:false
 create rule rrule as
   on update to vview do instead
 (

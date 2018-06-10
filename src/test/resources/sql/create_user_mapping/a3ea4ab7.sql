@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 468
+-- file:foreign_data.sql ln:474 expect:true
 CREATE USER MAPPING FOR public SERVER s4

@@ -1,5 +1,4 @@
--- file: opr_sanity.sql
--- line: 1138
+-- file:opr_sanity.sql ln:1139 expect:true
 SELECT p1.oid, p2.oid
 FROM pg_opclass AS p1, pg_opclass AS p2
 WHERE p1.oid != p2.oid AND

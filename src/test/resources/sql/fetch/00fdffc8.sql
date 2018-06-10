@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2919
+-- file:plpgsql.sql ln:2706 expect:false
 fetch last from c into x

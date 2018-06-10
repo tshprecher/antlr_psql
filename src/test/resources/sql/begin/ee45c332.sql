@@ -1,5 +1,4 @@
--- file: brin.sql
--- line: 303
+-- file:brin.sql ln:303 expect:false
 BEGIN
 	FOR r IN SELECT colname, oper, typ, value[ordinality], matches[ordinality] FROM brinopers, unnest(op) WITH ORDINALITY AS oper LOOP
 

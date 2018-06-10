@@ -1,3 +1,2 @@
--- file: plpgsql.sql
--- line: 2654
+-- file:plpgsql.sql ln:2441 expect:true
 set plpgsql.print_strict_params to true

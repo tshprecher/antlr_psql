@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 688
+-- file:rules.sql ln:688 expect:true
 SELECT * FROM shoelace_candelete

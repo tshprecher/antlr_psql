@@ -1,3 +1,2 @@
--- file: copydml.sql
--- line: 4
+-- file:copydml.sql ln:4 expect:true
 create table copydml_test (id serial, t text)

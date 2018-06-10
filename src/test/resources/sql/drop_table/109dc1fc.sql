@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 1034
+-- file:create_index.sql ln:1081 expect:true
 DROP TABLE reindex_verbose

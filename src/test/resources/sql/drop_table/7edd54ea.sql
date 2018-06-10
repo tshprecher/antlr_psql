@@ -1,3 +1,2 @@
--- file: bit.sql
--- line: 186
+-- file:bit.sql ln:186 expect:true
 DROP TABLE VARBIT_SHIFT_TABLE

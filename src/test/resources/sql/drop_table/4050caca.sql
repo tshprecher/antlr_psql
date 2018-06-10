@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 237
+-- file:transactions.sql ln:237 expect:true
 DROP TABLE savepoints

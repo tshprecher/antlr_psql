@@ -1,5 +1,4 @@
--- file: equivclass.sql
--- line: 180
+-- file:equivclass.sql ln:180 expect:true
 explain (costs off)
   select * from ec1,
     (select ff + 1 as x from

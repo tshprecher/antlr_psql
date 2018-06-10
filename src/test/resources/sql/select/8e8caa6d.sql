@@ -1,3 +1,2 @@
--- file: rules.sql
--- line: 762
+-- file:rules.sql ln:762 expect:true
 select * from vview

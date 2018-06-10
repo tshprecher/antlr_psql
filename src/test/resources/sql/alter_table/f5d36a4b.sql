@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 1173
+-- file:alter_table.sql ln:1192 expect:true
 alter table altstartwith set without oids

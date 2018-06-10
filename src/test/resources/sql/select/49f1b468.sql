@@ -1,3 +1,2 @@
--- file: strings.sql
--- line: 305
+-- file:strings.sql ln:305 expect:true
 SELECT 'hawkeye' NOT ILIKE 'H%Eye' AS "false"

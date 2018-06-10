@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 907
+-- file:alter_table.sql ln:926 expect:true
 alter table atacc1 drop xmin

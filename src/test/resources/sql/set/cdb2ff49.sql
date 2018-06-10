@@ -1,3 +1,2 @@
--- file: box.sql
--- line: 141
+-- file:box.sql ln:141 expect:true
 SET enable_seqscan = false

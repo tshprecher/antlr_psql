@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 148
+-- file:oidjoins.sql ln:148 expect:true
 SELECT	ctid, relowner
 FROM	pg_catalog.pg_class fk
 WHERE	relowner != 0 AND

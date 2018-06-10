@@ -1,3 +1,2 @@
--- file: enum.sql
--- line: 71
+-- file:enum.sql ln:71 expect:true
 SELECT enum_last(NULL::planets)

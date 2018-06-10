@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 432
+-- file:oidjoins.sql ln:440 expect:true
 SELECT	ctid, ev_class
 FROM	pg_catalog.pg_rewrite fk
 WHERE	ev_class != 0 AND

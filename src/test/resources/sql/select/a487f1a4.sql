@@ -1,3 +1,2 @@
--- file: rowtypes.sql
--- line: 27
+-- file:rowtypes.sql ln:27 expect:true
 select '(Joe,)'::fullname

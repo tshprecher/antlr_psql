@@ -1,3 +1,2 @@
--- file: expressions.sql
--- line: 32
+-- file:expressions.sql ln:32 expect:true
 SET search_path = 'notme'

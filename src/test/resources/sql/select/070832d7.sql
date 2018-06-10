@@ -1,5 +1,4 @@
--- file: alter_generic.sql
--- line: 527
+-- file:alter_generic.sql ln:527 expect:true
 SELECT nspname, cfgname, rolname
   FROM pg_ts_config t, pg_namespace n, pg_authid a
   WHERE t.cfgnamespace = n.oid AND t.cfgowner = a.oid

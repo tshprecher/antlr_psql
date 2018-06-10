@@ -1,3 +1,2 @@
--- file: stats.sql
--- line: 13
+-- file:stats.sql ln:13 expect:true
 SET enable_indexscan TO on

@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 108
+-- file:guc.sql ln:108 expect:true
 SET LOCAL vacuum_cost_delay TO 30

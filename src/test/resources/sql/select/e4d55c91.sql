@@ -1,3 +1,2 @@
--- file: boolean.sql
--- line: 31
+-- file:boolean.sql ln:31 expect:true
 SELECT bool 'y' AS true

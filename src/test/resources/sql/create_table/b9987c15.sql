@@ -1,3 +1,2 @@
--- file: temp.sql
--- line: 124
+-- file:temp.sql ln:124 expect:true
 create table public.whereami (f1 text)

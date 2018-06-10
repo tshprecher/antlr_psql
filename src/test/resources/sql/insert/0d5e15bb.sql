@@ -1,3 +1,2 @@
--- file: rangetypes.sql
--- line: 239
+-- file:rangetypes.sql ln:239 expect:true
 insert into test_range_spgist select int4range(NULL,g*10,'(]') from generate_series(1,100) g

@@ -1,3 +1,2 @@
--- file: btree_index.sql
--- line: 59
+-- file:btree_index.sql ln:59 expect:true
 set enable_seqscan to false

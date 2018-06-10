@@ -1,3 +1,2 @@
--- file: equivclass.sql
--- line: 14
+-- file:equivclass.sql ln:14 expect:true
 create type int8alias1

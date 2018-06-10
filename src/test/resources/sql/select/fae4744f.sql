@@ -1,5 +1,4 @@
--- file: tablesample.sql
--- line: 76
+-- file:tablesample.sql ln:76 expect:true
 select pct, count(unique1) from
   (values (0),(100)) v(pct),
   lateral (select * from tenk1 tablesample bernoulli (pct)) ss

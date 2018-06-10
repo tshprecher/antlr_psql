@@ -1,5 +1,4 @@
--- file: case.sql
--- line: 102
+-- file:case.sql ln:102 expect:true
 SELECT '' AS "Five",
   CASE WHEN ((i < 0) or (i < 0)) THEN 'small'
        WHEN ((i = 0) or (i = 0)) THEN 'zero'

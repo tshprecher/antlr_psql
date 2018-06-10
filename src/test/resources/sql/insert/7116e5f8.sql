@@ -1,5 +1,4 @@
--- file: brin.sql
--- line: 376
+-- file:brin.sql ln:376 expect:true
 INSERT INTO brintest SELECT
 	repeat(stringu1, 42)::bytea,
 	substr(stringu1, 1, 1)::"char",

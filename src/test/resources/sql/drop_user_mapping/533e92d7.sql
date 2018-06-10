@@ -1,3 +1,2 @@
--- file: foreign_data.sql
--- line: 270
+-- file:foreign_data.sql ln:270 expect:true
 DROP USER MAPPING FOR public SERVER s7

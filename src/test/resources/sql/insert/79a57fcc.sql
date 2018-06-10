@@ -1,3 +1,2 @@
--- file: transactions.sql
--- line: 125
+-- file:subselect.sql ln:150 expect:true
 INSERT INTO foo VALUES (1)

@@ -1,5 +1,4 @@
--- file: tsdicts.sql
--- line: 112
+-- file:tsdicts.sql ln:117 expect:true
 CREATE TEXT SEARCH DICTIONARY thesaurus (
                         Template=thesaurus,
 						DictFile=thesaurus_sample,

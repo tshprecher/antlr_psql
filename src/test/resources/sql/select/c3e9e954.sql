@@ -1,3 +1,2 @@
--- file: guc.sql
--- line: 194
+-- file:guc.sql ln:194 expect:true
 select current_schemas(false)

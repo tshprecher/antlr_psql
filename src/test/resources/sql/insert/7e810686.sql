@@ -1,5 +1,4 @@
--- file: create_misc.sql
--- line: 20
+-- file:create_misc.sql ln:20 expect:true
 INSERT INTO hobbies_r (name, person)
    SELECT 'posthacking', p.name
    FROM person* p

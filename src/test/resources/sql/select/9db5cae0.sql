@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 444
+-- file:oidjoins.sql ln:452 expect:true
 SELECT	ctid, refclassid
 FROM	pg_catalog.pg_shdepend fk
 WHERE	refclassid != 0 AND

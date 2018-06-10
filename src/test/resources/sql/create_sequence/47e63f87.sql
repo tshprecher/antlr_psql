@@ -1,3 +1,2 @@
--- file: sequence.sql
--- line: 17
+-- file:sequence.sql ln:17 expect:true
 CREATE SEQUENCE sequence_testx OWNED BY pg_class.relname

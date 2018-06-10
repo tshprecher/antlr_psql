@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 338
+-- file:insert.sql ln:397 expect:true
 insert into mlparted_def2 values (34, 50)

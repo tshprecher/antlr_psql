@@ -1,4 +1,3 @@
--- file: event_trigger.sql
--- line: 218
+-- file:xml.sql ln:225 expect:true
 END
 $$

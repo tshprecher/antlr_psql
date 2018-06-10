@@ -1,3 +1,2 @@
--- file: rolenames.sql
--- line: 124
+-- file:rolenames.sql ln:124 expect:false
 ALTER USER ALL WITH REPLICATION

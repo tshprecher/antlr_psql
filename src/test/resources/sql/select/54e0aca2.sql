@@ -1,3 +1,2 @@
--- file: foreign_key.sql
--- line: 190
+-- file:foreign_key.sql ln:190 expect:true
 SELECT * FROM FKTABLE

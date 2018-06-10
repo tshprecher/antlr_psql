@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 668
+-- file:oidjoins.sql ln:676 expect:true
 SELECT	ctid, proallargtypes
 FROM	(SELECT ctid, unnest(proallargtypes) AS proallargtypes FROM pg_catalog.pg_proc) fk
 WHERE	proallargtypes != 0 AND

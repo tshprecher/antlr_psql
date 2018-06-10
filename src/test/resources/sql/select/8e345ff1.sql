@@ -1,3 +1,2 @@
--- file: polymorphism.sql
--- line: 796
+-- file:polymorphism.sql ln:796 expect:true
 select * from dfview

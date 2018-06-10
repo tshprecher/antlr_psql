@@ -1,3 +1,2 @@
--- file: inherit.sql
--- line: 468
+-- file:inherit.sql ln:480 expect:true
 analyze patest2

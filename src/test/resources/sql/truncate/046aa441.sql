@@ -1,3 +1,2 @@
--- file: insert.sql
--- line: 267
+-- file:insert.sql ln:326 expect:true
 truncate mlparted

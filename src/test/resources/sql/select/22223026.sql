@@ -1,5 +1,4 @@
--- file: alter_generic.sql
--- line: 193
+-- file:alter_generic.sql ln:193 expect:true
 SELECT n.nspname, oprname, a.rolname,
     oprleft::regtype, oprright::regtype, oprcode::regproc
   FROM pg_operator o, pg_namespace n, pg_authid a

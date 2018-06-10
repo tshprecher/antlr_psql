@@ -1,3 +1,2 @@
--- file: tsearch.sql
--- line: 74
+-- file:tsearch.sql ln:74 expect:true
 SET enable_indexscan=OFF

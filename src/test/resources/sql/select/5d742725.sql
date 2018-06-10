@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 236
+-- file:oidjoins.sql ln:240 expect:true
 SELECT	ctid, extnamespace
 FROM	pg_catalog.pg_extension fk
 WHERE	extnamespace != 0 AND

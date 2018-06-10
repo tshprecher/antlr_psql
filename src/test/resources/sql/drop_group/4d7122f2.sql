@@ -1,3 +1,2 @@
--- file: dependency.sql
--- line: 21
+-- file:dependency.sql ln:21 expect:true
 DROP GROUP regress_dep_group

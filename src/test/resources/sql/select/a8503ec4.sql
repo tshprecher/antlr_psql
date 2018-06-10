@@ -1,5 +1,4 @@
--- file: oidjoins.sql
--- line: 76
+-- file:oidjoins.sql ln:76 expect:true
 SELECT	ctid, amopsortfamily
 FROM	pg_catalog.pg_amop fk
 WHERE	amopsortfamily != 0 AND

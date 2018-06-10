@@ -1,3 +1,2 @@
--- file: security_label.sql
--- line: 36
+-- file:security_label.sql ln:36 expect:true
 SECURITY LABEL ON ROLE regress_seclabel_user3 IS 'unclassified'

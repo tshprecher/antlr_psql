@@ -1,5 +1,4 @@
--- file: rules.sql
--- line: 1143
+-- file:rules.sql ln:1143 expect:true
 EXPLAIN (costs off) WITH data(hat_name, hat_color) AS (
     VALUES ('h8', 'green'),
         ('h9', 'blue'),

@@ -1,3 +1,2 @@
--- file: object_address.sql
--- line: 117
+-- file:object_address.sql ln:118 expect:true
 SELECT pg_get_object_address('role', '{one,two}', '{}')

@@ -1,3 +1,2 @@
--- file: alter_table.sql
--- line: 789
+-- file:alter_table.sql ln:808 expect:true
 alter table parent alter a drop not null

@@ -1,5 +1,4 @@
--- file: create_operator.sql
--- line: 122
+-- file:create_operator.sql ln:126 expect:true
 CREATE OPERATOR #*# (
    leftarg = type_op3,
    rightarg = int8,

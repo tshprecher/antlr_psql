@@ -1,5 +1,4 @@
--- file: subselect.sql
--- line: 401
+-- file:subselect.sql ln:401 expect:true
 select
   (select sq1) as qq1
 from

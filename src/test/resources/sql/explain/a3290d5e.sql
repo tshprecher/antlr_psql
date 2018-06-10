@@ -1,5 +1,4 @@
--- file: groupingsets.sql
--- line: 316
+-- file:groupingsets.sql ln:341 expect:true
 explain (costs off)
   select a, d, grouping(a,b,c)
     from gstest3

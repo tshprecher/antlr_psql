@@ -1,5 +1,4 @@
--- file: timestamptz.sql
--- line: 207
+-- file:timestamptz.sql ln:207 expect:true
 SELECT '' AS "54", d1 as timestamptz,
    date_part( 'quarter', d1) AS quarter, date_part( 'msec', d1) AS msec,
    date_part( 'usec', d1) AS usec

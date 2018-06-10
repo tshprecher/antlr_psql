@@ -1,3 +1,2 @@
--- file: create_type.sql
--- line: 85
+-- file:create_type.sql ln:85 expect:true
 SELECT * FROM default_test

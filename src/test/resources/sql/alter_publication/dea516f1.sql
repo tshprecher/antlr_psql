@@ -1,3 +1,2 @@
--- file: publication.sql
--- line: 44
+-- file:publication.sql ln:44 expect:false
 ALTER PUBLICATION testpub_foralltables SET TABLE pub_test.testpub_nopk

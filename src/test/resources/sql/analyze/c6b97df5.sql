@@ -1,3 +1,2 @@
--- file: create_index.sql
--- line: 961
+-- file:create_index.sql ln:997 expect:true
 ANALYZE dupindexcols
