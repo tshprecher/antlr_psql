@@ -6,7 +6,7 @@ public class SelectCommandTest extends CommandTest {
         return "SELECT";
     }
 
-    public String getAnchorFile() {
-        return "/sql/select/00021135.sql";
+    public String getAnchorDir() {
+        return "/sql/select/";
     }
 }
