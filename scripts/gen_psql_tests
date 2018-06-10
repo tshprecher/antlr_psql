@@ -9,6 +9,7 @@ https://github.com/postgres/postgres/tree/master/src/test/regress/sql
 ex: gen_psql_tests src/test/regress/sql /tmp/my_local_psql_tests/
 """
 
+import subprocess
 import sys
 import hashlib
 from os import listdir, makedirs
@@ -213,6 +214,21 @@ def get_query_type(query):
                 return cmd.replace(" ", "_").lower()
     return "_unknown"
 
+def get_expectation(query):
+    """Makes a call to local psql to check if the query has a 'syntax error'. It returns false
+    if and only if a query has a syntax error.
+    """
+    tmpfile = open("/tmp/query.sql", 'w')
+    tmpfile.write(query)
+    tmpfile.close()
+
+    output = subprocess.check_output(["psql -f /tmp/query.sql"], stderr=subprocess.STDOUT, shell=True)
+    res = True
+    if output.find("syntax error") >= 0:
+        res = False
+
+    return res
+
 def generate_test_cases(file, output_dir):
     """Given an open file and directory to write the test cases,
     remove the comments, parse out each sql command, and write it
@@ -234,8 +250,8 @@ def generate_test_cases(file, output_dir):
             if not exists(type_dir):
                 makedirs(type_dir)
             testfile = open(join(type_dir,  hashlib.sha224(query).hexdigest()[:8]) + ".sql", 'w')
-            testfile.write("-- file: " + file.name.split("/")[-1] + "\n")
-            testfile.write("-- line: " + str(line_num-len(query.split("\n"))+1) + "\n")
+            expect = "true" if get_expectation(query) else "false"
+            testfile.write("-- file:" + file.name.split("/")[-1] + " ln:" + str(line_num-len(query.split("\n"))+1) + " expect:" + expect + "\n")
             testfile.write(query + "\n")
             testfile.close()
             query = ""
