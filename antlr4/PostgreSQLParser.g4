@@ -25,8 +25,9 @@ parser grammar PostgreSQLParser;
 options { tokenVocab=PostgreSQLLexer; }
 
 // Top Level Description
-root
-    : select_stmt EOF
+stmt
+    : select_stmt | (OPEN_PAREN select_stmt CLOSE_PAREN)
+    EOF
     ;
 
 values_stmt
@@ -117,6 +118,7 @@ window_clause
     ;
 
 // TODO: order or operations: see test cb011d6e.sql
+// TODO: treat like normal operators
 combine_clause
     : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? select_stmt
     ;
@@ -304,7 +306,7 @@ array_cons_expr
 from_item
     : ONLY? table_name STAR? with_column_alias?
       (TABLESAMPLE todo_fill_in OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN (REPEATABLE OPEN_PAREN todo_fill_in CLOSE_PAREN)?)?
-    | LATERAL? OPEN_PAREN select_stmt CLOSE_PAREN AS? alias (OPEN_PAREN column_alias (COMMA column_alias)* CLOSE_PAREN)?
+    | LATERAL? OPEN_PAREN stmt CLOSE_PAREN AS? alias (OPEN_PAREN column_alias (COMMA column_alias)* CLOSE_PAREN)?
 //    | OPEN_PAREN values_stmt CLOSE_PAREN AS? alias
     | LATERAL? func_call (WITH ORDINALITY)? with_column_alias?
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN

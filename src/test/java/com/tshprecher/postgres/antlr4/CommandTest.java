@@ -47,7 +47,7 @@ public abstract class CommandTest {
                                             }
                                         }
                 );
-                parser.root();
+                parser.stmt();
 
                 if (success.get() != expect) {
                     if (expect)
