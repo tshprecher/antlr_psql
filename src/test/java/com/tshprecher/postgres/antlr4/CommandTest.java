@@ -50,6 +50,7 @@ public abstract class CommandTest {
                 parser.stmt();
 
                 if (success.get() != expect) {
+                    System.out.printf("failed: %s\n", name);
                     if (expect)
                         falseNegative++;
                     else

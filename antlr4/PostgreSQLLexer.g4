@@ -682,6 +682,20 @@ WRITE                                : W R I T E;
 YEAR                                 : Y E A R;
 ZONE                                 : Z O N E;
 
+// role options
+SUPERUSER                            : S U P E R U S E R;
+NOSUPERUSER                          : N O S U P E R U S E R;
+CREATEROLE                           : C R E A T E R O L E;
+NOCREATEROLE                         : N O C R E A T E R O L E;
+INHERIT                              : I N H E R I T;
+NOINHERIT                            : N O I N H E R I T;
+LOGIN                                : L O G I N;
+NOLOGIN                              : N O L O G I N;
+REPLICATION                          : R E P L I C A T I O N;
+NOREPLICATION                        : N O R E P L I C A T I O N;
+BYPASSRLS                            : B Y P A S S R L S;
+NOBYPASSRLS                          : N O B Y P A S S R L S;
+
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;
 BOOL                                 : B O O L;

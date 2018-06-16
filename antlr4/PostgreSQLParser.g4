@@ -27,6 +27,7 @@ options { tokenVocab=PostgreSQLLexer; }
 // Top Level Description
 stmt
     : select_stmt | (OPEN_PAREN select_stmt CLOSE_PAREN)
+    | create_stmt
     EOF
     ;
 
@@ -53,9 +54,25 @@ select_stmt
       for_clause?
     ;
 
+
+create_stmt
+    : create_role_stmt
+    ;
+
+create_role_stmt
+    : CREATE ROLE (name | CURRENT_USER | SESSION_USER)
+      (WITH?
+        (SUPERUSER | NOSUPERUSER | CREATEDB | NOCREATEDB |
+         CREATEROLE | NOCREATEROLE | INHERIT | NOINHERIT | LOGIN | NOLOGIN |
+         REPLICATION | NOREPLICATION | BYPASSRLS | NOBYPASSRLS |
+         CONNECTION LIMIT INTEGER_LITERAL | ENCRYPTED? PASSWORD (SINGLEQ_STRING_LITERAL | NULL) |
+         VALID UNTIL SINGLEQ_STRING_LITERAL | IN ROLE name_list | IN GROUP name_list | ROLE name_list |
+         ADMIN name_list | USER name_list | SYSID INTEGER_LITERAL)+)?
+    ;
+
 selector_clause
     :(ALL | (DISTINCT (ON expr_list)?))?
-     (STAR | (expr (AS? output_name)? (COMMA (STAR | expr (AS? output_name)?))* ))?
+     (STAR | (expr (AS? name)? (COMMA (STAR | expr (AS? name)?))* ))?
     ;
 
 from_clause
@@ -270,12 +287,16 @@ aggregate
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
     ;
 
-output_name
+name
     : DOUBLEQ_STRING_LITERAL
     | identifier
     ;
 
-table_name
+name_list
+    : name (COMMA name)*
+    ;
+
+table_name // TODO: rename to identifier
     : identifier
     | identifier DOT identifier
     ;
