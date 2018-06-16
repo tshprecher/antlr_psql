@@ -56,8 +56,13 @@ select_stmt
 
 
 create_stmt
-    : create_role_stmt
+    : create_access_method_stmt
+    | create_role_stmt
     ;
+
+
+create_access_method_stmt
+    : CREATE ACCESS METHOD name TYPE INDEX HANDLER name;
 
 create_role_stmt
     : CREATE ROLE (name | CURRENT_USER | SESSION_USER)

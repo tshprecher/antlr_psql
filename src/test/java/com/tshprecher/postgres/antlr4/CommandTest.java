@@ -15,7 +15,11 @@ public abstract class CommandTest {
 
     @Test
     public void testParse() throws IOException {
-        String markerPath = getClass().getResource(getAnchorDir()).getPath();
+        String testDir = getAnchorDir();
+        if (testDir == null)
+            return;
+
+        String markerPath = getClass().getResource(testDir).getPath();
         File dir = new File(markerPath.substring(0, markerPath.lastIndexOf('/')));
         File[] testFiles = dir.listFiles();
         int falsePositive=0, falseNegative=0, fileCount=0;
