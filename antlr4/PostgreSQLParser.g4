@@ -60,6 +60,7 @@ create_stmt
     | create_aggregate_stmt
     | create_cast_stmt
     | create_collation_stmt
+    | create_conversion_stmt
     | create_role_stmt
     ;
 
@@ -145,11 +146,15 @@ create_collation_opt_list
     : create_collation_opt (COMMA create_collation_opt)*
     ;
 
-
 create_collation_stmt
     : (CREATE COLLATION (IF NOT EXISTS)? name OPEN_PAREN
         create_collation_opt_list CLOSE_PAREN)
     | CREATE COLLATION (IF NOT EXISTS)? name FROM name
+    ;
+
+create_conversion_stmt
+    : CREATE DEFAULT? CONVERSION identifier
+        FOR SINGLEQ_STRING_LITERAL TO SINGLEQ_STRING_LITERAL FROM name
     ;
 
 create_role_stmt
@@ -390,9 +395,8 @@ name_list
     : name (COMMA name)*
     ;
 
-table_name // TODO: rename to identifier
+table_name
     : identifier
-    | identifier DOT identifier
     ;
 
 // TODO: can we remove in favor of just 'identifier' and the array case?
@@ -572,6 +576,7 @@ non_reserved_keyword
 identifier
     : non_reserved_keyword
     | IDENTIFIER
+    | identifier DOT identifier
     ;
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
