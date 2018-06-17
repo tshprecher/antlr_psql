@@ -59,6 +59,7 @@ create_stmt
     : create_access_method_stmt
     | create_aggregate_stmt
     | create_cast_stmt
+    | create_collation_stmt
     | create_role_stmt
     ;
 
@@ -129,6 +130,26 @@ create_cast_stmt
                | (WITHOUT FUNCTION)
                | (WITH INOUT))
               (AS ASSIGNMENT | AS IMPLICIT)?
+    ;
+
+create_collation_opt
+    : LOCALE EQUAL expr
+    | LC_COLLATE EQUAL expr
+    | LC_CTYPE EQUAL expr
+    | PROVIDER EQUAL expr
+    | VERSION EQUAL expr
+    | DOUBLEQ_STRING_LITERAL EQUAL expr
+    ;
+
+create_collation_opt_list
+    : create_collation_opt (COMMA create_collation_opt)*
+    ;
+
+
+create_collation_stmt
+    : (CREATE COLLATION (IF NOT EXISTS)? name OPEN_PAREN
+        create_collation_opt_list CLOSE_PAREN)
+    | CREATE COLLATION (IF NOT EXISTS)? name FROM name
     ;
 
 create_role_stmt
@@ -249,6 +270,7 @@ expr
     | HEX_INTEGER_LITERAL
     | NUMERIC_LITERAL
     | SINGLEQ_STRING_LITERAL
+    | DOUBLEQ_STRING_LITERAL
     | BIT_STRING
     | REGEX_STRING
     | DOLLAR_DOLLAR (~DOLLAR)+ DOLLAR_DOLLAR

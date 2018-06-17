@@ -721,6 +721,13 @@ RESTRICTED                           : R E S T R I C T E D;
 UNSAFE                               : U N S A F E;
 BASETYPE                             : B A S E T Y P E;
 
+// create collation options
+LOCALE                               : L O C A L E;
+LC_COLLATE                           : L C '_' C O L L A T E;
+LC_CTYPE                             : L C '_' C T Y P E;
+PROVIDER                             : P R O V I D E R;
+VERSION                              : V E R S I O N;
+
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;
 BOOL                                 : B O O L;
