@@ -58,6 +58,7 @@ select_stmt
 create_stmt
     : create_access_method_stmt
     | create_aggregate_stmt
+    | create_cast_stmt
     | create_role_stmt
     ;
 
@@ -120,6 +121,14 @@ create_aggregate_stmt
            (COMMA MINITCOND EQUAL identifier)?
            (COMMA SORTOP EQUAL identifier)?
          CLOSE_PAREN)
+    ;
+
+create_cast_stmt
+    : CREATE CAST OPEN_PAREN type_name AS type_name CLOSE_PAREN
+              ((WITH FUNCTION identifier ( OPEN_PAREN type_name_list CLOSE_PAREN )?)
+               | (WITHOUT FUNCTION)
+               | (WITH INOUT))
+              (AS ASSIGNMENT | AS IMPLICIT)?
     ;
 
 create_role_stmt
