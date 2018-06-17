@@ -61,6 +61,7 @@ create_stmt
     | create_cast_stmt
     | create_collation_stmt
     | create_conversion_stmt
+    | create_database_stmt
     | create_role_stmt
     ;
 
@@ -155,6 +156,21 @@ create_collation_stmt
 create_conversion_stmt
     : CREATE DEFAULT? CONVERSION identifier
         FOR SINGLEQ_STRING_LITERAL TO SINGLEQ_STRING_LITERAL FROM name
+    ;
+
+create_database_stmt
+    : CREATE DATABASE name
+    | ( WITH?
+        (OWNER EQUAL name)?
+        (TEMPLATE EQUAL name)?
+        (ENCODING EQUAL name)?
+        (LC_COLLATE EQUAL name)?
+        (LC_CTYPE EQUAL name)?
+        (TABLESPACE EQUAL name)?
+        (ALLOW_CONNECTIONS EQUAL name)?
+        (CONNECTION LIMIT EQUAL INTEGER_LITERAL)?
+        (IS_TEMPLATE EQUAL INTEGER_LITERAL)?
+      )?
     ;
 
 create_role_stmt
