@@ -57,12 +57,70 @@ select_stmt
 
 create_stmt
     : create_access_method_stmt
+    | create_aggregate_stmt
     | create_role_stmt
     ;
 
 
 create_access_method_stmt
     : CREATE ACCESS METHOD name TYPE INDEX HANDLER name;
+
+create_aggregate_stmt
+    : (CREATE AGGREGATE name OPEN_PAREN (IN | VARIADIC)? name? type_name_list CLOSE_PAREN
+        OPEN_PAREN
+          SFUNC EQUAL identifier COMMA
+          STYPE EQUAL identifier
+          (COMMA SSPACE EQUAL INTEGER_LITERAL)?
+          (COMMA FINALFUNC EQUAL identifier)?
+          (COMMA FINALFUNC_EXTRA)?
+          (COMMA COMBINEFUNC EQUAL identifier)?
+          (COMMA SERIALFUNC EQUAL identifier)?
+          (COMMA DESERIALFUNC EQUAL identifier)?
+          (COMMA INITCOND EQUAL expr)?
+          (COMMA MSFUNC EQUAL identifier)?
+          (COMMA MINVFUNC EQUAL identifier)?
+          (COMMA MSTYPE EQUAL identifier)?
+          (COMMA MSSPACE EQUAL INTEGER_LITERAL)?
+          (COMMA MFINALFUNC EQUAL identifier)?
+          (COMMA MFINALFUNC_EXTRA)?
+          (COMMA MINITCOND EQUAL identifier)?
+          (COMMA SORTOP EQUAL identifier)?
+          (COMMA PARALLEL EQUAL (SAFE | RESTRICTED | UNSAFE))?
+        CLOSE_PAREN)
+    | (CREATE AGGREGATE name OPEN_PAREN ((IN | VARIADIC)? name? type_name_list)?
+         ORDER BY (IN | VARIADIC)? name? type_name_list CLOSE_PAREN
+         OPEN_PAREN
+           SFUNC EQUAL identifier COMMA
+           STYPE EQUAL identifier
+           (COMMA SSPACE EQUAL INTEGER_LITERAL)?
+           (COMMA FINALFUNC EQUAL identifier)?
+           (COMMA FINALFUNC_EXTRA)?
+           (COMMA INITCOND EQUAL expr)?
+           (COMMA PARALLEL EQUAL (SAFE | RESTRICTED | UNSAFE))?
+           (COMMA HYPOTHETICAL)?
+         CLOSE_PAREN)
+    | (CREATE AGGREGATE name
+         OPEN_PAREN
+           BASETYPE EQUAL type_name COMMA
+           SFUNC EQUAL identifier COMMA
+           STYPE EQUAL identifier
+           (COMMA SSPACE EQUAL INTEGER_LITERAL)?
+           (COMMA FINALFUNC EQUAL identifier)?
+           (COMMA FINALFUNC_EXTRA)?
+           (COMMA COMBINEFUNC EQUAL identifier)?
+           (COMMA SERIALFUNC EQUAL identifier)?
+           (COMMA DESERIALFUNC EQUAL identifier)?
+           (COMMA INITCOND EQUAL expr)?
+           (COMMA MSFUNC EQUAL identifier)?
+           (COMMA MINVFUNC EQUAL identifier)?
+           (COMMA MSTYPE EQUAL identifier)?
+           (COMMA MSSPACE EQUAL INTEGER_LITERAL)?
+           (COMMA MFINALFUNC EQUAL identifier)?
+           (COMMA MFINALFUNC_EXTRA)?
+           (COMMA MINITCOND EQUAL identifier)?
+           (COMMA SORTOP EQUAL identifier)?
+         CLOSE_PAREN)
+    ;
 
 create_role_stmt
     : CREATE ROLE (name | CURRENT_USER | SESSION_USER)
@@ -314,6 +372,10 @@ type_name
     | type_name OPEN_BRACKET CLOSE_BRACKET
     ;
 
+type_name_list
+    : type_name (COMMA type_name)*
+    ;
+
 func_name
     : type_name
     | identifier
@@ -373,6 +435,7 @@ predicate
 
 // allow non-reserved keywords as identifiers
 // TODO: is this necessary?
+// easier to whitelist than blacklist
 non_reserved_keyword
     :  A_ |  ABORT |  ABS |  ABSOLUTE |  ACCESS
     |  ACTION |  ADA |  ADD |  ADMIN |  AFTER

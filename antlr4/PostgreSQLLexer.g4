@@ -696,6 +696,31 @@ NOREPLICATION                        : N O R E P L I C A T I O N;
 BYPASSRLS                            : B Y P A S S R L S;
 NOBYPASSRLS                          : N O B Y P A S S R L S;
 
+// create aggregate options
+SFUNC                                : S F U N C;
+STYPE                                : S T Y P E;
+SSPACE                               : S S P A C E;
+FINALFUNC                            : F I N A L F U N C;
+FINALFUNC_EXTRA                      : F I N A L F U N C '_' E X T R A;
+COMBINEFUNC                          : C O M B I N E F U N C;
+SERIALFUNC                           : S E R I A L F U N C;
+DESERIALFUNC                         : D E S E R I A L F U N C;
+INITCOND                             : I N I T C O N D;
+MSFUNC                               : M S F U N C;
+MINVFUNC                             : M I N V F U N C;
+MSTYPE                               : M S T Y P E;
+MSSPACE                              : M S S P A C E;
+MFINALFUNC                           : M F I N A L F U N C;
+MFINALFUNC_EXTRA                     : M F I N A L F U N C '_' E X T R A;
+MINITCOND                            : M I N I T C O N D;
+SORTOP                               : S O R T O P;
+PARALLEL                             : P A R A L L E L;
+HYPOTHETICAL                         : H Y P O T H E T I C A L;
+SAFE                                 : S A F E;
+RESTRICTED                           : R E S T R I C T E D;
+UNSAFE                               : U N S A F E;
+BASETYPE                             : B A S E T Y P E;
+
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;
 BOOL                                 : B O O L;
