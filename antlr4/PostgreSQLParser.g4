@@ -64,6 +64,7 @@ create_stmt
     | create_database_stmt
     | create_domain_stmt
     | create_event_trigger_stmt
+    | create_foreign_data_stmt
     | create_role_stmt
     ;
 
@@ -194,6 +195,18 @@ create_event_trigger_stmt
     : CREATE EVENT TRIGGER trigger=identifier ON event=identifier
       (WHEN create_event_trigger_cond)?
       EXECUTE PROCEDURE fn_name=identifier OPEN_PAREN CLOSE_PAREN
+    ;
+
+create_foreign_data_options
+    : opt=name SINGLEQ_STRING_LITERAL
+      (COMMA create_foreign_data_options)*
+    ;
+
+create_foreign_data_stmt
+    : CREATE FOREIGN DATA WRAPPER wrapper=identifier
+      (HANDLER handler=identifier | NO HANDLER)*
+      (VALIDATOR validator=identifier | NO VALIDATOR)?
+      (OPTIONS OPEN_PAREN opts=create_foreign_data_options CLOSE_PAREN)?
     ;
 
 create_role_stmt
