@@ -732,6 +732,9 @@ VERSION                              : V E R S I O N;
 ALLOW_CONNECTIONS                    : A L L O W '_' C O N N E C T I O N S ;
 IS_TEMPLATE                          : I S '_' T E M P L A T E ;
 
+// create event
+EVENT                                : E V E N T;
+
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;
 BOOL                                 : B O O L;

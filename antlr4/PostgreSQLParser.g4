@@ -63,9 +63,9 @@ create_stmt
     | create_conversion_stmt
     | create_database_stmt
     | create_domain_stmt
+    | create_event_trigger_stmt
     | create_role_stmt
     ;
-
 
 create_access_method_stmt
     : CREATE ACCESS METHOD name TYPE INDEX HANDLER name;
@@ -183,6 +183,17 @@ create_domain_stmt
       ((COLLATE name) |
        (DEFAULT expr) |
        domain_constraint)*
+    ;
+
+create_event_trigger_cond
+    : filter=identifier IN OPEN_PAREN SINGLEQ_STRING_LITERAL (COMMA SINGLEQ_STRING_LITERAL)* CLOSE_PAREN
+      (AND create_event_trigger_cond)*
+    ;
+
+create_event_trigger_stmt
+    : CREATE EVENT TRIGGER trigger=identifier ON event=identifier
+      (WHEN create_event_trigger_cond)?
+      EXECUTE PROCEDURE fn_name=identifier OPEN_PAREN CLOSE_PAREN
     ;
 
 create_role_stmt
