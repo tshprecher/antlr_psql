@@ -62,6 +62,7 @@ create_stmt
     | create_collation_stmt
     | create_conversion_stmt
     | create_database_stmt
+    | create_domain_stmt
     | create_role_stmt
     ;
 
@@ -70,7 +71,7 @@ create_access_method_stmt
     : CREATE ACCESS METHOD name TYPE INDEX HANDLER name;
 
 create_aggregate_stmt
-    : (CREATE AGGREGATE name OPEN_PAREN (IN | VARIADIC)? name? type_name_list CLOSE_PAREN
+    : (CREATE AGGREGATE name OPEN_PAREN (IN | VARIADIC)? name? type_list CLOSE_PAREN
         OPEN_PAREN
           SFUNC EQUAL identifier COMMA
           STYPE EQUAL identifier
@@ -91,8 +92,8 @@ create_aggregate_stmt
           (COMMA SORTOP EQUAL identifier)?
           (COMMA PARALLEL EQUAL (SAFE | RESTRICTED | UNSAFE))?
         CLOSE_PAREN)
-    | (CREATE AGGREGATE name OPEN_PAREN ((IN | VARIADIC)? name? type_name_list)?
-         ORDER BY (IN | VARIADIC)? name? type_name_list CLOSE_PAREN
+    | (CREATE AGGREGATE name OPEN_PAREN ((IN | VARIADIC)? name? type_list)?
+         ORDER BY (IN | VARIADIC)? name? type_list CLOSE_PAREN
          OPEN_PAREN
            SFUNC EQUAL identifier COMMA
            STYPE EQUAL identifier
@@ -105,7 +106,7 @@ create_aggregate_stmt
          CLOSE_PAREN)
     | (CREATE AGGREGATE name
          OPEN_PAREN
-           BASETYPE EQUAL type_name COMMA
+           BASETYPE EQUAL type COMMA
            SFUNC EQUAL identifier COMMA
            STYPE EQUAL identifier
            (COMMA SSPACE EQUAL INTEGER_LITERAL)?
@@ -127,8 +128,8 @@ create_aggregate_stmt
     ;
 
 create_cast_stmt
-    : CREATE CAST OPEN_PAREN type_name AS type_name CLOSE_PAREN
-              ((WITH FUNCTION identifier ( OPEN_PAREN type_name_list CLOSE_PAREN )?)
+    : CREATE CAST OPEN_PAREN type AS type CLOSE_PAREN
+              ((WITH FUNCTION identifier ( OPEN_PAREN type_list CLOSE_PAREN )?)
                | (WITHOUT FUNCTION)
                | (WITH INOUT))
               (AS ASSIGNMENT | AS IMPLICIT)?
@@ -171,6 +172,17 @@ create_database_stmt
         (CONNECTION LIMIT EQUAL INTEGER_LITERAL)?
         (IS_TEMPLATE EQUAL INTEGER_LITERAL)?
       )?
+    ;
+
+domain_constraint
+    : (CONSTRAINT name)? ( NOT NULL | NULL | CHECK OPEN_PAREN expr CLOSE_PAREN )
+    ;
+
+create_domain_stmt
+    : CREATE DOMAIN name AS? type
+      ((COLLATE name) |
+       (DEFAULT expr) |
+       domain_constraint)*
     ;
 
 create_role_stmt
@@ -288,7 +300,7 @@ expr
     | CURRENT_TIMESTAMP
     | CURRENT_USER
     | INTEGER_LITERAL
-    | HEX_INTEGER_LITERAL
+    | HEX_INTEGER_LITERAL // TODO: consolidate all integer literals under a rule
     | NUMERIC_LITERAL
     | SINGLEQ_STRING_LITERAL
     | DOUBLEQ_STRING_LITERAL
@@ -314,7 +326,8 @@ expr
              AMP | PIPE | HASH | TIL | LT_LT | LT_LT_EQ | GT_GT |
              AT_AT | LT_HYPHEN_GT | AT_GT | LT_AT | TIL_EQ | TIL_STAR| TIL_TIL | TIL_LT_TIL | TIL_GT_TIL | TIL_LTE_TIL |
              TIL_GTE_TIL | LT_QMARK_GT | HYPHEN_GT | HYPHEN_GT_GT | HASH_HASH | HASH_GT | HASH_GT_GT | QMARK | QMARK_PIPE |
-             QMARK_AMP | QMARK_HASH | LT_CARET | AMP_LT | HYPHEN_PIPE_HYPHEN | HASH_EQ | AMP_AMP | PIPE_PIPE | EQUAL_GT
+             QMARK_AMP | QMARK_HASH | LT_CARET | AMP_LT | HYPHEN_PIPE_HYPHEN | HASH_EQ | AMP_AMP | PIPE_PIPE | EQUAL_GT |
+             NOT | AND | OR
              ) expr
     | expr NOT? LIKE expr //(STRING_LITERAL_SINGLE_Q | REGEX_STRING)
     | expr NOT? BETWEEN expr AND expr
@@ -323,19 +336,21 @@ expr
     | expr op=IS (bool_expr | NULL)
     | expr op=(ISNULL | NOTNULL)
     | op=(NOT | ALL) expr
+    | func_call
     | identifier
-    | CAST OPEN_PAREN expr AS type_name CLOSE_PAREN
+    | CAST OPEN_PAREN expr AS type CLOSE_PAREN
     | correlation_name DOT column_name
     | CASE WHEN predicate THEN expr (ELSE expr)? END
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
-    | expr COLON_COLON type_name
+    | expr COLON_COLON type
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
-    | func_call
+
     | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
     ;
 
+// TODO: is this necessary. can we just encapsulate within expr's operator precedence?
 bool_expr
     : TRUE
     | FALSE
@@ -393,6 +408,7 @@ oper
     ;
 
 // TODO: explicit aggregate list or no?
+// TODO: see test 27e55664.sql (create domain) for an example where a fn call isn't an aggregate
 aggregate
     : identifier OPEN_PAREN (ALL | DISTINCT)? expr (COMMA expr)* order_by_clause? CLOSE_PAREN
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
@@ -403,7 +419,8 @@ aggregate
     ;
 
 name
-    : DOUBLEQ_STRING_LITERAL
+    : SINGLEQ_STRING_LITERAL
+    | DOUBLEQ_STRING_LITERAL
     | identifier
     ;
 
@@ -416,19 +433,21 @@ table_name
     ;
 
 // TODO: can we remove in favor of just 'identifier' and the array case?
-// TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type_name of SUM
-type_name
+// TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type of SUM
+type
     : type_literal
-    | identifier
-    | type_name OPEN_BRACKET CLOSE_BRACKET
+    | VARCHAR OPEN_PAREN INTEGER_LITERAL? CLOSE_PAREN
+    | NUMERIC OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN
+    | identifier // TODO: is this necessary?
+    | type OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET
     ;
 
-type_name_list
-    : type_name (COMMA type_name)*
+type_list
+    : type (COMMA type)*
     ;
 
 func_name
-    : type_name
+    : type
     | identifier
     ;
 
