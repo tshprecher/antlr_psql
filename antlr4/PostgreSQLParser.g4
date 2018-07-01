@@ -71,7 +71,14 @@ create_stmt
     | create_index_stmt
     | create_language_stmt
     | create_materialized_view_stmt
+    | create_operator_stmt
+    | create_operator_class_stmt
+    | create_operator_family_stmt
+    | create_policy_stmt
     | create_role_stmt
+    | create_rule_stmt
+    | create_schema_stmt
+    | create_sequence_stmt
     ;
 
 create_access_method_stmt
@@ -244,7 +251,7 @@ create_group_stmt
 
 create_index_stmt
     : CREATE UNIQUE? INDEX CONCURRENTLY? ((IF NOT EXISTS)? index_name=identifier)?
-        ON tableName=identifier (USING (BTREE | HASH_ | GIST | SPGIST | GIN | BRIN))?
+        ON tableName=identifier (USING index_method)?
         (TABLESPACE tablespace_name=identifier)?
         (WHERE predicate)?
     ;
@@ -265,6 +272,46 @@ create_materialized_view_stmt
       (WITH NO? DATA)?
     ;
 
+// TODO: this one is tricky because of the yet undefined 'operator' lexeme
+create_operator_stmt
+    : CREATE OPERATOR opName=identifier
+      OPEN_PAREN
+        PROCEDURE EQUAL function_name=identifier
+        (COMMA LEFTARG EQUAL left_type=name)?
+        (COMMA RIGHTARG EQUAL right_type=name)?
+        (COMMA COMMUTATOR EQUAL com_op=name)?
+        (COMMA NEGATOR EQUAL neg_op=name)?
+        (COMMA RESTRICT EQUAL res_proc=name)?
+        (COMMA JOIN EQUAL join_proc=name)?
+        (COMMA HASHES)?
+        (COMMA MERGES)?
+      CLOSE_PAREN
+    ;
+
+create_operator_class_opt
+    : (OPERATOR strategy_number=INTEGER_LITERAL opName=identifier (OPEN_PAREN identifier COMMA identifier CLOSE_PAREN)?) |
+      (FUNCTION support_number=INTEGER_LITERAL (OPEN_PAREN identifier (COMMA identifier)? CLOSE_PAREN)? func_name_=identifier OPEN_PAREN type_list CLOSE_PAREN) |
+      (STORAGE storage_type=identifier)
+    ;
+
+create_operator_class_stmt
+    : CREATE OPERATOR CLASS name_=identifier DEFAULT? FOR TYPE data_type=identifier
+        USING index_method (FAMILY family_name=identifier)? AS
+        create_operator_class_opt (COMMA create_operator_class_opt)*
+    ;
+
+create_operator_family_stmt
+    : CREATE OPERATOR FAMILY name_=identifier USING index_method
+    ;
+
+create_policy_stmt
+    : CREATE POLICY name_=identifier ON tableName=identifier
+      (FOR (ALL | SELECT | INSERT | UPDATE | DELETE))?
+      (TO (role_name=identifier | PUBLIC | CURRENT_USER | SESSION_USER))? // TODO: make a list here
+      (USING OPEN_PAREN predicate CLOSE_PAREN)?
+      (WITH CHECK OPEN_PAREN predicate CLOSE_PAREN)?
+    ;
+
 create_role_stmt
     : CREATE ROLE (name | CURRENT_USER | SESSION_USER)
       (WITH?
@@ -274,6 +321,36 @@ create_role_stmt
          CONNECTION LIMIT INTEGER_LITERAL | ENCRYPTED? PASSWORD (SINGLEQ_STRING_LITERAL | NULL) |
          VALID UNTIL SINGLEQ_STRING_LITERAL | IN ROLE name_list | IN GROUP name_list | ROLE name_list |
          ADMIN name_list | USER name_list | SYSID INTEGER_LITERAL)+)?
+    ;
+
+create_rule_event
+    : SELECT | INSERT | UPDATE | DELETE
+    ;
+
+// TODO: resolve 'command' to its proper definition
+create_rule_stmt
+    : CREATE (OR REPLACE)? RULE name_=name AS ON event=create_rule_event
+      TO tableName=identifier (WHERE predicate)?
+      DO (ALSO | INSTEAD)? (NOTHING | command=identifier)
+    ;
+
+create_schema_role_spec
+    : user_name=identifier | CURRENT_USER | SESSION_USER
+    ;
+
+create_schema_stmt
+    : (CREATE SCHEMA schema_name=identifier (AUTHORIZATION create_schema_role_spec)? todo_fill_in? ) |
+      (CREATE SCHEMA AUTHORIZATION create_schema_role_spec todo_fill_in?) |
+      (CREATE SCHEMA IF NOT EXISTS schema_name=identifier (AUTHORIZATION create_schema_role_spec)?) |
+      (CREATE SCHEMA IF NOT EXISTS AUTHORIZATION create_schema_role_spec)
+    ;
+
+create_sequence_stmt
+    : CREATE (TEMPORARY | TEMP)? SEQUENCE (IF NOT EXISTS)? name_=identifier (INCREMENT BY? increment=INTEGER_LITERAL)?
+      (MINVALUE minvalue=INTEGER_LITERAL | NO MINVALUE)?
+      (MAXVALUE maxvalue=INTEGER_LITERAL | NO MAXVALUE)?
+      (START WITH? start=INTEGER_LITERAL)? (CACHE cache=INTEGER_LITERAL)? (NO? CYCLE)?
+      (OWNED BY ((table_name_=identifier DOT column_name_=identifier) | NONE))?
     ;
 
 selector_clause
@@ -530,6 +607,10 @@ type
 
 type_list
     : type (COMMA type)*
+    ;
+
+index_method
+    : BTREE | HASH_ | GIST | SPGIST | GIN | BRIN
     ;
 
 func_name

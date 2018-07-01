@@ -759,6 +759,23 @@ INLINE                               : I N L I N E;
 // create materialized view
 MATERIALIZED                         : M A T E R I A L I Z E D;
 
+// create operator
+LEFTARG                              : L E F T A R G;
+RIGHTARG                             : R I G H T A R G;
+COMMUTATOR                           : C O M M U T A T O R;
+NEGATOR                              : N E G A T O R;
+HASHES                               : H A S H E S;
+MERGES                               : M E R G E S;
+
+// create operator family
+FAMILY                               : F A M I L Y;
+
+// create policy
+POLICY                               : P O L I C Y;
+
+// create sequence
+OWNED                                : O W N E D;
+
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;
 BOOL                                 : B O O L;
@@ -850,3 +867,4 @@ TIL_LTE_TIL                          : '~<=~';
 TIL_LT_TIL                           : '~<~';
 TIL_STAR                             : '~*';
 TIL_TIL                              : '~~';
+

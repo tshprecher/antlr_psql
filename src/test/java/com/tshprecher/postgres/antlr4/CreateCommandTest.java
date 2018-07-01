@@ -84,7 +84,42 @@ public class CreateCommandTest extends CommandTest {
     }
 
     @Test
+    public void testCreateOperator() throws IOException {
+        super.test("CREATE OPERATOR", "/sql/create_operator/");
+    }
+
+    @Test
+    public void testCreateOperatorClass() throws IOException {
+        super.test("CREATE OPERATOR CLASS", "/sql/create_operator_class/");
+    }
+
+    @Test
+    public void testCreateOperatorFamily() throws IOException {
+        super.test("CREATE OPERATOR FAMILY", "/sql/create_operator_family/");
+    }
+
+    @Test
+    public void testCreatePolicy() throws IOException {
+        super.test("CREATE POLICY", "/sql/create_policy/");
+    }
+
+    @Test
     public void testCreateRole() throws IOException {
         super.test("CREATE ROLE", "/sql/create_role/");
+    }
+
+    @Test
+    public void testCreateRule() throws IOException {
+        super.test("CREATE RULE", "/sql/create_rule/");
+    }
+
+    @Test
+    public void testCreateSchema() throws IOException {
+        super.test("CREATE SCHEMA", "/sql/create_schema/");
+    }
+
+    @Test
+    public void testCreateSequence() throws IOException {
+        super.test("CREATE SEQUENCE", "/sql/create_sequence/");
     }
 }
