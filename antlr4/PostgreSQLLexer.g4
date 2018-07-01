@@ -721,6 +721,9 @@ RESTRICTED                           : R E S T R I C T E D;
 UNSAFE                               : U N S A F E;
 BASETYPE                             : B A S E T Y P E;
 
+// create collation
+IF                                   : I F;
+
 // create collation options
 LOCALE                               : L O C A L E;
 LC_COLLATE                           : L C '_' C O L L A T E;
@@ -737,6 +740,24 @@ EVENT                                : E V E N T;
 
 // create foreign data wrapper
 WRAPPER                              : W R A P P E R;
+
+// create foreign table
+SERVER                               : S E R V E R;
+
+// create index
+BTREE                                : B T R E E;
+HASH_                                : H A S H;
+GIST                                 : G I S T;
+SPGIST                               : S P G I S T;
+GIN                                  : G I N;
+BRIN                                 : B R I N;
+CONCURRENTLY                         : C O N C U R R E N T L Y;
+
+// create language
+INLINE                               : I N L I N E;
+
+// create materialized view
+MATERIALIZED                         : M A T E R I A L I Z E D;
 
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;

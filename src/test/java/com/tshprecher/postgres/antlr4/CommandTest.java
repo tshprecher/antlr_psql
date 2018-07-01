@@ -7,6 +7,9 @@ import org.junit.Test;
 import java.io.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// TODO: rename subclasses to *not* use Command in their name
+// TODO: instead of one command per class, split by command type
+//       and have multiple tests per class.
 public abstract class CommandTest {
 
     public abstract String getCommandName();

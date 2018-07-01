@@ -66,6 +66,11 @@ create_stmt
     | create_event_trigger_stmt
     | create_foreign_data_stmt
     | create_foreign_table_stmt
+    | create_function_stmt
+    | create_group_stmt
+    | create_index_stmt
+    | create_language_stmt
+    | create_materialized_view_stmt
     | create_role_stmt
     ;
 
@@ -153,7 +158,7 @@ create_collation_opt_list
 create_collation_stmt
     : (CREATE COLLATION (IF NOT EXISTS)? name OPEN_PAREN
         create_collation_opt_list CLOSE_PAREN)
-    | CREATE COLLATION (IF NOT EXISTS)? name FROM name
+    | (CREATE COLLATION (IF NOT EXISTS)? name FROM name)
     ;
 
 create_conversion_stmt
@@ -220,6 +225,44 @@ create_foreign_table_stmt
       (INHERITS name_list)?
       SERVER server_name=name
       (OPTIONS OPEN_PAREN opts=create_foreign_data_options CLOSE_PAREN)?
+    ;
+
+create_function_stmt
+    : CREATE (OR REPLACE)? FUNCTION fn_name=name
+    ;
+
+create_group_stmt
+    : CREATE GROUP group=identifier
+      (WITH?
+         (SUPERUSER | NOSUPERUSER | CREATEDB | NOCREATEDB |
+          CREATEROLE | NOCREATEROLE | CREATEUSER | NOCREATEUSER |
+          INHERIT | NOINHERIT | LOGIN | NOLOGIN |
+          (ENCRYPTED | UNENCRYPTED)? PASSWORD (SINGLEQ_STRING_LITERAL | NULL) |
+          VALID UNTIL SINGLEQ_STRING_LITERAL | IN ROLE name_list | IN GROUP name_list | ROLE name_list |
+          ADMIN name_list | USER name_list | SYSID INTEGER_LITERAL)+)?
+    ;
+
+create_index_stmt
+    : CREATE UNIQUE? INDEX CONCURRENTLY? ((IF NOT EXISTS)? index_name=identifier)?
+        ON tableName=identifier (USING (BTREE | HASH_ | GIST | SPGIST | GIN | BRIN))?
+        (TABLESPACE tablespace_name=identifier)?
+        (WHERE predicate)?
+    ;
+
+create_language_stmt
+    : (CREATE (OR REPLACE)? PROCEDURAL? LANGUAGE language_name=identifier) |
+      (CREATE (OR REPLACE)? TRUSTED? PROCEDURAL? LANGUAGE language_name=identifier
+       HANDLER call_handler=identifier (INLINE inline_handler=identifier)? (VALIDATOR valfunction=identifier)?)
+    ;
+
+// TODO: normalize aliases so we don't have tableName and table_name
+create_materialized_view_stmt
+    : CREATE MATERIALIZED VIEW (IF NOT EXISTS)? tableName=identifier
+      (OPEN_PAREN columns=identifier_list CLOSE_PAREN)?
+      (WITH /* todo: implement */)?
+      (TABLESPACE tablespace_name=identifier)?
+      AS query=select_stmt
+      (WITH NO? DATA)?
     ;
 
 create_role_stmt
@@ -455,6 +498,7 @@ aggregate
       (FILTER OPEN_PAREN WHERE where_clause CLOSE_PAREN)?
     ;
 
+// TODO: rename so aliases can use 'name'? probably not
 name
     : SINGLEQ_STRING_LITERAL
     | DOUBLEQ_STRING_LITERAL
@@ -463,6 +507,10 @@ name
 
 name_list
     : name (COMMA name)*
+    ;
+
+identifier_list
+    : identifier (COMMA identifier)*
     ;
 
 // TODO: remove
