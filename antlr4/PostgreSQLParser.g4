@@ -65,6 +65,7 @@ create_stmt
     | create_domain_stmt
     | create_event_trigger_stmt
     | create_foreign_data_stmt
+    | create_foreign_table_stmt
     | create_role_stmt
     ;
 
@@ -197,6 +198,7 @@ create_event_trigger_stmt
       EXECUTE PROCEDURE fn_name=identifier OPEN_PAREN CLOSE_PAREN
     ;
 
+// TODO: rename to options_list
 create_foreign_data_options
     : opt=name SINGLEQ_STRING_LITERAL
       (COMMA create_foreign_data_options)*
@@ -206,6 +208,17 @@ create_foreign_data_stmt
     : CREATE FOREIGN DATA WRAPPER wrapper=identifier
       (HANDLER handler=identifier | NO HANDLER)*
       (VALIDATOR validator=identifier | NO VALIDATOR)?
+      (OPTIONS OPEN_PAREN opts=create_foreign_data_options CLOSE_PAREN)?
+    ;
+
+create_foreign_table_stmt
+    : CREATE FOREIGN TABLE (IF NOT EXISTS)? table_name_TODO=identifier
+      OPEN_PAREN column_name_TODO=identifier data_type=identifier
+        (OPTIONS OPEN_PAREN opts=create_foreign_data_options CLOSE_PAREN)?
+        (COLLATE create_collation_opt)?
+      CLOSE_PAREN
+      (INHERITS name_list)?
+      SERVER server_name=name
       (OPTIONS OPEN_PAREN opts=create_foreign_data_options CLOSE_PAREN)?
     ;
 
@@ -452,6 +465,7 @@ name_list
     : name (COMMA name)*
     ;
 
+// TODO: remove
 table_name
     : identifier
     ;
@@ -640,6 +654,7 @@ identifier
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
 correlation_name    : identifier;
+// TODO: rename
 column_name         : identifier;
 alias               : identifier;
 column_alias        : identifier;
