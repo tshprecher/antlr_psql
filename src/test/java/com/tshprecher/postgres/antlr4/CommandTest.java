@@ -2,25 +2,14 @@ package com.tshprecher.postgres.antlr4;
 
 import org.antlr.v4.runtime.*;
 import org.junit.Assert;
-import org.junit.Test;
-
 import java.io.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 
-// TODO: rename subclasses to *not* use Command in their name
-// TODO: instead of one command per class, split by command type
-//       and have multiple tests per class.
 public abstract class CommandTest {
 
-    public abstract String getCommandName();
-
-    public abstract String getAnchorDir();
-
-    @Test
-    public void testParse() throws IOException {
-        String testDir = getAnchorDir();
+    public void test(String commandName, String testDir) throws IOException {
         if (testDir == null)
-            return;
+            Assert.fail("test dir cannot be empty");
 
         String markerPath = getClass().getResource(testDir).getPath();
         File dir = new File(markerPath.substring(0, markerPath.lastIndexOf('/')));
@@ -66,13 +55,15 @@ public abstract class CommandTest {
             }
         }
         int failureCount = falseNegative + falsePositive;
-        System.out.printf("result of %s: accuracy -> %d / %d (%f%%), false pos rate -> %d / %d (%f%%), false neg rate -> %d / %d (%f%%)\n",
-                getCommandName(),
+        String summary = String.format("result of %s: accuracy -> %d / %d (%f), false pos rate -> %d / %d (%f), false neg rate -> %d / %d (%f)\n",
+                commandName,
                 fileCount-failureCount, fileCount, (double) (fileCount - failureCount) / fileCount * 100,
                 falsePositive, failureCount, (double) falsePositive / failureCount * 100,
                 falseNegative, failureCount, (double) falseNegative / failureCount * 100);
+        System.out.printf(summary);
         if (failureCount > 0) {
-            Assert.fail();
+            Assert.fail(summary);
         }
     }
+
 }

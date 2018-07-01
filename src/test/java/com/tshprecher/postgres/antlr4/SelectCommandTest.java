@@ -1,12 +1,14 @@
 package com.tshprecher.postgres.antlr4;
 
+import org.junit.Test;
+
+import java.io.IOException;
+
 public class SelectCommandTest extends CommandTest {
 
-    public String getCommandName() {
-        return "SELECT";
+    @Test
+    public void testSelect() throws IOException {
+        super.test("SELECT", "/sql/select/");
     }
 
-    public String getAnchorDir() {
-        return "/sql/select/";
-    }
 }
