@@ -11,4 +11,9 @@ public class SelectCommandTest extends CommandTest {
         super.test("SELECT", "/sql/select/");
     }
 
+    @Test
+    public void testSelectInto() throws IOException {
+        super.test("SELECT INTO", "/sql/select_into/");
+    }
+
 }

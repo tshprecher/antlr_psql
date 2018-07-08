@@ -25,35 +25,296 @@ parser grammar PostgreSQLParser;
 options { tokenVocab=PostgreSQLLexer; }
 
 // Top Level Description
+// TODO: consolidate rollback* into a rollback_stmt a la alter/create/drop
 stmt
-    : select_stmt | (OPEN_PAREN select_stmt CLOSE_PAREN)
-    | create_stmt
+    : (abort_stmt
+     | alter_stmt
+     | analyze_stmt
+     | create_stmt
+     | close_stmt
+     | cluster_stmt
+     | comment_stmt
+     | commit_stmt
+     | commit_prepared_stmt
+     | copy_stmt
+     | deallocate_stmt
+     | declare_stmt
+     | delete_stmt
+     | discard_stmt
+     | drop_stmt
+     | execute_stmt
+     | explain_stmt
+     | fetch_stmt
+     | grant_stmt
+     | import_foreign_schema_stmt
+     | insert_stmt
+     | listen_stmt
+     | load_stmt
+     | lock_stmt
+     | move_stmt
+     | notify_stmt
+     | prepare_stmt
+     | prepare_transaction_stmt
+     | reassign_owned_stmt
+     | refresh_materialized_view_stmt
+     | reindex_stmt
+     | release_savepoint_stmt
+     | reset_stmt
+     | revoke_stmt
+     | rollback_stmt
+     | rollback_prepared_stmt
+     | rollback_to_savepoint_stmt
+     | savepoint_stmt
+     | security_label_stmt
+     | select_stmt | (OPEN_PAREN select_stmt CLOSE_PAREN)
+     | set_stmt
+     | set_constraints_stmt
+     | set_role_stmt
+     | set_session_authorization_stmt
+     | set_transaction_stmt
+     | show_stmt
+     | truncate_stmt
+     | unlisten_stmt
+     | update_stmt
+     | vacuum_stmt
+     | values_stmt)
     EOF
     ;
 
-values_stmt
-    : (VALUES expr_list_list) | (VALUES expr_list)
-      order_by_clause?
-      limit_clause?
-      offset_clause?
-      fetch_clause?
+abort_stmt
+    : identifier
     ;
 
-select_stmt
-    : SELECT selector_clause
-      from_clause?
-      where_clause?
-      group_by_clause?
-      having_clause?
-      window_clause?
-      combine_clause?
-      order_by_clause?
-      limit_clause?
-      offset_clause?
-      fetch_clause?
-      for_clause?
+alter_stmt
+    : alter_aggregate_stmt
+    | alter_collation_stmt
+    | alter_conversion_stmt
+    | alter_database_stmt
+    | alter_default_privileges_stmt
+    | alter_domain_stmt
+    | alter_event_trigger_stmt
+    | alter_extension_stmt
+    | alter_foreign_data_wrapper_stmt
+    | alter_foreign_table_stmt
+    | alter_function_stmt
+    | alter_group_stmt
+    | alter_index_stmt
+    | alter_language_stmt
+    | alter_large_object_stmt
+    | alter_materialize_view_stmt
+    | alter_operator_stmt
+    | alter_operator_class_stmt
+    | alter_operator_family_stmt
+    | alter_policy_stmt
+    | alter_publication_stmt
+    | alter_role_stmt
+    | alter_rule_stmt
+    | alter_schema_stmt
+    | alter_sequence_stmt
+    | alter_server_stmt
+    | alter_statistics_stmt
+    | alter_subscription_stmt
+    | alter_system_stmt
+    | alter_table_stmt
+    | alter_tablespace_stmt
+    | alter_text_search_config_stmt
+    | alter_text_search_dict_stmt
+    | alter_text_search_parser_stmt
+    | alter_text_search_template_stmt
+    | alter_trigger_stmt
+    | alter_type_stmt
+    | alter_user_stmt
+    | alter_user_mapping_stmt
+    | alter_view_stmt
+    ;
+    
+alter_aggregate_stmt
+    : todo_implement
     ;
 
+alter_collation_stmt
+    : todo_implement
+    ;
+
+alter_conversion_stmt
+    : todo_implement
+    ;
+
+alter_database_stmt
+    : todo_implement
+    ;
+
+alter_default_privileges_stmt
+    : todo_implement
+    ;
+
+alter_domain_stmt
+    : todo_implement
+    ;
+
+alter_event_trigger_stmt
+    : todo_implement
+    ;
+
+alter_extension_stmt
+    : todo_implement
+    ;
+
+alter_foreign_data_wrapper_stmt
+    : todo_implement
+    ;
+
+alter_foreign_table_stmt
+    : todo_implement
+    ;
+
+alter_function_stmt
+    : todo_implement
+    ;
+
+alter_group_stmt
+    : todo_implement
+    ;
+
+alter_index_stmt
+    : todo_implement
+    ;
+
+alter_language_stmt
+    : todo_implement
+    ;
+
+alter_large_object_stmt
+    : todo_implement
+    ;
+
+alter_materialize_view_stmt
+    : todo_implement
+    ;
+
+alter_operator_stmt
+    : todo_implement
+    ;
+
+alter_operator_class_stmt
+    : todo_implement
+    ;
+
+alter_operator_family_stmt
+    : todo_implement
+    ;
+
+alter_policy_stmt
+    : todo_implement
+    ;
+
+alter_publication_stmt
+    : todo_implement
+    ;
+
+alter_role_stmt
+    : todo_implement
+    ;
+
+alter_rule_stmt
+    : todo_implement
+    ;
+
+alter_schema_stmt
+    : todo_implement
+    ;
+
+alter_sequence_stmt
+    : todo_implement
+    ;
+
+alter_server_stmt
+    : todo_implement
+    ;
+
+alter_statistics_stmt
+    : todo_implement
+    ;
+
+alter_subscription_stmt
+    : todo_implement
+    ;
+
+alter_system_stmt
+    : todo_implement
+    ;
+
+alter_table_stmt
+    : todo_implement
+    ;
+
+alter_tablespace_stmt
+    : todo_implement
+    ;
+
+alter_text_search_config_stmt
+    : todo_implement
+    ;
+
+alter_text_search_dict_stmt
+    : todo_implement
+    ;
+
+alter_text_search_parser_stmt
+    : todo_implement
+    ;
+
+alter_text_search_template_stmt
+    : todo_implement
+    ;
+
+alter_trigger_stmt
+    : todo_implement
+    ;
+
+alter_type_stmt
+    : todo_implement
+    ;
+
+alter_user_stmt
+    : todo_implement
+    ;
+
+alter_user_mapping_stmt
+    : todo_implement
+    ;
+
+alter_view_stmt
+    : todo_implement
+    ;
+
+analyze_stmt
+    : todo_implement
+    ;
+
+close_stmt
+    : todo_implement
+    ;
+
+cluster_stmt
+    : todo_implement
+    ;
+
+comment_stmt
+    : todo_implement
+    ;
+
+commit_stmt
+    : todo_implement
+    ;
+
+commit_prepared_stmt
+    : todo_implement
+    ;
+
+copy_stmt
+    : todo_implement
+    ;
 
 create_stmt
     : create_access_method_stmt
@@ -79,6 +340,22 @@ create_stmt
     | create_rule_stmt
     | create_schema_stmt
     | create_sequence_stmt
+    | create_server_stmt
+    | create_statistics_stmt
+    | create_subscription_stmt
+    | create_table_stmt
+    | create_table_as_stmt
+    | create_tablespace_stmt
+    | create_text_search_config_stmt
+    | create_text_search_dict_stmt
+    | create_text_search_parser_stmt
+    | create_text_search_template_stmt
+    | create_transform_stmt
+    | create_trigger_stmt
+    | create_type_stmt
+    | create_user_stmt
+    | create_user_mapping_stmt
+    | create_view_stmt
     ;
 
 create_access_method_stmt
@@ -351,6 +628,454 @@ create_sequence_stmt
       (MAXVALUE maxvalue=INTEGER_LITERAL | NO MAXVALUE)?
       (START WITH? start=INTEGER_LITERAL)? (CACHE cache=INTEGER_LITERAL)? (NO? CYCLE)?
       (OWNED BY ((table_name_=identifier DOT column_name_=identifier) | NONE))?
+    ;
+
+create_server_stmt
+    : todo_implement
+    ;
+
+create_statistics_stmt
+    : todo_implement
+    ;
+
+create_subscription_stmt
+    : todo_implement
+    ;
+
+create_table_stmt
+    : todo_implement
+    ;
+
+create_table_as_stmt
+    : todo_implement
+    ;
+
+create_tablespace_stmt
+    : todo_implement
+    ;
+
+create_text_search_config_stmt
+    : todo_implement
+    ;
+
+create_text_search_dict_stmt
+    : todo_implement
+    ;
+
+create_text_search_parser_stmt
+    : todo_implement
+    ;
+
+create_text_search_template_stmt
+    : todo_implement
+    ;
+
+create_transform_stmt
+    : todo_implement
+    ;
+
+create_trigger_stmt
+    : todo_implement
+    ;
+
+create_type_stmt
+    : todo_implement
+    ;
+
+create_user_stmt
+    : todo_implement
+    ;
+
+create_user_mapping_stmt
+    : todo_implement
+    ;
+
+create_view_stmt
+    : todo_implement
+    ;
+
+deallocate_stmt
+    : todo_implement
+    ;
+
+declare_stmt
+    : todo_implement
+    ;
+
+delete_stmt
+    : todo_implement
+    ;
+
+discard_stmt
+    : todo_implement
+    ;
+
+drop_stmt
+    : drop_access_method_stmt
+    | drop_aggregate_stmt
+    | drop_cast_stmt
+    | drop_collation_stmt
+    | drop_conversion_stmt
+    | drop_database_stmt
+    | drop_domain_stmt
+    | drop_event_trigger_stmt
+    | drop_extension_stmt
+    | drop_foreign_data_wrapper_stmt
+    | drop_foreign_table_stmt
+    | drop_function_stmt
+    | drop_group_stmt
+    | drop_index_stmt
+    | drop_language_stmt
+    | drop_materialized_view_stmt
+    | drop_operator_stmt
+    | drop_operator_class_stmt
+    | drop_operator_family_stmt
+    | drop_owned_stmt
+    | drop_policy_stmt
+    | drop_publication_stmt
+    | drop_role_stmt
+    | drop_rule_stmt
+    | drop_schema_stmt
+    | drop_sequence_stmt
+    | drop_server_stmt
+    | drop_statistics_stmt
+    | drop_subscription_stmt
+    | drop_table_stmt
+    | drop_tablespace_stmt
+    | drop_text_search_config_stmt
+    | drop_text_search_dict_stmt
+    | drop_text_search_parser_stmt
+    | drop_text_search_template_stmt
+    | drop_transform_stmt
+    | drop_trigger_stmt
+    | drop_type_stmt
+    | drop_user_stmt
+    | drop_user_mapping_stmt
+    | drop_view_stmt
+    ;
+
+
+drop_access_method_stmt
+    : todo_implement
+    ;
+
+drop_aggregate_stmt
+    : todo_implement
+    ;
+
+drop_cast_stmt
+    : todo_implement
+    ;
+
+drop_collation_stmt
+    : todo_implement
+    ;
+
+drop_conversion_stmt
+    : todo_implement
+    ;
+
+drop_database_stmt
+    : todo_implement
+    ;
+
+drop_domain_stmt
+    : todo_implement
+    ;
+
+drop_event_trigger_stmt
+    : todo_implement
+    ;
+
+drop_extension_stmt
+    : todo_implement
+    ;
+
+drop_foreign_data_wrapper_stmt
+    : todo_implement
+    ;
+
+drop_foreign_table_stmt
+    : todo_implement
+    ;
+
+drop_function_stmt
+    : todo_implement
+    ;
+
+drop_group_stmt
+    : todo_implement
+    ;
+
+drop_index_stmt
+    : todo_implement
+    ;
+
+drop_language_stmt
+    : todo_implement
+    ;
+
+drop_materialized_view_stmt
+    : todo_implement
+    ;
+
+drop_operator_stmt
+    : todo_implement
+    ;
+
+drop_operator_class_stmt
+    : todo_implement
+    ;
+
+drop_operator_family_stmt
+    : todo_implement
+    ;
+
+drop_owned_stmt
+    : todo_implement
+    ;
+
+drop_policy_stmt
+    : todo_implement
+    ;
+
+drop_publication_stmt
+    : todo_implement
+    ;
+
+drop_role_stmt
+    : todo_implement
+    ;
+
+drop_rule_stmt
+    : todo_implement
+    ;
+
+drop_schema_stmt
+    : todo_implement
+    ;
+
+drop_sequence_stmt
+    : todo_implement
+    ;
+
+drop_server_stmt
+    : todo_implement
+    ;
+
+drop_statistics_stmt
+    : todo_implement
+    ;
+
+drop_subscription_stmt
+    : todo_implement
+    ;
+
+drop_table_stmt
+    : todo_implement
+    ;
+
+drop_tablespace_stmt
+    : todo_implement
+    ;
+
+drop_text_search_config_stmt
+    : todo_implement
+    ;
+
+drop_text_search_dict_stmt
+    : todo_implement
+    ;
+
+drop_text_search_parser_stmt
+    : todo_implement
+    ;
+
+drop_text_search_template_stmt
+    : todo_implement
+    ;
+
+drop_transform_stmt
+    : todo_implement
+    ;
+
+drop_trigger_stmt
+    : todo_implement
+    ;
+
+drop_type_stmt
+    : todo_implement
+    ;
+
+drop_user_stmt
+    : todo_implement
+    ;
+
+drop_user_mapping_stmt
+    : todo_implement
+    ;
+
+drop_view_stmt
+    : todo_implement
+    ;
+
+execute_stmt
+    : todo_implement
+    ;
+
+explain_stmt
+    : todo_implement
+    ;
+
+fetch_stmt
+    : todo_implement
+    ;
+
+grant_stmt
+    : todo_implement
+    ;
+
+import_foreign_schema_stmt
+    : todo_implement
+    ;
+
+insert_stmt
+    : todo_implement
+    ;
+
+listen_stmt
+    : todo_implement
+    ;
+
+load_stmt
+    : todo_implement
+    ;
+
+lock_stmt
+    : todo_implement
+    ;
+
+move_stmt
+    : todo_implement
+    ;
+
+notify_stmt
+    : todo_implement
+    ;
+
+prepare_stmt
+    : todo_implement
+    ;
+
+prepare_transaction_stmt
+    : todo_implement
+    ;
+
+reassign_owned_stmt
+    : todo_implement
+    ;
+
+refresh_materialized_view_stmt
+    : todo_implement
+    ;
+
+reindex_stmt
+    : todo_implement
+    ;
+
+release_savepoint_stmt
+    : todo_implement
+    ;
+
+reset_stmt
+    : todo_implement
+    ;
+
+revoke_stmt
+    : todo_implement
+    ;
+
+rollback_stmt
+    : todo_implement
+    ;
+
+rollback_prepared_stmt
+    : todo_implement
+    ;
+
+rollback_to_savepoint_stmt
+    : todo_implement
+    ;
+
+savepoint_stmt
+    : todo_implement
+    ;
+
+security_label_stmt
+    : todo_implement
+    ;
+
+select_stmt
+    : SELECT selector_clause
+      from_clause?
+      where_clause?
+      group_by_clause?
+      having_clause?
+      window_clause?
+      combine_clause?
+      order_by_clause?
+      limit_clause?
+      offset_clause?
+      fetch_clause?
+      for_clause?
+    ;
+
+set_stmt
+    : todo_implement
+    ;
+
+set_constraints_stmt
+    : todo_implement
+    ;
+
+set_role_stmt
+    : todo_implement
+    ;
+
+set_session_authorization_stmt
+    : todo_implement
+    ;
+
+set_transaction_stmt
+    : todo_implement
+    ;
+
+show_stmt
+    : todo_implement
+    ;
+
+truncate_stmt
+    : todo_implement
+    ;
+
+unlisten_stmt
+    : todo_implement
+    ;
+
+update_stmt
+    : todo_implement
+    ;
+
+vacuum_stmt
+    : todo_implement
+    ;
+
+values_stmt
+    : (VALUES expr_list_list) | (VALUES expr_list)
+      order_by_clause?
+      limit_clause?
+      offset_clause?
+      fetch_clause?
     ;
 
 selector_clause
@@ -782,6 +1507,7 @@ identifier
     ;
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
+todo_implement      : identifier;
 correlation_name    : identifier;
 // TODO: rename
 column_name         : identifier;

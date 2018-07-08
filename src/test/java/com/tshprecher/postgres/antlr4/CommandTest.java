@@ -8,8 +8,11 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public abstract class CommandTest {
 
     public void test(String commandName, String testDir) throws IOException {
-        if (testDir == null)
+        if (testDir == null) {
+            printSummary(commandName, 0, 0, 0);
             Assert.fail("test dir cannot be empty");
+            return;
+        }
 
         String markerPath = getClass().getResource(testDir).getPath();
         File dir = new File(markerPath.substring(0, markerPath.lastIndexOf('/')));
@@ -54,16 +57,20 @@ public abstract class CommandTest {
                 }
             }
         }
+        printSummary(commandName, fileCount, falseNegative, falsePositive);
+        if (falseNegative + falsePositive > 0) {
+            Assert.fail("some tests failed");
+        }
+    }
+
+    private void printSummary(String commandName, int fileCount, int falseNegative, int falsePositive) {
         int failureCount = falseNegative + falsePositive;
-        String summary = String.format("result of %s: accuracy -> %d / %d (%f), false pos rate -> %d / %d (%f), false neg rate -> %d / %d (%f)\n",
+        String summary = String.format("result: %s\taccuracy: %d / %d (%f)\tfalse pos rate: %d / %d (%f)\tfalse neg rate: %d / %d (%f)\n",
                 commandName,
                 fileCount-failureCount, fileCount, (double) (fileCount - failureCount) / fileCount * 100,
                 falsePositive, failureCount, (double) falsePositive / failureCount * 100,
                 falseNegative, failureCount, (double) falseNegative / failureCount * 100);
         System.out.printf(summary);
-        if (failureCount > 0) {
-            Assert.fail(summary);
-        }
     }
 
 }

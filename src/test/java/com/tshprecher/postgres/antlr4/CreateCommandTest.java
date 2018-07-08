@@ -5,14 +5,6 @@ import org.junit.Test;
 
 public class CreateCommandTest extends CommandTest {
 
-    public String getCommandName() {
-        return "";
-    }
-
-    public String getAnchorDir() {
-        return "";
-    }
-
     @Test
     public void testCreateAccessMethod() throws IOException {
         super.test("CREATE ACCESS METHOD", null);
@@ -121,5 +113,85 @@ public class CreateCommandTest extends CommandTest {
     @Test
     public void testCreateSequence() throws IOException {
         super.test("CREATE SEQUENCE", "/sql/create_sequence/");
+    }
+
+    @Test
+    public void testCreateServer() throws IOException {
+        super.test("CREATE SERVER", "/sql/create_server/");
+    }
+
+    @Test
+    public void testCreateStatistics() throws IOException {
+        super.test("CREATE STATISTICS", "/sql/create_statistics/");
+    }
+
+    @Test
+    public void testCreateSubscription() throws IOException {
+        super.test("CREATE SUBSCRIPTION", "/sql/create_subscription/");
+    }
+
+    @Test
+    public void testCreateTable() throws IOException {
+        super.test("CREATE TABLE", "/sql/create_table/");
+    }
+
+    @Test
+    public void testCreateTableAs() throws IOException {
+        super.test("CREATE TABLE AS", "/sql/create_table_as/");
+    }
+
+    @Test
+    public void testCreateTablespace() throws IOException {
+        super.test("CREATE TABLESPACE", "/sql/create_tablespace/");
+    }
+
+    @Test
+    public void testCreateTextSearchConfig() throws IOException {
+        super.test("CREATE TEXT SEARCH CONFIGURATION", "/sql/create_text_search_configuration/");
+    }
+
+    @Test
+    public void testCreateTextSearchDict() throws IOException {
+        super.test("CREATE TEXT SEARCH DICTIONARY", "/sql/create_text_search_dictionary/");
+    }
+
+    @Test
+    public void testCreateSearchParser() throws IOException {
+        super.test("CREATE SEARCH PARSER", "/sql/create_search_parser/");
+    }
+
+    @Test
+    public void testCreateSearchTemplate() throws IOException {
+        super.test("CREATE SEARCH TEMPLATE", "/sql/create_search_template/");
+    }
+
+    @Test
+    public void testCreateTransform() throws IOException {
+        super.test("CREATE TRANSFORM", "/sql/create_transform/");
+    }
+
+    @Test
+    public void testCreateTrigger() throws IOException {
+        super.test("CREATE TRIGGER", "/sql/create_trigger/");
+    }
+
+    @Test
+    public void testCreateType() throws IOException {
+        super.test("CREATE TYPE", "/sql/create_type/");
+    }
+
+    @Test
+    public void testCreateUser() throws IOException {
+        super.test("CREATE USER", "/sql/create_user/");
+    }
+
+    @Test
+    public void testCreateUserMapping() throws IOException {
+        super.test("CREATE USER MAPPING", "/sql/create_user_mapping/");
+    }
+
+    @Test
+    public void testCreateView() throws IOException {
+        super.test("CREATE VIEW", "/sql/create_view/");
     }
 }
