@@ -1,0 +1,4 @@
+#! /bin/bash
+
+cd ..
+mvn test 2> /dev/null | grep "result:" | sort
