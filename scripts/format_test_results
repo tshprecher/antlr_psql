@@ -1,0 +1,49 @@
+#!/usr/bin/python
+
+"""
+Generates html formatted test results by command type. To generate, run the following in ./scripts/
+
+$ ./get_test_output | ./format_test_result
+
+"""
+
+import sys
+
+def main():
+    results = []
+    for line in sys.stdin:
+        result = {}
+        r = line.split("\t")
+        result['cmd'] = r[0].split(":")[1]
+        result['accuracy'] = r[1].split(":")[1]
+        result['false_pos_rate'] = r[2].split(":")[1]
+        result['false_neg_rate'] = r[3].split(":")[1]
+        results.append(result)
+
+    print_html(results)
+
+def print_html(results):
+    print "<html>"
+    print "<style>table {border-collapse: collapse;} th, td {text-align: left; border: 1px solid black;}</style>"
+    print "<body>"
+    print "<table>"
+    print"\t<tr>\n\t\t<th>Command</th>\n\t\t<th>Accuracy</th>\n\t\t<th>False Pos Rate</th>\n\t\t<th>False Neg Rate</th>\n\t</tr>"
+
+    for r in results:
+        accuracy = float(r['accuracy'].split(" ")[1][1:-2])
+        text_color = "red"
+        if accuracy > 95:
+            text_color = "green"
+        elif accuracy > 80:
+            text_color = "orange"
+        
+        print "\t<tr style=\"color: %s\">\n\t\t<td>%s</td>\n\t\t<td>%s</td>\n\t\t<td>%s</td>\n\t\t<td>%s</td>\n\t</tr>" % \
+            (text_color, r['cmd'], r['accuracy'], r['false_pos_rate'], r['false_neg_rate'])
+
+    print "</table>"
+    print "</body>"
+    print "</html>"
+        
+if __name__ == "__main__":
+    main()
+
