@@ -43,7 +43,7 @@ function check_antlr_jar
 {
     if [ ! -f "$1" ]; then
         echo "No ANTLR JAR found, downloading it now..."
-        curl -o "$1" "http://www.antlr.org/download/antlr-$antlr_version-complete.jar"
+        curl "https://www.antlr.org/download/antlr-$antlr_version-complete.jar" > "$1"
     fi
 }
 
@@ -139,6 +139,6 @@ java -cp "$antlr_jar" org.antlr.v4.Tool "$grammar_file"
 write_main_class "$main_class_file" "$lexer_name" "$grammar_name" "$input" "$rule_name"
 
 # Compile all .java source files and run the main class
-javac -cp "../target/classes/:$antlr_jar:." *.java
-java  -cp "../target/classes/:$antlr_jar:." "$main_class_name"
+javac -cp "target/classes/:$antlr_jar:." *.java
+java  -cp "target/classes/:$antlr_jar:." "$main_class_name"
 rm *.class *.java
