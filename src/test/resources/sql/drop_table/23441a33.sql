@@ -1,2 +1,2 @@
--- file:lock.sql ln:127 expect:true
+-- file:lock.sql ln:64 expect:true
 DROP TABLE lock_tbl1

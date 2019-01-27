@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3736 expect:true
+-- file:plpgsql.sql ln:4015 expect:true
 drop function scope_test()

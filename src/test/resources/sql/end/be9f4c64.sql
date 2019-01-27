@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:420 expect:false
+-- file:plpgsql.sql ln:4191 expect:false
 end loop

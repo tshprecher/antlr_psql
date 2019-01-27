@@ -1,4 +1,4 @@
--- file:select_parallel.sql ln:154 expect:true
+-- file:select_parallel.sql ln:85 expect:true
 explain (costs off)
 select * from
   (select count(*) from tenk1 where thousand > 99) ss

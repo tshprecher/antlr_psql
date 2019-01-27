@@ -1,2 +1,2 @@
--- file:domain.sql ln:400 expect:true
+-- file:domain.sql ln:298 expect:true
 drop table domdeftest

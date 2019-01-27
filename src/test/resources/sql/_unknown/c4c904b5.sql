@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:359 expect:false
+-- file:alter_table.sql ln:324 expect:false
 RETURN $1

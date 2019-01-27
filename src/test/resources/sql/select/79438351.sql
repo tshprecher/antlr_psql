@@ -1,3 +1,3 @@
--- file:window.sql ln:1109 expect:true
+-- file:window.sql ln:547 expect:true
 SELECT VAR_POP(n::bigint) OVER (ORDER BY i ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
   FROM (VALUES(1,600),(2,470),(3,170),(4,430),(5,300)) r(i,n)

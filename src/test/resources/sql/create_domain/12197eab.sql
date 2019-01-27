@@ -1,2 +1,2 @@
--- file:domain.sql ln:403 expect:true
+-- file:domain.sql ln:301 expect:true
 create domain con as integer

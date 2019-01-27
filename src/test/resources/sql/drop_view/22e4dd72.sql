@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1285 expect:true
+-- file:triggers.sql ln:1302 expect:true
 drop view my_view

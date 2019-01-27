@@ -1,2 +1,2 @@
--- file:vacuum.sql ln:76 expect:true
+-- file:vacuum.sql ln:79 expect:true
 ANALYZE vacparted(a,b,b)

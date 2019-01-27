@@ -1,2 +1,2 @@
--- file:portals.sql ln:494 expect:true
+-- file:portals.sql ln:518 expect:true
 move backward all in c

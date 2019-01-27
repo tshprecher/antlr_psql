@@ -1,2 +1,2 @@
--- file:sequence.sql ln:46 expect:false
+-- file:sequence.sql ln:46 expect:true
 ALTER SEQUENCE sequence_test11 AS int

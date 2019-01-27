@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:604 expect:true
+-- file:oidjoins.sql ln:596 expect:true
 SELECT	ctid, typnamespace
 FROM	pg_catalog.pg_type fk
 WHERE	typnamespace != 0 AND

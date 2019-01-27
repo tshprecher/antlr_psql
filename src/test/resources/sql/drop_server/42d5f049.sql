@@ -1,2 +1,2 @@
--- file:foreign_data.sql ln:220 expect:true
+-- file:foreign_data.sql ln:207 expect:true
 DROP SERVER s2

@@ -1,2 +1,2 @@
--- file:inherit.sql ln:479 expect:true
+-- file:inherit.sql ln:450 expect:true
 analyze patest1

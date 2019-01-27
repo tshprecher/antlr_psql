@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1270 expect:true
+-- file:triggers.sql ln:1287 expect:true
 drop table upsert

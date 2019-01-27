@@ -1,2 +1,2 @@
--- file:create_am.sql ln:40 expect:true
+-- file:create_am.sql ln:42 expect:true
 BEGIN

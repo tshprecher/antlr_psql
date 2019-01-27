@@ -1,2 +1,2 @@
--- file:vacuum.sql ln:98 expect:true
+-- file:vacuum.sql ln:81 expect:true
 DROP TABLE vacparted

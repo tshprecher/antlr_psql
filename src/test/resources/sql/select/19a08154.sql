@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:588 expect:true
+-- file:oidjoins.sql ln:580 expect:true
 SELECT	ctid, prslextype
 FROM	pg_catalog.pg_ts_parser fk
 WHERE	prslextype != 0 AND

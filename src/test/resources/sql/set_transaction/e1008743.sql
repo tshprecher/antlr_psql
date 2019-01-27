@@ -1,2 +1,2 @@
--- file:triggers.sql ln:562 expect:true
+-- file:triggers.sql ln:579 expect:true
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE

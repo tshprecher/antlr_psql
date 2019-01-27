@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2163 expect:false
+-- file:plpgsql.sql ln:2141 expect:false
 Johnny Yuma

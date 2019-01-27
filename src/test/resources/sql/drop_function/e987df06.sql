@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1271 expect:true
+-- file:triggers.sql ln:1288 expect:true
 drop function upsert_before_func()

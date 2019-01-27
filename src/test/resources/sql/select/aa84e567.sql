@@ -1,4 +1,4 @@
--- file:json.sql ln:584 expect:true
+-- file:json.sql ln:561 expect:true
 select value, json_typeof(value)
   from (values (json '123.4'),
                (json '-1'),

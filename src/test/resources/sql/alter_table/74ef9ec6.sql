@@ -1,3 +1,3 @@
--- file:alter_table.sql ln:488 expect:true
+-- file:alter_table.sql ln:453 expect:true
 ALTER TABLE FKTABLE ADD CONSTRAINT fknd FOREIGN KEY(ftest1) REFERENCES pktable
   ON DELETE CASCADE ON UPDATE NO ACTION NOT DEFERRABLE

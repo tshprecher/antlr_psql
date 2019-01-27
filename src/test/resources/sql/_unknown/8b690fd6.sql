@@ -1,4 +1,4 @@
--- file:triggers.sql ln:278 expect:false
+-- file:triggers.sql ln:300 expect:false
 123	999
 456	999
 \.

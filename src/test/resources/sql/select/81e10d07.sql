@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:236 expect:true
+-- file:oidjoins.sql ln:232 expect:true
 SELECT	ctid, extowner
 FROM	pg_catalog.pg_extension fk
 WHERE	extowner != 0 AND

@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:2744 expect:false
+-- file:plpgsql.sql ln:2957 expect:false
 begin
   open c

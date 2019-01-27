@@ -1,2 +1,2 @@
--- file:strings.sql ln:568 expect:true
+-- file:strings.sql ln:536 expect:true
 SELECT lpad('hi', 5, '')

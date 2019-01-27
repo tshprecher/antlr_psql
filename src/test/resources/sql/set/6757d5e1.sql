@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:776 expect:true
+-- file:jsonb.sql ln:753 expect:true
 SET enable_sort = on

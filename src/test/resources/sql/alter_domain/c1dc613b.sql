@@ -1,2 +1,2 @@
--- file:domain.sql ln:396 expect:true
+-- file:domain.sql ln:294 expect:true
 alter domain ddef1 drop default

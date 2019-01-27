@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1968 expect:true
+-- file:triggers.sql ln:1752 expect:true
 select * from table2

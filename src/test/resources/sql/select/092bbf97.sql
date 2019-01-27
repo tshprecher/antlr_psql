@@ -1,2 +1,0 @@
--- file:jsonb.sql ln:1154 expect:true
-select '12345.0000000000000000000000000000000000000000000005'::jsonb::numeric

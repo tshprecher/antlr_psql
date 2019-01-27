@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:438 expect:true
+-- file:rowtypes.sql ln:336 expect:true
 SELECT (NULL::compositetable).a

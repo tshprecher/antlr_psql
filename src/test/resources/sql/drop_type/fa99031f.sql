@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3121 expect:true
+-- file:plpgsql.sql ln:3334 expect:true
 drop type compostype

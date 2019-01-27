@@ -1,4 +1,4 @@
--- file:float8.sql ln:209 expect:true
+-- file:float8.sql ln:203 expect:true
 SELECT x,
        atand(x),
        atand(x) IN (-90,-45,0,45,90) AS atand_exact

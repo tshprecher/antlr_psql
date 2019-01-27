@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:560 expect:true
+-- file:oidjoins.sql ln:552 expect:true
 SELECT	ctid, dictowner
 FROM	pg_catalog.pg_ts_dict fk
 WHERE	dictowner != 0 AND

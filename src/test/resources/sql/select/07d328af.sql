@@ -1,2 +1,2 @@
--- file:inherit.sql ln:635 expect:true
+-- file:inherit.sql ln:604 expect:true
 select * from cnullparent where f1 = 2

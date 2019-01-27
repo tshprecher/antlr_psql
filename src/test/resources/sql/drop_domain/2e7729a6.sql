@@ -1,2 +1,2 @@
--- file:domain.sql ln:723 expect:true
+-- file:domain.sql ln:613 expect:true
 drop domain inotnull

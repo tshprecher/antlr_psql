@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:397 expect:true
+-- file:hs_standby_disallowed.sql ln:10 expect:true
 commit

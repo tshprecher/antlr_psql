@@ -1,4 +1,4 @@
--- file:alter_table.sql ln:2229 expect:false
+-- file:alter_table.sql ln:2161 expect:true
 CREATE TABLE range_parted (
 	a int,
 	b int

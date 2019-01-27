@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:2541 expect:true
+-- file:alter_table.sql ln:2368 expect:true
 drop table p1

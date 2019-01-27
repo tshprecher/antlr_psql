@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:396 expect:true
+-- file:oidjoins.sql ln:388 expect:true
 SELECT	ctid, proowner
 FROM	pg_catalog.pg_proc fk
 WHERE	proowner != 0 AND

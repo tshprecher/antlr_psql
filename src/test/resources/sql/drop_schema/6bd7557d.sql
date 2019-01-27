@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1851 expect:true
+-- file:alter_table.sql ln:1800 expect:true
 DROP SCHEMA alter2

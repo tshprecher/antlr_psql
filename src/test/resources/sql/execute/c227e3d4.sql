@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2227 expect:false
+-- file:plpgsql.sql ln:2205 expect:false
 execute 'select * from '||$1||' limit 1' into _rt

@@ -1,2 +1,2 @@
--- file:insert.sql ln:222 expect:true
+-- file:insert.sql ln:181 expect:true
 truncate list_parted

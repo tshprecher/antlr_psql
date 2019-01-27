@@ -1,2 +1,2 @@
--- file:inherit.sql ln:636 expect:true
+-- file:inherit.sql ln:605 expect:true
 drop table cnullparent cascade

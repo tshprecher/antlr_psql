@@ -1,4 +1,4 @@
--- file:join.sql ln:761 expect:true
+-- file:join.sql ln:752 expect:true
 SELECT * FROM
 ( SELECT 1 as key1 ) sub1
 LEFT JOIN

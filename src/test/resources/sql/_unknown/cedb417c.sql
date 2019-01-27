@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2743 expect:false
+-- file:plpgsql.sql ln:2956 expect:false
 x integer

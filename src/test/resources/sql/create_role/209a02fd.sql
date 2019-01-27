@@ -1,2 +1,2 @@
--- file:insert.sql ln:493 expect:true
+-- file:insert.sql ln:364 expect:true
 create role regress_coldesc_role

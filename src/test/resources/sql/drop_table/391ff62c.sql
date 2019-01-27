@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1122 expect:true
+-- file:triggers.sql ln:1139 expect:true
 drop table parent, child

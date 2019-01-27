@@ -1,2 +1,2 @@
--- file:gist.sql ln:36 expect:true
+-- file:gist.sql ln:25 expect:true
 vacuum analyze gist_point_tbl

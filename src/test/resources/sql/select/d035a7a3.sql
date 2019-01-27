@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:484 expect:true
+-- file:opr_sanity.sql ln:483 expect:true
 SELECT castsource::regtype, casttarget::regtype, castfunc, castcontext
 FROM pg_cast c
 WHERE c.castmethod = 'b' AND

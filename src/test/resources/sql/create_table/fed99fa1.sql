@@ -1,4 +1,4 @@
--- file:insert.sql ln:89 expect:false
+-- file:insert.sql ln:89 expect:true
 create table range_parted (
 	a text,
 	b int

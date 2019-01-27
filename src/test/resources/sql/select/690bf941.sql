@@ -1,4 +1,4 @@
--- file:join.sql ln:1709 expect:true
+-- file:join.sql ln:1695 expect:true
 select * from
   int8_tbl a left join lateral
   (select b.q1 as bq1, c.q1 as cq1, least(a.q1,b.q1,c.q1) from

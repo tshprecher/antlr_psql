@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1120 expect:true
+-- file:triggers.sql ln:1137 expect:true
 select * from parent

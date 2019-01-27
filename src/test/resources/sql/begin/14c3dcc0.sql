@@ -1,4 +1,4 @@
--- file:triggers.sql ln:805 expect:false
+-- file:triggers.sql ln:822 expect:false
 begin
     if NEW.country_name IS NOT NULL then
         SELECT country_id, continent INTO ctry_id, NEW.continent

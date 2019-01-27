@@ -1,2 +1,2 @@
--- file:privileges.sql ln:910 expect:true
+-- file:privileges.sql ln:909 expect:true
 DROP TABLE testns.acltest1

@@ -1,4 +1,4 @@
--- file:join.sql ln:861 expect:true
+-- file:join.sql ln:852 expect:true
 select nt3.id
 from nt3 as nt3
   left join

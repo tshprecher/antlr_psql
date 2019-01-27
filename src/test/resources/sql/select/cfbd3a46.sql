@@ -1,2 +1,2 @@
--- file:create_index.sql ln:656 expect:true
+-- file:create_index.sql ln:646 expect:true
 SELECT * FROM array_index_op_test WHERE i && '{32}' AND t @> '{AAAAAAA80240}' ORDER BY seqno

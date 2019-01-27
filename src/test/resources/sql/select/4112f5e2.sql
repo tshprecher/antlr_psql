@@ -1,2 +1,2 @@
--- file:numeric.sql ln:874 expect:true
+-- file:numeric.sql ln:851 expect:true
 select div(-9999999999999999999999::numeric,1000000000000000000000)

@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:686 expect:true
+-- file:union.sql ln:326 expect:true
 reset enable_indexonlyscan

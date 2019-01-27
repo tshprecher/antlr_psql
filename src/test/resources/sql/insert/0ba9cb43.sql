@@ -1,4 +1,4 @@
--- file:triggers.sql ln:2080 expect:true
+-- file:triggers.sql ln:1831 expect:true
 insert into trig_table values
   (1, 'one a'),
   (1, 'one b'),

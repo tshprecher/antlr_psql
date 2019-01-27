@@ -1,2 +1,2 @@
--- file:subscription.sql ln:57 expect:false
+-- file:subscription.sql ln:57 expect:true
 DROP SUBSCRIPTION testsub3

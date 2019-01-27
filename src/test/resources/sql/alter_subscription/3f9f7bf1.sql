@@ -1,2 +1,2 @@
--- file:subscription.sql ln:54 expect:false
+-- file:subscription.sql ln:54 expect:true
 ALTER SUBSCRIPTION testsub3 ENABLE

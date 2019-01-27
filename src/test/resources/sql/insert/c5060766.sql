@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:4394 expect:true
+-- file:plpgsql.sql ln:4664 expect:true
 INSERT INTO transition_table_status (level, node_no, status)
   SELECT 1, level1_no, 0 FROM transition_table_level1

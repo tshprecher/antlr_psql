@@ -1,4 +1,4 @@
--- file:join.sql ln:1727 expect:true
+-- file:join.sql ln:1713 expect:true
 explain (verbose, costs off)
 select c.*,a.*,ss1.q1,ss2.q1,ss3.* from
   int8_tbl c left join (

@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3604 expect:true
+-- file:plpgsql.sql ln:3883 expect:true
 select cast_invoker(20150719)

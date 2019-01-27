@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:818 expect:true
+-- file:alter_table.sql ln:783 expect:true
 delete from child

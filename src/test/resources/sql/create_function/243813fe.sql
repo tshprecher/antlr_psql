@@ -1,4 +1,4 @@
--- file:updatable_views.sql ln:840 expect:true
+-- file:updatable_views.sql ln:764 expect:true
 CREATE FUNCTION base_tbl_trig_fn()
 RETURNS trigger AS
 $$

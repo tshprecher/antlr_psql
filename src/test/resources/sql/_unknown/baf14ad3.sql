@@ -1,3 +1,3 @@
--- file:triggers.sql ln:812 expect:false
+-- file:triggers.sql ln:829 expect:false
 else
         NEW.continent := NULL

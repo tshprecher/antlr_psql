@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:600 expect:true
+-- file:oidjoins.sql ln:592 expect:true
 SELECT	ctid, tmpllexize
 FROM	pg_catalog.pg_ts_template fk
 WHERE	tmpllexize != 0 AND

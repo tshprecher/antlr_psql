@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1081 expect:true
+-- file:alter_table.sql ln:1046 expect:true
 alter table renameColumn add column w int

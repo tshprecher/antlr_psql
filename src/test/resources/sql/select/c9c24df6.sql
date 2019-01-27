@@ -1,4 +1,4 @@
--- file:create_misc.sql ln:45 expect:true
+-- file:create_misc.sql ln:40 expect:true
 SELECT *
    INTO TABLE ramp
    FROM road

@@ -1,4 +1,4 @@
--- file:create_table.sql ln:625 expect:false
+-- file:create_table.sql ln:570 expect:true
 CREATE TABLE parted (
 	a text,
 	b int NOT NULL DEFAULT 0,

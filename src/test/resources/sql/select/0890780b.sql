@@ -1,4 +1,4 @@
--- file:alter_table.sql ln:1178 expect:true
+-- file:alter_table.sql ln:1143 expect:true
 select attrelid::regclass, attname, attinhcount, attislocal
 from pg_attribute
 where attnum > 0 and attrelid::regclass in ('depth0', 'depth1', 'depth2')

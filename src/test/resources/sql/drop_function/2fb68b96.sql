@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:4114 expect:true
+-- file:plpgsql.sql ln:4384 expect:true
 drop function inner_func(int)

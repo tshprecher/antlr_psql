@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:928 expect:true
+-- file:jsonb.sql ln:905 expect:true
 select jsonb_pretty('{"a": "test", "b": [1, 2, 3], "c": "test3", "d":{"dd": "test4", "dd2":{"ddd": "test5"}}}')

@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:222 expect:true
+-- file:plpgsql.sql ln:2519 expect:true
 $proc$ language plpgsql

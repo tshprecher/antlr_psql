@@ -1,2 +1,2 @@
--- file:triggers.sql ln:614 expect:true
+-- file:triggers.sql ln:631 expect:true
 DROP TABLE min_updates_test_oids

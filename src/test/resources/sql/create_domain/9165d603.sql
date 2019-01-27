@@ -1,2 +1,2 @@
--- file:domain.sql ln:678 expect:true
+-- file:domain.sql ln:568 expect:true
 create domain di as int

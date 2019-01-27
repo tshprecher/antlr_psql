@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:452 expect:true
+-- file:opr_sanity.sql ln:451 expect:true
 SELECT c.*
 FROM pg_cast c, pg_proc p
 WHERE c.castfunc = p.oid AND

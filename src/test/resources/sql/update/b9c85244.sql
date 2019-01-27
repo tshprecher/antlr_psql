@@ -1,4 +1,4 @@
--- file:triggers.sql ln:858 expect:false
+-- file:triggers.sql ln:875 expect:false
 else
         UPDATE city_table SET city_name = NEW.city_name,
                               population = NEW.population

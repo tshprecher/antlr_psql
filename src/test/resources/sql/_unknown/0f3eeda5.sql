@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2304 expect:false
+-- file:plpgsql.sql ln:2282 expect:false
 raise notice '%

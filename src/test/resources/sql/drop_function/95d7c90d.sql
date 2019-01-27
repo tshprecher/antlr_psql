@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3463 expect:true
+-- file:plpgsql.sql ln:3742 expect:true
 drop function rttest()

@@ -1,4 +1,4 @@
--- file:type_sanity.sql ln:430 expect:true
+-- file:type_sanity.sql ln:406 expect:true
 SELECT p1.rngtypid, p1.rngsubtype, o.opcmethod, o.opcname
 FROM pg_range p1 JOIN pg_opclass o ON o.oid = p1.rngsubopc
 WHERE o.opcmethod != 403 OR

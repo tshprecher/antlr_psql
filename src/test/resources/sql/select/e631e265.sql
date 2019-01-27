@@ -1,2 +1,2 @@
--- file:tsdicts.sql ln:112 expect:true
+-- file:tsdicts.sql ln:107 expect:true
 SELECT ts_lexize('synonym', 'indices')

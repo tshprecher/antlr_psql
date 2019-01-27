@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1047 expect:true
+-- file:triggers.sql ln:1064 expect:true
 create function parent_upd_func()
   returns trigger language plpgsql as
 $$

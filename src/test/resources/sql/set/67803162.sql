@@ -1,2 +1,2 @@
--- file:join.sql ln:2384 expect:true
+-- file:groupingsets.sql ln:396 expect:true
 set work_mem = '64kB'

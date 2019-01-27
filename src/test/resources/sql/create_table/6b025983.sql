@@ -1,2 +1,2 @@
--- file:inherit.sql ln:425 expect:true
+-- file:inherit.sql ln:396 expect:true
 create table p1(f1 int)

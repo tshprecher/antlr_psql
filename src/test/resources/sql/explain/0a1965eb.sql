@@ -1,4 +1,4 @@
--- file:join.sql ln:1772 expect:true
+-- file:join.sql ln:1758 expect:true
 explain (verbose, costs off)
 select * from (values (0), (1)) v(id),
 lateral (select * from int8_tbl t1,

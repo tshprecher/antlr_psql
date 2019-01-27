@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3892 expect:false
+-- file:plpgsql.sql ln:4171 expect:false
 y int

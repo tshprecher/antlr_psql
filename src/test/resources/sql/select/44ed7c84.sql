@@ -1,2 +1,2 @@
--- file:inherit.sql ln:242 expect:true
+-- file:inherit.sql ln:225 expect:true
 select NULL::derived::base

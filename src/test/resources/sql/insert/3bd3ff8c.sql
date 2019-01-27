@@ -1,2 +1,2 @@
--- file:inherit.sql ln:273 expect:true
+-- file:inherit.sql ln:256 expect:true
 insert into ac (aa) values (NULL)

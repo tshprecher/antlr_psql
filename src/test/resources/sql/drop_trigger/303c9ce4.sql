@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1906 expect:true
+-- file:triggers.sql ln:1690 expect:true
 drop trigger child1_update_trig on child1

@@ -1,2 +1,2 @@
--- file:insert.sql ln:506 expect:true
+-- file:insert.sql ln:377 expect:true
 drop table inserttest3

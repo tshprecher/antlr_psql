@@ -1,4 +1,4 @@
--- file:tsearch.sql ln:254 expect:true
+-- file:tsearch.sql ln:250 expect:true
 SELECT ts_rank_cd(to_tsvector('english', '
 Day after day, day after day,
   We stuck, nor breath nor motion,

@@ -1,2 +1,2 @@
--- file:strings.sql ln:499 expect:true
+-- file:strings.sql ln:485 expect:true
 select md5('abc'::bytea) = '900150983cd24fb0d6963f7d28e17f72' AS "TRUE"

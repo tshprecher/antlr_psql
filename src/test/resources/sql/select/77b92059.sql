@@ -1,2 +1,2 @@
--- file:numeric.sql ln:1032 expect:true
+-- file:numeric.sql ln:1002 expect:true
 select scale(0)

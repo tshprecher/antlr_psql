@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:4299 expect:true
+-- file:plpgsql.sql ln:4569 expect:true
 CREATE TABLE transition_table_status
 (
       level int NOT NULL,

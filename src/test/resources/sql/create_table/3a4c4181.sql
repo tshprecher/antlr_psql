@@ -1,2 +1,2 @@
--- file:insert.sql ln:362 expect:false
+-- file:insert.sql ln:254 expect:true
 create table mlparted12 partition of mlparted1 for values from (5) to (10)

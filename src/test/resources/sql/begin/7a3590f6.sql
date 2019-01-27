@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3347 expect:false
+-- file:plpgsql.sql ln:3560 expect:false
 begin
   raise exception using
     column = '>>some column name<<',

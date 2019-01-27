@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:858 expect:true
+-- file:jsonb.sql ln:835 expect:true
 select * from nestjsonb where j @> '[[14]]'

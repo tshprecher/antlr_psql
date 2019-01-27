@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1243 expect:true
+-- file:triggers.sql ln:1260 expect:true
 create function upsert_after_func()
   returns trigger language plpgsql as
 $$

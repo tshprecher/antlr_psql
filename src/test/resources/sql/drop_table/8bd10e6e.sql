@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1345 expect:true
+-- file:alter_table.sql ln:1310 expect:true
 drop table another

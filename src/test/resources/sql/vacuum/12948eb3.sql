@@ -1,2 +1,2 @@
--- file:create_index.sql ln:811 expect:true
+-- file:create_index.sql ln:781 expect:true
 VACUUM FULL concur_heap

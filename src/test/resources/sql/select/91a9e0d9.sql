@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:368 expect:true
+-- file:oidjoins.sql ln:364 expect:true
 SELECT	ctid, opfmethod
 FROM	pg_catalog.pg_opfamily fk
 WHERE	opfmethod != 0 AND

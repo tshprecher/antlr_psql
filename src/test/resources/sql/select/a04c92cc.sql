@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:801 expect:true
+-- file:jsonb.sql ln:778 expect:true
 SELECT count(*) FROM testjsonb WHERE j @> '{}'

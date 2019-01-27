@@ -1,4 +1,4 @@
--- file:triggers.sql ln:137 expect:true
+-- file:triggers.sql ln:165 expect:true
 create trigger ttserial
 	before insert or update on tttest
 	for each row

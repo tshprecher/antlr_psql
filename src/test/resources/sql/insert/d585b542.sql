@@ -1,2 +1,2 @@
--- file:insert.sql ln:201 expect:true
+-- file:insert.sql ln:160 expect:true
 insert into list_parted values (null, 1)

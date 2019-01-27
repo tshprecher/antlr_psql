@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2609 expect:true
+-- file:plpgsql.sql ln:2822 expect:true
 drop function shadowtest()

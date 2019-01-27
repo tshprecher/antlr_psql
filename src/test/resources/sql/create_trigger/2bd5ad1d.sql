@@ -1,4 +1,4 @@
--- file:alter_table.sql ln:1556 expect:true
+-- file:alter_table.sql ln:1505 expect:true
 create trigger ttdummy
 	before delete or update on alterlock
 	for each row

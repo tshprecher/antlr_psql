@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1893 expect:false
+-- file:triggers.sql ln:1677 expect:false
 AAA	42
 BBB	42
 CCC	42

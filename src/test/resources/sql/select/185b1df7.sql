@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:572 expect:true
+-- file:oidjoins.sql ln:564 expect:true
 SELECT	ctid, prsstart
 FROM	pg_catalog.pg_ts_parser fk
 WHERE	prsstart != 0 AND

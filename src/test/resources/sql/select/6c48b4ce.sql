@@ -1,2 +1,2 @@
--- file:psql.sql ln:435 expect:true
+-- file:psql.sql ln:399 expect:true
 select 'still okay'

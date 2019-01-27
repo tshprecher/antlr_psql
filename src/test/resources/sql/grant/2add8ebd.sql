@@ -1,2 +1,2 @@
--- file:privileges.sql ln:1157 expect:true
+-- file:privileges.sql ln:1126 expect:true
 GRANT SELECT ON lock_table TO regress_locktable_user

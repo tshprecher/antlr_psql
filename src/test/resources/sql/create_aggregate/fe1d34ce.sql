@@ -1,4 +1,4 @@
--- file:create_aggregate.sql ln:178 expect:true
+-- file:create_aggregate.sql ln:175 expect:true
 CREATE AGGREGATE mysum (int)
 (
 	stype = int,

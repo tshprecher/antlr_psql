@@ -1,2 +1,2 @@
--- file:cluster.sql ln:211 expect:true
+-- file:cluster.sql ln:204 expect:true
 set enable_indexscan = off

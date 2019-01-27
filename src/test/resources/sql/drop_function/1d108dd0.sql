@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3675 expect:true
+-- file:plpgsql.sql ln:3954 expect:true
 drop function strtest()

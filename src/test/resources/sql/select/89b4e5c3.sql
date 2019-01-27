@@ -1,2 +1,2 @@
--- file:numeric.sql ln:911 expect:true
+-- file:numeric.sql ln:888 expect:true
 select 12.34 ^ 0.0

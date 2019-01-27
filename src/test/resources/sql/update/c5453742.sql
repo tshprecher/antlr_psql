@@ -1,2 +1,2 @@
--- file:updatable_views.sql ln:752 expect:true
+-- file:updatable_views.sql ln:676 expect:true
 UPDATE rw_view2 SET a = a + 10

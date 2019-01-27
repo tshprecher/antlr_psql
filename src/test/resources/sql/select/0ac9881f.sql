@@ -1,2 +1,2 @@
--- file:strings.sql ln:578 expect:true
+-- file:strings.sql ln:546 expect:true
 SELECT translate('', '14', 'ax')

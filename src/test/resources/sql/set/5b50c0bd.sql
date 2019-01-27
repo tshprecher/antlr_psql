@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:485 expect:true
+-- file:join.sql ln:680 expect:true
 set enable_mergejoin = 0

@@ -1,2 +1,2 @@
--- file:select_parallel.sql ln:98 expect:true
+-- file:select_parallel.sql ln:46 expect:true
 deallocate tenk1_count

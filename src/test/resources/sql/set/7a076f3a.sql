@@ -1,2 +1,2 @@
--- file:gist.sql ln:56 expect:true
+-- file:gist.sql ln:42 expect:true
 set enable_seqscan=off

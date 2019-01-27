@@ -1,2 +1,2 @@
--- file:join.sql ln:1333 expect:true
+-- file:join.sql ln:1324 expect:true
 set enable_hashjoin to off

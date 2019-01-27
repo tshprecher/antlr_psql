@@ -1,2 +1,2 @@
--- file:inherit.sql ln:243 expect:true
+-- file:inherit.sql ln:226 expect:true
 drop table derived

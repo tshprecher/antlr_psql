@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3438 expect:true
+-- file:plpgsql.sql ln:3717 expect:true
 drop function tftest(int)

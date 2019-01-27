@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3631 expect:true
+-- file:plpgsql.sql ln:3910 expect:true
 drop function fail()

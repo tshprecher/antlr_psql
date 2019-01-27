@@ -1,2 +1,2 @@
--- file:portals.sql ln:495 expect:true
+-- file:portals.sql ln:519 expect:true
 fetch all from c

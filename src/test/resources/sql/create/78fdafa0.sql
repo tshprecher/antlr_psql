@@ -1,2 +1,2 @@
--- file:tsearch.sql ln:535 expect:true
+-- file:tsearch.sql ln:531 expect:true
 create temp table phrase_index_test(fts tsvector)

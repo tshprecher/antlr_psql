@@ -1,4 +1,4 @@
--- file:join.sql ln:1311 expect:true
+-- file:join.sql ln:1302 expect:true
 select * from
   (select 1 as id) as xx
   left join

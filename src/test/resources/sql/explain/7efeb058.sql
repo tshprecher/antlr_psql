@@ -1,4 +1,4 @@
--- file:select_parallel.sql ln:268 expect:true
+-- file:select_parallel.sql ln:164 expect:true
 explain (costs off)
 select * from
   (select string4, count(unique2)

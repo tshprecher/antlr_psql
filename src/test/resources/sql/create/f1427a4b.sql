@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1624 expect:true
+-- file:triggers.sql ln:1415 expect:true
 create or replace function dump_delete() returns trigger language plpgsql as
 $$
   begin

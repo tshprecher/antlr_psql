@@ -1,2 +1,2 @@
--- file:insert.sql ln:132 expect:true
+-- file:insert.sql ln:128 expect:true
 insert into part_null values (null, 0)

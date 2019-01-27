@@ -1,4 +1,4 @@
--- file:join.sql ln:1703 expect:true
+-- file:join.sql ln:1689 expect:true
 explain (verbose, costs off)
 select * from
   int8_tbl a left join lateral

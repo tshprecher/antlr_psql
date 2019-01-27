@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:2938 expect:true
+-- file:plpgsql.sql ln:3151 expect:true
 create or replace function return_dquery()
 returns setof int as $$
 begin

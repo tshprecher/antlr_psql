@@ -1,4 +1,4 @@
--- file:json.sql ln:565 expect:true
+-- file:json.sql ln:544 expect:true
 INSERT INTO jspoptest
 SELECT '{
 	"jsa": [1, "2", null, 4],

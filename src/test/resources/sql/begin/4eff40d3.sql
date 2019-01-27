@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:3290 expect:false
+-- file:plpgsql.sql ln:3503 expect:false
 begin
   perform raise_test()

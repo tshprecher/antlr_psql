@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:288 expect:true
+-- file:oidjoins.sql ln:284 expect:true
 SELECT	ctid, lanvalidator
 FROM	pg_catalog.pg_language fk
 WHERE	lanvalidator != 0 AND

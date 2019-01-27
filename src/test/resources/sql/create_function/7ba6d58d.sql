@@ -1,4 +1,4 @@
--- file:aggregates.sql ln:818 expect:true
+-- file:aggregates.sql ln:812 expect:true
 create function halfsum_finalfn(state int4) returns int4 as
 $$
 begin

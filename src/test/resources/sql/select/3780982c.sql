@@ -1,4 +1,4 @@
--- file:updatable_views.sql ln:671 expect:true
+-- file:updatable_views.sql ln:595 expect:true
 SELECT table_name, column_name, is_updatable
   FROM information_schema.columns
  WHERE table_name LIKE E'r_\\_view%'

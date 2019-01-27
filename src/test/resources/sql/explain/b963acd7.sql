@@ -1,4 +1,4 @@
--- file:join.sql ln:567 expect:true
+-- file:join.sql ln:558 expect:true
 explain (costs off)
 select * from tt4x t1
 where not exists (

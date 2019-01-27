@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:4291 expect:true
+-- file:plpgsql.sql ln:4561 expect:true
 CREATE TABLE transition_table_level2
 (
       level2_no serial NOT NULL ,

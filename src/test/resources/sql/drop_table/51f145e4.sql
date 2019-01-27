@@ -1,2 +1,2 @@
--- file:timestamptz.sql ln:284 expect:true
+-- file:timestamptz.sql ln:280 expect:true
 DROP TABLE TIMESTAMPTZ_TST

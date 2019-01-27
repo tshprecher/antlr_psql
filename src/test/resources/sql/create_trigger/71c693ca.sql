@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1843 expect:false
+-- file:triggers.sql ln:1627 expect:true
 create trigger child1_delete_trig
   after delete on child1 referencing old table as old_table
   for each statement execute procedure dump_delete()

@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:749 expect:true
+-- file:jsonb.sql ln:726 expect:true
 SELECT count(*) FROM testjsonb WHERE j ? 'public'

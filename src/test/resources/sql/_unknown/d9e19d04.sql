@@ -1,2 +1,2 @@
--- file:updatable_views.sql ln:1094 expect:true
+-- file:updatable_views.sql ln:1018 expect:true
 TABLE t1

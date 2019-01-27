@@ -1,2 +1,2 @@
--- file:triggers.sql ln:372 expect:true
+-- file:triggers.sql ln:394 expect:true
 create table trigtest (i serial primary key)

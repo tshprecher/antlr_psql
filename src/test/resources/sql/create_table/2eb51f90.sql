@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1173 expect:true
+-- file:alter_table.sql ln:1138 expect:true
 create table depth0()

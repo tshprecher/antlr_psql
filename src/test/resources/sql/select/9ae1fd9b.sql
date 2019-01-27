@@ -1,2 +1,2 @@
--- file:domain.sql ln:542 expect:true
+-- file:domain.sql ln:440 expect:true
 select doubledecrement(2)

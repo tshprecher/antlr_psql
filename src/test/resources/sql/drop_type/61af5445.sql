@@ -1,2 +1,2 @@
--- file:json.sql ln:575 expect:true
+-- file:json.sql ln:554 expect:true
 DROP TYPE jsrec

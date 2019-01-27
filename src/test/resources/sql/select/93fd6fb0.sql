@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3778 expect:true
+-- file:plpgsql.sql ln:4057 expect:true
 select * from conflict_test()

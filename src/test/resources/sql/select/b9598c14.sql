@@ -1,2 +1,2 @@
--- file:domain.sql ln:670 expect:true
+-- file:domain.sql ln:560 expect:true
 select array_elem_check(-1)

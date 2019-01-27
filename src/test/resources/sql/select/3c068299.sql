@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2375 expect:true
+-- file:plpgsql.sql ln:2588 expect:true
 select * from foo

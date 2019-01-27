@@ -1,2 +1,2 @@
--- file:numeric.sql ln:880 expect:true
+-- file:numeric.sql ln:857 expect:true
 select 12345678901234567890 % 123

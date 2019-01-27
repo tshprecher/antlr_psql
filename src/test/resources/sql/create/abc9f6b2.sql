@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3168 expect:true
+-- file:plpgsql.sql ln:3381 expect:true
 create or replace function raise_test() returns void as $$
 begin
   raise 'check me'

@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:72 expect:true
+-- file:rowtypes.sql ln:69 expect:true
 create temp table pp (f1 text)

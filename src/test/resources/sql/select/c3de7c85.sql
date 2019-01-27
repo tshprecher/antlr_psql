@@ -1,4 +1,4 @@
--- file:jsonb.sql ln:636 expect:true
+-- file:jsonb.sql ln:633 expect:true
 SELECT rec FROM jsonb_populate_record(
 	row(NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,
 		row('x',3,'2012-12-31 15:30:56')::jbpop,NULL)::jsbrec,

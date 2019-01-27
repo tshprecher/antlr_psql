@@ -1,4 +1,4 @@
--- file:join.sql ln:1101 expect:true
+-- file:join.sql ln:1092 expect:true
 explain (verbose, costs off)
 select foo1.join_key as foo1_id, foo3.join_key AS foo3_id, bug_field from
   (values (0),(1)) foo1(join_key)

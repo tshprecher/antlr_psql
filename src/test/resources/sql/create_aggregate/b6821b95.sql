@@ -1,4 +1,4 @@
--- file:window.sql ln:889 expect:true
+-- file:window.sql ln:327 expect:true
 CREATE AGGREGATE logging_agg_nonstrict (anyelement)
 (
 	stype = text,

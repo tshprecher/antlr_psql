@@ -1,2 +1,2 @@
--- file:privileges.sql ln:1059 expect:true
+-- file:privileges.sql ln:1030 expect:true
 CREATE ROLE regress_schemauser2 superuser login

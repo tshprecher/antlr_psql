@@ -1,2 +1,2 @@
--- file:write_parallel.sql ln:10 expect:true
+-- file:select_parallel.sql ln:13 expect:true
 set parallel_setup_cost=0

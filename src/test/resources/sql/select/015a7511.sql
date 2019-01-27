@@ -1,4 +1,4 @@
--- file:xml.sql ln:392 expect:false
+-- file:xml.sql ln:392 expect:true
 SELECT * FROM XMLTABLE(XMLNAMESPACES(DEFAULT 'http://x.y'),
                       '/rows/row'
                       PASSING '<rows xmlns="http://x.y"><row><a>10</a></row></rows>'

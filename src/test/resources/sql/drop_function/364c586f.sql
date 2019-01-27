@@ -1,2 +1,2 @@
--- file:polymorphism.sql ln:801 expect:true
+-- file:polymorphism.sql ln:816 expect:true
 drop function dfunc(anyelement, anyelement, bool)

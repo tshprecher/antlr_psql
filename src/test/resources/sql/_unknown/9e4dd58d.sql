@@ -1,2 +1,2 @@
--- file:tsrf.sql ln:103 expect:true
+-- file:tsrf.sql ln:108 expect:true
 VALUES(1, generate_series(1,2))

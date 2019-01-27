@@ -1,4 +1,4 @@
--- file:object_address.sql ln:75 expect:true
+-- file:object_address.sql ln:74 expect:true
 DO $$
 DECLARE
 	objtype text

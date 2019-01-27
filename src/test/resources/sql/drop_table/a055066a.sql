@@ -1,2 +1,2 @@
--- file:fast_default.sql ln:363 expect:true
+-- file:sequence.sql ln:164 expect:true
 DROP TABLE t1

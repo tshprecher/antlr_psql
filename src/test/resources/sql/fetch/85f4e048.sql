@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2710 expect:false
+-- file:plpgsql.sql ln:2923 expect:false
 fetch relative -1 from c into x

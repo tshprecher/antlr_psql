@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:280 expect:true
+-- file:oidjoins.sql ln:276 expect:true
 SELECT	ctid, lanplcallfoid
 FROM	pg_catalog.pg_language fk
 WHERE	lanplcallfoid != 0 AND

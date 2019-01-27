@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1714 expect:true
+-- file:triggers.sql ln:1498 expect:true
 insert into parent values ('AAA', 42)

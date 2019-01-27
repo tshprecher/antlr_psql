@@ -1,4 +1,4 @@
--- file:jsonb.sql ln:708 expect:true
+-- file:jsonb.sql ln:687 expect:true
 INSERT INTO jsbpoptest
 SELECT '{
 	"jsa": [1, "2", null, 4],

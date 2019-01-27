@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:312 expect:true
+-- file:oidjoins.sql ln:308 expect:true
 SELECT	ctid, opcowner
 FROM	pg_catalog.pg_opclass fk
 WHERE	opcowner != 0 AND

@@ -1,2 +1,2 @@
--- file:select_parallel.sql ln:116 expect:true
+-- file:union.sql ln:263 expect:true
 set enable_bitmapscan = off

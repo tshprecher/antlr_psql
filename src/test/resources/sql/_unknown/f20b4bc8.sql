@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3770 expect:false
+-- file:plpgsql.sql ln:4049 expect:false
 q1 bigint := 42

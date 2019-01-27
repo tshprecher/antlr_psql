@@ -1,2 +1,2 @@
--- file:select_parallel.sql ln:346 expect:true
+-- file:select_parallel.sql ln:199 expect:true
 reset force_parallel_mode

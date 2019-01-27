@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3434 expect:true
+-- file:plpgsql.sql ln:3713 expect:true
 $$ language plpgsql immutable strict

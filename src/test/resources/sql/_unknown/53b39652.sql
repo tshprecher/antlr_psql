@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2532 expect:false
+-- file:plpgsql.sql ln:2745 expect:false
 p3 text := 'foo'

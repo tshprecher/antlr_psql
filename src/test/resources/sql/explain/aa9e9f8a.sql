@@ -1,4 +1,4 @@
--- file:join.sql ln:1051 expect:true
+-- file:join.sql ln:1042 expect:true
 explain (costs off)
 select * from
 (values (1, array[10,20]), (2, array[20,30])) as v1(v1x,v1ys)

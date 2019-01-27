@@ -1,0 +1,2 @@
+-- file:create_table_like.sql ln:106 expect:true
+CREATE TABLE ctlt13_like (LIKE ctlt3 INCLUDING CONSTRAINTS INCLUDING COMMENTS INCLUDING STORAGE) INHERITS (ctlt1)

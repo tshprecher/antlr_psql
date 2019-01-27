@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3336 expect:true
+-- file:plpgsql.sql ln:3549 expect:true
 drop function raise_test()

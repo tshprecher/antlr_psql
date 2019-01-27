@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:4067 expect:false
+-- file:plpgsql.sql ln:4337 expect:false
 begin
   begin
     perform sx / 0

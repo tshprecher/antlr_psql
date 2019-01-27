@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3510 expect:false
+-- file:plpgsql.sql ln:3789 expect:false
 i := 1

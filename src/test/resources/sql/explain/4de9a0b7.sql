@@ -1,4 +1,4 @@
--- file:window.sql ln:849 expect:true
+-- file:window.sql ln:287 expect:true
 EXPLAIN (COSTS OFF)
 SELECT * FROM
   (SELECT depname,

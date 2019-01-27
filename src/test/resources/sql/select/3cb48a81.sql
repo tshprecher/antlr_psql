@@ -1,2 +1,2 @@
--- file:json.sql ln:811 expect:true
+-- file:json.sql ln:758 expect:true
 select ts_headline('[]'::json, tsquery('aaa & bbb'))

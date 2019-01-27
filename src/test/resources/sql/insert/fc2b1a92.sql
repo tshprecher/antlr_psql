@@ -1,2 +1,2 @@
--- file:join.sql ln:314 expect:true
+-- file:join.sql ln:305 expect:true
 insert into y values (4,null)

@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:1261 expect:true
+-- file:opr_sanity.sql ln:1258 expect:true
 SELECT p1.amprocfamily, p1.amproc, p2.prosrc
 FROM pg_amproc AS p1, pg_proc AS p2
 WHERE p1.amproc = p2.oid AND

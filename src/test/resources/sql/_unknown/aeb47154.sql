@@ -1,4 +1,4 @@
--- file:psql.sql ln:440 expect:false
+-- file:psql.sql ln:404 expect:false
 still not okay
 \endif
 

@@ -1,4 +1,4 @@
--- file:tsearch.sql ln:391 expect:true
+-- file:tsearch.sql ln:387 expect:true
 SELECT ts_headline('english', '
 Day after day, day after day,
   We stuck, nor breath nor motion,

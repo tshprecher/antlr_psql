@@ -1,2 +1,2 @@
--- file:triggers.sql ln:403 expect:true
+-- file:triggers.sql ln:420 expect:true
 insert into trigtest2 values(1)

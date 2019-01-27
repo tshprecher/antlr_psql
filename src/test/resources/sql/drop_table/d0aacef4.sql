@@ -1,2 +1,2 @@
--- file:event_trigger.sql ln:343 expect:true
+-- file:event_trigger.sql ln:345 expect:true
 drop table rewriteme

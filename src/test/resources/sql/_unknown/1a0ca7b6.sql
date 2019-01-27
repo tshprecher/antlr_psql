@@ -1,3 +1,3 @@
--- file:aggregates.sql ln:823 expect:false
+-- file:aggregates.sql ln:817 expect:false
 else
 		return state / 2

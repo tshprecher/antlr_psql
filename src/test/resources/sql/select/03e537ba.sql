@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2128 expect:true
+-- file:plpgsql.sql ln:2106 expect:true
 select raise_test3(1)

@@ -1,2 +1,2 @@
--- file:polygon.sql ln:144 expect:true
+-- file:create_index.sql ln:133 expect:true
 SET enable_seqscan = ON

@@ -1,2 +1,2 @@
--- file:subscription.sql ln:60 expect:false
+-- file:subscription.sql ln:60 expect:true
 ALTER SUBSCRIPTION testsub CONNECTION 'foobar'

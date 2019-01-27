@@ -1,4 +1,4 @@
--- file:join.sql ln:424 expect:true
+-- file:join.sql ln:415 expect:true
 explain (costs off)
 select * from
   j1_tbl full join

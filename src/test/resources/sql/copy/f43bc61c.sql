@@ -1,2 +1,2 @@
--- file:insert.sql ln:523 expect:true
+-- file:insert.sql ln:394 expect:true
 copy donothingbrtrig_test from stdout

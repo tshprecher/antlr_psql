@@ -1,4 +1,4 @@
--- file:window.sql ln:985 expect:true
+-- file:window.sql ln:423 expect:true
 SELECT
 	i::text || ':' || COALESCE(v::text, 'NULL') as row,
 	logging_agg_strict(v::text)

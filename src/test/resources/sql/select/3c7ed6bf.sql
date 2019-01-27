@@ -1,4 +1,4 @@
--- file:join.sql ln:945 expect:true
+-- file:join.sql ln:936 expect:true
 select t1.unique2, t1.stringu1, t2.unique1, t2.stringu2 from
   tenk1 t1
   inner join int4_tbl i1

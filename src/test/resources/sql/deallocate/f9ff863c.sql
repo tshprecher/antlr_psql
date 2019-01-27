@@ -1,2 +1,2 @@
--- file:psql.sql ln:425 expect:true
+-- file:psql.sql ln:389 expect:true
 deallocate q

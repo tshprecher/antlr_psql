@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:208 expect:true
+-- file:oidjoins.sql ln:204 expect:true
 SELECT	ctid, datdba
 FROM	pg_catalog.pg_database fk
 WHERE	datdba != 0 AND

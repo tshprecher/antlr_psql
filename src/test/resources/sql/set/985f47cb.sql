@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:770 expect:true
+-- file:jsonb.sql ln:747 expect:true
 SET enable_hashagg = off

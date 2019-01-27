@@ -1,4 +1,4 @@
--- file:join.sql ln:1494 expect:true
+-- file:join.sql ln:1480 expect:true
 explain (costs off)
 select t0.*
 from

@@ -1,4 +1,4 @@
--- file:inherit.sql ln:563 expect:true
+-- file:inherit.sql ln:532 expect:true
 explain (costs off)
 SELECT thousand, tenthous FROM tenk1
 UNION ALL

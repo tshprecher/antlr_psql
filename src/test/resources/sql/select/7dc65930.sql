@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:564 expect:true
+-- file:oidjoins.sql ln:556 expect:true
 SELECT	ctid, dicttemplate
 FROM	pg_catalog.pg_ts_dict fk
 WHERE	dicttemplate != 0 AND

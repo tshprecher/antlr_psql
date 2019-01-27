@@ -1,2 +1,2 @@
--- file:tsearch.sql ln:525 expect:true
+-- file:tsearch.sql ln:521 expect:true
 create index pendtest_idx on pendtest using gin(ts)

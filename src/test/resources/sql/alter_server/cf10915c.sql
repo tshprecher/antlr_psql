@@ -1,2 +1,2 @@
--- file:foreign_data.sql ln:171 expect:false
+-- file:foreign_data.sql ln:158 expect:false
 ALTER SERVER s0

@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:331 expect:true
+-- file:rowtypes.sql ln:229 expect:true
 select * from compos

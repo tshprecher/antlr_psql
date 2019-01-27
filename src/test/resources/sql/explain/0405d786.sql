@@ -1,4 +1,4 @@
--- file:join.sql ln:438 expect:true
+-- file:join.sql ln:429 expect:true
 explain (costs off)
 select count(*) from
   (select * from tenk1 x order by x.thousand, x.twothousand, x.fivethous) x

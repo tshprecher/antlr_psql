@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:1938 expect:false
+-- file:plpgsql.sql ln:1916 expect:false
 return rc

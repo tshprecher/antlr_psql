@@ -1,4 +1,4 @@
--- file:rowtypes.sql ln:416 expect:true
+-- file:rowtypes.sql ln:314 expect:true
 with r(a,b) as
   (values (1,row(1,2)), (1,row(null,null)), (1,null),
           (null,row(1,2)), (null,row(null,null)), (null,null) )

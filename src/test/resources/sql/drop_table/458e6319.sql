@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:481 expect:true
+-- file:alter_table.sql ln:446 expect:true
 DROP TABLE PKTABLE

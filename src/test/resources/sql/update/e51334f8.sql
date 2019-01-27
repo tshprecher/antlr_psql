@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:60 expect:true
+-- file:rowtypes.sql ln:57 expect:true
 update people set fn.suffix = 'Jr'

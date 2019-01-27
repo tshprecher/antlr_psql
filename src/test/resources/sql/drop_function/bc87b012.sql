@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3415 expect:true
+-- file:plpgsql.sql ln:3694 expect:true
 drop function pleast(numeric)

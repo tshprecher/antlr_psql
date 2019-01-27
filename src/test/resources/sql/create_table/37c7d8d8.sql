@@ -1,4 +1,4 @@
--- file:triggers.sql ln:418 expect:true
+-- file:triggers.sql ln:435 expect:true
 CREATE TABLE trigger_test (
         i int,
         v varchar

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1971 expect:true
+-- file:triggers.sql ln:1755 expect:true
 drop table table2

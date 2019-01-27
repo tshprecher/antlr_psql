@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2544 expect:true
+-- file:plpgsql.sql ln:2757 expect:true
 set plpgsql.extra_errors to 'all'

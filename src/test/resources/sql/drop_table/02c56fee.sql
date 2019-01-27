@@ -1,2 +1,2 @@
--- file:join.sql ln:461 expect:true
+-- file:join.sql ln:452 expect:true
 DROP TABLE J2_TBL

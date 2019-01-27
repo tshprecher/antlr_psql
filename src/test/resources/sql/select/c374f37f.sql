@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:380 expect:true
+-- file:oidjoins.sql ln:376 expect:true
 SELECT	ctid, partrelid
 FROM	pg_catalog.pg_partitioned_table fk
 WHERE	partrelid != 0 AND

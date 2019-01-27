@@ -1,2 +1,2 @@
--- file:copyselect.sql ln:82 expect:true
+-- file:alter_table.sql ln:939 expect:true
 drop table test1

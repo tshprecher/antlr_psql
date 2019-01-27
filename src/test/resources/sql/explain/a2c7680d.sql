@@ -1,4 +1,4 @@
--- file:join.sql ln:407 expect:true
+-- file:join.sql ln:398 expect:true
 explain (costs off)
 select a.f1, b.f1, t.thousand, t.tenthous from
   tenk1 t,

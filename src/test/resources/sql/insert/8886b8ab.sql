@@ -1,2 +1,2 @@
--- file:join.sql ln:304 expect:true
+-- file:join.sql ln:295 expect:true
 insert into x values (1,11)

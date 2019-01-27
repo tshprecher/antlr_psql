@@ -1,3 +1,3 @@
--- file:privileges.sql ln:696 expect:true
+-- file:privileges.sql ln:679 expect:true
 select has_table_privilege(t2.oid,'atest1','delete')
 from (select oid from pg_roles where rolname = current_user) as t2

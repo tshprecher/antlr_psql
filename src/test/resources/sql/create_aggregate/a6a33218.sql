@@ -1,4 +1,4 @@
--- file:create_aggregate.sql ln:191 expect:true
+-- file:create_aggregate.sql ln:188 expect:true
 CREATE AGGREGATE invalidsumdouble (float8)
 (
     stype = float8,

@@ -1,4 +1,4 @@
--- file:aggregates.sql ln:853 expect:true
+-- file:aggregates.sql ln:847 expect:true
 CREATE FUNCTION balkifnull(int8, int4)
 RETURNS int8
 STRICT

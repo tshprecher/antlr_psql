@@ -1,2 +1,2 @@
--- file:privileges.sql ln:766 expect:true
+-- file:privileges.sql ln:767 expect:true
 DROP FUNCTION dogrant_fails()

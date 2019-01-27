@@ -1,3 +1,0 @@
--- file:fast_default.sql ln:309 expect:true
-EXPLAIN (VERBOSE TRUE, COSTS FALSE)
-DELETE FROM T WHERE pk BETWEEN 10 AND 20 RETURNING *

@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3118 expect:true
+-- file:plpgsql.sql ln:3331 expect:true
 select compos()

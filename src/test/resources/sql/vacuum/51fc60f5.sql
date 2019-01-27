@@ -1,2 +1,2 @@
--- file:join.sql ln:2007 expect:true
+-- file:join.sql ln:1970 expect:true
 vacuum analyze j3

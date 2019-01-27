@@ -1,3 +1,3 @@
--- file:triggers.sql ln:1164 expect:true
+-- file:triggers.sql ln:1181 expect:true
 create trigger self_ref_trigger_del_trig before delete on self_ref_trigger
   for each row execute procedure self_ref_trigger_del_func()

@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:353 expect:true
+-- file:opr_sanity.sql ln:352 expect:true
 SELECT p1.oid, p1.proname, p2.oid, p2.proname
 FROM pg_proc AS p1, pg_proc AS p2
 WHERE p2.oid = p1.protransform AND

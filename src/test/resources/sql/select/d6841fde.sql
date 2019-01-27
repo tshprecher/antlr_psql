@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:1285 expect:true
+-- file:opr_sanity.sql ln:1282 expect:true
 SELECT p1.indexrelid, p1.indrelid
 FROM pg_index as p1
 WHERE array_lower(indkey, 1) != 0 OR array_upper(indkey, 1) != indnatts-1 OR

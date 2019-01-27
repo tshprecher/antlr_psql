@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:3474 expect:false
+-- file:plpgsql.sql ln:3753 expect:false
 EXCEPTION
     WHEN others THEN RETURN 0

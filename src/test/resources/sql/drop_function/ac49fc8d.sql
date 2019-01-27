@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2922 expect:true
+-- file:plpgsql.sql ln:3135 expect:true
 drop function forc01()

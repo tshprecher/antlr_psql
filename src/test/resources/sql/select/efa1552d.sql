@@ -1,2 +1,2 @@
--- file:tsdicts.sql ln:193 expect:true
+-- file:tsdicts.sql ln:188 expect:true
 SELECT to_tsvector('thesaurus_tst', 'one postgres one two one two three one')

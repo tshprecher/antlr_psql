@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:3787 expect:false
+-- file:plpgsql.sql ln:4066 expect:false
 begin
   forward := forward * 2

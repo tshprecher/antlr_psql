@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1902 expect:false
+-- file:triggers.sql ln:1686 expect:false
 DDD	42
 \.
 

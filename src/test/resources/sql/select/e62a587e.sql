@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:124 expect:true
+-- file:opr_sanity.sql ln:123 expect:true
 SELECT p1.oid, p1.proname, p2.oid, p2.proname
 FROM pg_proc AS p1, pg_proc AS p2
 WHERE p1.oid != p2.oid AND

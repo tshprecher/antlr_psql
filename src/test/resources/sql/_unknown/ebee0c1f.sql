@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2222 expect:false
+-- file:plpgsql.sql ln:2200 expect:false
 k int

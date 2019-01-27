@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:4258 expect:false
+-- file:plpgsql.sql ln:4528 expect:false
 l text

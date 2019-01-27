@@ -1,2 +1,2 @@
--- file:tsearch.sql ln:405 expect:true
+-- file:tsearch.sql ln:401 expect:true
 CREATE TABLE test_tsquery (txtkeyword TEXT, txtsample TEXT)

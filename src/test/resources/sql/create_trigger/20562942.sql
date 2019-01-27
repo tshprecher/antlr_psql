@@ -1,3 +1,3 @@
--- file:triggers.sql ln:299 expect:true
+-- file:triggers.sql ln:321 expect:true
 CREATE TRIGGER after_upd_b_row_trig AFTER UPDATE OF b ON main_table
 FOR EACH ROW EXECUTE PROCEDURE trigger_func('after_upd_b_row')

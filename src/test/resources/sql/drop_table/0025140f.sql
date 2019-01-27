@@ -1,2 +1,2 @@
--- file:tsrf.sql ln:167 expect:true
+-- file:tsrf.sql ln:172 expect:true
 DROP TABLE few

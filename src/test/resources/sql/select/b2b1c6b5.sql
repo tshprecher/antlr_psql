@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2087 expect:true
+-- file:plpgsql.sql ln:2065 expect:true
 select namedparmcursor_test8()

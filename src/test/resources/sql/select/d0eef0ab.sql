@@ -1,2 +1,2 @@
--- file:privileges.sql ln:757 expect:true
+-- file:privileges.sql ln:758 expect:true
 SELECT dogrant_ok()

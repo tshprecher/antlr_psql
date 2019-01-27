@@ -1,3 +1,0 @@
--- file:fast_default.sql ln:120 expect:true
-ALTER TABLE T ADD COLUMN c_num NUMERIC DEFAULT 1.00000000001,
-              ALTER COLUMN c_big SET DEFAULT -9999999999999999

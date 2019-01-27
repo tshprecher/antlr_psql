@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:1073 expect:true
+-- file:opr_sanity.sql ln:1070 expect:true
 SELECT DISTINCT proname, oprname, amopstrategy
 FROM pg_operator AS o, pg_aggregate AS a, pg_proc AS p,
      pg_amop as ao

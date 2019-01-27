@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3574 expect:true
+-- file:plpgsql.sql ln:3853 expect:true
 ROLLBACK TO a

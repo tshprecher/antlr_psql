@@ -1,2 +1,2 @@
--- file:window.sql ln:858 expect:true
+-- file:window.sql ln:296 expect:true
 DROP TABLE empsalary

@@ -1,4 +1,4 @@
--- file:join.sql ln:798 expect:true
+-- file:join.sql ln:789 expect:true
 EXPLAIN (COSTS OFF)
 SELECT qq, unique1
   FROM

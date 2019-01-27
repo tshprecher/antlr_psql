@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:516 expect:true
+-- file:oidjoins.sql ln:508 expect:true
 SELECT	ctid, tgrelid
 FROM	pg_catalog.pg_trigger fk
 WHERE	tgrelid != 0 AND

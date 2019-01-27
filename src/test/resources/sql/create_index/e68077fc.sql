@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:737 expect:true
+-- file:jsonb.sql ln:714 expect:true
 CREATE INDEX jidx ON testjsonb USING gin (j)

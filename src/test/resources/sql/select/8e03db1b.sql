@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:333 expect:true
+-- file:opr_sanity.sql ln:332 expect:true
 SELECT p1.oid, p1.proname
 FROM pg_proc as p1
 WHERE proallargtypes IS NOT NULL AND proargnames IS NOT NULL AND

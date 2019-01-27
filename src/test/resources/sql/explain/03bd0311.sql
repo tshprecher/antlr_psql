@@ -1,4 +1,4 @@
--- file:join.sql ln:1304 expect:true
+-- file:join.sql ln:1295 expect:true
 explain (costs off)
 select * from
   (select 1 as id) as xx

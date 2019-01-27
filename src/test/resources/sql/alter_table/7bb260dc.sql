@@ -1,2 +1,2 @@
--- file:aggregates.sql ln:902 expect:true
+-- file:aggregates.sql ln:895 expect:true
 ALTER TABLE tenk1 set (parallel_workers = 4)

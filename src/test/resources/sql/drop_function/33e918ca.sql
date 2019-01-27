@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3960 expect:true
+-- file:plpgsql.sql ln:4239 expect:true
 drop function arrayassign1()

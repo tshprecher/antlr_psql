@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:66 expect:true
+-- file:rowtypes.sql ln:63 expect:true
 select * from quadtable

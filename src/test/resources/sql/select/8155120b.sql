@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:648 expect:true
+-- file:oidjoins.sql ln:640 expect:true
 SELECT	ctid, typanalyze
 FROM	pg_catalog.pg_type fk
 WHERE	typanalyze != 0 AND

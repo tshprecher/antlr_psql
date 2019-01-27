@@ -1,2 +1,2 @@
--- file:foreign_data.sql ln:472 expect:true
+-- file:foreign_data.sql ln:453 expect:true
 DROP SERVER s4

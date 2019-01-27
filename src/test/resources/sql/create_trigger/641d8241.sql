@@ -1,3 +1,3 @@
--- file:triggers.sql ln:343 expect:true
+-- file:triggers.sql ln:365 expect:true
 CREATE TRIGGER error_upd_a_a BEFORE UPDATE OF a, a ON main_table
 FOR EACH ROW EXECUTE PROCEDURE trigger_func('error_upd_a_a')

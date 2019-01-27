@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:268 expect:true
+-- file:opr_sanity.sql ln:267 expect:true
 SELECT p1.oid, p1.proname
 FROM pg_proc as p1
 WHERE p1.prorettype IN

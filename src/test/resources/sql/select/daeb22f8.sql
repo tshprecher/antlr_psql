@@ -1,2 +1,2 @@
--- file:numeric.sql ln:879 expect:true
+-- file:numeric.sql ln:856 expect:true
 select 70.0 / 70 

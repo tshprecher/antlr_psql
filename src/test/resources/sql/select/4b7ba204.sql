@@ -1,4 +1,4 @@
--- file:join.sql ln:1027 expect:true
+-- file:join.sql ln:1018 expect:true
 select b.unique1 from
   tenk1 a join tenk1 b on a.unique1 = b.unique2
   left join tenk1 c on b.unique1 = 42 and c.thousand = a.thousand

@@ -1,4 +1,4 @@
--- file:join.sql ln:726 expect:true
+-- file:join.sql ln:717 expect:true
 create temp table b (
      a char not null,
      num integer not null,

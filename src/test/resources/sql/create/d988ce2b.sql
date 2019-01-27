@@ -1,4 +1,4 @@
--- file:alter_table.sql ln:1493 expect:true
+-- file:alter_table.sql ln:1442 expect:true
 create or replace view my_locks as
 select case when c.relname like 'pg_toast%' then 'pg_toast' else c.relname end, max(mode::lockmodes) as max_lockmode
 from pg_locks l join pg_class c on l.relation = c.oid

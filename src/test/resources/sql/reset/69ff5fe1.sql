@@ -1,2 +1,2 @@
--- file:select_parallel.sql ln:279 expect:true
+-- file:select_parallel.sql ln:175 expect:true
 reset enable_material

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1234 expect:false
+-- file:triggers.sql ln:1251 expect:false
 raise warning 'before insert (new, modified): %', new.*::text

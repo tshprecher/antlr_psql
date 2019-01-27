@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:400 expect:true
+-- file:oidjoins.sql ln:392 expect:true
 SELECT	ctid, prolang
 FROM	pg_catalog.pg_proc fk
 WHERE	prolang != 0 AND

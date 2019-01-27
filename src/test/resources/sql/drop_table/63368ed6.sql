@@ -1,2 +1,2 @@
--- file:privileges.sql ln:1125 expect:true
+-- file:privileges.sql ln:1094 expect:true
 DROP TABLE atest1

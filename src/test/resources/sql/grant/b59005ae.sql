@@ -1,2 +1,2 @@
--- file:privileges.sql ln:806 expect:true
+-- file:privileges.sql ln:807 expect:true
 GRANT SELECT, UPDATE ON LARGE OBJECT  999 TO PUBLIC

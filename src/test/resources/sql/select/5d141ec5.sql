@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2250 expect:true
+-- file:plpgsql.sql ln:2228 expect:true
 select excpt_test1()

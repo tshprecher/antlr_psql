@@ -1,2 +1,2 @@
--- file:domain.sql ln:436 expect:true
+-- file:domain.sql ln:334 expect:true
 create domain dom as integer

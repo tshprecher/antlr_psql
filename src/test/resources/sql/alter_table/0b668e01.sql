@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1942 expect:true
+-- file:triggers.sql ln:1726 expect:true
 alter table child inherit parent

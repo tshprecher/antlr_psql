@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:2043 expect:true
+-- file:alter_table.sql ln:1995 expect:true
 ALTER TABLE partitioned DROP COLUMN b

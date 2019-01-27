@@ -1,2 +1,2 @@
--- file:triggers.sql ln:442 expect:false
+-- file:triggers.sql ln:459 expect:false
 raise NOTICE 'TG_RELID::regclass: %', relid

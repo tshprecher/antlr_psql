@@ -1,2 +1,2 @@
--- file:privileges.sql ln:1026 expect:true
+-- file:privileges.sql ln:1013 expect:true
 ' LANGUAGE sql

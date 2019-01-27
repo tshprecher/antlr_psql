@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2780 expect:true
+-- file:plpgsql.sql ln:2993 expect:true
 drop function pl_qual_names(int)

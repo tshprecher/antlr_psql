@@ -1,3 +1,3 @@
--- file:domain.sql ln:682 expect:false
+-- file:domain.sql ln:572 expect:false
 begin
   d := $1

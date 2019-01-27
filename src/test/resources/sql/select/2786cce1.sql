@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2920 expect:true
+-- file:plpgsql.sql ln:3133 expect:true
 select * from forc_test

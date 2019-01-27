@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3655 expect:true
+-- file:plpgsql.sql ln:3934 expect:true
 set standard_conforming_strings = on

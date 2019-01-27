@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1268 expect:true
+-- file:triggers.sql ln:1285 expect:true
 select * from upsert

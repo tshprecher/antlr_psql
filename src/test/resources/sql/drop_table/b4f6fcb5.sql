@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2237 expect:true
+-- file:plpgsql.sql ln:2215 expect:true
 drop table eifoo cascade

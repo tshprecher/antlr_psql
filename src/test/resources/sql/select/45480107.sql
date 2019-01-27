@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:448 expect:true
+-- file:oidjoins.sql ln:440 expect:true
 SELECT	ctid, seqtypid
 FROM	pg_catalog.pg_sequence fk
 WHERE	seqtypid != 0 AND

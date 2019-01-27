@@ -1,3 +1,3 @@
--- file:insert.sql ln:337 expect:true
+-- file:insert.sql ln:229 expect:true
 $$
 language plpgsql

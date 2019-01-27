@@ -1,2 +1,2 @@
--- file:timestamptz.sql ln:409 expect:true
+-- file:timestamptz.sql ln:405 expect:true
 SET TimeZone to 'Europe/Moscow'

@@ -1,2 +1,2 @@
--- file:json.sql ln:803 expect:true
+-- file:json.sql ln:750 expect:true
 select ts_headline('{"a": "aaa bbb", "b": {"c": "ccc ddd fff", "c1": "ccc1 ddd1"}, "d": ["ggg hhh", "iii jjj"]}'::json, tsquery('bbb & ddd & hhh'))

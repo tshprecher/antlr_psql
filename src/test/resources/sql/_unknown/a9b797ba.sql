@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:2014 expect:false
+-- file:plpgsql.sql ln:1992 expect:false
 else
         return false

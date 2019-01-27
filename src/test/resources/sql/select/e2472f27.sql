@@ -1,4 +1,4 @@
--- file:jsonb.sql ln:814 expect:true
+-- file:jsonb.sql ln:791 expect:true
 SELECT
   '{"ff":{"a":12,"b":16},"qq":123,"x":[1,2],"Y":null}'::jsonb -> 'ff',
   '{"ff":{"a":12,"b":16},"qq":123,"x":[1,2],"Y":null}'::jsonb -> 'qq',

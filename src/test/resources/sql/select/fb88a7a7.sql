@@ -1,2 +1,0 @@
--- file:partition_aggregate.sql ln:139 expect:true
-SELECT b.y, sum(a.y) FROM pagg_tab1 a RIGHT JOIN pagg_tab2 b ON a.x = b.y GROUP BY b.y ORDER BY 1 NULLS LAST

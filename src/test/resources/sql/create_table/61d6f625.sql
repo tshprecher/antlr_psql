@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:2077 expect:true
+-- file:alter_table.sql ln:2029 expect:true
 CREATE TABLE fail_part (LIKE list_parted)

@@ -1,2 +1,2 @@
--- file:join.sql ln:1975 expect:true
+-- file:join.sql ln:1938 expect:true
 set enable_hashjoin to 0

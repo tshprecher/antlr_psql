@@ -1,3 +1,3 @@
--- file:triggers.sql ln:1250 expect:false
+-- file:triggers.sql ln:1267 expect:false
 elsif (TG_OP = 'INSERT') then
     raise warning 'after insert (new): %', new.*::text

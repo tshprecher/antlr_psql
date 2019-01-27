@@ -1,2 +1,2 @@
--- file:triggers.sql ln:977 expect:true
+-- file:triggers.sql ln:994 expect:true
 insert into depth_b values (new.id)

@@ -1,2 +1,2 @@
--- file:privileges.sql ln:1117 expect:true
+-- file:privileges.sql ln:1086 expect:true
 DROP VIEW atestv0

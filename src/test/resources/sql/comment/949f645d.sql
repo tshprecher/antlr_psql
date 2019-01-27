@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:939 expect:true
+-- file:alter_table.sql ln:904 expect:true
 comment on column atacc1.a is 'testing'

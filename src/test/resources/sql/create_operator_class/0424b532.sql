@@ -1,0 +1,25 @@
+-- file:create_am.sql ln:12 expect:true
+CREATE OPERATOR CLASS box_ops DEFAULT
+	FOR TYPE box USING gist2 AS
+	OPERATOR 1	<<,
+	OPERATOR 2	&<,
+	OPERATOR 3	&&,
+	OPERATOR 4	&>,
+	OPERATOR 5	>>,
+	OPERATOR 6	~=,
+	OPERATOR 7	@>,
+	OPERATOR 8	<@,
+	OPERATOR 9	&<|,
+	OPERATOR 10	<<|,
+	OPERATOR 11	|>>,
+	OPERATOR 12	|&>,
+	OPERATOR 13	~,
+	OPERATOR 14	@,
+	FUNCTION 1	gist_box_consistent(internal, box, smallint, oid, internal),
+	FUNCTION 2	gist_box_union(internal, internal),
+	FUNCTION 3	gist_box_compress(internal),
+	FUNCTION 4	gist_box_decompress(internal),
+	FUNCTION 5	gist_box_penalty(internal, internal, internal),
+	FUNCTION 6	gist_box_picksplit(internal, internal),
+	FUNCTION 7	gist_box_same(box, box, internal),
+	FUNCTION 9	gist_box_fetch(internal)

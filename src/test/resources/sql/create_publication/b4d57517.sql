@@ -1,2 +1,2 @@
--- file:publication.sql ln:20 expect:false
+-- file:publication.sql ln:20 expect:true
 CREATE PUBLICATION testpub_xxx WITH (publish = 'cluster, vacuum')

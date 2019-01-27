@@ -1,4 +1,4 @@
--- file:join.sql ln:1132 expect:true
+-- file:join.sql ln:1123 expect:true
 explain (verbose, costs off)
 select t1.* from
   text_tbl t1

@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3893 expect:false
+-- file:plpgsql.sql ln:4172 expect:false
 begin
   foreach x, y in array $1
   loop

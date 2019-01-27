@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3063 expect:true
+-- file:plpgsql.sql ln:3276 expect:true
 create or replace function compos() returns setof compostype as $$
 begin
   for i in 1..3

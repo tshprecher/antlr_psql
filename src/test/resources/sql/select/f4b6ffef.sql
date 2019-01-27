@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:1018 expect:true
+-- file:jsonb.sql ln:995 expect:true
 select '[]'::jsonb - 'a'

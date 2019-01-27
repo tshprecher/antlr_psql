@@ -1,2 +1,2 @@
--- file:strings.sql ln:229 expect:true
+-- file:strings.sql ln:232 expect:true
 SELECT 'hawkeye' NOT LIKE 'indio%' AS "true"

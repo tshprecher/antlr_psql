@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1228 expect:true
+-- file:alter_table.sql ln:1193 expect:true
 create table altwithoid (col integer) without oids

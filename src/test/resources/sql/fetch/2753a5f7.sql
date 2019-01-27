@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:2909 expect:false
+-- file:plpgsql.sql ln:3122 expect:false
 loop
     fetch c into r

@@ -1,2 +1,2 @@
--- file:json.sql ln:573 expect:true
+-- file:json.sql ln:552 expect:true
 SELECT (json_populate_record(NULL::jsrec, js)).* FROM jspoptest

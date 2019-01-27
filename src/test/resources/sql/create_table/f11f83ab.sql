@@ -1,2 +1,2 @@
--- file:insert.sql ln:534 expect:false
+-- file:insert.sql ln:405 expect:true
 create table mcrparted (a text, b int) partition by range(a, b)

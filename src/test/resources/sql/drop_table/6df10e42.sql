@@ -1,2 +1,2 @@
--- file:insert.sql ln:358 expect:true
+-- file:insert.sql ln:250 expect:true
 drop table lparted_nonullpart

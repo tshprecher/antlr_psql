@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:4145 expect:true
+-- file:plpgsql.sql ln:4415 expect:true
 reset plpgsql.check_asserts

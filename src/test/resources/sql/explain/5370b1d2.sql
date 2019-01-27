@@ -1,4 +1,4 @@
--- file:join.sql ln:1008 expect:true
+-- file:join.sql ln:999 expect:true
 explain (costs off)
 select count(*) from
   tenk1 a join tenk1 b on a.unique1 = b.unique2

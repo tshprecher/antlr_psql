@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:1210 expect:true
+-- file:opr_sanity.sql ln:1207 expect:true
 SELECT p1.opcname, p1.opcfamily
 FROM pg_opclass AS p1
 WHERE NOT EXISTS(SELECT 1 FROM pg_amop AS p2

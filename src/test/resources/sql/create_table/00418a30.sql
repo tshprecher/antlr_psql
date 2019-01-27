@@ -1,4 +1,4 @@
--- file:rowtypes.sql ln:271 expect:true
+-- file:rowtypes.sql ln:169 expect:true
 CREATE TABLE price (
     id SERIAL PRIMARY KEY,
     active BOOLEAN NOT NULL,

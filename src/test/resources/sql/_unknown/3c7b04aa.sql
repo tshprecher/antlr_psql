@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3307 expect:false
+-- file:plpgsql.sql ln:3520 expect:false
 _message text

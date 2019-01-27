@@ -1,2 +1,2 @@
--- file:domain.sql ln:321 expect:true
+-- file:domain.sql ln:219 expect:true
 drop domain dcheck restrict

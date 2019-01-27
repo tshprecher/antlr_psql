@@ -1,4 +1,4 @@
--- file:triggers.sql ln:2039 expect:false
+-- file:triggers.sql ln:1790 expect:true
 create trigger my_table_multievent_trig
   after insert or update on my_table referencing new table as new_table
   for each statement execute procedure dump_insert()

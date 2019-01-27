@@ -1,2 +1,2 @@
--- file:triggers.sql ln:414 expect:true
+-- file:triggers.sql ln:431 expect:true
 drop table trigtest

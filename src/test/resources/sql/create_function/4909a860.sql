@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1153 expect:true
+-- file:triggers.sql ln:1170 expect:true
 create function self_ref_trigger_del_func()
   returns trigger language plpgsql as
 $$

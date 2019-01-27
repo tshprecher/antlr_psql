@@ -1,2 +1,2 @@
--- file:triggers.sql ln:862 expect:false
+-- file:triggers.sql ln:879 expect:false
 NEW.continent := OLD.continent

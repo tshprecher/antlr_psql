@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:889 expect:true
+-- file:alter_table.sql ln:854 expect:true
 select "........pg.dropped.1........" from atacc1

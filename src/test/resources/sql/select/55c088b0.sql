@@ -1,4 +1,4 @@
--- file:join.sql ln:1290 expect:true
+-- file:join.sql ln:1281 expect:true
 select ss2.* from
   int4_tbl i41
   left join int8_tbl i8

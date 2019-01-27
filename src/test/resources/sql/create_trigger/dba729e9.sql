@@ -1,3 +1,3 @@
--- file:triggers.sql ln:258 expect:true
+-- file:triggers.sql ln:286 expect:true
 CREATE TRIGGER modified_a BEFORE UPDATE OF a ON main_table
 FOR EACH ROW WHEN (OLD.a <> NEW.a) EXECUTE PROCEDURE trigger_func('modified_a')

@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1603 expect:true
+-- file:triggers.sql ln:1394 expect:true
 create or replace function dump_insert() returns trigger language plpgsql as
 $$
   begin

@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:632 expect:true
+-- file:oidjoins.sql ln:624 expect:true
 SELECT	ctid, typreceive
 FROM	pg_catalog.pg_type fk
 WHERE	typreceive != 0 AND

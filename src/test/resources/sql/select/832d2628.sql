@@ -1,2 +1,2 @@
--- file:json.sql ln:787 expect:true
+-- file:json.sql ln:746 expect:true
 select to_tsvector('[]'::json)

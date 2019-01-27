@@ -1,4 +1,4 @@
--- file:updatable_views.sql ln:676 expect:true
+-- file:updatable_views.sql ln:600 expect:true
 SELECT events & 4 != 0 AS upd,
        events & 8 != 0 AS ins,
        events & 16 != 0 AS del

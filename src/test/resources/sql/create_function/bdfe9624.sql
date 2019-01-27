@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3545 expect:true
+-- file:plpgsql.sql ln:3824 expect:true
 create function recurse(float8) returns float8 as
 $$
 begin

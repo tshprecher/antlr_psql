@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:456 expect:true
+-- file:oidjoins.sql ln:448 expect:true
 SELECT	ctid, classoid
 FROM	pg_catalog.pg_shdescription fk
 WHERE	classoid != 0 AND

@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:640 expect:true
+-- file:oidjoins.sql ln:632 expect:true
 SELECT	ctid, typmodin
 FROM	pg_catalog.pg_type fk
 WHERE	typmodin != 0 AND

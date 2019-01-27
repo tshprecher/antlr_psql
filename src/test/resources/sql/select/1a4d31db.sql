@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:352 expect:true
+-- file:oidjoins.sql ln:348 expect:true
 SELECT	ctid, oprnegate
 FROM	pg_catalog.pg_operator fk
 WHERE	oprnegate != 0 AND

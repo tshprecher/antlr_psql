@@ -1,2 +1,2 @@
--- file:select_parallel.sql ln:345 expect:true
+-- file:select_parallel.sql ln:198 expect:true
 select count(*) from tenk1

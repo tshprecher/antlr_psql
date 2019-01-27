@@ -1,2 +1,2 @@
--- file:insert.sql ln:199 expect:true
+-- file:insert.sql ln:157 expect:true
 select tableoid::regclass, * from range_parted

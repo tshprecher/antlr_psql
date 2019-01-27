@@ -1,4 +1,4 @@
--- file:create_aggregate.sql ln:206 expect:true
+-- file:create_aggregate.sql ln:203 expect:true
 CREATE AGGREGATE wrongreturntype (float8)
 (
     stype = float8,

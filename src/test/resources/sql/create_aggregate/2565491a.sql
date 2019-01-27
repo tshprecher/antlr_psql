@@ -1,4 +1,4 @@
--- file:aggregates.sql ln:829 expect:true
+-- file:aggregates.sql ln:823 expect:true
 create aggregate my_sum(int4)
 (
    stype = int4,

@@ -1,2 +1,2 @@
--- file:domain.sql ln:460 expect:true
+-- file:domain.sql ln:358 expect:true
 drop sequence ddef4_seq

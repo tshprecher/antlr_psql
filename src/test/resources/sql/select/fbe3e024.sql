@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:694 expect:true
+-- file:jsonb.sql ln:673 expect:true
 select * from jsonb_to_record('{"ia": null}') as x(ia _int4)

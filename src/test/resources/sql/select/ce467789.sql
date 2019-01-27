@@ -1,4 +1,4 @@
--- file:domain.sql ln:354 expect:false
+-- file:domain.sql ln:252 expect:false
 42
 \.
 

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:409 expect:true
+-- file:triggers.sql ln:426 expect:true
 select * from trigtest2

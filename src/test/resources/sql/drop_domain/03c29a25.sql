@@ -1,2 +1,2 @@
--- file:domain.sql ln:599 expect:true
+-- file:domain.sql ln:489 expect:true
 drop domain posint cascade

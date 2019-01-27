@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2205 expect:true
+-- file:plpgsql.sql ln:2183 expect:true
 drop function void_return_expr()

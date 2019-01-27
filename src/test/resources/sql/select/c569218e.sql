@@ -1,2 +1,2 @@
--- file:window.sql ln:315 expect:true
+-- file:window.sql ln:229 expect:true
 SELECT * FROM v_window

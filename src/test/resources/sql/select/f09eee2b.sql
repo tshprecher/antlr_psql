@@ -1,4 +1,4 @@
--- file:tsearch.sql ln:334 expect:true
+-- file:tsearch.sql ln:330 expect:true
 SELECT ts_headline('english', '
 <html>
 <!<body>

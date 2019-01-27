@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1616 expect:true
+-- file:alter_table.sql ln:1565 expect:true
 drop view my_locks

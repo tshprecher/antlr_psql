@@ -1,2 +1,2 @@
--- file:triggers.sql ln:191 expect:true
+-- file:triggers.sql ln:219 expect:true
 drop sequence ttdummy_seq

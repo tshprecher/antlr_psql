@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:296 expect:true
+-- file:oidjoins.sql ln:292 expect:true
 SELECT	ctid, lomowner
 FROM	pg_catalog.pg_largeobject_metadata fk
 WHERE	lomowner != 0 AND

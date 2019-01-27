@@ -1,2 +1,2 @@
--- file:event_trigger.sql ln:247 expect:true
+-- file:event_trigger.sql ln:236 expect:true
 SELECT * FROM dropped_objects WHERE type = 'schema'

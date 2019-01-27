@@ -1,4 +1,4 @@
--- file:insert.sql ln:524 expect:false
+-- file:insert.sql ln:395 expect:false
 1	baz
 2	qux
 \.

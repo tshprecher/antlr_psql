@@ -1,4 +1,4 @@
--- file:join.sql ln:711 expect:true
+-- file:join.sql ln:702 expect:true
 select t1.q2, count(t2.*)
 from int8_tbl t1 left join
   (select q1, case when q2=1 then 1 else q2 end as q2 from int8_tbl) t2

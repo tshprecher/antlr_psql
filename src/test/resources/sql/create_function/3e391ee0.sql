@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:2062 expect:true
+-- file:plpgsql.sql ln:2040 expect:true
 create function namedparmcursor_test7() returns void as $$
 declare
   c1 cursor (p1 int, p2 int) for

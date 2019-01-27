@@ -1,2 +1,2 @@
--- file:tsdicts.sql ln:100 expect:true
+-- file:tsdicts.sql ln:95 expect:true
 SELECT ts_lexize('hunspell_num', 'footballklubber')

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1914 expect:true
+-- file:triggers.sql ln:1698 expect:true
 delete from parent

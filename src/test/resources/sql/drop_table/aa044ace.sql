@@ -1,2 +1,2 @@
--- file:strings.sql ln:432 expect:true
+-- file:indirect_toast.sql ln:60 expect:true
 DROP TABLE toasttest

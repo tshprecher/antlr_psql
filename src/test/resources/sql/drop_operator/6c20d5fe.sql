@@ -1,2 +1,2 @@
--- file:alter_operator.sql ln:98 expect:true
+-- file:alter_operator.sql ln:95 expect:true
 DROP OPERATOR === (boolean, boolean)

@@ -1,2 +1,2 @@
--- file:strings.sql ln:582 expect:true
+-- file:strings.sql ln:550 expect:true
 SELECT ascii('')

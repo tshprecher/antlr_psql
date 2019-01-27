@@ -1,4 +1,4 @@
--- file:join.sql ln:1594 expect:true
+-- file:join.sql ln:1580 expect:true
 select * from generate_series(100,200) g,
   lateral (select * from int8_tbl a where g = q1 union all
            select * from int8_tbl b where g = q2) ss

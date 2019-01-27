@@ -1,2 +1,2 @@
--- file:triggers.sql ln:866 expect:false
+-- file:triggers.sql ln:883 expect:false
 RETURN NEW

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:2088 expect:true
+-- file:triggers.sql ln:1839 expect:true
 update refd_table set a = 11 where b = 'one'

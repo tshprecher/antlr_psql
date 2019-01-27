@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:1135 expect:true
+-- file:jsonb.sql ln:1082 expect:true
 select ts_headline('null'::jsonb, tsquery('aaa & bbb'))

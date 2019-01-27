@@ -1,2 +1,2 @@
--- file:inherit.sql ln:477 expect:true
+-- file:inherit.sql ln:448 expect:true
 create index patest2i on patest2(id)

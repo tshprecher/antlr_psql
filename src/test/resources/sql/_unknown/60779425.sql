@@ -1,2 +1,2 @@
--- file:triggers.sql ln:438 expect:false
+-- file:triggers.sql ln:455 expect:false
 raise NOTICE 'TG_NAME: %', TG_name

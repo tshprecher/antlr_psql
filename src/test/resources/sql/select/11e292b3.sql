@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:953 expect:true
+-- file:jsonb.sql ln:930 expect:true
 select '"a"'::jsonb || '{"a":1}'

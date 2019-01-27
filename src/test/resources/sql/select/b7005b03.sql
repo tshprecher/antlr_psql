@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:284 expect:true
+-- file:oidjoins.sql ln:280 expect:true
 SELECT	ctid, laninline
 FROM	pg_catalog.pg_language fk
 WHERE	laninline != 0 AND

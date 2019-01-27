@@ -1,2 +1,2 @@
--- file:vacuum.sql ln:71 expect:true
+-- file:vacuum.sql ln:74 expect:true
 VACUUM (FULL) vacparted

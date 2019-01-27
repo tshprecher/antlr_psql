@@ -1,4 +1,4 @@
--- file:create_aggregate.sql ln:148 expect:true
+-- file:create_aggregate.sql ln:147 expect:true
 CREATE AGGREGATE myavg (numeric)
 (
 	stype = internal,

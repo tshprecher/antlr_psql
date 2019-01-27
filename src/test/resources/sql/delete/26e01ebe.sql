@@ -1,2 +1,2 @@
--- file:triggers.sql ln:148 expect:true
+-- file:triggers.sql ln:176 expect:true
 delete from tttest where price_id = 2

@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2230 expect:false
+-- file:plpgsql.sql ln:2208 expect:false
 raise notice '% % %', i, j, k

@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3401 expect:true
+-- file:plpgsql.sql ln:3680 expect:true
 select pleast(10,20, -1.0)

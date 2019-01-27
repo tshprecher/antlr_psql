@@ -1,2 +1,2 @@
--- file:insert.sql ln:374 expect:true
+-- file:insert.sql ln:266 expect:true
 alter table mlparted add c text

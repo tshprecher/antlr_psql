@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3712 expect:true
+-- file:plpgsql.sql ln:3991 expect:true
 $ex$

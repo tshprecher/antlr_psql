@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:828 expect:true
+-- file:opr_sanity.sql ln:825 expect:true
 SELECT a.aggfnoid::oid, p.proname, ptr.oid, ptr.proname
 FROM pg_aggregate AS a, pg_proc AS p, pg_proc AS ptr
 WHERE a.aggfnoid = p.oid AND

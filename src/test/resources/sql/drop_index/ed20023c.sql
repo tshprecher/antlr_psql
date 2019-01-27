@@ -1,2 +1,2 @@
--- file:event_trigger.sql ln:280 expect:true
+-- file:event_trigger.sql ln:282 expect:true
 DROP INDEX evttrig.one_idx

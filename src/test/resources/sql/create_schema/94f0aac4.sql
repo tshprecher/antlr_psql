@@ -1,2 +1,2 @@
--- file:create_operator.sql ln:51 expect:true
+-- file:create_operator.sql ln:78 expect:true
 CREATE SCHEMA schema_op1

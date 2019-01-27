@@ -1,2 +1,2 @@
--- file:updatable_views.sql ln:588 expect:true
+-- file:updatable_views.sql ln:512 expect:true
 DROP TABLE base_tbl

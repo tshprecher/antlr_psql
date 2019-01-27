@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3603 expect:true
+-- file:plpgsql.sql ln:3882 expect:true
 rollback to savepoint s1

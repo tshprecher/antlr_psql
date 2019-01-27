@@ -1,2 +1,2 @@
--- file:domain.sql ln:362 expect:true
+-- file:domain.sql ln:260 expect:true
 create domain dnotnulltest integer

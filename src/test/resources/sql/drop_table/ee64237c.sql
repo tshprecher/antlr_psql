@@ -1,2 +1,2 @@
--- file:stats.sql ln:178 expect:true
+-- file:stats.sql ln:175 expect:true
 DROP TABLE prevstats

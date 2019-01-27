@@ -1,2 +1,2 @@
--- file:join.sql ln:656 expect:true
+-- file:join.sql ln:647 expect:true
 execute foo(true)

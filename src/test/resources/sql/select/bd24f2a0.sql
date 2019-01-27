@@ -1,3 +1,3 @@
--- file:window.sql ln:1166 expect:true
+-- file:window.sql ln:604 expect:true
 SELECT STDDEV_SAMP(n::numeric) OVER (ORDER BY i ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
   FROM (VALUES(1,NULL),(2,600),(3,470),(4,170),(5,430),(6,300)) r(i,n)

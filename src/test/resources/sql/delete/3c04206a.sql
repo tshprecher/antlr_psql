@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:2195 expect:true
+-- file:alter_table.sql ln:2139 expect:true
 DELETE FROM part_2

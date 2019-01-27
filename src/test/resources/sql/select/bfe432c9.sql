@@ -1,4 +1,4 @@
--- file:gist.sql ln:95 expect:true
+-- file:gist.sql ln:81 expect:true
 select p from
   (values (box(point(0,0), point(0.5,0.5))),
           (box(point(0.5,0.5), point(0.75,0.75))),

@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:416 expect:true
+-- file:oidjoins.sql ln:408 expect:true
 SELECT	ctid, rngtypid
 FROM	pg_catalog.pg_range fk
 WHERE	rngtypid != 0 AND

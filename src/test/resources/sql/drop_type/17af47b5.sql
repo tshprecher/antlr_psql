@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:721 expect:true
+-- file:inherit.sql ln:712 expect:true
 drop type pp_colors

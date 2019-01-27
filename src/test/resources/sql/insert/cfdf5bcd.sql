@@ -1,4 +1,4 @@
--- file:gist.sql ln:48 expect:true
+-- file:gist.sql ln:34 expect:true
 insert into gist_tbl
 select box(point(0.05*i, 0.05*i), point(0.05*i, 0.05*i)),
        point(0.05*i, 0.05*i),

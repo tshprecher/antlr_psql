@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:356 expect:true
+-- file:oidjoins.sql ln:352 expect:true
 SELECT	ctid, oprcode
 FROM	pg_catalog.pg_operator fk
 WHERE	oprcode != 0 AND

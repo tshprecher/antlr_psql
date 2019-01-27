@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2019 expect:true
+-- file:plpgsql.sql ln:1997 expect:true
 select namedparmcursor_test2(20, 20)

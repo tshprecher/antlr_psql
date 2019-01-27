@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2626 expect:true
+-- file:plpgsql.sql ln:2839 expect:true
 end $$ language plpgsql

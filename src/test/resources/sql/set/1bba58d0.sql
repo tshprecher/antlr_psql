@@ -1,2 +1,2 @@
--- file:polygon.sql ln:158 expect:true
+-- file:create_index.sql ln:592 expect:true
 SET enable_indexscan = OFF

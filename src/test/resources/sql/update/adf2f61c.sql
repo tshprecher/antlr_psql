@@ -1,2 +1,2 @@
--- file:updatable_views.sql ln:1008 expect:true
+-- file:updatable_views.sql ln:932 expect:true
 UPDATE rw_view2 SET person=person WHERE snoop(person)

@@ -1,4 +1,4 @@
--- file:join.sql ln:275 expect:true
+-- file:join.sql ln:266 expect:true
 SELECT * FROM
 (SELECT name, n as s1_n, 1 as s1_1 FROM t1) as s1
 NATURAL FULL JOIN

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:117 expect:true
+-- file:triggers.sql ln:145 expect:true
 delete from trigtest

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1821 expect:true
+-- file:triggers.sql ln:1605 expect:true
 create table child2 (b int, a text)

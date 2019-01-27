@@ -1,2 +1,2 @@
--- file:insert.sql ln:385 expect:true
+-- file:insert.sql ln:253 expect:true
 alter table mlparted drop constraint check_b

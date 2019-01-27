@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:771 expect:true
+-- file:opr_sanity.sql ln:770 expect:true
 WITH funcdescs AS (
   SELECT p.oid as p_oid, proname, o.oid as o_oid,
     pd.description as prodesc,

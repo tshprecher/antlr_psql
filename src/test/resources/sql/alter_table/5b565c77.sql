@@ -1,2 +1,2 @@
--- file:insert.sql ln:566 expect:true
+-- file:insert.sql ln:437 expect:true
 alter table returningwrtest add b text

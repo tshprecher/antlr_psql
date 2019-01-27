@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3951 expect:false
+-- file:plpgsql.sql ln:4230 expect:false
 res[2] := x3

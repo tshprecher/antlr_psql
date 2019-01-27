@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:1960 expect:true
+-- file:plpgsql.sql ln:1938 expect:true
 fetch next from test1

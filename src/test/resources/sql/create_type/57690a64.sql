@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2984 expect:true
+-- file:plpgsql.sql ln:3197 expect:true
 create type compostype as (x int, y varchar)

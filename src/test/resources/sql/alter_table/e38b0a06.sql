@@ -1,2 +1,2 @@
--- file:insert.sql ln:568 expect:true
+-- file:insert.sql ln:439 expect:true
 alter table returningwrtest2 drop c

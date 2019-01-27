@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:157 expect:true
+-- file:rowtypes.sql ln:154 expect:true
 select row(1,1.1) = any (array[ row(7,7.7), row(1,1.0), row(0,0.0) ])

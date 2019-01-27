@@ -1,2 +1,2 @@
--- file:insert.sql ln:227 expect:true
+-- file:insert.sql ln:186 expect:true
 select tableoid::regclass::text, a, min(b) as min_b, max(b) as max_b from list_parted group by 1, 2 order by 1

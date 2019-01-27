@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:1111 expect:true
+-- file:jsonb.sql ln:1070 expect:true
 select to_tsvector('""'::jsonb)

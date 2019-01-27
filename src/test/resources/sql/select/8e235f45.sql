@@ -1,4 +1,4 @@
--- file:join.sql ln:1472 expect:true
+-- file:join.sql ln:1458 expect:true
 SELECT * FROM
     (SELECT 1 AS x) ss1
   LEFT JOIN

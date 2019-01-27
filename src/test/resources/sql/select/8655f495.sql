@@ -1,4 +1,4 @@
--- file:xml.sql ln:527 expect:false
+-- file:xml.sql ln:527 expect:true
 SELECT  xmltable.*
    FROM (SELECT data FROM xmldata) x,
         LATERAL XMLTABLE('/ROWS/ROW'

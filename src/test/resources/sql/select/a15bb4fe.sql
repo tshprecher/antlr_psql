@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:301 expect:true
+-- file:rowtypes.sql ln:199 expect:true
 select * from price

@@ -1,2 +1,2 @@
--- file:rowtypes.sql ln:150 expect:true
+-- file:rowtypes.sql ln:147 expect:true
 select ROW() = ROW()

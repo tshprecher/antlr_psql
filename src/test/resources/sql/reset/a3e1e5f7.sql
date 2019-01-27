@@ -1,2 +1,2 @@
--- file:cluster.sql ln:222 expect:true
+-- file:cluster.sql ln:226 expect:true
 reset enable_indexscan

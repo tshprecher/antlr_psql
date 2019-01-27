@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:700 expect:true
+-- file:inherit.sql ln:702 expect:true
 drop table pp_arrpart

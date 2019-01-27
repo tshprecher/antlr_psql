@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2622 expect:true
+-- file:plpgsql.sql ln:2835 expect:true
 reset plpgsql.extra_warnings

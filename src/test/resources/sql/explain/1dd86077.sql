@@ -1,4 +1,4 @@
--- file:join.sql ln:1486 expect:true
+-- file:join.sql ln:1472 expect:true
 explain (costs off)
 select t1.* from
   uniquetbl as t1

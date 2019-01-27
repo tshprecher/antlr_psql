@@ -1,2 +1,2 @@
--- file:numeric.sql ln:971 expect:true
+-- file:numeric.sql ln:941 expect:true
 select * from generate_series(1::numeric, 3::numeric) i, generate_series(1,5,i) j

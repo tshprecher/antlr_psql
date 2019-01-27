@@ -1,4 +1,4 @@
--- file:join.sql ln:233 expect:true
+-- file:join.sql ln:224 expect:true
 SELECT * FROM
 (SELECT * FROM t2) as s2
 INNER JOIN

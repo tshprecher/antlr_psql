@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:804 expect:true
+-- file:jsonb.sql ln:781 expect:true
 DROP INDEX jidx

@@ -1,2 +1,2 @@
--- file:event_trigger.sql ln:345 expect:true
+-- file:event_trigger.sql ln:347 expect:true
 drop function test_evtrig_no_rewrite()

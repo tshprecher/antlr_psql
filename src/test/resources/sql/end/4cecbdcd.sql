@@ -1,2 +1,2 @@
--- file:psql.sql ln:614 expect:true
+-- file:psql.sql ln:560 expect:true
 end $$

@@ -1,2 +1,2 @@
--- file:partition_join.sql ln:163 expect:true
+-- file:collate.sql ln:220 expect:true
 RESET enable_hashjoin

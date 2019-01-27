@@ -1,4 +1,4 @@
--- file:triggers.sql ln:790 expect:true
+-- file:triggers.sql ln:807 expect:true
 CREATE TABLE city_table (
     city_id        serial primary key,
     city_name    text not null,

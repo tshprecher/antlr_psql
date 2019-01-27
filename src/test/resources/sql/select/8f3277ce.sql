@@ -1,4 +1,4 @@
--- file:float8.sql ln:186 expect:true
+-- file:float8.sql ln:180 expect:true
 SELECT x,
        cosd(x),
        cosd(x) IN (-1,-0.5,0,0.5,1) AS cosd_exact

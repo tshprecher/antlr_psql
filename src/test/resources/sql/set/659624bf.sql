@@ -1,2 +1,2 @@
--- file:polygon.sql ln:159 expect:true
+-- file:box.sql ln:210 expect:true
 SET enable_bitmapscan = ON

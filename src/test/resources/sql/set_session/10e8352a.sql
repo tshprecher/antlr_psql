@@ -1,2 +1,2 @@
--- file:privileges.sql ln:1061 expect:true
+-- file:privileges.sql ln:1032 expect:true
 SET SESSION ROLE regress_schemauser1

@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1218 expect:true
+-- file:alter_table.sql ln:1183 expect:true
 select * from altwithoid

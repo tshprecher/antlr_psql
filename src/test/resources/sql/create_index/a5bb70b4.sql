@@ -1,2 +1,2 @@
--- file:select_parallel.sql ln:185 expect:true
+-- file:select_parallel.sql ln:116 expect:true
 create index i_bmtest ON bmscantest(a)

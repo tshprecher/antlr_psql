@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:484 expect:true
+-- file:join.sql ln:657 expect:true
 set enable_hashjoin = 0

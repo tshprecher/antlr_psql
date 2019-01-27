@@ -1,2 +1,2 @@
--- file:foreign_data.sql ln:129 expect:true
+-- file:foreign_data.sql ln:806 expect:true
 DROP FOREIGN DATA WRAPPER foo CASCADE

@@ -1,4 +1,4 @@
--- file:event_trigger.sql ln:182 expect:true
+-- file:event_trigger.sql ln:171 expect:true
 CREATE TABLE dropped_objects (
 	type text,
 	schema text,

@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:2596 expect:false
+-- file:plpgsql.sql ln:2809 expect:false
 begin
 	end

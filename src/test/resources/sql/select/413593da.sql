@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:192 expect:true
+-- file:oidjoins.sql ln:188 expect:true
 SELECT	ctid, confrelid
 FROM	pg_catalog.pg_constraint fk
 WHERE	confrelid != 0 AND

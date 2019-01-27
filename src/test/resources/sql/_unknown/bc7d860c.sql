@@ -1,3 +1,3 @@
--- file:plpgsql.sql ln:2012 expect:false
+-- file:plpgsql.sql ln:1990 expect:false
 if found then
         return true

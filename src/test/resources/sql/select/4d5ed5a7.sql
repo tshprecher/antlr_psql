@@ -1,2 +1,2 @@
--- file:numeric.sql ln:1045 expect:true
+-- file:numeric.sql ln:1015 expect:true
 SELECT SUM((-9999)::numeric) FROM generate_series(1, 100000)

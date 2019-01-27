@@ -1,2 +1,2 @@
--- file:privileges.sql ln:971 expect:true
+-- file:privileges.sql ln:960 expect:true
 DROP FUNCTION testns.foo()

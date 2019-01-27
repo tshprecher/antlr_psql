@@ -1,2 +1,2 @@
--- file:create_index.sql ln:1095 expect:true
+-- file:create_index.sql ln:1048 expect:true
 CREATE INDEX ON matview(col1)

@@ -1,2 +1,2 @@
--- file:join.sql ln:1989 expect:true
+-- file:join.sql ln:1952 expect:true
 reset enable_nestloop

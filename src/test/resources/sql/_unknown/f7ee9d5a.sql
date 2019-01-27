@@ -1,2 +1,2 @@
--- file:create_am.sql ln:62 expect:true
+-- file:create_am.sql ln:64 expect:true
 ROLLBACK

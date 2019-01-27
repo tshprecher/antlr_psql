@@ -1,2 +1,2 @@
--- file:join.sql ln:684 expect:true
+-- file:join.sql ln:675 expect:true
 create index on tidv (idv)

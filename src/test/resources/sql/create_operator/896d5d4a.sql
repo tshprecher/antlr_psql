@@ -1,4 +1,4 @@
--- file:create_operator.sql ln:86 expect:true
+-- file:create_operator.sql ln:113 expect:true
 CREATE OPERATOR === (
     LEFTARG = boolean,
     RIGHTARG = boolean,

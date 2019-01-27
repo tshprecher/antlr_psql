@@ -1,4 +1,4 @@
--- file:create_table.sql ln:322 expect:false
+-- file:create_table.sql ln:329 expect:true
 CREATE TABLE partitioned (
 	a int,
 	b int

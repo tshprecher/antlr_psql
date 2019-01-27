@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:1027 expect:true
+-- file:jsonb.sql ln:1004 expect:true
 select jsonb_set('[]','{1}','"b"', false)

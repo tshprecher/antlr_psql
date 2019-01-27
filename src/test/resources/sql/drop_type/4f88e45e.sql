@@ -1,2 +1,2 @@
--- file:privileges.sql ln:601 expect:true
+-- file:privileges.sql ln:584 expect:true
 DROP TYPE test7b

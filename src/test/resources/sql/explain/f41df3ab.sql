@@ -1,3 +1,3 @@
--- file:gist.sql ln:64 expect:true
+-- file:gist.sql ln:50 expect:true
 explain (costs off)
 select p from gist_tbl where p <@ box(point(0,0), point(0.5, 0.5))

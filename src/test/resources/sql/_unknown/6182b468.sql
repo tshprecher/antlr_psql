@@ -1,4 +1,4 @@
--- file:triggers.sql ln:202 expect:false
+-- file:triggers.sql ln:230 expect:false
 5	10
 20	20
 30	10

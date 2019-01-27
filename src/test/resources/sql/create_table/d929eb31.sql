@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1825 expect:true
+-- file:triggers.sql ln:1609 expect:true
 create table child3 (c text) inherits (parent)

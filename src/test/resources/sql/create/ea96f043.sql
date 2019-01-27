@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3260 expect:true
+-- file:plpgsql.sql ln:3473 expect:true
 create or replace function raise_test() returns void as $$
 begin
   raise exception 'custom exception'

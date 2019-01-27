@@ -1,2 +1,2 @@
--- file:domain.sql ln:469 expect:true
+-- file:domain.sql ln:367 expect:true
 select 'y1234'::dtop

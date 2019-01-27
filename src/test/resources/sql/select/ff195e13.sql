@@ -1,2 +1,2 @@
--- file:numeric.sql ln:1029 expect:true
+-- file:numeric.sql ln:999 expect:true
 select scale(numeric 'NaN')

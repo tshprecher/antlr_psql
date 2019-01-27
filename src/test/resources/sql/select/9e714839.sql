@@ -1,4 +1,4 @@
--- file:join.sql ln:807 expect:true
+-- file:join.sql ln:798 expect:true
 SELECT qq, unique1
   FROM
   ( SELECT COALESCE(q1, 0) AS qq FROM int8_tbl a ) AS ss1

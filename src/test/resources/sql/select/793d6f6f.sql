@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:886 expect:true
+-- file:alter_table.sql ln:851 expect:true
 select b,c,d from atacc1

@@ -1,2 +1,2 @@
--- file:tsearch.sql ln:433 expect:true
+-- file:tsearch.sql ln:429 expect:true
 SELECT COUNT(*) FROM test_tsquery WHERE keyword <  'new & york'

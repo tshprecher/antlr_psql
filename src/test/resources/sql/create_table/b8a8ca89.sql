@@ -1,4 +1,4 @@
--- file:create_table.sql ln:641 expect:false
+-- file:create_table.sql ln:586 expect:true
 CREATE TABLE part_b PARTITION OF parted (
 	b NOT NULL,
 	b DEFAULT 1,

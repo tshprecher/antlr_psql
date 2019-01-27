@@ -1,2 +1,2 @@
--- file:insert.sql ln:326 expect:true
+-- file:insert.sql ln:218 expect:true
 truncate mlparted

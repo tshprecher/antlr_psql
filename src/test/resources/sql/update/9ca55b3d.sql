@@ -1,2 +1,2 @@
--- file:vacuum.sql ln:69 expect:true
+-- file:vacuum.sql ln:72 expect:true
 UPDATE vacparted SET b = 'b'

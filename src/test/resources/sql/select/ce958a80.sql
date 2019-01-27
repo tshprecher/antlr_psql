@@ -1,4 +1,4 @@
--- file:join.sql ln:886 expect:true
+-- file:join.sql ln:877 expect:true
 select * from
   int8_tbl t1 left join
   (select q1 as x, 42 as y from int8_tbl t2) ss

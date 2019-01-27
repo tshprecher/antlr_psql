@@ -1,4 +1,4 @@
--- file:join.sql ln:1066 expect:true
+-- file:join.sql ln:1057 expect:true
 explain (costs off)
 select q1, unique2, thousand, hundred
   from int8_tbl a left join tenk1 b on q1 = unique2

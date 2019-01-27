@@ -1,4 +1,4 @@
--- file:triggers.sql ln:549 expect:true
+-- file:triggers.sql ln:566 expect:true
 CREATE TABLE serializable_update_tab (
 	id int,
 	filler  text,

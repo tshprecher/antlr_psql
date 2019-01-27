@@ -1,2 +1,2 @@
--- file:event_trigger.sql ln:300 expect:true
+-- file:event_trigger.sql ln:302 expect:true
 create table rewriteme (id serial primary key, foo float)

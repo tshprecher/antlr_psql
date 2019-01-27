@@ -1,2 +1,2 @@
--- file:partition_prune.sql ln:720 expect:true
+-- file:inherit.sql ln:711 expect:true
 drop table pp_enumpart

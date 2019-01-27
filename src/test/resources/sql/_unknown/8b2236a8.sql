@@ -1,3 +1,3 @@
--- file:updatable_views.sql ln:883 expect:true
+-- file:updatable_views.sql ln:807 expect:true
 $$
 LANGUAGE plpgsql

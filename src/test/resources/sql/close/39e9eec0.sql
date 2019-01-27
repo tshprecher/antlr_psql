@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2011 expect:true
+-- file:plpgsql.sql ln:1989 expect:true
 close c1

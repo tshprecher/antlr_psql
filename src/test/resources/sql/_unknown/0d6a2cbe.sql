@@ -1,3 +1,3 @@
--- file:triggers.sql ln:466 expect:false
+-- file:triggers.sql ln:483 expect:false
 if TG_OP = 'DELETE' then
 		return OLD

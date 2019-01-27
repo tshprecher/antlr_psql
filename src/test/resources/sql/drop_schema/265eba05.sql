@@ -1,2 +1,2 @@
--- file:privileges.sql ln:996 expect:true
+-- file:privileges.sql ln:1043 expect:true
 DROP SCHEMA testns CASCADE

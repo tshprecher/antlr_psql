@@ -1,3 +1,3 @@
--- file:triggers.sql ln:462 expect:false
+-- file:triggers.sql ln:479 expect:false
 if TG_OP != 'DELETE' then
 		raise NOTICE 'NEW: %', NEW

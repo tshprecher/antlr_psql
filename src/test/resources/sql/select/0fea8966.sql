@@ -1,2 +1,2 @@
--- file:numeric.sql ln:878 expect:true
+-- file:numeric.sql ln:855 expect:true
 select div (70.0,70) 

@@ -1,2 +1,2 @@
--- file:triggers.sql ln:277 expect:true
+-- file:triggers.sql ln:299 expect:true
 COPY main_table FROM stdin

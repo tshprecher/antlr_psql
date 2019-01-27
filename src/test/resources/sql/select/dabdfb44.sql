@@ -1,2 +1,2 @@
--- file:tsearch.sql ln:157 expect:true
+-- file:tsearch.sql ln:153 expect:true
 SELECT to_tsquery('english', '''the wether'':dc & ''           sKies '':BC ')

@@ -1,2 +1,2 @@
--- file:privileges.sql ln:922 expect:true
+-- file:privileges.sql ln:921 expect:true
 CREATE SCHEMA testns2

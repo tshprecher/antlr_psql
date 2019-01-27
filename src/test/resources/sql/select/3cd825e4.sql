@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:320 expect:true
+-- file:oidjoins.sql ln:316 expect:true
 SELECT	ctid, opcintype
 FROM	pg_catalog.pg_opclass fk
 WHERE	opcintype != 0 AND

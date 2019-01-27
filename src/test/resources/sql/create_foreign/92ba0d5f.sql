@@ -1,4 +1,4 @@
--- file:foreign_data.sql ln:609 expect:true
+-- file:foreign_data.sql ln:590 expect:true
 CREATE FOREIGN TABLE ft3 (
 	c1 integer NOT NULL,
 	c2 text,

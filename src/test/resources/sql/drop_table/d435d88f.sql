@@ -1,2 +1,2 @@
--- file:create_table.sql ln:279 expect:true
+-- file:create_table.sql ln:275 expect:true
 DROP TABLE as_select1

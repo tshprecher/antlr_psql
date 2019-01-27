@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:1251 expect:true
+-- file:opr_sanity.sql ln:1248 expect:true
 SELECT p1.amprocfamily, p1.amprocnum
 FROM pg_amproc as p1
 WHERE p1.amprocfamily = 0 OR p1.amproclefttype = 0 OR p1.amprocrighttype = 0

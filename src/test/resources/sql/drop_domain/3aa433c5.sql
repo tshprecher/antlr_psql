@@ -1,2 +1,2 @@
--- file:domain.sql ln:319 expect:true
+-- file:domain.sql ln:217 expect:true
 drop domain dnotnull restrict

@@ -1,2 +1,2 @@
--- file:tsearch.sql ln:419 expect:true
+-- file:tsearch.sql ln:415 expect:true
 ALTER TABLE test_tsquery ADD COLUMN sample tsquery

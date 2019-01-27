@@ -1,2 +1,2 @@
--- file:strings.sql ln:431 expect:true
+-- file:strings.sql ln:417 expect:true
 SELECT c FROM toasttest

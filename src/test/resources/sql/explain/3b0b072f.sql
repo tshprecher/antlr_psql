@@ -1,4 +1,4 @@
--- file:join.sql ln:1448 expect:true
+-- file:join.sql ln:1434 expect:true
 explain (costs off)
 select p.* from
   (parent p left join child c on (p.k = c.k)) join parent x on p.k = x.k

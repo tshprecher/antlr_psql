@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:802 expect:true
+-- file:alter_table.sql ln:767 expect:true
 create table parent (a int)

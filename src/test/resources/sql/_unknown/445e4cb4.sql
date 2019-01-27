@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3450 expect:false
+-- file:plpgsql.sql ln:3729 expect:false
 raise notice '% %', found, rc

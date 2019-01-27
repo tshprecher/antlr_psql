@@ -1,2 +1,2 @@
--- file:updatable_views.sql ln:530 expect:true
+-- file:updatable_views.sql ln:413 expect:true
 SELECT * FROM rw_view2

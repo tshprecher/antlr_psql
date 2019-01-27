@@ -1,2 +1,2 @@
--- file:triggers.sql ln:1648 expect:true
+-- file:triggers.sql ln:1439 expect:true
 alter table child2 drop column x

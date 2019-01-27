@@ -1,2 +1,2 @@
--- file:updatable_views.sql ln:685 expect:true
+-- file:updatable_views.sql ln:609 expect:true
 CREATE TABLE base_tbl_parent (a int)

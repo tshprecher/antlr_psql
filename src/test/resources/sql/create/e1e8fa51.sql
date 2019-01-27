@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:843 expect:true
+-- file:jsonb.sql ln:820 expect:true
 create temp table nestjsonb (j jsonb)

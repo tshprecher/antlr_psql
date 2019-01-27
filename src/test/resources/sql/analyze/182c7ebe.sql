@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:4399 expect:true
+-- file:plpgsql.sql ln:4669 expect:true
 ANALYZE transition_table_status

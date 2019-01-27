@@ -1,2 +1,2 @@
--- file:domain.sql ln:318 expect:true
+-- file:domain.sql ln:216 expect:true
 drop table nulltest

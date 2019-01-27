@@ -1,2 +1,2 @@
--- file:create_index.sql ln:782 expect:true
+-- file:create_index.sql ln:752 expect:true
 INSERT INTO concur_heap VALUES  ('a','b')

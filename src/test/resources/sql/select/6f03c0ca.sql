@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:427 expect:true
+-- file:opr_sanity.sql ln:426 expect:true
 SELECT *
 FROM pg_cast c
 WHERE (castmethod = 'f' AND castfunc = 0)

@@ -1,2 +1,2 @@
--- file:numeric.sql ln:945 expect:true
+-- file:numeric.sql ln:915 expect:true
 select exp(-32.999)

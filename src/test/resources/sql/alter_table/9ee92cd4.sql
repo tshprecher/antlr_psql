@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:920 expect:true
+-- file:alter_table.sql ln:885 expect:true
 alter table atacc1 drop bar

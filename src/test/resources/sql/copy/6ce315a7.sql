@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1411 expect:false
+-- file:triggers.sql ln:1377 expect:false
 1
 2
 \.

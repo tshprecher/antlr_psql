@@ -1,4 +1,4 @@
--- file:join.sql ln:1267 expect:true
+-- file:join.sql ln:1258 expect:true
 select 1 from
   text_tbl as tt1
   inner join text_tbl as tt2 on (tt1.f1 = 'foo')

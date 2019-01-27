@@ -1,4 +1,4 @@
--- file:join.sql ln:380 expect:true
+-- file:join.sql ln:371 expect:true
 explain (costs off)
 select * from int8_tbl i1 left join (int8_tbl i2 join
   (select 123 as x) ss on i2.q1 = x) on i1.q2 = i2.q2

@@ -1,2 +1,2 @@
--- file:create_index.sql ln:1040 expect:true
+-- file:create_index.sql ln:1004 expect:true
 RESET enable_indexonlyscan

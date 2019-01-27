@@ -1,2 +1,2 @@
--- file:privileges.sql ln:604 expect:true
+-- file:privileges.sql ln:587 expect:true
 DROP FUNCTION castfunc(int) CASCADE

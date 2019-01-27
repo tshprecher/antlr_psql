@@ -1,2 +1,2 @@
--- file:transactions.sql ln:468 expect:true
+-- file:guc.sql ln:107 expect:true
 SAVEPOINT sp

@@ -1,2 +1,2 @@
--- file:strings.sql ln:320 expect:true
+-- file:strings.sql ln:323 expect:true
 SELECT 'jack' LIKE '%____%' AS t

@@ -1,3 +1,3 @@
--- file:privileges.sql ln:656 expect:true
+-- file:privileges.sql ln:639 expect:true
 select has_table_privilege(t1.oid,'select')
 from (select oid from pg_class where relname = 'pg_authid') as t1

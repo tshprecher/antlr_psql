@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:4356 expect:true
+-- file:plpgsql.sql ln:4626 expect:true
 CREATE FUNCTION transition_table_level2_ri_child_insupd_func()
   RETURNS TRIGGER
   LANGUAGE plpgsql

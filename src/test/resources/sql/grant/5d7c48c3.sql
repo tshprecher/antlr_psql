@@ -1,2 +1,0 @@
--- file:privileges.sql ln:217 expect:true
-GRANT SELECT ON atestv2 TO regress_priv_user2

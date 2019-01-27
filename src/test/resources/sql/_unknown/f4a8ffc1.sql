@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:2137 expect:false
+-- file:plpgsql.sql ln:2115 expect:false
 EXCEPTION
        WHEN syntax_error THEN
            BEGIN

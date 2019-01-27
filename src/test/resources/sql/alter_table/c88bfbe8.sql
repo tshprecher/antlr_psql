@@ -1,2 +1,2 @@
--- file:updatable_views.sql ln:1230 expect:true
+-- file:updatable_views.sql ln:1154 expect:true
 alter table wcowrtest2 drop c

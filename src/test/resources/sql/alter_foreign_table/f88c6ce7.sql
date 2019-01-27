@@ -1,2 +1,2 @@
--- file:foreign_data.sql ln:335 expect:true
+-- file:foreign_data.sql ln:316 expect:true
 ALTER FOREIGN TABLE ft1 ADD COLUMN c8 integer

@@ -1,4 +1,4 @@
--- file:foreign_data.sql ln:570 expect:true
+-- file:foreign_data.sql ln:551 expect:true
 CREATE CONSTRAINT TRIGGER trigtest_constraint AFTER INSERT OR UPDATE OR DELETE
 ON foreign_schema.foreign_table_1
 FOR EACH ROW

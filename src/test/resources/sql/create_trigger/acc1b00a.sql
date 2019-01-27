@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1847 expect:false
+-- file:triggers.sql ln:1631 expect:true
 create trigger child2_insert_trig
   after insert on child2 referencing new table as new_table
   for each statement execute procedure dump_insert()

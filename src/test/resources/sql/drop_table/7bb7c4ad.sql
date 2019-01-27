@@ -1,2 +1,2 @@
--- file:inherit.sql ln:217 expect:true
+-- file:inherit.sql ln:200 expect:true
 drop table oid_parent cascade

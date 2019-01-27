@@ -1,4 +1,4 @@
--- file:triggers.sql ln:1061 expect:true
+-- file:triggers.sql ln:1078 expect:true
 create function parent_del_func()
   returns trigger language plpgsql as
 $$

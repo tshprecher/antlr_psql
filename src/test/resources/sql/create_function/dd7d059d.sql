@@ -1,4 +1,4 @@
--- file:insert.sql ln:330 expect:true
+-- file:insert.sql ln:222 expect:true
 create function mlparted11_trig_fn()
 returns trigger AS
 $$

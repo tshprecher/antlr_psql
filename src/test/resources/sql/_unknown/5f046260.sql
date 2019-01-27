@@ -1,3 +1,3 @@
--- file:triggers.sql ln:468 expect:false
+-- file:triggers.sql ln:485 expect:false
 else
 		return NEW

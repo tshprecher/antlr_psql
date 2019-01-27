@@ -1,2 +1,2 @@
--- file:insert.sql ln:106 expect:true
+-- file:insert.sql ln:102 expect:true
 insert into part1 values ('a', 1)

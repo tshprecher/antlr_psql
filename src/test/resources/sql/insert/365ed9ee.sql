@@ -1,2 +1,2 @@
--- file:triggers.sql ln:143 expect:true
+-- file:triggers.sql ln:171 expect:true
 insert into tttest values (1, 1, null)

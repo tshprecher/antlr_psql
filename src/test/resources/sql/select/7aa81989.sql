@@ -1,2 +1,2 @@
--- file:strings.sql ln:581 expect:true
+-- file:strings.sql ln:549 expect:true
 SELECT ascii('x')

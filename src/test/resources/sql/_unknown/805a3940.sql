@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3513 expect:false
+-- file:plpgsql.sql ln:3792 expect:false
 RETURN arr

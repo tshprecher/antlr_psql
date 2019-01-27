@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:332 expect:true
+-- file:oidjoins.sql ln:328 expect:true
 SELECT	ctid, oprowner
 FROM	pg_catalog.pg_operator fk
 WHERE	oprowner != 0 AND

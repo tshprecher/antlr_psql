@@ -1,2 +1,2 @@
--- file:fast_default.sql ln:51 expect:false
+-- file:opr_sanity.sql ln:64 expect:false
 end if

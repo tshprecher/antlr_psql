@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:2451 expect:true
+-- file:alter_table.sql ln:2284 expect:true
 DROP TABLE range_parted2

@@ -1,2 +1,2 @@
--- file:domain.sql ln:425 expect:true
+-- file:domain.sql ln:323 expect:true
 create domain things AS INT

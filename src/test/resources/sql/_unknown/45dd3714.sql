@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3354 expect:false
+-- file:plpgsql.sql ln:3567 expect:false
 exception when others then
   get stacked diagnostics
         _column_name = column_name,

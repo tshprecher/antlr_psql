@@ -1,2 +1,2 @@
--- file:event_trigger.sql ln:282 expect:true
+-- file:event_trigger.sql ln:284 expect:true
 DROP TABLE a_temp_tbl

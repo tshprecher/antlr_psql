@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:855 expect:true
+-- file:jsonb.sql ln:832 expect:true
 set enable_bitmapscan = on

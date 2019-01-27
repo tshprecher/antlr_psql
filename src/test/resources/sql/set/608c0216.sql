@@ -1,2 +1,2 @@
--- file:join.sql ln:527 expect:true
+-- file:join.sql ln:518 expect:true
 set work_mem to '64kB'

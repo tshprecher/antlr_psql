@@ -1,4 +1,4 @@
--- file:rowtypes.sql ln:373 expect:true
+-- file:rowtypes.sql ln:271 expect:true
 explain (costs off)
 select row_to_json(q) from
   (select thousand, tenthous from tenk1

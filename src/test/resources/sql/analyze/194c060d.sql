@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:935 expect:true
+-- file:alter_table.sql ln:900 expect:true
 analyze atacc1(a)

@@ -222,7 +222,7 @@ def get_expectation(query):
     tmpfile.write(query)
     tmpfile.close()
 
-    output = subprocess.check_output(["psql -f /tmp/query.sql"], stderr=subprocess.STDOUT, shell=True)
+    output = subprocess.check_output(["psql -U postgres -f /tmp/query.sql"], stderr=subprocess.STDOUT, shell=True)
     res = True
     if output.find("syntax error") >= 0:
         res = False

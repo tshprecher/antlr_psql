@@ -1,4 +1,4 @@
--- file:window.sql ln:1042 expect:true
+-- file:window.sql ln:480 expect:true
 WITH
 vs AS (
 	SELECT i, (random() * 100)::int4 AS v

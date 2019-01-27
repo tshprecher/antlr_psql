@@ -1,2 +1,2 @@
--- file:join.sql ln:742 expect:true
+-- file:join.sql ln:733 expect:true
 insert into c (name, a) values ('B', 'q')

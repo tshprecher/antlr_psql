@@ -1,4 +1,4 @@
--- file:aggregates.sql ln:880 expect:true
+-- file:aggregates.sql ln:873 expect:true
 CREATE FUNCTION balkifnull(int8, int8)
 RETURNS int8
 PARALLEL SAFE

@@ -1,2 +1,2 @@
--- file:domain.sql ln:368 expect:true
+-- file:domain.sql ln:266 expect:true
 insert into domnotnull default values

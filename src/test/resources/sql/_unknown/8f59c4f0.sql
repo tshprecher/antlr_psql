@@ -1,4 +1,4 @@
--- file:xml.sql ln:565 expect:false
+-- file:xml.sql ln:565 expect:true
 WITH
    x AS (SELECT proname, proowner, procost::numeric, pronargs,
                 array_to_string(proargnames,',') as proargnames,

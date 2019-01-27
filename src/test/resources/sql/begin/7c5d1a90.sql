@@ -1,2 +1,2 @@
--- file:write_parallel.sql ln:7 expect:true
+-- file:select_parallel.sql ln:10 expect:true
 begin isolation level repeatable read

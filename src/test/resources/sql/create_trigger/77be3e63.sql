@@ -1,3 +1,3 @@
--- file:triggers.sql ln:723 expect:true
+-- file:triggers.sql ln:740 expect:true
 CREATE TRIGGER before_ins_stmt_trig BEFORE INSERT ON main_view
 FOR EACH STATEMENT EXECUTE PROCEDURE view_trigger('before_view_ins_stmt')

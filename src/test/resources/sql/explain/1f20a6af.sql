@@ -1,4 +1,4 @@
--- file:gist.sql ln:87 expect:true
+-- file:gist.sql ln:73 expect:true
 explain (costs off)
 select p from
   (values (box(point(0,0), point(0.5,0.5))),

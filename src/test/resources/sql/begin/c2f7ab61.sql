@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:4333 expect:false
+-- file:plpgsql.sql ln:4603 expect:false
 BEGIN
     WITH p AS (SELECT level1_no, sum(delta) cnt
                  FROM (SELECT level1_no, 1 AS delta FROM i

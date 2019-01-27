@@ -1,4 +1,4 @@
--- file:create_operator.sql ln:106 expect:true
+-- file:create_operator.sql ln:133 expect:true
 CREATE OPERATOR #@%# (
    procedure = numeric_fac
 )

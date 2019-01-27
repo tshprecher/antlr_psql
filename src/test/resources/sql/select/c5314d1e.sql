@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:419 expect:true
+-- file:opr_sanity.sql ln:418 expect:true
 SELECT *
 FROM pg_cast c
 WHERE castsource = 0 OR casttarget = 0 OR castcontext NOT IN ('e', 'a', 'i')

@@ -1,2 +1,2 @@
--- file:lock.sql ln:124 expect:true
+-- file:lock.sql ln:61 expect:true
 DROP VIEW lock_view1

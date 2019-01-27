@@ -1,2 +1,2 @@
--- file:join.sql ln:458 expect:true
+-- file:join.sql ln:449 expect:true
 DROP TABLE t3

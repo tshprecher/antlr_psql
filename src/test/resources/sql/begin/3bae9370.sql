@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3681 expect:false
+-- file:plpgsql.sql ln:3960 expect:false
 BEGIN
     FOR r IN SELECT rtrim(roomno) AS roomno, comment FROM Room ORDER BY roomno
     LOOP

@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2307 expect:true
+-- file:plpgsql.sql ln:2285 expect:true
 select raise_exprs()

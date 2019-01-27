@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3069 expect:false
+-- file:plpgsql.sql ln:3282 expect:false
 return next null::compostype

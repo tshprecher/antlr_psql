@@ -1,4 +1,4 @@
--- file:join.sql ln:922 expect:true
+-- file:join.sql ln:913 expect:true
 explain (costs off)
 select * from
   tenk1, int8_tbl a, int8_tbl b

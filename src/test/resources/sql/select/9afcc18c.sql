@@ -1,2 +1,2 @@
--- file:jsonb.sql ln:959 expect:true
+-- file:jsonb.sql ln:936 expect:true
 select '{}'::jsonb || '{"cq":"l", "b":"g", "fg":false}'

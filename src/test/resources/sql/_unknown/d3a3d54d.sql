@@ -1,2 +1,2 @@
--- file:transactions.sql ln:464 expect:true
+-- file:sanity_check.sql ln:1 expect:true
 VACUUM

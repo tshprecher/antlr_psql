@@ -1,4 +1,4 @@
--- file:event_trigger.sql ln:290 expect:true
+-- file:event_trigger.sql ln:292 expect:true
 CREATE OR REPLACE FUNCTION test_evtrig_no_rewrite() RETURNS event_trigger
 LANGUAGE plpgsql AS $$
 BEGIN

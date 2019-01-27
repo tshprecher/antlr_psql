@@ -1,2 +1,2 @@
--- file:domain.sql ln:597 expect:true
+-- file:domain.sql ln:487 expect:true
 drop table ddtest2

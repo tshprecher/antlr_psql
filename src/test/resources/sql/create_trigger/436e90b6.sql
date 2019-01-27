@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:4372 expect:false
+-- file:plpgsql.sql ln:4642 expect:true
 CREATE TRIGGER transition_table_level2_ri_child_ins_trigger
   AFTER INSERT ON transition_table_level2
   REFERENCING NEW TABLE AS i

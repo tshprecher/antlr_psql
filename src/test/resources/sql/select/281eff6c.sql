@@ -1,4 +1,4 @@
--- file:oidjoins.sql ln:488 expect:true
+-- file:oidjoins.sql ln:480 expect:true
 SELECT	ctid, stxnamespace
 FROM	pg_catalog.pg_statistic_ext fk
 WHERE	stxnamespace != 0 AND

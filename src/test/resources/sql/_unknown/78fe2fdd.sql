@@ -1,4 +1,4 @@
--- file:timestamptz.sql ln:293 expect:true
+-- file:timestamptz.sql ln:289 expect:true
 WITH tzs (tz) AS (VALUES
     ('+1'), ('+1:'), ('+1:0'), ('+100'), ('+1:00'), ('+01:00'),
     ('+10'), ('+1000'), ('+10:'), ('+10:0'), ('+10:00'), ('+10:00:'),

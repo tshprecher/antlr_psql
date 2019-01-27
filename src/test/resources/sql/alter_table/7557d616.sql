@@ -1,2 +1,2 @@
--- file:triggers.sql ln:367 expect:true
+-- file:triggers.sql ln:389 expect:true
 ALTER TABLE main_table DROP COLUMN b

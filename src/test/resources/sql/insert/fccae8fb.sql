@@ -1,4 +1,4 @@
--- file:spgist.sql ln:41 expect:true
+-- file:spgist.sql ln:56 expect:true
 insert into spgist_text_tbl (id, t)
 select g, 'f' || repeat('o', 100) || g from generate_series(1, 10000) g
 union all

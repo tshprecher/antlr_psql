@@ -1,2 +1,2 @@
--- file:numeric.sql ln:895 expect:true
+-- file:numeric.sql ln:872 expect:true
 select 3.789 ^ 21

@@ -1,4 +1,4 @@
--- file:join.sql ln:1748 expect:true
+-- file:join.sql ln:1734 expect:true
 select * from
   ((select 2 as v) union all (select 3 as v)) as q1
   cross join lateral

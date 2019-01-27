@@ -1,4 +1,4 @@
--- file:opr_sanity.sql ln:1327 expect:true
+-- file:opr_sanity.sql ln:1324 expect:true
 SELECT indexrelid::regclass, indrelid::regclass, iclass, icoll
 FROM (SELECT indexrelid, indrelid,
              unnest(indclass) as iclass, unnest(indcollation) as icoll

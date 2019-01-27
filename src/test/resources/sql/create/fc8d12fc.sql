@@ -1,2 +1,2 @@
--- file:join.sql ln:1657 expect:true
+-- file:join.sql ln:1643 expect:true
 create temp table dual()

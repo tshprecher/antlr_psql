@@ -1,2 +1,2 @@
--- file:join.sql ln:737 expect:true
+-- file:join.sql ln:728 expect:true
 insert into a (code) values ('p')

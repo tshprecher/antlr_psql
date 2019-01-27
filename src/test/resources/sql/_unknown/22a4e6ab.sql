@@ -1,2 +1,2 @@
--- file:triggers.sql ln:905 expect:true
+-- file:triggers.sql ln:922 expect:true
 end'

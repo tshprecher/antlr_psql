@@ -1,2 +1,2 @@
--- file:horology.sql ln:533 expect:true
+-- file:horology.sql ln:527 expect:true
 RESET TIME ZONE

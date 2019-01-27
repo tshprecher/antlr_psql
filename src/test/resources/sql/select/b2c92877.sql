@@ -1,2 +1,2 @@
--- file:numeric.sql ln:1003 expect:true
+-- file:numeric.sql ln:973 expect:true
 select log(10.00000000000000000)

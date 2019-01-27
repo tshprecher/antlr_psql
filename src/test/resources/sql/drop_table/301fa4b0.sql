@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:2069 expect:true
+-- file:alter_table.sql ln:2021 expect:true
 DROP TABLE unparted, fail_part

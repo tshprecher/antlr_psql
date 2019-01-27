@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:3292 expect:false
+-- file:plpgsql.sql ln:3505 expect:false
 exception when others then
   get stacked diagnostics
         _message = message_text,

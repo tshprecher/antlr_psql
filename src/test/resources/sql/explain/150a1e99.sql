@@ -1,4 +1,4 @@
--- file:inherit.sql ln:595 expect:true
+-- file:inherit.sql ln:564 expect:true
 explain (costs off)
 SELECT x, y FROM
   (SELECT thousand AS x, tenthous AS y FROM tenk1 a

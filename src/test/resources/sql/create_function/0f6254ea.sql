@@ -1,4 +1,4 @@
--- file:plpgsql.sql ln:4406 expect:true
+-- file:plpgsql.sql ln:4676 expect:true
 CREATE FUNCTION transition_table_level2_bad_usage_func()
   RETURNS TRIGGER
   LANGUAGE plpgsql

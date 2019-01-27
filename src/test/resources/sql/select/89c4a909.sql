@@ -1,2 +1,2 @@
--- file:alter_table.sql ln:1219 expect:true
+-- file:alter_table.sql ln:1184 expect:true
 select * from altinhoid

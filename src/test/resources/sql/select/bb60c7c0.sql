@@ -1,4 +1,4 @@
--- file:inherit.sql ln:613 expect:true
+-- file:inherit.sql ln:582 expect:true
 SELECT
     ARRAY(SELECT f.i FROM (
         (SELECT d + g.i FROM generate_series(4, 30, 3) d ORDER BY 1)

@@ -1,2 +1,2 @@
--- file:inherit.sql ln:259 expect:true
+-- file:inherit.sql ln:242 expect:true
 CREATE TABLE bc (bb TEXT) INHERITS (ac)

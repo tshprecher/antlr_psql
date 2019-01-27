@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:2906 expect:false
+-- file:plpgsql.sql ln:3119 expect:false
 r record

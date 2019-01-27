@@ -1,2 +1,2 @@
--- file:strings.sql ln:576 expect:true
+-- file:strings.sql ln:544 expect:true
 SELECT ltrim('zzzytrim', 'xyz')

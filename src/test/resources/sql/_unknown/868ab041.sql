@@ -1,2 +1,2 @@
--- file:plpgsql.sql ln:3977 expect:true
+-- file:plpgsql.sql ln:4256 expect:true
 $$ stable

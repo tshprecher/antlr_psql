@@ -1,4 +1,4 @@
--- file:join.sql ln:552 expect:true
+-- file:join.sql ln:543 expect:true
 SELECT a.f1
 FROM tt4 a
 LEFT JOIN (

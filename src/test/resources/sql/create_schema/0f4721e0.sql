@@ -1,2 +1,2 @@
--- file:create_index.sql ln:1087 expect:true
+-- file:create_index.sql ln:1040 expect:true
 CREATE SCHEMA schema_to_reindex
