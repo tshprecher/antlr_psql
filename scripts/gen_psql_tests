@@ -239,8 +239,8 @@ def generate_test_cases(file, output_dir):
     next_next_char = file.read(1)
     query = ""
     line_num = 1
-    while next_char != "":
-        if next_char == "-" and next_next_char == "-":
+    while next_char != "":        
+        if (next_char == "-" and next_next_char == "-"):
             while next_char != "\n":
                 next_char = next_next_char
                 next_next_char = file.read(1)
@@ -255,6 +255,11 @@ def generate_test_cases(file, output_dir):
             testfile.write(query + "\n")
             testfile.close()
             query = ""
+        elif query == "" and (next_char == "\\" or next_char == ":"):
+            # skip postgres specific \xxx commands
+            while next_char != "\n":
+                next_char = next_next_char
+                next_next_char = file.read(1)
         elif query != "" or next_char.isspace() == False:
             query += next_char
         if next_char == "\n":
