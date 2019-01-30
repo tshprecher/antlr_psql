@@ -912,7 +912,7 @@ drop_user_stmt
     ;
 
 drop_user_mapping_stmt
-    : DROP USER MAPPING (IF EXISTS)? FOR (user_name=identifier|USER|CURRENT_USER|PUBLIC) SERVER server_name=identifier
+    : DROP USER MAPPING (IF EXISTS)? FOR (user_name=name_|USER|CURRENT_USER|SESSION_USER|PUBLIC) SERVER server_name=identifier
     ;
 
 drop_view_stmt
