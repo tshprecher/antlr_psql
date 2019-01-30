@@ -800,7 +800,7 @@ drop_foreign_table_stmt
     ;
 
 drop_function_stmt
-    : todo_implement
+    : DROP FUNCTION (IF EXISTS)? functions=func_sig_list (CASCADE|RESTRICT)?
     ;
 
 drop_group_stmt
@@ -1249,6 +1249,22 @@ expr_list_list
     : OPEN_PAREN expr_list (COMMA expr_list)* CLOSE_PAREN
     ;
 
+func_sig_arg
+    : ((argmode=(IN|OUT|INOUT|VARIADIC))? (argname=identifier)? argtype=type)?
+    ;
+
+func_sig_arg_list
+    : func_sig_arg (COMMA func_sig_arg)*
+    ;
+
+func_sig
+    : name=identifier (OPEN_PAREN func_sig_arg_list CLOSE_PAREN)?
+    ;
+
+func_sig_list
+    : func_sig (COMMA func_sig)*
+    ;
+
 // TODO: is type_literal necessary or can we just have this be an identifier and match (identifier STRING_LITERAL)?
 // TODO: rename prefix notation type casts
 type_literal
@@ -1264,6 +1280,7 @@ type_literal
     | LINE
     | POINT
     | NAME
+    | NUMERIC
     | TEXT
     | TIMESTAMP ((WITH | AT) TIME ZONE)?
     | TIMESTAMP (WITHOUT TIME ZONE)?
@@ -1271,11 +1288,16 @@ type_literal
     | TIME (WITH TIME ZONE)?
     | TIME (WITHOUT TIME ZONE)?
     | TIME_TZ
+    | INT
     | INT2
     | INT4
     | INT8
     | INTERVAL
     | RELTIME
+    ;
+
+type_literal_list
+    : type_literal (COMMA type_literal)*
     ;
 
 // TODO: what to do with this?
@@ -1339,14 +1361,14 @@ index_method
     ;
 
 func_name
-    : type
+    : type  // for casting to a type
     | identifier
     ;
 
 func_call
     : func_name OPEN_PAREN VARIADIC expr CLOSE_PAREN
     | func_name OPEN_PAREN (expr (COMMA expr)* (COMMA VARIADIC expr)?)? CLOSE_PAREN
-    | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN    // for EXTRACT()
+    | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN
     ;
 
 array_cons_expr
@@ -1357,7 +1379,6 @@ from_item
     : ONLY? table_name_ STAR? with_column_alias?
       (TABLESAMPLE todo_fill_in OPEN_PAREN expr (COMMA expr)* CLOSE_PAREN (REPEATABLE OPEN_PAREN todo_fill_in CLOSE_PAREN)?)?
     | LATERAL? OPEN_PAREN stmt CLOSE_PAREN AS? alias (OPEN_PAREN column_alias (COMMA column_alias)* CLOSE_PAREN)?
-//    | OPEN_PAREN values_stmt CLOSE_PAREN AS? alias
     | LATERAL? func_call (WITH ORDINALITY)? with_column_alias?
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
@@ -1397,9 +1418,10 @@ predicate
 
 aggregate_signature
     : STAR
-    | (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=identifier_list
-    | ((argmode=(IN|VARIADIC))? (argname=identifier)? argtype=identifier_list)
-        ORDER BY (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=identifier_list
+    // TODO: can we combine the two using the ? operator
+    | (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=type_list
+    | ((argmode=(IN|VARIADIC))? (argname=identifier)? argtype=type_list)
+        ORDER BY (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=type_list
     ;
 
 // TODO: replace copies of this during alterations because it's so common
