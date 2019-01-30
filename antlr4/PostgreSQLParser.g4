@@ -584,13 +584,13 @@ create_operator_family_stmt
 create_policy_stmt
     : CREATE POLICY name=identifier ON tableName=identifier
       (FOR (ALL | SELECT | INSERT | UPDATE | DELETE))?
-      (TO (role_name=identifier | PUBLIC | CURRENT_USER | SESSION_USER))? // TODO: make a list here
+      (TO role=role_name)? // TODO: make a list here
       (USING OPEN_PAREN predicate CLOSE_PAREN)?
       (WITH CHECK OPEN_PAREN predicate CLOSE_PAREN)?
     ;
 
 create_role_stmt
-    : CREATE ROLE (name_ | CURRENT_USER | SESSION_USER)
+    : CREATE ROLE role=role_name
       (WITH?
         (SUPERUSER | NOSUPERUSER | CREATEDB | NOCREATEDB |
          CREATEROLE | NOCREATEROLE | INHERIT | NOINHERIT | LOGIN | NOLOGIN |
@@ -611,15 +611,11 @@ create_rule_stmt
       DO (ALSO | INSTEAD)? (NOTHING | command=identifier)
     ;
 
-create_schema_role_spec
-    : user_name=identifier | CURRENT_USER | SESSION_USER
-    ;
-
 create_schema_stmt
-    : (CREATE SCHEMA schema_name=identifier (AUTHORIZATION create_schema_role_spec)? todo_fill_in? ) |
-      (CREATE SCHEMA AUTHORIZATION create_schema_role_spec todo_fill_in?) |
-      (CREATE SCHEMA IF NOT EXISTS schema_name=identifier (AUTHORIZATION create_schema_role_spec)?) |
-      (CREATE SCHEMA IF NOT EXISTS AUTHORIZATION create_schema_role_spec)
+    : (CREATE SCHEMA schema_name=identifier (AUTHORIZATION role_name)? todo_fill_in? ) |
+      (CREATE SCHEMA AUTHORIZATION role_name todo_fill_in?) |
+      (CREATE SCHEMA IF NOT EXISTS schema_name=identifier (AUTHORIZATION role_name)?) |
+      (CREATE SCHEMA IF NOT EXISTS AUTHORIZATION role_name)
     ;
 
 create_sequence_stmt
@@ -832,7 +828,7 @@ drop_operator_family_stmt
     ;
 
 drop_owned_stmt
-    : DROP OWNED BY owner_list (CASCADE|RESTRICT)?
+    : DROP OWNED BY role_name_list (CASCADE|RESTRICT)?
     ;
 
 drop_policy_stmt
@@ -1426,13 +1422,12 @@ aggregate_signature
         ORDER BY (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=type_list
     ;
 
-// TODO: replace copies of this during alterations because it's so common
-owner
-    : name=name_ | CURRENT_USER | SESSION_USER
+role_name
+    : name=name_ | CURRENT_USER | SESSION_USER | PUBLIC
     ;
 
-owner_list
-    : owner (COMMA owner)*
+role_name_list
+    : role_name (COMMA role_name)*
     ;
 
 // allow non-reserved keywords as identifiers
