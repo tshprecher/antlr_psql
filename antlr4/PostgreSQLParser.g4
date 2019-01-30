@@ -1357,7 +1357,9 @@ type_list
     ;
 
 index_method
-    : BTREE | HASH_ | GIST | SPGIST | GIN | BRIN
+    : builtin=(BTREE | HASH_ | GIST | SPGIST | GIN | BRIN)
+    | unknown=identifier
+
     ;
 
 func_name
