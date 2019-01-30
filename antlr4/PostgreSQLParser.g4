@@ -848,7 +848,7 @@ drop_role_stmt
     ;
 
 drop_rule_stmt
-    : DROP RULE (IF EXISTS)? name=identifier ON table_name=identifier (CASCADE|RESTRICT)?
+    : DROP RULE (IF EXISTS)? name=name_ ON table_name=identifier (CASCADE|RESTRICT)?
     ;
 
 drop_schema_stmt
