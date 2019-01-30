@@ -808,7 +808,7 @@ drop_group_stmt
     ;
 
 drop_index_stmt
-    : DROP INDEX CONCURRENTLY? (IF EXISTS)? names=identifier_list (CASCADE|RESTRICT)?
+    : DROP INDEX CONCURRENTLY? (IF EXISTS)? names=name_list (CASCADE|RESTRICT)?
     ;
 
 drop_language_stmt
