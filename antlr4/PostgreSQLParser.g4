@@ -1426,7 +1426,7 @@ aggregate_signature
 
 // TODO: replace copies of this during alterations because it's so common
 owner
-    : name=identifier | CURRENT_USER | SESSION_USER
+    : name=name_ | CURRENT_USER | SESSION_USER
     ;
 
 owner_list
