@@ -40,10 +40,18 @@ when this project reaches a stable state.
 
 ## Generating test files
 
+Setup Environment :-
+
+    - Install postgres, 
+	`brew install postgres` (OS : mac) 
+	For OS other than mac, refer (http://postgresguide.com/setup/install.html)
+    - Launch/Start postgres Sql :
+        `pg_ctl -D /usr/local/var/postgres start`
+			
+
 As mentioned, tests have been generated from the official postgres repo
 (https://github.com/postgres/postgres). To regenerate them, fetch the repository
-at the desired version and run `./scripts/gen_psql_tests src/test/regress/sql /tmp/my_local_psql_tests/`
-where `src/test/regress/sql` is a directory in the source postgres project.
+at the desired version and run `path/to/antlr_postgres_repo/scripts/gen_psql_tests path/to/postgres_repo/src/test/regress/sql /tmp/my_local_psql_tests/`
 
 ## Parsing a specific query
 
