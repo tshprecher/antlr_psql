@@ -24,6 +24,11 @@ parser grammar PostgreSQLParser;
 
 options { tokenVocab=PostgreSQLLexer; }
 
+
+root
+    : stmt ((SEMI stmt)+ SEMI)? EOF
+    ;
+
 // Top Level Description
 // TODO: consolidate rollback* into a rollback_stmt a la alter/create/drop
 stmt
@@ -78,7 +83,6 @@ stmt
      | update_stmt
      | vacuum_stmt
      | values_stmt)
-    EOF
     ;
 
 abort_stmt
@@ -452,7 +456,7 @@ create_conversion_stmt
 
 create_database_stmt
     : CREATE DATABASE name_
-    | ( WITH?
+     ( WITH?
         (OWNER EQUAL name_)?
         (TEMPLATE EQUAL name_)?
         (ENCODING EQUAL name_)?
@@ -462,7 +466,7 @@ create_database_stmt
         (ALLOW_CONNECTIONS EQUAL name_)?
         (CONNECTION LIMIT EQUAL INTEGER_LITERAL)?
         (IS_TEMPLATE EQUAL INTEGER_LITERAL)?
-      )?
+      )
     ;
 
 domain_constraint

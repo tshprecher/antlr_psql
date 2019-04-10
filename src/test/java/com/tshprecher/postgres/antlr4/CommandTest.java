@@ -39,14 +39,12 @@ public abstract class CommandTest {
                 PostgreSQLParser parser = new PostgreSQLParser(new CommonTokenStream(lexer));
                 success.set(true);
                 parser.addErrorListener(new BaseErrorListener() {
-                                            @Override
-                                            public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e)
-                                                    throws RecognitionException {
-                                                success.set(false);
-                                            }
-                                        }
-                );
-                parser.stmt();
+                    @Override
+                    public void syntaxError(Recognizer<?, ?> recognizer, Object offendingSymbol, int line, int charPositionInLine, String msg, RecognitionException e) throws RecognitionException {
+                        success.set(false);
+                    }
+                });
+                parser.root();
 
                 if (success.get() != expect) {
                     System.out.printf("failed: %s\n", name);
