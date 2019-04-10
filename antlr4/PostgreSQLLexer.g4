@@ -24,8 +24,8 @@ lexer grammar PostgreSQLLexer;
 
 // Skip
 WHITESPACE          : [ \t\r\n]+    -> skip;
-BLOCK_COMMENT       : '/*' .*? '*/' -> skip;
-LINE_COMMENT        : '--' .*? '\n' -> skip;
+BLOCK_COMMENT       : '/*' .*? '*/' -> channel(HIDDEN);
+LINE_COMMENT        : '--' .*? '\n' -> channel(HIDDEN);
 
 // Fragments
 fragment A          : ('A'|'a') ;
@@ -873,4 +873,4 @@ TIL_LTE_TIL                          : '~<=~';
 TIL_LT_TIL                           : '~<~';
 TIL_STAR                             : '~*';
 TIL_TIL                              : '~~';
-
+SEMI:                ';';
