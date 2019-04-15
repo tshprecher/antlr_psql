@@ -26,7 +26,7 @@ options { tokenVocab=PostgreSQLLexer; }
 
 
 root
-    : (stmt SEMI?)* EOF
+    : (stmt SEMI?)* EOF?
     ;
 
 // Top Level Description
