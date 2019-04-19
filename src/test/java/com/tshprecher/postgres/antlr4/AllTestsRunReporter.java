@@ -19,18 +19,17 @@ public class AllTestsRunReporter {
 
     public static void main(String args[]) throws IOException {
         File resultsFile = new File("rawResults.txt");
-        File reportFile = new File("report.html");
+        File reportFile = new File("test_coverage.html");
         generateReportIfNotExists(resultsFile);
         Map<String, String> finalResults = extractResults(resultsFile);
         generateHtmlReport(reportFile, finalResults);
-        FileUtils.write(reportFile, "</table>\r\n" + "</body>\r\n" + "</html>", Charset.defaultCharset(), true);
     }
 
     private static void generateHtmlReport(File reportFile, Map<String, String> finalResults) throws IOException {
         FileUtils.write(reportFile, "<html>\r\n"
                 + "<style>table {border-collapse: collapse;} th, td {text-align: left; border: 1px solid black;}</style>\r\n"
                 + "<body>\r\n" + "<table>\r\n" + "  <tr>\r\n" + "       <th>Command</th>\r\n"
-                + "     <th>Accuracy</th>\r\n" + "  </tr>", Charset.defaultCharset());
+                + "     <th>Accuracy</th>\r\n" + "  </tr>\r\n", Charset.defaultCharset());
         finalResults.forEach((k, v) -> {
             try {
                 double accuracy = Double.parseDouble(v.split("\\(")[1].split("\\,")[0]);
@@ -42,13 +41,19 @@ public class AllTestsRunReporter {
                     color = "green";
                 }
                 FileUtils.write(reportFile,
-                        String.format("<tr style=\"color: %s\"><td>%s</td><td>%s</td></tr>%n", color, k, v),
+                        String.format(
+                                "    <tr style=\"color: %s\">%n"
+                                + "        <td>%s</td>%n"
+                                + "        <td>%s</td>%n"
+                                + "    </tr>%n", color, k, v),
                         Charset.defaultCharset(), true);
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
-    }result
+        FileUtils.write(reportFile, "</table>\r\n" + "</body>\r\n" + "</html>", Charset.defaultCharset(), true);
+
+    }
 
     private static Map<String, String> extractResults(File resultsFile) throws IOException {
         List<String> lines = Files.readAllLines(resultsFile.toPath(), Charset.defaultCharset());
