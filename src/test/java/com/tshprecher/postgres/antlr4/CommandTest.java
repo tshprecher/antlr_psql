@@ -5,7 +5,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -14,7 +13,6 @@ import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.RecognitionException;
 import org.antlr.v4.runtime.Recognizer;
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 
 public abstract class CommandTest {
@@ -83,8 +81,9 @@ public abstract class CommandTest {
         int failureCount = falseNegative + falsePositive;
         String msg = String.format(
                 "result:%s\taccuracy:%d/%d (%.2f%%)\tfalse pos rate:%d/%d (%.2f%%)\tfalse neg rate:%d/%d (%.2f%%)\n",
-                commandName, fileCount - failureCount, fileCount, (double) (fileCount - failureCount) / fileCount * 100,
-                falsePositive, failureCount, (double) falsePositive / failureCount * 100, falseNegative, failureCount,
+                commandName, fileCount - failureCount, fileCount,
+                fileCount <= 0 ? 0 : (double) (fileCount - failureCount) / fileCount * 100, falsePositive, failureCount,
+                (double) falsePositive / failureCount * 100, falseNegative, failureCount,
                 (double) falseNegative / failureCount * 100);
         System.out.println(msg);
     }

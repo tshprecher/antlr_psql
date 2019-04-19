@@ -4,3 +4,4 @@ target/*
 gen-java/*
 AntlrTest.*
 *.tokens
+/target/
