@@ -48,13 +48,13 @@ public class AllTestsRunReporter {
                 e.printStackTrace();
             }
         });
-    }
+    }result
 
     private static Map<String, String> extractResults(File resultsFile) throws IOException {
         List<String> lines = Files.readAllLines(resultsFile.toPath(), Charset.defaultCharset());
         Map<String, String> finalResults = new TreeMap<>();
         for (String line : lines) {
-            if (line.isEmpty() || line.startsWith("failed")) {
+            if (line.isEmpty() || !line.startsWith("result")) {
                 continue;
             }
 
