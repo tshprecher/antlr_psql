@@ -1222,7 +1222,7 @@ expr
     | identifier
     | CAST OPEN_PAREN expr AS type CLOSE_PAREN
     | correlation_name DOT column_name
-    | CASE WHEN predicate THEN expr (ELSE expr)? END
+    | case_expr
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
     | expr COLON_COLON type
     | expr DOT (identifier | STAR)
@@ -1239,6 +1239,11 @@ bool_expr
     | NOT bool_expr
     | bool_expr AND bool_expr
     | bool_expr OR bool_expr
+    ;
+
+case_expr
+    : CASE expr (WHEN expr THEN expr)+ (ELSE expr)? END
+    | CASE (WHEN predicate THEN expr)+ (ELSE expr)? END
     ;
 
 expr_list
