@@ -1,3 +1,5 @@
+cp -R target/generated-sources/com/tshprecher/postgres/antlr4/* ../MetaGoverness/src/main/java/ru/tinkoff/dwh/metagoverness/parser/syntax; sed -i "s/com\.tshprecher\.postgres\.antlr4/ru\.tinkoff\.dwh\.metagoverness\.parser\.syntax/g" ../MetaGoverness/src/main/java/ru/tinkoff/dwh/metagoverness/parser/syntax/*.java
+
 *WORK IN PROGRESS*
 
 # Antlr4 grammar for PostgresSQL v10.
