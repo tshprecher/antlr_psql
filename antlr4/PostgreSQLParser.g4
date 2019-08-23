@@ -1028,6 +1028,7 @@ select_stmt
       offset_clause?
       fetch_clause?
       for_clause?
+    | OPEN_PAREN select_stmt CLOSE_PAREN combine_clause?
     ;
 
 set_stmt
