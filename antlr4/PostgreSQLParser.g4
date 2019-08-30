@@ -71,7 +71,7 @@ stmt
      | rollback_to_savepoint_stmt
      | savepoint_stmt
      | security_label_stmt
-     | select_stmt | (OPEN_PAREN select_stmt CLOSE_PAREN)
+     | select_stmt
      | set_stmt
      | set_constraints_stmt
      | set_role_stmt
