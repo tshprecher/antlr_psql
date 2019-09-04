@@ -691,7 +691,10 @@ create_user_mapping_stmt
     ;
 
 create_view_stmt
-    : todo_implement
+    : CREATE (OR REPLACE)? (TEMP|TEMPORARY)? RECURSIVE? VIEW name=name_ (OPEN_PAREN name_list CLOSE_PAREN)?
+    (WITH OPEN_PAREN parameter_list CLOSE_PAREN)?
+    AS (select_stmt | values_stmt)
+    (WITH (CASCADED|LOCAL)? CHECK OPTION)?
     ;
 
 deallocate_stmt
@@ -1343,6 +1346,14 @@ identifier_list
     : identifier (COMMA identifier)*
     ;
 
+parameter_list
+    : parameter (COMMA parameter)*
+    ;
+
+parameter
+    : identifier (EQUAL identifier)?
+    ;
+
 // TODO: remove
 table_name_
     : identifier
@@ -1391,7 +1402,7 @@ from_item
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
       (AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN)? CLOSE_PAREN
-    | from_item NATURAL? join_type from_item join_clause // TODO: fix 'left' being treated as an alias
+    | from_item NATURAL? join_type from_item join_clause? // TODO: fix 'left' being treated as an alias
     ;
 
 with_column_alias
@@ -1446,7 +1457,7 @@ role_name_list
 non_reserved_keyword
     :  A_ |  ABORT |  ABS |  ABSOLUTE |  ACCESS
     |  ACTION |  ADA |  ADD |  ADMIN |  AFTER
-    |  AGGREGATE |  ALLOCATE |  ALSO |  ALTER |  ALWAYS
+    |  AGGREGATE |  ALLOCATE |  ALSO |  ALTER |  ALWAYS | ANY
     |  ARE |  ASENSITIVE |  ASSERTION |  ASSIGNMENT |  AT
     |  ATOMIC |  ATTRIBUTE |  ATTRIBUTES |  AVG |  BACKWARD
     |  BEFORE |  BEGIN |  BERNOULLI |  BETWEEN |  BIGINT
@@ -1534,7 +1545,7 @@ non_reserved_keyword
     |  TIMESTAMP |  TIMEZONE_HOUR |  TIMEZONE_MINUTE |  TOP_LEVEL_COUNT |  TRANSACTION
     |  TRANSACTIONS_COMMITTED |  TRANSACTIONS_ROLLED_BACK |  TRANSACTION_ACTIVE |  TRANSFORM |  TRANSFORMS
     |  TRANSLATE |  TRANSLATION |  TREAT |  TRIGGER |  TRIGGER_CATALOG
-    |  TRIGGER_NAME |  TRIGGER_SCHEMA |  TRIM |  TRUNCATE |  TRUSTED
+    |  TRIGGER_NAME |  TRIGGER_SCHEMA |  TRIM | TRUE | TRUNCATE |  TRUSTED
     |  TYPE |  UESCAPE |  UNBOUNDED |  UNCOMMITTED |  UNDER
     |  UNENCRYPTED |  UNKNOWN |  UNLISTEN |  UNNAMED |  UNNEST
     |  UNTIL |  UPDATE |  UPPER |  USAGE |  USER_DEFINED_TYPE_CATALOG
