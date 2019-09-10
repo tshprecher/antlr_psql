@@ -481,7 +481,7 @@ create_domain_stmt
     ;
 
 create_event_trigger_cond
-    : filter=identifier IN OPEN_PAREN SINGLEQ_STRING_LITERAL (COMMA SINGLEQ_STRING_LITERAL)* CLOSE_PAREN
+    : filter_stmt=identifier IN OPEN_PAREN SINGLEQ_STRING_LITERAL (COMMA SINGLEQ_STRING_LITERAL)* CLOSE_PAREN
       (AND create_event_trigger_cond)*
     ;
 
