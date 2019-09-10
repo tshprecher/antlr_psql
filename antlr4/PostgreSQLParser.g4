@@ -506,7 +506,7 @@ create_foreign_data_stmt
 
 create_foreign_table_stmt
     : CREATE FOREIGN TABLE (IF NOT EXISTS)? table_name_TODO=identifier
-      OPEN_PAREN column_name_TODO=identifier data_type=identifier
+      OPEN_PAREN column_name_TODO=identifier column_type=identifier
         (OPTIONS OPEN_PAREN opts=create_foreign_data_options CLOSE_PAREN)?
         (COLLATE create_collation_opt)?
       CLOSE_PAREN
@@ -576,7 +576,7 @@ create_operator_class_opt
     ;
 
 create_operator_class_stmt
-    : CREATE OPERATOR CLASS name=identifier DEFAULT? FOR TYPE data_type=identifier
+    : CREATE OPERATOR CLASS name=identifier DEFAULT? FOR TYPE op_type=identifier
         USING index_method (FAMILY family_name=identifier)? AS
         create_operator_class_opt (COMMA create_operator_class_opt)*
     ;
