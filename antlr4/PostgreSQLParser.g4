@@ -366,7 +366,7 @@ create_access_method_stmt
     : CREATE ACCESS METHOD name_ TYPE INDEX HANDLER name_;
 
 create_aggregate_stmt
-    : (CREATE AGGREGATE name_ OPEN_PAREN (IN | VARIADIC)? name_? type_list CLOSE_PAREN
+    : (CREATE AGGREGATE name_ OPEN_PAREN (IN | VARIADIC)? name_? data_type_list CLOSE_PAREN
         OPEN_PAREN
           SFUNC EQUAL identifier COMMA
           STYPE EQUAL identifier
@@ -387,8 +387,8 @@ create_aggregate_stmt
           (COMMA SORTOP EQUAL identifier)?
           (COMMA PARALLEL EQUAL (SAFE | RESTRICTED | UNSAFE))?
         CLOSE_PAREN)
-    | (CREATE AGGREGATE name_ OPEN_PAREN ((IN | VARIADIC)? name_? type_list)?
-         ORDER BY (IN | VARIADIC)? name_? type_list CLOSE_PAREN
+    | (CREATE AGGREGATE name_ OPEN_PAREN ((IN | VARIADIC)? name_? data_type_list)?
+         ORDER BY (IN | VARIADIC)? name_? data_type_list CLOSE_PAREN
          OPEN_PAREN
            SFUNC EQUAL identifier COMMA
            STYPE EQUAL identifier
@@ -401,7 +401,7 @@ create_aggregate_stmt
          CLOSE_PAREN)
     | (CREATE AGGREGATE name_
          OPEN_PAREN
-           BASETYPE EQUAL type COMMA
+           BASETYPE EQUAL data_type COMMA
            SFUNC EQUAL identifier COMMA
            STYPE EQUAL identifier
            (COMMA SSPACE EQUAL INTEGER_LITERAL)?
@@ -423,8 +423,8 @@ create_aggregate_stmt
     ;
 
 create_cast_stmt
-    : CREATE CAST OPEN_PAREN type AS type CLOSE_PAREN
-              ((WITH FUNCTION identifier ( OPEN_PAREN type_list CLOSE_PAREN )?)
+    : CREATE CAST OPEN_PAREN data_type AS data_type CLOSE_PAREN
+              ((WITH FUNCTION identifier ( OPEN_PAREN data_type_list CLOSE_PAREN )?)
                | (WITHOUT FUNCTION)
                | (WITH INOUT))
               (AS ASSIGNMENT | AS IMPLICIT)?
@@ -474,14 +474,14 @@ domain_constraint
     ;
 
 create_domain_stmt
-    : CREATE DOMAIN name_ AS? type
+    : CREATE DOMAIN name_ AS? data_type
       ((COLLATE name_) |
        (DEFAULT expr) |
        domain_constraint)*
     ;
 
 create_event_trigger_cond
-    : filter=identifier IN OPEN_PAREN SINGLEQ_STRING_LITERAL (COMMA SINGLEQ_STRING_LITERAL)* CLOSE_PAREN
+    : filter_stmt=identifier IN OPEN_PAREN SINGLEQ_STRING_LITERAL (COMMA SINGLEQ_STRING_LITERAL)* CLOSE_PAREN
       (AND create_event_trigger_cond)*
     ;
 
@@ -506,7 +506,7 @@ create_foreign_data_stmt
 
 create_foreign_table_stmt
     : CREATE FOREIGN TABLE (IF NOT EXISTS)? table_name_TODO=identifier
-      OPEN_PAREN column_name_TODO=identifier data_type=identifier
+      OPEN_PAREN column_name_TODO=identifier column_type=identifier
         (OPTIONS OPEN_PAREN opts=create_foreign_data_options CLOSE_PAREN)?
         (COLLATE create_collation_opt)?
       CLOSE_PAREN
@@ -571,12 +571,12 @@ create_operator_stmt
 
 create_operator_class_opt
     : (OPERATOR strategy_number=INTEGER_LITERAL opName=identifier (OPEN_PAREN identifier COMMA identifier CLOSE_PAREN)?) |
-      (FUNCTION support_number=INTEGER_LITERAL (OPEN_PAREN identifier (COMMA identifier)? CLOSE_PAREN)? func_name_=identifier OPEN_PAREN type_list CLOSE_PAREN) |
+      (FUNCTION support_number=INTEGER_LITERAL (OPEN_PAREN identifier (COMMA identifier)? CLOSE_PAREN)? func_name_=identifier OPEN_PAREN data_type_list CLOSE_PAREN) |
       (STORAGE storage_type=identifier)
     ;
 
 create_operator_class_stmt
-    : CREATE OPERATOR CLASS name=identifier DEFAULT? FOR TYPE data_type=identifier
+    : CREATE OPERATOR CLASS name=identifier DEFAULT? FOR TYPE op_type=identifier
         USING index_method (FAMILY family_name=identifier)? AS
         create_operator_class_opt (COMMA create_operator_class_opt)*
     ;
@@ -767,7 +767,7 @@ drop_aggregate_stmt
     ;
 
 drop_cast_stmt
-    : DROP CAST (IF EXISTS)? OPEN_PAREN source_type=type AS target_type=identifier CLOSE_PAREN (CASCADE|RESTRICT)?
+    : DROP CAST (IF EXISTS)? OPEN_PAREN source_type=data_type AS target_type=identifier CLOSE_PAREN (CASCADE|RESTRICT)?
     ;
 
 drop_collation_stmt
@@ -1224,11 +1224,11 @@ expr
     | op=(NOT | ALL) expr
     | func_call
     | identifier
-    | CAST OPEN_PAREN expr AS type CLOSE_PAREN
+    | CAST OPEN_PAREN expr AS data_type CLOSE_PAREN
     | correlation_name DOT column_name
     | case_expr
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
-    | expr COLON_COLON type
+    | expr COLON_COLON data_type
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
 
@@ -1259,7 +1259,7 @@ expr_list_list
     ;
 
 func_sig_arg
-    : ((argmode=(IN|OUT|INOUT|VARIADIC))? (argname=identifier)? argtype=type)?
+    : ((argmode=(IN|OUT|INOUT|VARIADIC))? (argname=identifier)? argtype=data_type)?
     ;
 
 func_sig_arg_list
@@ -1361,16 +1361,16 @@ table_name_
 
 // TODO: can we remove in favor of just 'identifier' and the array case?
 // TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type of SUM
-type
+data_type
     : type_literal
     | VARCHAR OPEN_PAREN INTEGER_LITERAL? CLOSE_PAREN
     | NUMERIC OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN
     | identifier // TODO: is this necessary?
-    | type OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET
+    | data_type OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET
     ;
 
-type_list
-    : type (COMMA type)*
+data_type_list
+    : data_type (COMMA data_type)*
     ;
 
 index_method
@@ -1380,7 +1380,7 @@ index_method
     ;
 
 func_name
-    : type  // for casting to a type
+    : data_type  // for casting to a type
     | identifier
     ;
 
@@ -1438,9 +1438,9 @@ predicate
 aggregate_signature
     : STAR
     // TODO: can we combine the two using the ? operator
-    | (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=type_list
-    | ((argmode=(IN|VARIADIC))? (argname=identifier)? argtype=type_list)
-        ORDER BY (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=type_list
+    | (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=data_type_list
+    | ((argmode=(IN|VARIADIC))? (argname=identifier)? argtype=data_type_list)
+        ORDER BY (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=data_type_list
     ;
 
 role_name
