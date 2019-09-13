@@ -131,17 +131,24 @@ alter_stmt
     | alter_user_mapping_stmt
     | alter_view_stmt
     ;
-    
+
 alter_aggregate_stmt
-    : todo_implement
+    : ALTER AGGREGATE name=identifier OPEN_PAREN aggregate_signature CLOSE_PAREN RENAME TO new_name=identifier
+    | ALTER AGGREGATE name=identifier OPEN_PAREN aggregate_signature CLOSE_PAREN OWNER TO new_owner=role_name
+    | ALTER AGGREGATE name=identifier OPEN_PAREN aggregate_signature CLOSE_PAREN SET SCHEMA new_schema=identifier
     ;
 
 alter_collation_stmt
-    : todo_implement
+    : ALTER COLLATION name=name_ REFRESH VERSION
+    | ALTER COLLATION name=name_ RENAME TO new_name=identifier
+    | ALTER COLLATION name=name_ OWNER TO new_owner=role_name
+    | ALTER COLLATION name=name_ SET SCHEMA new_schema=identifier
     ;
 
 alter_conversion_stmt
-    : todo_implement
+    : ALTER CONVERSION name=identifier RENAME TO new_name=identifier
+    | ALTER CONVERSION name=identifier OWNER TO new_owner=role_name
+    | ALTER CONVERSION name=identifier SET SCHEMA new_schema=identifier
     ;
 
 alter_database_stmt
@@ -153,23 +160,80 @@ alter_default_privileges_stmt
     ;
 
 alter_domain_stmt
-    : todo_implement
+    : ALTER DOMAIN name=identifier (SET DEFAULT expr | DROP DEFAULT)
+    | ALTER DOMAIN name=identifier (SET|DROP) NOT NULL
+    | ALTER DOMAIN name=identifier ADD domain_constraint (NOT VALID)?
+    | ALTER DOMAIN name=identifier DROP CONSTRAINT (IF EXISTS)? constraint_name=identifier (RESTRICT|CASCADE)?
+    | ALTER DOMAIN name=identifier RENAME CONSTRAINT constraint_name=identifier TO new_constraint_name=identifier
+    | ALTER DOMAIN name=identifier VALIDATE CONSTRAINT constraint_name=identifier
+    | ALTER DOMAIN name=identifier OWNER TO new_owner=role_name
+    | ALTER DOMAIN name=identifier RENAME TO new_name=identifier
+    | ALTER DOMAIN name=identifier SET SCHEMA new_schema=identifier
     ;
 
 alter_event_trigger_stmt
-    : todo_implement
+    : ALTER EVENT TRIGGER name=identifier DISABLE
+    | ALTER EVENT TRIGGER name=identifier ENABLE (REPLICA|ALWAYS)?
+    | ALTER EVENT TRIGGER name=identifier OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
+    | ALTER EVENT TRIGGER name=identifier RENAME TO new_name=identifier
     ;
 
 alter_extension_stmt
-    : todo_implement
+    : ALTER EXTENSION name=identifier UPDATE (TO new_version=identifier)?
+    | ALTER EXTENSION name=identifier SET SCHEMA new_schema=identifier
     ;
 
 alter_foreign_data_wrapper_stmt
     : todo_implement
     ;
 
+// TODD: should this be used outside
+option_value
+    : option=identifier EQUALS value=identifier
+    ;
+
+option_value_list
+    : option_value (COMMA option_value)*
+    ;
+
+alter_foreign_table_action
+// TODO: fix data_type?
+    : ADD COLUMN? column_name_=column_name data_type_=data_type (COLLATE collation=identifier)? (column_constraints_=column_constraints)?
+    | DROP COLUMN? (IF EXISTS)? column_name_=column_name (RESTRICT|CASCADE)?
+    | ALTER COLUMN? column_name_=column_name (SET DATA)? TYPE data_type_=data_type (COLLATE collation=identifier)?
+    | ALTER COLUMN? column_name_=column_name SET DEFAULT expr
+    | ALTER COLUMN? column_name_=column_name DROP DEFAULT
+    | ALTER COLUMN? column_name_=column_name (SET|DROP) NOT NULL
+    | ALTER COLUMN? column_name_=column_name SET STATISTICS INTEGER
+    | ALTER COLUMN? column_name_=column_name SET OPEN_PAREN attribute_values=option_value_list CLOSE_PAREN
+    | ALTER COLUMN? column_name_=column_name RESET OPEN_PAREN attributes=identifier_list CLOSE_PAREN
+    | ALTER COLUMN? column_name_=column_name SET STORAGE (PLAIN|EXTERNAL|EXTENDED|MAIN)
+    | ALTER COLUMN? column_name_=column_name OPTIONS ((ADD|SET|DROP)?)
+    | ADD table_constraint (NOT VALID)?
+    | VALIDATE CONSTRAINT constraint_name=todo_fill_in
+    | DROP CONSTRAINT (IF EXISTS)? constraint_name=todo_fill_in (RESTRICT|CASCADE)?
+    | DISABLE TRIGGER (trigger_name=todo_fill_in|ALL|USER)?
+    | ENABLE TRIGGER (trigger_name=todo_fill_in|ALL|USER)?
+    | ENABLE REPLICA TRIGGER trigger_name=todo_fill_in
+    | ENABLE ALWAYS TRIGGER trigger_name=todo_fill_in
+    | SET WITH OIDS
+    | SET WITHOUT OIDS
+    | INHERIT parent_table=identifier
+    | NO INHERIT parent_table=identifier
+    | OWNER TO new_owner=role_name
+    | OPTIONS ((ADD|SET|DROP)?)
+    ;
+
+alter_foreign_table_action_list
+    : alter_foreign_table_action (COMMA alter_foreign_table_action)*
+    ;
+
 alter_foreign_table_stmt
-    : todo_implement
+    : ALTER FOREIGN TABLE (IF EXISTS)? ONLY? name=identifier STAR? actions=alter_foreign_table_action_list
+    | ALTER FOREIGN TABLE (IF EXISTS)? ONLY? name=identifier STAR?
+        RENAME COLUMN? column_name_=column_name TO new_column_name=identifier
+    | ALTER FOREIGN TABLE (IF EXISTS)? name=identifier RENAME TO new_name=identifier
+    | ALTER FOREIGN TABLE (IF EXISTS)? name=identifier SET SCHEMA new_schama=identifier
     ;
 
 alter_function_stmt
@@ -177,19 +241,28 @@ alter_function_stmt
     ;
 
 alter_group_stmt
-    : todo_implement
+    : ALTER GROUP role=role_name ADD USER users=identifier_list
+    | ALTER GROUP role=role_name DROP USER users=identifier_list
+    | ALTER GROUP group_name=identifier RENAME TO new_name=identifier
     ;
 
 alter_index_stmt
-    : todo_implement
+    : ALTER INDEX (IF EXISTS)? name=identifier RENAME TO new_name=identifier
+    | ALTER INDEX (IF EXISTS)? name=identifier SET TABLESPACE tablespace_name=identifier
+    | ALTER INDEX name=identifier DEPENDS ON EXTENSION extension_name=identifier
+    | ALTER INDEX (IF EXISTS)? name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER INDEX (IF EXISTS)? RESET OPEN_PAREN identifier_list CLOSE_PAREN
+    | ALTER INDEX ALL IN TABLESPACE name=identifier (OWNED BY roles=identifier_list)?
+      SET TABLESPACE new_tablespace=identifier NOWAIT?
     ;
 
 alter_language_stmt
-    : todo_implement
+    : ALTER PROCEDURAL? LANGUAGE name=identifier RENAME TO new_name=identifier
+    | ALTER PROCEDURAL? LANGUAGE name=identifier OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
     ;
 
 alter_large_object_stmt
-    : todo_implement
+    : ALTER LARGE OBJECT large_object_oid=INTEGER_LITERAL OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
     ;
 
 alter_materialize_view_stmt
@@ -201,7 +274,9 @@ alter_operator_stmt
     ;
 
 alter_operator_class_stmt
-    : todo_implement
+    : ALTER OPERATOR CLASS name=identifier USING index_method RENAME TO new_name=identifier
+    | ALTER OPERATOR CLASS name=identifier USING index_method OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
+    | ALTER OPERATOR CLASS name=identifier USING index_method SET SCHEMA new_schema=identifier
     ;
 
 alter_operator_family_stmt
@@ -209,43 +284,87 @@ alter_operator_family_stmt
     ;
 
 alter_policy_stmt
-    : todo_implement
+    : ALTER POLICY name=identifier ON table_name=identifier RENAME TO new_name=identifier
+    | ALTER POLICY name=identifier ON table_name=identifier
+        (TO roles=role_name_list)?
+        (USING predicate)?
+        (WITH CHECK predicate)?
     ;
 
 alter_publication_stmt
-    : todo_implement
+    : ALTER PUBLICATION name=identifier ADD TABLE ONLY? table_names=identifier_list
+    | ALTER PUBLICATION name=identifier SET TABLE ONLY? table_names=identifier_list
+    | ALTER PUBLICATION name=identifier DROP TABLE ONLY? table_names=identifier_list
+    | ALTER PUBLICATION name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER PUBLICATION name=identifier OWNER TO new_owner=role_name
+    | ALTER PUBLICATION name=identifier RENAME TO new_name=name_
+    ;
+
+alter_role_options
+    : SUPERUSER | NOSUPERUSER | CREATEDB | NOCREATEDB | CREATEROLE | NOCREATEROLE |
+      INHERIT | NOINHERIT | LOGIN | NOLOGIN | REPLICATION | NOREPLICATION | BYPASSRLS |
+      NOBYPASSRLS | CONNECTION LIMIT connlimit=INTEGER | ENCRYPTED? PASSWORD SINGLEQ_STRING_LITERAL |
+      VALID UNTIL SINGLEQ_STRING_LITERAL
     ;
 
 alter_role_stmt
-    : todo_implement
+    // TODO: need to define value
+    : ALTER ROLE role=role_name WITH? options=alter_role_options+
+    | ALTER ROLE name=name_ RENAME TO new_name=name_
+    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier (TO | EQUALS) (value=INTEGER | DEFAULT)
+    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier FROM CURRENT
+    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? RESET configuration_parameter=identifier
+    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? RESET ALL
     ;
 
 alter_rule_stmt
-    : todo_implement
+    : ALTER RULE name=name_ ON table_name=identifier RENAME TO new_name=name_
     ;
 
 alter_schema_stmt
-    : todo_implement
+    : ALTER SCHEMA name=identifier RENAME TO new_name=identifier
+    | ALTER SCHEMA name=identifier OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
     ;
 
 alter_sequence_stmt
-    : todo_implement
+    : ALTER SEQUENCE (IF EXISTS)? name=name_
+    ;
+
+alter_server_options_list
+    : ((ADD|SET|DROP)? option=identifier (value=param_value)?)
+       (COMMA (ADD|SET|DROP)? option=identifier (value=param_value)?)*
     ;
 
 alter_server_stmt
-    : todo_implement
+    : ALTER SERVER name=identifier (
+       (VERSION SINGLEQ_STRING_LITERAL) |
+       ((VERSION SINGLEQ_STRING_LITERAL)? (OPTIONS OPEN_PAREN alter_server_options_list CLOSE_PAREN)))
+    | ALTER SERVER name=identifier OWNER TO new_owner=role_name
+    | ALTER SERVER name=identifier RENAME TO new_name=name_
     ;
 
 alter_statistics_stmt
-    : todo_implement
+    : ALTER STATISTICS name=identifier OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
+    | ALTER STATISTICS name=identifier RENAME TO new_name=identifier
+    | ALTER STATISTICS name=identifier SET SCHEMA new_schema=identifier
     ;
 
 alter_subscription_stmt
-    : todo_implement
+    : ALTER SUBSCRIPTION name=identifier CONNECTION conninfo=param_value
+    | ALTER SUBSCRIPTION name=identifier SET PUBLICATION publication_name=name_list
+        (WITH OPEN_PAREN options_list CLOSE_PAREN)?
+    | ALTER SUBSCRIPTION name=identifier REFRESH PUBLICATION (WITH OPEN_PAREN options_list CLOSE_PAREN)?
+    | ALTER SUBSCRIPTION name=identifier ENABLE
+    | ALTER SUBSCRIPTION name=identifier DISABLE
+    | ALTER SUBSCRIPTION name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER SUBSCRIPTION name=identifier OWNER TO new_owner=role_name
+    | ALTER SUBSCRIPTION name=identifier RENAME TO new_name=identifier
     ;
 
 alter_system_stmt
-    : todo_implement
+    : ALTER SYSTEM SET param=IDENTIFIER (TO|EQUALS) value=param_value
+    | ALTER SYSTEM RESET param=IDENTIFIER
+    | ALTER STSTEM RESET ALL
     ;
 
 alter_table_stmt
@@ -253,11 +372,26 @@ alter_table_stmt
     ;
 
 alter_tablespace_stmt
-    : todo_implement
+    : ALTER TABLESPACE name=identifier RENAME TO new_name=identifier
+    | ALTER TABLESPACE name=identifier OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
+    | ALTER TABLESPACE name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER TABLESPACE name=identifier RESET OPEN_PAREN identifier_list CLOSE_PAREN
     ;
 
 alter_text_search_config_stmt
-    : todo_implement
+    : ALTER TEXT SEARCH CONFIGURATION name=identifier
+        ADD MAPPING FOR token_types=identifier_list WITH dictionary_names=identifier_list
+    | ALTER TEXT SEARCH CONFIGURATION name=identifier
+        ALTER MAPPING FOR token_types=identifier_list WITH dictionary_names=identifier_list
+    | ALTER TEXT SEARCH CONFIGURATION name=identifier
+        ALTER MAPPING REPLACE old_dictionary=identifier WITH new_dictionary=identifier
+    | ALTER TEXT SEARCH CONFIGURATION name=identifier
+        ALTER MAPPING FOR token_types=identifier_list REPLACE old_dictionary=identifier WITH new_dictionary=identifier
+    | ALTER TEXT SEARCH CONFIGURATION name=identifier
+        DROP MAPPING (IF EXISTS)? FOR token_types=identifier_list
+    | ALTER TEXT SEARCH CONFIGURATION name=identifier RENAME TO new_name=identifier
+    | ALTER TEXT SEARCH CONFIGURATION name=identifier OWNER TO new_owner=role_name
+    | ALTER TEXT SEARCH CONFIGURATION name=identifier SET SCHEMA new_schema=identifier
     ;
 
 alter_text_search_dict_stmt
@@ -269,11 +403,13 @@ alter_text_search_parser_stmt
     ;
 
 alter_text_search_template_stmt
-    : todo_implement
+    : ALTER TEXT SEARCH TEMPLATE name=identifier RENAME TO new_name=identifier
+    | ALTER TEXT SEARCH TEMPLATE name=identifier SET SCHEMA new_schema=identifier
     ;
 
 alter_trigger_stmt
-    : todo_implement
+    : ALTER TRIGGER name=identifier ON table_name=identifier RENAME TO new_name=identifier
+    | ALTER TRIGGER name=identifier ON table_name=identifier DEPENDS ON EXTENSION extension_name=identifier
     ;
 
 alter_type_stmt
@@ -285,7 +421,9 @@ alter_user_stmt
     ;
 
 alter_user_mapping_stmt
-    : todo_implement
+    : ALTER USER MAPPING FOR user=role_name
+        SERVER server_name=identifier
+        OPTIONS (OPEN_PAREN alter_server_options_list CLOSE_PAREN)
     ;
 
 alter_view_stmt
@@ -491,7 +629,7 @@ create_event_trigger_stmt
       EXECUTE PROCEDURE fn_name=identifier OPEN_PAREN CLOSE_PAREN
     ;
 
-// TODO: rename to options_list
+// TODO: rename to options_list?
 create_foreign_data_options
     : opt=name_ SINGLEQ_STRING_LITERAL
       (COMMA create_foreign_data_options)*
@@ -1189,7 +1327,6 @@ expr
     | HEX_INTEGER_LITERAL // TODO: consolidate all integer literals under a rule
     | NUMERIC_LITERAL
     | SINGLEQ_STRING_LITERAL
-    | DOUBLEQ_STRING_LITERAL
     | BIT_STRING
     | REGEX_STRING
     | DOLLAR_DOLLAR (~DOLLAR)+ DOLLAR_DOLLAR
@@ -1280,6 +1417,7 @@ type_literal
     : ABSTIME
     | BOOL
     | BOX
+    | CHAR
     | DATE
     | FLOAT4
     | FLOAT8
@@ -1301,6 +1439,7 @@ type_literal
     | INT2
     | INT4
     | INT8
+    | INTEGER
     | INTERVAL
     | RELTIME
     ;
@@ -1333,10 +1472,13 @@ aggregate
 
 // TODO: rename aliases of [a-z]+_name to just name for clarity
 name_
-     : SINGLEQ_STRING_LITERAL
-     | DOUBLEQ_STRING_LITERAL
-     | identifier
-     ;
+    : SINGLEQ_STRING_LITERAL
+    | identifier
+    ;
+
+options_list
+    : opt=identifier EQUAL value=param_value (COMMA opt=identifier EQUALS value=param_value)*
+    ;
 
 name_list
     : name_ (COMMA name_)*
@@ -1419,7 +1561,7 @@ join_type
 
 join_clause
     : ON predicate
-    | USING OPEN_PAREN column_name (COMMA column_name)* CLOSE_PAREN
+    | USING OPEN_PAREN column_name (COMMA column_name)* CLOSE_PAREN // TODO: consolidate column_name (,column_name *) into its own production
     ;
 
 // TODO: fill in
@@ -1443,12 +1585,46 @@ aggregate_signature
         ORDER BY (argmode=(IN|VARIADIC))? (argname=identifier)? argtype=data_type_list
     ;
 
+column_constraint
+    : NOT NULL;
+
+column_constraints
+    : column_constraint+
+    ;
+
+index_parameters
+    : (WITH OPEN_PAREN options_list CLOSE_PAREN)? (USING INDEX TABLESPACE tablespace=identifier)?
+    ;
+
+exclude_element
+    : (column_name_=identifier | OPEN_PAREN expr CLOSE_PAREN) (opclass=identifier)? (ASC | DESC)? (NULLS (FIRST | LAST))?
+    ;
+
+table_constraint
+    : (CONSTRAINT constraint_name=name_)?
+      (  (CHECK OPEN_PAREN expr CLOSE_PAREN (NO INHERIT)?)
+       | (UNIQUE OPEN_PAREN columns=identifier_list CLOSE_PAREN)
+       | (PRIMARY KEY OPEN_PAREN columns=identifier_list CLOSE_PAREN index_parameters)
+       | (EXCLUDE (USING index_method)? OPEN_PAREN exclude_element WITH operators=identifier_list CLOSE_PAREN index_parameters (WHERE OPEN_PAREN predicate CLOSE_PAREN))?
+       | (FOREIGN KEY OPEN_PAREN columns=identifier_list CLOSE_PAREN REFERENCES reftable=identifier (columns=identifier_list)?
+           (MATCH FULL | MATCH PARTIAL | MATCH_SIMPLE)? (ON DELETE action=identifier)? (ON UPDATE action=identifier)?)
+      )
+      (NOT? DEFERABLE)? (INITIALLY (DEFERRED|IMMEDIATE))?
+    ;
+
 role_name
     : name=name_ | CURRENT_USER | SESSION_USER | PUBLIC
     ;
 
 role_name_list
     : role_name (COMMA role_name)*
+    ;
+
+param_value
+    : ON | OFF | TRUE | FALSE | YES | NO | NONE
+    | SINGLEQ_STRING_LITERAL
+    | NUMERIC_LITERAL
+    | identifier
     ;
 
 // allow non-reserved keywords as identifiers
@@ -1482,7 +1658,7 @@ non_reserved_keyword
     |  DELETE |  DELIMITER |  DELIMITERS |  DENSE_RANK |  DEPTH
     |  DEREF |  DERIVED |  DESCRIBE |  DESCRIPTOR |  DETERMINISTIC
     |  DIAGNOSTICS |  DICTIONARY |  DISCONNECT |  DISPATCH |  DOMAIN
-    |  DOUBLE |  DROP |  DYNAMIC |  DYNAMIC_FUNCTION |  DYNAMIC_FUNCTION_CODE
+    |  DOUBLE | DYNAMIC |  DYNAMIC_FUNCTION |  DYNAMIC_FUNCTION_CODE
     |  EACH |  ELEMENT |  ENCODING |  ENCRYPTED |  END
     |  EQUALS |  ESCAPE |  EVERY |  EXCEPTION |  EXCLUDE
     |  EXCLUDING |  EXCLUSIVE |  EXEC |  EXECUTE |  EXISTS
@@ -1491,7 +1667,7 @@ non_reserved_keyword
     |  FORCE |  FORTRAN |  FORWARD |  FOUND |  FREE
     |  FUNCTION |  FUSION |  G_ |  GENERAL |  GENERATED
     |  GET |  GLOBAL |  GO |  GOTO | GREATEST | GRANTED
-    |  GROUPING |  HANDLER |  HIERARCHY |  HOLD |  HOUR
+    |  GROUPING |  HANDLER |  HIERARCHY |  HOLD | HOST | HOUR
     |  IDENTITY |  IGNORE |  IMMEDIATE |  IMMUTABLE |  IMPLEMENTATION
     |  IMPLICIT |  INCLUDING |  INCREMENT |  INDEX |  INDICATOR
     |  INHERITS |  INOUT |  INPUT |  INSENSITIVE |  INSERT
@@ -1520,7 +1696,7 @@ non_reserved_keyword
     |  POWER |  PRECEDING |  PRECISION |  PREPARE |  PRESERVE
     |  PRIOR |  PRIVILEGES |  PROCEDURAL |  PROCEDURE |  PUBLIC
     |  QUOTE |  RANGE |  RANK |  READ |  READS
-    |  REAL |  RECHECK |  RECURSIVE |  REF |  REFERENCING
+    |  REAL |  RECHECK |  RECURSIVE |  REF |  REFERENCING | REFRESH
     |  REGR_AVGX |  REGR_AVGY |  REGR_COUNT |  REGR_INTERCEPT |  REGR_SLOPE
     |  REGR_SXX |  REGR_SXY |  REGR_SYY |  REINDEX |  RELATIVE
     |  RELEASE |  RENAME |  REPEATABLE |  REPLACE |  RESET
@@ -1558,6 +1734,7 @@ non_reserved_keyword
 
 identifier
     : non_reserved_keyword
+    | DOUBLEQ_STRING_LITERAL
     | IDENTIFIER
     | identifier DOT identifier
     ;
