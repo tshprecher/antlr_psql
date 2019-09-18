@@ -72,7 +72,6 @@ stmt
      | rollback_to_savepoint_stmt
      | savepoint_stmt
      | security_label_stmt
-     | select_stmt
      | set_stmt
      | set_constraints_stmt
      | set_role_stmt
@@ -82,8 +81,7 @@ stmt
      | truncate_stmt
      | unlisten_stmt
      | update_stmt
-     | vacuum_stmt
-     | values_stmt)
+     | vacuum_stmt)
     ;
 
 data_stmt
