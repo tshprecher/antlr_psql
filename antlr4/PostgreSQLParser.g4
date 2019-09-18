@@ -42,6 +42,7 @@ stmt
      | commit_stmt
      | commit_prepared_stmt
      | copy_stmt
+     | data_stmt
      | deallocate_stmt
      | declare_stmt
      | delete_stmt
@@ -83,6 +84,11 @@ stmt
      | update_stmt
      | vacuum_stmt
      | values_stmt)
+    ;
+
+data_stmt
+    : (select_stmt|values_stmt|table_stmt)
+    | OPEN_PAREN data_stmt CLOSE_PAREN combine_clause?
     ;
 
 abort_stmt
@@ -1169,7 +1175,6 @@ select_stmt
       offset_clause?
       fetch_clause?
       for_clause?
-    | OPEN_PAREN select_stmt CLOSE_PAREN combine_clause?
     ;
 
 set_stmt
@@ -1213,8 +1218,18 @@ vacuum_stmt
     ;
 
 values_stmt
-    : (VALUES expr_list_list) | (VALUES expr_list)
+    : VALUES expr_list_list
       order_by_clause?
+      combine_clause?
+      limit_clause?
+      offset_clause?
+      fetch_clause?
+    ;
+
+table_stmt
+    : TABLE ONLY? table_name_ STAR?
+      order_by_clause?
+      combine_clause?
       limit_clause?
       offset_clause?
       fetch_clause?
@@ -1287,7 +1302,7 @@ window_clause
 // TODO: order or operations: see test cb011d6e.sql
 // TODO: treat like normal operators
 combine_clause
-    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? select_stmt
+    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? data_stmt
     ;
 
 order_by_clause
@@ -1392,7 +1407,7 @@ expr_list
     ;
 
 expr_list_list
-    : OPEN_PAREN expr_list (COMMA expr_list)* CLOSE_PAREN
+    : OPEN_PAREN? expr_list (COMMA expr_list)* CLOSE_PAREN?
     ;
 
 func_sig_arg

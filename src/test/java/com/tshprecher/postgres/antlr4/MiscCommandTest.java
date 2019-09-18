@@ -207,6 +207,11 @@ public class MiscCommandTest extends CommandTest {
     }
 
     @Test
+    public void testTable() throws IOException {
+        super.test("TABLE", "/sql/table/");
+    }
+
+    @Test
     public void testTruncate() throws IOException {
         super.test("TRUNCATE", "/sql/truncate/");
     }
