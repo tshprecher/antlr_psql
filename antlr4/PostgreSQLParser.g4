@@ -32,7 +32,7 @@ root
 // Top Level Description
 // TODO: consolidate rollback* into a rollback_stmt a la alter/create/drop
 stmt
-    :(abort_stmt
+    : (abort_stmt
      | alter_stmt
      | analyze_stmt
      | create_stmt
@@ -83,7 +83,7 @@ stmt
      | update_stmt
      | vacuum_stmt
      | values_stmt)
-     ;
+    ;
 
 abort_stmt
     : identifier
@@ -1171,7 +1171,6 @@ select_stmt
       offset_clause?
       fetch_clause?
       for_clause?
-    |
     ;
 
 set_stmt
