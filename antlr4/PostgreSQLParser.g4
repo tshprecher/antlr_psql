@@ -1288,8 +1288,6 @@ window_clause
     : WINDOW window_name AS OPEN_PAREN window_definition CLOSE_PAREN
     ;
 
-// TODO: order or operations: see test cb011d6e.sql
-// TODO: treat like normal operators
 combine_clause
     : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? OPEN_PAREN* (select_stmt | values_stmt) CLOSE_PAREN* combine_clause?
     ;
