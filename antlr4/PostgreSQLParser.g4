@@ -32,7 +32,7 @@ root
 // Top Level Description
 // TODO: consolidate rollback* into a rollback_stmt a la alter/create/drop
 stmt
-    : OPEN_PAREN* (abort_stmt
+    :(abort_stmt
      | alter_stmt
      | analyze_stmt
      | create_stmt
@@ -82,8 +82,8 @@ stmt
      | unlisten_stmt
      | update_stmt
      | vacuum_stmt
-     | values_stmt) CLOSE_PAREN* combine_clause?
-    ;
+     | values_stmt)
+     ;
 
 abort_stmt
     : identifier
@@ -1157,9 +1157,10 @@ security_label_stmt
     ;
 
 select_stmt
-    : (SELECT selector_clause
-      from_clause?
-      | TABLE ONLY? table_name_ STAR?)
+    : ((SELECT selector_clause from_clause?)
+      | (TABLE ONLY? table_name_ STAR?)
+      | (OPEN_PAREN+ select_stmt CLOSE_PAREN+ combine_clause)
+      )
       where_clause?
       group_by_clause?
       having_clause?
@@ -1170,6 +1171,7 @@ select_stmt
       offset_clause?
       fetch_clause?
       for_clause?
+    |
     ;
 
 set_stmt
@@ -1213,7 +1215,9 @@ vacuum_stmt
     ;
 
 values_stmt
-    : VALUES expr_list_list
+    : ((VALUES expr_list_list)
+      | (OPEN_PAREN+ values_stmt CLOSE_PAREN+ combine_clause)
+      )
       order_by_clause?
       combine_clause?
       limit_clause?
@@ -1288,7 +1292,7 @@ window_clause
 // TODO: order or operations: see test cb011d6e.sql
 // TODO: treat like normal operators
 combine_clause
-    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? OPEN_PAREN* (select_stmt|values_stmt) CLOSE_PAREN* combine_clause?
+    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? OPEN_PAREN* (select_stmt | values_stmt) CLOSE_PAREN* combine_clause?
     ;
 
 order_by_clause
