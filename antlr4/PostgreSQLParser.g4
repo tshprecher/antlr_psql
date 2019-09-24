@@ -1157,8 +1157,10 @@ security_label_stmt
     ;
 
 select_stmt
-    : SELECT selector_clause
-      from_clause?
+    : ((SELECT selector_clause from_clause?)
+      | (TABLE ONLY? table_name_ STAR?)
+      | (OPEN_PAREN+ select_stmt CLOSE_PAREN+ combine_clause)
+      )
       where_clause?
       group_by_clause?
       having_clause?
@@ -1169,7 +1171,6 @@ select_stmt
       offset_clause?
       fetch_clause?
       for_clause?
-    | OPEN_PAREN select_stmt CLOSE_PAREN combine_clause?
     ;
 
 set_stmt
@@ -1213,8 +1214,11 @@ vacuum_stmt
     ;
 
 values_stmt
-    : (VALUES expr_list_list) | (VALUES expr_list)
+    : ((VALUES expr_list_list)
+      | (OPEN_PAREN+ values_stmt CLOSE_PAREN+ combine_clause)
+      )
       order_by_clause?
+      combine_clause?
       limit_clause?
       offset_clause?
       fetch_clause?
@@ -1284,10 +1288,8 @@ window_clause
     : WINDOW window_name AS OPEN_PAREN window_definition CLOSE_PAREN
     ;
 
-// TODO: order or operations: see test cb011d6e.sql
-// TODO: treat like normal operators
 combine_clause
-    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? select_stmt
+    : ( UNION | INTERSECT | EXCEPT ) ( ALL | DISTINCT)? OPEN_PAREN* (select_stmt | values_stmt) CLOSE_PAREN* combine_clause?
     ;
 
 order_by_clause
@@ -1392,7 +1394,7 @@ expr_list
     ;
 
 expr_list_list
-    : OPEN_PAREN expr_list (COMMA expr_list)* CLOSE_PAREN
+    : OPEN_PAREN? expr_list (COMMA expr_list)* CLOSE_PAREN?
     ;
 
 func_sig_arg

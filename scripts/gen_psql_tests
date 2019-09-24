@@ -189,6 +189,7 @@ commands = set([
     "SET TRANSACTION",
     "SHOW",
     "START TRANSACTION",
+    "TABLE",
     "TRUNCATE",
     "UNLISTEN",
     "UPDATE",
