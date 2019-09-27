@@ -1334,14 +1334,17 @@ for_clause
     ;
 
 updater_clause
-    : (expr EQUAL expr (COMMA expr EQUAL expr)*)
-    | (OPEN_PAREN name_list CLOSE_PAREN EQUAL expr_list)
-    | (OPEN_PAREN name_list CLOSE_PAREN EQUAL OPEN_PAREN select_stmt CLOSE_PAREN)
+    : updater_expr (COMMA updater_expr)*
+    ;
+
+updater_expr
+    : expr
+    | (OPEN_PAREN name_list CLOSE_PAREN EQUAL (expr | expr_list))
     ;
 
 returning_clause
-    : RETURNING ((column_name_=expr (AS? name_)?) | STAR)
-        (COMMA ((column_name_=expr (AS? name_)?) | STAR))*
+    : RETURNING ((column_name_=expr (AS? output_name=name_)?) | STAR)
+        (COMMA ((column_name_=expr (AS? output_name=name_)?) | STAR))*
     ;
 
 // TODO: split into more granular expression types?
@@ -1389,13 +1392,14 @@ expr
     | expr op=(LT | GT | EQUAL | LTE | GTE | LT_GT | BANG_EQUAL) expr
     | expr op=IS (bool_expr | NULL)
     | expr op=(ISNULL | NOTNULL)
+    | expr IS NOT? DISTINCT FROM expr
     | op=(NOT | ALL) expr
     | func_call
     | identifier
     | CAST OPEN_PAREN expr AS data_type CLOSE_PAREN
     | correlation_name DOT column_name
     | case_expr
-    | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
+    | expr (OPEN_BRACKET expr? COLON expr? CLOSE_BRACKET)+
     | expr COLON_COLON data_type
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
