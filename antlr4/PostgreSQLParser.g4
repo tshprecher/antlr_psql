@@ -844,7 +844,10 @@ declare_stmt
     ;
 
 delete_stmt
-    : todo_implement
+    : DELETE FROM ONLY? table_name_ STAR? (AS? alias)?
+    (USING identifier_list)?
+    (where_clause | (WHERE CURRENT OF cursor_name_=identifier))?
+    returning_clause?
     ;
 
 discard_stmt
@@ -1081,7 +1084,16 @@ import_foreign_schema_stmt
     ;
 
 insert_stmt
-    : todo_implement
+    : INSERT INTO table_name_ (AS alias_=identifier)? (OPEN_PAREN name_list CLOSE_PAREN)?
+    (OVERRIDING (SYSTEM | USER)? VALUE)?
+    (DEFAULT VALUES | select_stmt | values_stmt)
+    returning_clause?
+    (ON CONFLICT
+        (OPEN_PAREN column_name CLOSE_PAREN)?
+        (ON CONSTRAINT column_name)?
+        where_clause?
+        ((DO NOTHING)|(DO UPDATE SET updater_clause where_clause?))
+    )?
     ;
 
 listen_stmt
@@ -1198,7 +1210,8 @@ show_stmt
     ;
 
 truncate_stmt
-    : todo_implement
+    : TRUNCATE TABLE? ONLY? table_name_ STAR? (COMMA ONLY? identifier_list)?
+    ((RESTART | CONTINUE) IDENTITY)? (CASCADE | RESTRICT)?
     ;
 
 unlisten_stmt
@@ -1206,7 +1219,11 @@ unlisten_stmt
     ;
 
 update_stmt
-    : todo_implement
+    : UPDATE ONLY? table_name_ STAR? (AS? alias_=identifier)?
+    SET updater_clause
+    from_clause?
+    (where_clause | (WHERE CURRENT OF cursor_name_=identifier))?
+    returning_clause?
     ;
 
 vacuum_stmt
@@ -1316,6 +1333,20 @@ for_clause
     : FOR ( UPDATE | NO KEY UPDATE | SHARE | KEY SHARE ) (OF table_name_ (COMMA table_name_)*)? ( NOWAIT | SKIP_ LOCKED)*
     ;
 
+updater_clause
+    : updater_expr (COMMA updater_expr)*
+    ;
+
+updater_expr
+    : expr
+    | (OPEN_PAREN name_list CLOSE_PAREN EQUAL (expr | expr_list))
+    ;
+
+returning_clause
+    : RETURNING ((column_name_=expr (AS? output_name=name_)?) | STAR)
+        (COMMA ((column_name_=expr (AS? output_name=name_)?) | STAR))*
+    ;
+
 // TODO: split into more granular expression types?
 // TODO: handle operators like BETWEEN in a more normalized way
 expr
@@ -1325,6 +1356,7 @@ expr
     | CURRENT_TIME
     | CURRENT_TIMESTAMP
     | CURRENT_USER
+    | DEFAULT //used in insert_stmt in values
     | INTEGER_LITERAL
     | HEX_INTEGER_LITERAL // TODO: consolidate all integer literals under a rule
     | NUMERIC_LITERAL
@@ -1360,13 +1392,14 @@ expr
     | expr op=(LT | GT | EQUAL | LTE | GTE | LT_GT | BANG_EQUAL) expr
     | expr op=IS (bool_expr | NULL)
     | expr op=(ISNULL | NOTNULL)
+    | expr IS NOT? DISTINCT FROM expr
     | op=(NOT | ALL) expr
     | func_call
     | identifier
     | CAST OPEN_PAREN expr AS data_type CLOSE_PAREN
     | correlation_name DOT column_name
     | case_expr
-    | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
+    | expr (OPEN_BRACKET expr? COLON expr? CLOSE_BRACKET)+
     | expr COLON_COLON data_type
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
