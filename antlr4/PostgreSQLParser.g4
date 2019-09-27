@@ -1367,7 +1367,8 @@ expr
     | correlation_name DOT column_name
     | case_expr
     | expr OPEN_BRACKET expr COLON expr CLOSE_BRACKET
-    | expr COLON_COLON data_type
+    | expr (COLON_COLON data_type)+
+    | data_type expr
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
 
@@ -1415,35 +1416,66 @@ func_sig_list
 
 // TODO: is type_literal necessary or can we just have this be an identifier and match (identifier STRING_LITERAL)?
 // TODO: rename prefix notation type casts
+// https://www.postgresql.org/docs/current/datatype.htm
 type_literal
     : ABSTIME
+    | BIGINT
+    | BIGSERIAL
+    | BIT (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | BIT_VARYING (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
     | BOOL
+    | BOOLEAN
     | BOX
-    | CHAR
+    | BYTEA
+    | CHAR (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | CHARACTER (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | CHARACTER_VARYING (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | CIDR
+    | CIRCLE
     | DATE
+    | DECIMAL (OPEN_PAREN INTEGER_LITERAL COMMA INTEGER_LITERAL CLOSE_PAREN)?
+    | (DOUBLE PRECISION)
     | FLOAT4
     | FLOAT8
-    | INTERVAL
+    | INET
+    | INT
+    | INT4
+    | INT2
+    | INT8
+    | INTEGER
+    | INTERVAL FIELDS? (INTEGER_LITERAL)?
     | JSON
     | JSONB
     | LINE
+    | LSEG
+    | MACADDR
+    | MACADDR8
+    | MONEY
+    | NUMERIC (OPEN_PAREN INTEGER_LITERAL COMMA INTEGER_LITERAL CLOSE_PAREN)?
+    | PATH
+    | PG_LSN
     | POINT
-    | NAME
-    | NUMERIC
-    | TEXT
-    | TIMESTAMP ((WITH | AT) TIME ZONE)?
-    | TIMESTAMP (WITHOUT TIME ZONE)?
-    | TIMESTAMP_TZ
-    | TIME (WITH TIME ZONE)?
-    | TIME (WITHOUT TIME ZONE)?
-    | TIME_TZ
-    | INT
-    | INT2
-    | INT4
-    | INT8
-    | INTEGER
-    | INTERVAL
+    | POLYGON
+    | REAL
     | RELTIME
+    | SERIAL
+    | SERIAL2
+    | SERIAL4
+    | SERIAL8
+    | SMALLINT
+    | SMALLSERIAL
+    | TEXT
+    | TIMESTAMPTZ (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | TIMESTAMP (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?  ((WITH|WITHOUT|AT) TIME ZONE)? //AT?
+    | TIMETZ (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | TIME (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?  ((WITH|WITHOUT|AT) TIME ZONE)? //AT?
+    | TSQUERY
+    | TSVECTOR
+    | TXID_SNAPSHOT
+    | UUID
+    | VARBIT (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | VARCHAR (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | XML
     ;
 
 type_literal_list
@@ -1694,7 +1726,7 @@ non_reserved_keyword
     |  OWNER |  PAD |  PARAMETER |  PARAMETER_MODE |  PARAMETER_NAME
     |  PARAMETER_ORDINAL_POSITION |  PARAMETER_SPECIFIC_CATALOG |  PARAMETER_SPECIFIC_NAME |  PARAMETER_SPECIFIC_SCHEMA
     |  PARTIAL |  PARTITION |  PASCAL |  PASSWORD |  PATH
-    |  PERCENTILE_CONT |  PERCENTILE_DISC |  PERCENT_RANK |  PLI |  POSITION
+    |  PERCENTILE_CONT |  PERCENTILE_DISC |  PERCENT_RANK |  PLAIN | PLI |  POSITION
     |  POWER |  PRECEDING |  PRECISION |  PREPARE |  PRESERVE
     |  PRIOR |  PRIVILEGES |  PROCEDURAL |  PROCEDURE |  PUBLIC
     |  QUOTE |  RANGE |  RANK |  READ |  READS
@@ -1739,6 +1771,7 @@ identifier
     | DOUBLEQ_STRING_LITERAL
     | IDENTIFIER
     | identifier DOT identifier
+    | type_literal
     ;
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
