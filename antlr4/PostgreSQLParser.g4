@@ -1037,7 +1037,7 @@ drop_text_search_template_stmt
     ;
 
 drop_transform_stmt
-    : DROP TRANSFORM (IF EXISTS)? FOR type_name=identifier LANGUAGE lang_name=identifier (CASCADE|RESTRICT)
+    : DROP TRANSFORM (IF EXISTS)? FOR type_name_=identifier LANGUAGE lang_name=identifier (CASCADE|RESTRICT)
     ;
 
 drop_trigger_stmt
@@ -1340,7 +1340,7 @@ expr
     // see: https://www.postgresql.org/docs/10/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS
     | expr OPEN_BRACKET expr CLOSE_BRACKET
     | OPEN_PAREN expr CLOSE_PAREN
-    | type_literal SINGLEQ_STRING_LITERAL
+    | type_name SINGLEQ_STRING_LITERAL
     | op=(BANG_BANG | AT_SIGN | PLUS | MINUS) expr
     | op=(TIL | QMARK_HYPHEN) expr
     | expr op=BANG
@@ -1414,11 +1414,11 @@ func_sig_list
     : func_sig (COMMA func_sig)*
     ;
 
-// TODO: is type_literal necessary or can we just have this be an identifier and match (identifier STRING_LITERAL)?
 // TODO: rename prefix notation type casts
-// https://www.postgresql.org/docs/current/datatype.htm
-type_literal
-    : ABSTIME
+// Actual list on https://www.postgresql.org/docs/current/datatype.htm
+type_name
+    : ABSTIME //obsolete, internal use only
+    | RELTIME //obsolete, internal use only
     | BIGINT
     | BIGSERIAL
     | BIT (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
@@ -1434,7 +1434,7 @@ type_literal
     | CIRCLE
     | DATE
     | DECIMAL (OPEN_PAREN INTEGER_LITERAL COMMA INTEGER_LITERAL CLOSE_PAREN)?
-    | (DOUBLE PRECISION)
+    | DOUBLE PRECISION
     | FLOAT4
     | FLOAT8
     | INET
@@ -1457,7 +1457,6 @@ type_literal
     | POINT
     | POLYGON
     | REAL
-    | RELTIME
     | SERIAL
     | SERIAL2
     | SERIAL4
@@ -1482,9 +1481,6 @@ type_literal
 oper
     :
     | IS OF
-    | DATE
-    | INTERVAL
-    | DOUBLE PRECISION
     | IN
     | ALL
     ;
@@ -1531,10 +1527,9 @@ table_name_
     : identifier
     ;
 
-// TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type of SUM
-// identifier used in create_domain_stmt
+// identifier used in create_domain_stmt as custom type
 data_type
-    : (type_literal|identifier) (OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET)*
+    : (type_name|identifier) (OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET)*
     ;
 
 data_type_list
@@ -1544,12 +1539,10 @@ data_type_list
 index_method
     : builtin=(BTREE | HASH_ | GIST | SPGIST | GIN | BRIN)
     | unknown=identifier
-
     ;
 
 func_name
-    : data_type  // for casting to a type
-    | identifier
+    : identifier
     ;
 
 func_call
@@ -1763,7 +1756,7 @@ identifier
     | DOUBLEQ_STRING_LITERAL
     | IDENTIFIER
     | identifier DOT identifier
-    | type_literal
+    | type_name
     ;
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
