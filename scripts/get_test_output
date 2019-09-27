@@ -1,3 +1,5 @@
 #! /bin/bash
 
-mvn test 2> /dev/null | grep "result:" | sort
+mvn test 1> full.log 2> /dev/null;
+cat full.log | grep "failed:" | awk '{print $2}' | tr -d ",/" > failed.log;
+cat full.log | grep "result:" | sort
