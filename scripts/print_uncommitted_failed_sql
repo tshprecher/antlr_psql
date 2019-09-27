@@ -1,0 +1,8 @@
+#! /bin/bash
+
+for e in $(git diff | grep "+" | grep ".sql" | grep -v "@" | tr -d "+");
+do
+    echo "$e";
+    cat src/test/resources/sql/*/$e;
+    echo "";
+done;
