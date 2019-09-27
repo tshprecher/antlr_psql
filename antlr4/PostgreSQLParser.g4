@@ -1478,10 +1478,6 @@ type_literal
     | XML
     ;
 
-type_literal_list
-    : type_literal (COMMA type_literal)*
-    ;
-
 // TODO: what to do with this?
 oper
     :
@@ -1535,14 +1531,10 @@ table_name_
     : identifier
     ;
 
-// TODO: can we remove in favor of just 'identifier' and the array case?
 // TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type of SUM
+// identifier used in create_domain_stmt
 data_type
-    : type_literal
-    | VARCHAR OPEN_PAREN INTEGER_LITERAL? CLOSE_PAREN
-    | NUMERIC OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN
-    | identifier // TODO: is this necessary?
-    | data_type OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET
+    : (type_literal|identifier) (OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET)*
     ;
 
 data_type_list
@@ -1605,7 +1597,7 @@ predicate
     | expr oper expr
     | expr (IS NOT? NULL)
     | OPEN_PAREN predicate CLOSE_PAREN
-    | EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
+    | NOT? EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
     | predicate AND predicate
     | predicate OR predicate
     | NOT predicate
@@ -1743,7 +1735,7 @@ non_reserved_keyword
     |  SCROLL |  SEARCH |  SECOND |  SECTION |  SECURITY
     |  SELF |  SENSITIVE |  SEQUENCE |  SERIALIZABLE |  SERVER_NAME
     |  SESSION |  SET |  SETOF |  SETS |  SHARE
-    |  SHOW |  SIMPLE |  SIZE |  SMALLINT |  SOURCE
+    |  SHOW |  SIMPLE |  SIZE |  SMALLINT | SOME | SOURCE
     |  SPACE |  SPECIFIC |  SPECIFICTYPE |  SPECIFIC_NAME |  SQL
     |  SQLCODE |  SQLERROR |  SQLEXCEPTION |  SQLSTATE |  SQLWARNING
     |  SQRT |  STABLE |  START |  STATE |  STATEMENT
