@@ -48,7 +48,7 @@ where `src/test/regress/sql` is a directory in the source postgres project.
 ## Parsing a specific query
 
 Sometimes it is useful to see exactly where the parser fails on a specific query.
-You could use [IntelliJ Idea Plugin for ANTLR v4](https://github.com/antlr/intellij-plugin-v4)
+You could use [IntelliJ Idea Plugin for ANTLR v4](https://github.com/antlr/intellij-plugin-v4) for testing.
 Also there's a script for that. To see where the parser fails on `selectttt 1`, run `./scripts/parse "selectttt 1" stmt`.
 The first argument is the query and the second the grammar rule, with `stmt` being the root rule defined
 in `PostgreSQLParser.g4`.
