@@ -799,11 +799,11 @@ OWNED                                : O W N E D;
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;
 BIGSERIAL                            : B I G S E R I A L;
-BIT_VARYING                          : B I T '_' V A R Y I N G;
+BIT_VARYING                          : B I T ' ' V A R Y I N G;
 BOOL                                 : B O O L;
 BOX                                  : B O X;
 BYTEA                                : B Y T E A;
-CHARACTER_VARYING                    : C H A R A C T E R '_' V A R Y I N G;
+CHARACTER_VARYING                    : C H A R A C T E R ' ' V A R Y I N G;
 CIDR                                 : C I D R;
 CIRCLE                               : C I R C L E;
 FLOAT4                               : F L O A T '4';
