@@ -168,7 +168,7 @@ commands = set([
     "MOVE",
     "NOTIFY",
     "PREPARE",
-    "PREPARE",
+    "PREPARE TRANSACTION",
     "REASSIGN OWNED",
     "REFRESH MATERIALIZED",
     "REINDEX",
