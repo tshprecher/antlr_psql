@@ -431,7 +431,7 @@ alter_view_stmt
     ;
 
 analyze_stmt
-    : todo_implement
+    : ANALYZE VERBOSE? table_name_ (OPEN_PAREN name_list CLOSE_PAREN)?
     ;
 
 close_stmt
