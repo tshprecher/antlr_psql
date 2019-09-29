@@ -364,7 +364,7 @@ alter_subscription_stmt
 alter_system_stmt
     : ALTER SYSTEM SET param=IDENTIFIER (TO|EQUALS) value=param_value
     | ALTER SYSTEM RESET param=IDENTIFIER
-    | ALTER STSTEM RESET ALL
+    | ALTER SYSTEM RESET ALL
     ;
 
 alter_table_stmt
