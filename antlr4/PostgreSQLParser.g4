@@ -1498,7 +1498,6 @@ oper
     | DATE
     | INTERVAL
     | DOUBLE PRECISION
-    | IN
     | ALL
     ;
 
