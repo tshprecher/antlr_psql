@@ -1119,12 +1119,12 @@ notify_stmt
     ;
 
 prepare_stmt
-    : PREPARE identifier (OPEN_PAREN data_type_list CLOSE_PAREN)? AS
+    : PREPARE name=identifier (OPEN_PAREN data_type_list CLOSE_PAREN)? AS
     (select_stmt|insert_stmt|update_stmt|delete_stmt|values_stmt)
     ;
 
 prepare_transaction_stmt
-    : todo_implement
+    : PREPARE TRANSACTION name=name_
     ;
 
 reassign_owned_stmt
