@@ -1277,7 +1277,7 @@ having_clause
     ;
 
 explain_parameter
-    : (ANALYZE | VERBOSE | COSTS | BUFFERS | TIMING) (TRUE|FALSE|ON|OFF|INTEGER_LITERAL)?
+    : (ANALYZE | VERBOSE | COSTS | BUFFERS | TIMING) param_value?
     | FORMAT (TEXT | XML | JSON | YAML)
     ;
 
