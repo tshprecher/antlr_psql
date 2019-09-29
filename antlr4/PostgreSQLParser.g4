@@ -1064,7 +1064,7 @@ drop_view_stmt
     ;
 
 execute_stmt
-    : todo_implement
+    : EXECUTE name=identifier expr_list?
     ;
 
 explain_stmt
