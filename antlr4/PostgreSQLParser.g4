@@ -1040,7 +1040,7 @@ drop_text_search_template_stmt
     ;
 
 drop_transform_stmt
-    : DROP TRANSFORM (IF EXISTS)? FOR type_name=identifier LANGUAGE lang_name=identifier (CASCADE|RESTRICT)
+    : DROP TRANSFORM (IF EXISTS)? FOR type_name_=identifier LANGUAGE lang_name=identifier (CASCADE|RESTRICT)
     ;
 
 drop_trigger_stmt
@@ -1372,7 +1372,7 @@ expr
     // see: https://www.postgresql.org/docs/10/static/sql-syntax-lexical.html#SQL-SYNTAX-OPERATORS
     | expr OPEN_BRACKET expr CLOSE_BRACKET
     | OPEN_PAREN expr CLOSE_PAREN
-    | type_literal SINGLEQ_STRING_LITERAL
+    | type_name SINGLEQ_STRING_LITERAL
     | op=(BANG_BANG | AT_SIGN | PLUS | MINUS) expr
     | op=(TIL | QMARK_HYPHEN) expr
     | expr op=BANG
@@ -1400,12 +1400,14 @@ expr
     | correlation_name DOT column_name
     | case_expr
     | expr (OPEN_BRACKET expr? COLON expr? CLOSE_BRACKET)+
-    | expr COLON_COLON data_type
+    | expr (COLON_COLON data_type)+
+    | data_type expr
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
 
     | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
+    | expr (AT TIME ZONE) SINGLEQ_STRING_LITERAL // https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT
     ;
 
 // TODO: is this necessary. can we just encapsulate within expr's operator precedence?
@@ -1446,50 +1448,73 @@ func_sig_list
     : func_sig (COMMA func_sig)*
     ;
 
-// TODO: is type_literal necessary or can we just have this be an identifier and match (identifier STRING_LITERAL)?
 // TODO: rename prefix notation type casts
-type_literal
-    : ABSTIME
+// Actual list on https://www.postgresql.org/docs/current/datatype.htm
+type_name
+    : ABSTIME //obsolete, internal use only
+    | RELTIME //obsolete, internal use only
+    | BIGINT
+    | BIGSERIAL
+    | BIT (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | BIT_VARYING (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
     | BOOL
+    | BOOLEAN
     | BOX
-    | CHAR
+    | BYTEA
+    | CHAR (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | CHARACTER (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | CHARACTER_VARYING (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | CIDR
+    | CIRCLE
     | DATE
+    | DECIMAL (OPEN_PAREN INTEGER_LITERAL COMMA INTEGER_LITERAL CLOSE_PAREN)?
+    | DOUBLE PRECISION
     | FLOAT4
     | FLOAT8
-    | INTERVAL
+    | INET
+    | INT
+    | INT4
+    | INT2
+    | INT8
+    | INTEGER
+    | INTERVAL FIELDS? (INTEGER_LITERAL)?
     | JSON
     | JSONB
     | LINE
+    | LSEG
+    | MACADDR
+    | MACADDR8
+    | MONEY
+    | NUMERIC (OPEN_PAREN INTEGER_LITERAL COMMA INTEGER_LITERAL CLOSE_PAREN)?
+    | PATH
+    | PG_LSN
     | POINT
-    | NAME
-    | NUMERIC
+    | POLYGON
+    | REAL
+    | SERIAL
+    | SERIAL2
+    | SERIAL4
+    | SERIAL8
+    | SMALLINT
+    | SMALLSERIAL
     | TEXT
-    | TIMESTAMP ((WITH | AT) TIME ZONE)?
-    | TIMESTAMP (WITHOUT TIME ZONE)?
-    | TIMESTAMP_TZ
-    | TIME (WITH TIME ZONE)?
-    | TIME (WITHOUT TIME ZONE)?
-    | TIME_TZ
-    | INT
-    | INT2
-    | INT4
-    | INT8
-    | INTEGER
-    | INTERVAL
-    | RELTIME
-    ;
-
-type_literal_list
-    : type_literal (COMMA type_literal)*
+    | TIME (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)? ((WITH|WITHOUT) TIME ZONE)?
+    | TIMESTAMP (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)? ((WITH|WITHOUT) TIME ZONE)?
+    | TIMETZ (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+	| TIMESTAMPTZ (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | TSQUERY
+    | TSVECTOR
+    | TXID_SNAPSHOT
+    | UUID
+    | VARBIT (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | VARCHAR (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)?
+    | XML
     ;
 
 // TODO: what to do with this?
 oper
     :
     | IS OF
-    | DATE
-    | INTERVAL
-    | DOUBLE PRECISION
     | IN
     | ALL
     ;
@@ -1536,14 +1561,10 @@ table_name_
     : identifier
     ;
 
-// TODO: can we remove in favor of just 'identifier' and the array case?
-// TODO: aggregate calls are mistakenly taken for type conversions: e.g : SUM(a) resolves to type of SUM
+// identifier used in create_domain_stmt as custom type
+// Maybe need to add (OPEN_PAREN INTEGER_LITERAL CLOSE_PAREN)? after identifier for length of custom type
 data_type
-    : type_literal
-    | VARCHAR OPEN_PAREN INTEGER_LITERAL? CLOSE_PAREN
-    | NUMERIC OPEN_PAREN (expr (COMMA expr)*)? CLOSE_PAREN
-    | identifier // TODO: is this necessary?
-    | data_type OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET
+    : (type_name|identifier) (OPEN_BRACKET INTEGER_LITERAL? CLOSE_BRACKET)*
     ;
 
 data_type_list
@@ -1553,12 +1574,10 @@ data_type_list
 index_method
     : builtin=(BTREE | HASH_ | GIST | SPGIST | GIN | BRIN)
     | unknown=identifier
-
     ;
 
 func_name
-    : data_type  // for casting to a type
-    | identifier
+    : identifier
     ;
 
 func_call
@@ -1606,7 +1625,7 @@ predicate
     | expr oper expr
     | expr (IS NOT? NULL)
     | OPEN_PAREN predicate CLOSE_PAREN
-    | EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
+    | NOT? EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
     | predicate AND predicate
     | predicate OR predicate
     | NOT predicate
@@ -1727,7 +1746,7 @@ non_reserved_keyword
     |  OWNER |  PAD |  PARAMETER |  PARAMETER_MODE |  PARAMETER_NAME
     |  PARAMETER_ORDINAL_POSITION |  PARAMETER_SPECIFIC_CATALOG |  PARAMETER_SPECIFIC_NAME |  PARAMETER_SPECIFIC_SCHEMA
     |  PARTIAL |  PARTITION |  PASCAL |  PASSWORD |  PATH
-    |  PERCENTILE_CONT |  PERCENTILE_DISC |  PERCENT_RANK |  PLI |  POSITION
+    |  PERCENTILE_CONT |  PERCENTILE_DISC |  PERCENT_RANK |  PLAIN | PLI |  POSITION
     |  POWER |  PRECEDING |  PRECISION |  PREPARE |  PRESERVE
     |  PRIOR |  PRIVILEGES |  PROCEDURAL |  PROCEDURE |  PUBLIC
     |  QUOTE |  RANGE |  RANK |  READ |  READS
@@ -1744,7 +1763,7 @@ non_reserved_keyword
     |  SCROLL |  SEARCH |  SECOND |  SECTION |  SECURITY
     |  SELF |  SENSITIVE |  SEQUENCE |  SERIALIZABLE |  SERVER_NAME
     |  SESSION |  SET |  SETOF |  SETS |  SHARE
-    |  SHOW |  SIMPLE |  SIZE |  SMALLINT |  SOURCE
+    |  SHOW |  SIMPLE |  SIZE |  SMALLINT | SOME | SOURCE
     |  SPACE |  SPECIFIC |  SPECIFICTYPE |  SPECIFIC_NAME |  SQL
     |  SQLCODE |  SQLERROR |  SQLEXCEPTION |  SQLSTATE |  SQLWARNING
     |  SQRT |  STABLE |  START |  STATE |  STATEMENT
@@ -1772,6 +1791,7 @@ identifier
     | DOUBLEQ_STRING_LITERAL
     | IDENTIFIER
     | identifier DOT identifier
+    | type_name
     ;
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
