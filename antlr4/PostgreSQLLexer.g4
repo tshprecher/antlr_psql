@@ -344,6 +344,7 @@ INTERVAL                             : I N T E R V A L;
 INTO                                 : I N T O;
 INVOKER                              : I N V O K E R;
 IS                                   : I S;
+ISNOTNULL                            : I S N O T N U L L;
 ISNULL                               : I S N U L L;
 ISOLATION                            : I S O L A T I O N;
 ITERATE                              : I T E R A T E;
@@ -834,6 +835,7 @@ DOT                                  : '.';
 SINGLEQ_STRING_LITERAL               : SQUOTA_STRING;
 DOUBLEQ_STRING_LITERAL               : DQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
+DOLLAR_DEC                           : '$' DEC_DIGIT+;
 
 // operator tokens
 AMP                                  : '&';

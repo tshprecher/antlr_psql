@@ -1119,7 +1119,8 @@ notify_stmt
     ;
 
 prepare_stmt
-    : todo_implement
+    : PREPARE identifier (OPEN_PAREN data_type_list CLOSE_PAREN)? AS
+    (select_stmt|insert_stmt|update_stmt|delete_stmt|values_stmt)
     ;
 
 prepare_transaction_stmt
@@ -1414,7 +1415,10 @@ expr
     | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
     | NOT? EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
+    | DOLLAR_DEC
     ;
+
+ddec : DOLLAR_DEC;
 
 // TODO: is this necessary. can we just encapsulate within expr's operator precedence?
 bool_expr
