@@ -703,7 +703,6 @@ WITHIN                               : W I T H I N;
 WITHOUT                              : W I T H O U T;
 WORK                                 : W O R K;
 WRITE                                : W R I T E;
-XML                                  : X M L;
 YAML                                 : Y A M L;
 YEAR                                 : Y E A R;
 YES                                  : Y E S;

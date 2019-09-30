@@ -114,9 +114,9 @@
 		<td>ALTER VIEW</td>
 		<td>0/14 (0.00%)</td>
 		</tr>
-	<tr style="color: red">
+	<tr style="color: green">
 		<td>ANALYZE</td>
-		<td>0/33 (0.00%)</td>
+		<td>33/33 (100.00%)</td>
 		</tr>
 	<tr style="color: red">
 		<td>CLOSE</td>
@@ -278,6 +278,10 @@
 		<td>DELETE</td>
 		<td>193/206 (93.69%)</td>
 		</tr>
+	<tr style="color: red">
+		<td>DISCARD</td>
+		<td>0/5 (0.00%)</td>
+		</tr>
 	<tr style="color: green">
 		<td>DROP ACCESS METHOD</td>
 		<td>4/4 (100.00%)</td>
@@ -410,13 +414,13 @@
 		<td>DROP VIEW</td>
 		<td>57/57 (100.00%)</td>
 		</tr>
-	<tr style="color: red">
+	<tr style="color: green">
 		<td>EXECUTE</td>
-		<td>20/53 (37.74%)</td>
+		<td>53/53 (100.00%)</td>
 		</tr>
-	<tr style="color: red">
+	<tr style="color: orange">
 		<td>EXPLAIN</td>
-		<td>0/530 (0.00%)</td>
+		<td>462/530 (87.17%)</td>
 		</tr>
 	<tr style="color: red">
 		<td>FETCH</td>
@@ -446,9 +450,13 @@
 		<td>NOTIFY</td>
 		<td>0/2 (0.00%)</td>
 		</tr>
-	<tr style="color: red">
+	<tr style="color: orange">
 		<td>PREPARE</td>
-		<td>0/46 (0.00%)</td>
+		<td>42/46 (91.30%)</td>
+		</tr>
+	<tr style="color: green">
+		<td>PREPARE TRANSACTION</td>
+		<td>8/8 (100.00%)</td>
 		</tr>
 	<tr style="color: red">
 		<td>REASSIGN OWNED</td>
@@ -492,7 +500,7 @@
 		</tr>
 	<tr style="color: orange">
 		<td>SELECT</td>
-		<td>6585/7447 (88.42%)</td>
+		<td>6567/7447 (88.18%)</td>
 		</tr>
 	<tr style="color: green">
 		<td>SELECT INTO</td>
