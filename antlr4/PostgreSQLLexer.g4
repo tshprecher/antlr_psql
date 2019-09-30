@@ -62,7 +62,6 @@ fragment SQUOTA_STRING                : '\'' ('\\'. | '\'\'' | ~('\'' | '\\'))* 
 fragment BQUOTA_STRING                : '`' ( '\\'. | '``' | ~('`' | '\\'))* '`';
 
 // Keywords
-
 A_                                   : A;
 ABORT                                : A B O R T;
 ABS                                  : A B S;
@@ -216,6 +215,7 @@ DECIMAL                              : D E C I M A L;
 DECLARE                              : D E C L A R E;
 DEFAULT                              : D E F A U L T;
 DEFAULTS                             : D E F A U L T S;
+DEFERABLE                            : D E F E R A B L E;
 DEFERRABLE                           : D E F E R R A B L E;
 DEFERRED                             : D E F E R R E D;
 DEFINED                              : D E F I N E D;
@@ -270,11 +270,13 @@ EXISTING                             : E X I S T I N G;
 EXISTS                               : E X I S T S;
 EXP                                  : E X P;
 EXPLAIN                              : E X P L A I N;
+EXTENDED                             : E X T E N D E D;
 EXTENSION                            : E X T E N S I O N;
 EXTERNAL                             : E X T E R N A L;
 EXTRACT                              : E X T R A C T;
 FALSE                                : F A L S E;
 FETCH                                : F E T C H;
+FIELDS                               : F I E L D S;
 FILTER                               : F I L T E R;
 FINAL                                : F I N A L;
 FIRST                                : F I R S T;
@@ -378,9 +380,11 @@ LOCK                                 : L O C K;
 LOCKED                               : L O C K E D; // TODO: added manually, fix in docs
 LOWER                                : L O W E R;
 M_                                   : M;
+MAIN                                 : M A I N;
 MAP                                  : M A P;
 MAPPING                              : M A P P I N G;
 MATCH                                : M A T C H;
+MATCH_SIMPLE                         : M A T C H '_' S I M P L E;
 MATCHED                              : M A T C H E D;
 MAX                                  : M A X;
 MAXVALUE                             : M A X V A L U E;
@@ -476,6 +480,7 @@ PERCENT_RANK                         : P E R C E N T '_' R A N K;
 PERCENTILE_CONT                      : P E R C E N T I L E '_' C O N T;
 PERCENTILE_DISC                      : P E R C E N T I L E '_' D I S C;
 PLACING                              : P L A C I N G;
+PLAIN                                : P L A I N;
 PLI                                  : P L I;
 POSITION                             : P O S I T I O N;
 POSTFIX                              : P O S T F I X;
@@ -626,9 +631,7 @@ THAN                                 : T H A N;
 THEN                                 : T H E N;
 TIES                                 : T I E S;
 TIME                                 : T I M E;
-TIME_TZ                              : T I M E T Z; // TODO: added manually, fix in docs
 TIMESTAMP                            : T I M E S T A M P;
-TIMESTAMP_TZ                         : T I M E S T A M P T Z; // TODO: added manually, fix in docs
 TIMEZONE_HOUR                        : T I M E Z O N E '_' H O U R;
 TIMEZONE_MINUTE                      : T I M E Z O N E '_' M I N U T E;
 TIMING                               : T I M I N G;
@@ -703,6 +706,7 @@ WRITE                                : W R I T E;
 XML                                  : X M L;
 YAML                                 : Y A M L;
 YEAR                                 : Y E A R;
+YES                                  : Y E S;
 ZONE                                 : Z O N E;
 
 // role options
@@ -801,19 +805,46 @@ OWNED                                : O W N E D;
 
 // builtin types that are not reserved keywords that are used in prefix type casts (i.e. {type} {expr})
 ABSTIME                              : A B S T I M E;
+BIGSERIAL                            : B I G S E R I A L;
+BIT_VARYING                          : B I T ' ' V A R Y I N G;
 BOOL                                 : B O O L;
 BOX                                  : B O X;
+BYTEA                                : B Y T E A;
+CHARACTER_VARYING                    : C H A R A C T E R ' ' V A R Y I N G;
+CIDR                                 : C I D R;
+CIRCLE                               : C I R C L E;
 FLOAT4                               : F L O A T '4';
 FLOAT8                               : F L O A T '8';
+INET                                 : I N E T;
 INT2                                 : I N T '2';
 INT4                                 : I N T '4';
 INT8                                 : I N T '8';
 JSON                                 : J S O N;
 JSONB                                : J S O N B;
 LINE                                 : L I N E;
+LSEG                                 : L S E G;
+MACADDR                              : M A C A D D R;
+MACADDR8                             : M A C A D D R '8';
+MONEY                                : M O N E Y;
+PG_LSN                               : P G '_' L S N;
 POINT                                : P O I N T;
+POLYGON                              : P O L Y G O N;
 RELTIME                              : R E L T I M E;
+SERIAL                               : S E R I A L;
+SERIAL2                              : S E R I A L '2';
+SERIAL4                              : S E R I A L '4';
+SERIAL8                              : S E R I A L '8';
+SMALLSERIAL                          : S M A L L S E R I A L;
+STSTEM                               : S T S T E M;
 TEXT                                 : T E X T;
+TIMESTAMPTZ                          : T I M E S T A M P T Z;
+TIMETZ                               : T I M E T Z;
+TSQUERY                              : T S Q U E R Y;
+TSVECTOR                             : T S V E C T O R;
+TXID_SNAPSHOT                        : T X I D '_' S N A P S H O T;
+UUID                                 : U U I D;
+VARBIT                               : V A R B I T;
+XML                                  : X M L;
 
 // language tokens
 COMMA                                : ',';
