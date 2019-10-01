@@ -1394,15 +1394,13 @@ expr
              QMARK_AMP | QMARK_HASH | LT_CARET | AMP_LT | HYPHEN_PIPE_HYPHEN | HASH_EQ | AMP_AMP | PIPE_PIPE | EQUAL_GT |
              NOT | AND | OR
              ) expr
-    | expr NOT? LIKE expr //(STRING_LITERAL_SINGLE_Q | REGEX_STRING)
+    | expr (NOT LIKE | LIKE) expr //(STRING_LITERAL_SINGLE_Q | REGEX_STRING)
     | expr NOT? BETWEEN expr AND expr
     | expr IN expr
     | expr op=(LT | GT | EQUAL | LTE | GTE | LT_GT | BANG_EQUAL) expr
-    | expr op=IS (bool_expr | NULL)
-    | expr op=(ISNULL | NOTNULL)
+    | expr op=IS (bool_expr | NULL | NOT NULL)
     | expr IS NOT? DISTINCT FROM expr
-    | expr IS NOT? NULL
-    | op=(NOT | ALL) expr
+    | op=(NOT | ALL ) expr
     | func_call
     | identifier
     | CAST OPEN_PAREN expr AS data_type CLOSE_PAREN
@@ -1416,7 +1414,7 @@ expr
     | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
     | expr (AT TIME ZONE) SINGLEQ_STRING_LITERAL // https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT
-    | NOT? EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
+    | EXISTS expr // NOT EXISTS will be in `op=(NOT | ALL) expr`
     | DOLLAR_DEC
     ;
 
@@ -1733,7 +1731,7 @@ non_reserved_keyword
     |  IMPLICIT |  INCLUDING |  INCREMENT |  INDEX |  INDICATOR
     |  INHERITS |  INOUT |  INPUT |  INSENSITIVE |  INSERT
     |  INSTANCE |  INSTANTIABLE |  INSTEAD |  INT |  INTEGER
-    |  INTERSECTION |  INTERVAL |  INVOKER | ISNULL | ISNOTNULL ISOLATION | K_
+    |  INTERSECTION |  INTERVAL |  INVOKER | ISOLATION | K_
     |  KEY |  KEY_MEMBER |  KEY_TYPE |  LANGUAGE |  LARGE
     |  LAST | LEAST |  LEFT | LENGTH |  LEVEL |  LISTEN |  LN
     |  LOAD |  LOCAL |  LOCATION |  LOCATOR |  LOCK

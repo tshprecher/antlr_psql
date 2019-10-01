@@ -347,8 +347,6 @@ INTERVAL                             : I N T E R V A L;
 INTO                                 : I N T O;
 INVOKER                              : I N V O K E R;
 IS                                   : I S;
-ISNOTNULL                            : I S N O T N U L L;
-ISNULL                               : I S N U L L;
 ISOLATION                            : I S O L A T I O N;
 ITERATE                              : I T E R A T E;
 JOIN                                 : J O I N;
