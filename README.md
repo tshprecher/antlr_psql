@@ -59,6 +59,11 @@ the tests and filters out summary lines into one that formats those lines into a
 Simply run `./scripts/get_test_output | ./scripts/format_test_results > test_coverage.html`. Note
 that this can take a minute through the entire suite.
 
+`./scripts/get_test_output` also fills `failed.log` with the names of currently failed scripts.
+Sometimes small changes in parser could cause a decrease of the success rates in the coverage report.
+`scripts/print_uncommitted_failed_sql` prints to console a code of the statements that previously were
+success and now have status 'failed'. In normal way the length of `failed.log` should only decrease.
+
 
 
 
