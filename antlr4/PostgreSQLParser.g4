@@ -1131,7 +1131,7 @@ refresh_materialized_view_stmt
     ;
 
 reindex_stmt
-    : todo_implement
+    : REINDEX (OPEN_PAREN VERBOSE CLOSE_PAREN)? (INDEX | TABLE | SCHEMA | DATABASE | SYSTEM) name=name_
     ;
 
 release_savepoint_stmt
