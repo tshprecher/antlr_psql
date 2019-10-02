@@ -1110,7 +1110,7 @@ move_stmt
     ;
 
 notify_stmt
-    : todo_implement
+    : NOTIFY channel=name_ (COMMA payload=SINGLEQ_STRING_LITERAL)?
     ;
 
 prepare_stmt
