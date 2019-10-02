@@ -1258,8 +1258,7 @@ values_stmt
     ;
 
 selector_clause
-    :(ALL | (DISTINCT (ON expr_list)?))?
-     (STAR | (expr (AS? name_)? (COMMA (STAR | expr (AS? name_)?))* ))?
+    :(ALL | (DISTINCT (ON expr_list)?))? column_list
     ;
 
 from_clause
@@ -1288,6 +1287,11 @@ grouping_elem_list
 
 having_clause
     : HAVING predicate (COMMA predicate)*
+    ;
+
+column_list
+    :      ((column_name_=expr (AS? output_name=name_)?) | STAR)
+    (COMMA ((column_name_=expr (AS? output_name=name_)?) | STAR))*
     ;
 
 explain_parameter
@@ -1364,8 +1368,7 @@ updater_expr
     ;
 
 returning_clause
-    : RETURNING ((column_name_=expr (AS? output_name=name_)?) | STAR)
-        (COMMA ((column_name_=expr (AS? output_name=name_)?) | STAR))*
+    : RETURNING column_list
     ;
 
 // TODO: split into more granular expression types?
