@@ -1147,7 +1147,7 @@ revoke_stmt
     ;
 
 rollback_stmt
-    : todo_implement
+    : ROLLBACK (WORK | TRANSACTION)?
     ;
 
 rollback_prepared_stmt
