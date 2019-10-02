@@ -1099,7 +1099,9 @@ load_stmt
     ;
 
 lock_stmt
-    : todo_implement
+    : LOCK TABLE? ONLY? name=name_ STAR? (IN
+        (ACCESS SHARE | ROW SHARE | ROW EXCLUSIVE | SHARE UPDATE EXCLUSIVE
+              | SHARE | SHARE ROW EXCLUSIVE | EXCLUSIVE | ACCESS EXCLUSIVE) MODE)? NOWAIT?
     ;
 
 move_stmt
