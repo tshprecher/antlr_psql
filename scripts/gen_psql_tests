@@ -195,6 +195,7 @@ commands = set([
     "UPDATE",
     "VACUUM",
     "VALUES",
+    "WITH"
 ])
 
 
