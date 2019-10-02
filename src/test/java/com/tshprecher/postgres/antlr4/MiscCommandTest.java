@@ -58,7 +58,7 @@ public class MiscCommandTest extends CommandTest {
 
     @Test
     public void testDiscard() throws IOException {
-        super.test("DISCARD", "/sql/discare/");
+        super.test("DISCARD", "/sql/discard/");
     }
 
     @Test

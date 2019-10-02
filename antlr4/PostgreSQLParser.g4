@@ -364,7 +364,7 @@ alter_subscription_stmt
 alter_system_stmt
     : ALTER SYSTEM SET param=IDENTIFIER (TO|EQUALS) value=param_value
     | ALTER SYSTEM RESET param=IDENTIFIER
-    | ALTER STSTEM RESET ALL
+    | ALTER SYSTEM RESET ALL
     ;
 
 alter_table_stmt
@@ -431,7 +431,7 @@ alter_view_stmt
     ;
 
 analyze_stmt
-    : todo_implement
+    : ANALYZE VERBOSE? table_name_ (OPEN_PAREN name_list CLOSE_PAREN)?
     ;
 
 close_stmt
@@ -851,7 +851,7 @@ delete_stmt
     ;
 
 discard_stmt
-    : todo_implement
+    : DISCARD (ALL | PLANS | SEQUENCES | TEMPORARY | TEMP)
     ;
 
 drop_stmt
@@ -1064,11 +1064,13 @@ drop_view_stmt
     ;
 
 execute_stmt
-    : todo_implement
+    : EXECUTE name=identifier expr_list?
     ;
 
 explain_stmt
-    : todo_implement
+    : ((EXPLAIN ANALYZE? VERBOSE?)
+    | (EXPLAIN OPEN_PAREN explain_parameter (COMMA explain_parameter)* CLOSE_PAREN))
+    (select_stmt|insert_stmt|update_stmt|delete_stmt|values_stmt|execute_stmt|declare_stmt|create_table_as_stmt|create_materialized_view_stmt)
     ;
 
 fetch_stmt
@@ -1117,11 +1119,12 @@ notify_stmt
     ;
 
 prepare_stmt
-    : todo_implement
+    : PREPARE name=identifier (OPEN_PAREN data_type_list CLOSE_PAREN)? AS
+    (select_stmt|insert_stmt|update_stmt|delete_stmt|values_stmt)
     ;
 
 prepare_transaction_stmt
-    : todo_implement
+    : PREPARE TRANSACTION name=name_
     ;
 
 reassign_owned_stmt
@@ -1274,6 +1277,11 @@ having_clause
     : HAVING predicate (COMMA predicate)*
     ;
 
+explain_parameter
+    : (ANALYZE | VERBOSE | COSTS | BUFFERS | TIMING) param_value?
+    | FORMAT (TEXT | XML | JSON | YAML)
+    ;
+
 frame
     : UNBOUNDED PRECEDING
     | INTEGER_LITERAL PRECEDING
@@ -1386,14 +1394,13 @@ expr
              QMARK_AMP | QMARK_HASH | LT_CARET | AMP_LT | HYPHEN_PIPE_HYPHEN | HASH_EQ | AMP_AMP | PIPE_PIPE | EQUAL_GT |
              NOT | AND | OR
              ) expr
-    | expr NOT? LIKE expr //(STRING_LITERAL_SINGLE_Q | REGEX_STRING)
+    | expr (NOT LIKE | LIKE) expr //(STRING_LITERAL_SINGLE_Q | REGEX_STRING)
     | expr NOT? BETWEEN expr AND expr
     | expr IN expr
     | expr op=(LT | GT | EQUAL | LTE | GTE | LT_GT | BANG_EQUAL) expr
-    | expr op=IS (bool_expr | NULL)
-    | expr op=(ISNULL | NOTNULL)
+    | expr op=IS (bool_expr | NULL | NOT NULL)
     | expr IS NOT? DISTINCT FROM expr
-    | op=(NOT | ALL) expr
+    | op=(NOT | ALL ) expr
     | func_call
     | identifier
     | CAST OPEN_PAREN expr AS data_type CLOSE_PAREN
@@ -1404,10 +1411,11 @@ expr
     | data_type expr
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
-
     | array_cons_expr
     | OPEN_PAREN select_stmt CLOSE_PAREN
     | expr (AT TIME ZONE) SINGLEQ_STRING_LITERAL // https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT
+    | EXISTS expr // NOT EXISTS will be in `op=(NOT | ALL) expr`
+    | DOLLAR_DEC
     ;
 
 // TODO: is this necessary. can we just encapsulate within expr's operator precedence?
@@ -1515,7 +1523,6 @@ type_name
 oper
     :
     | IS OF
-    | IN
     | ALL
     ;
 
@@ -1598,7 +1605,7 @@ from_item
     | LATERAL? func_call AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN
     | LATERAL? ROWS FROM OPEN_PAREN func_call CLOSE_PAREN
       (AS OPEN_PAREN column_definition (COMMA column_definition)* CLOSE_PAREN)? CLOSE_PAREN
-    | from_item NATURAL? join_type from_item join_clause? // TODO: fix 'left' being treated as an alias
+    | from_item NATURAL? join_type OPEN_PAREN? from_item join_clause? CLOSE_PAREN? // TODO: fix 'left' being treated as an alias
     ;
 
 with_column_alias
@@ -1623,9 +1630,7 @@ join_clause
 predicate
     : expr
     | expr oper expr
-    | expr (IS NOT? NULL)
     | OPEN_PAREN predicate CLOSE_PAREN
-    | NOT? EXISTS OPEN_PAREN select_stmt CLOSE_PAREN
     | predicate AND predicate
     | predicate OR predicate
     | NOT predicate
@@ -1718,7 +1723,7 @@ non_reserved_keyword
     |  EXCLUDING |  EXCLUSIVE |  EXEC |  EXECUTE |  EXISTS
     |  EXP |  EXPLAIN |  EXTENSION | EXTERNAL |  EXTRACT |  FILTER
     |  FINAL |  FIRST |  FLOAT |  FLOOR |  FOLLOWING
-    |  FORCE |  FORTRAN |  FORWARD |  FOUND |  FREE
+    |  FORCE | FORMAT | FORTRAN |  FORWARD |  FOUND |  FREE
     |  FUNCTION |  FUSION |  G_ |  GENERAL |  GENERATED
     |  GET |  GLOBAL |  GO |  GOTO | GREATEST | GRANTED
     |  GROUPING |  HANDLER |  HIERARCHY |  HOLD | HOST | HOUR
@@ -1726,7 +1731,7 @@ non_reserved_keyword
     |  IMPLICIT |  INCLUDING |  INCREMENT |  INDEX |  INDICATOR
     |  INHERITS |  INOUT |  INPUT |  INSENSITIVE |  INSERT
     |  INSTANCE |  INSTANTIABLE |  INSTEAD |  INT |  INTEGER
-    |  INTERSECTION |  INTERVAL |  INVOKER |  ISOLATION
+    |  INTERSECTION |  INTERVAL |  INVOKER | ISOLATION | K_
     |  KEY |  KEY_MEMBER |  KEY_TYPE |  LANGUAGE |  LARGE
     |  LAST | LEAST |  LEFT | LENGTH |  LEVEL |  LISTEN |  LN
     |  LOAD |  LOCAL |  LOCATION |  LOCATOR |  LOCK
@@ -1761,7 +1766,7 @@ non_reserved_keyword
     |  ROW_NUMBER |  RULE |  SAVEPOINT |  SCALE |  SCHEMA
     |  SCHEMA_NAME |  SCOPE |  SCOPE_CATALOG |  SCOPE_NAME |  SCOPE_SCHEMA
     |  SCROLL |  SEARCH |  SECOND |  SECTION |  SECURITY
-    |  SELF |  SENSITIVE |  SEQUENCE |  SERIALIZABLE |  SERVER_NAME
+    |  SELF |  SENSITIVE |  SEQUENCE | SEQUENCES | SERIALIZABLE |  SERVER_NAME
     |  SESSION |  SET |  SETOF |  SETS |  SHARE
     |  SHOW |  SIMPLE |  SIZE |  SMALLINT | SOME | SOURCE
     |  SPACE |  SPECIFIC |  SPECIFICTYPE |  SPECIFIC_NAME |  SQL
