@@ -1105,7 +1105,8 @@ lock_stmt
     ;
 
 move_stmt
-    : todo_implement
+    : MOVE ((NEXT | PRIOR | FIRST | LAST | ABSOLUTE INTEGER | RELATIVE INTEGER_LITERAL | INTEGER_LITERAL |
+            ALL | FORWARD (INTEGER_LITERAL|ALL)? | BACKWARD (INTEGER_LITERAL|ALL)?) (FROM|IN)?)? cursor_name=name_
     ;
 
 notify_stmt
