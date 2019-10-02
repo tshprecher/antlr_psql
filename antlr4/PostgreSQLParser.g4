@@ -1091,7 +1091,7 @@ insert_stmt
     ;
 
 listen_stmt
-    : todo_implement
+    : LISTEN channel=identifier
     ;
 
 load_stmt
