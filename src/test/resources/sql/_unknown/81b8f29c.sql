@@ -1,0 +1,7 @@
+-- file:with.sql ln:881 expect:true
+WITH RECURSIVE t1 AS (
+  INSERT INTO yy SELECT * FROM t2 RETURNING *
+), t2 AS (
+  INSERT INTO y SELECT * FROM y RETURNING *
+)
+SELECT 1
