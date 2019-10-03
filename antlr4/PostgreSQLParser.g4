@@ -844,7 +844,8 @@ declare_stmt
     ;
 
 delete_stmt
-    : DELETE FROM ONLY? table_name_ STAR? (AS? alias)?
+    : with_clause?
+    DELETE FROM ONLY? table_name_ STAR? (AS? alias)?
     (USING identifier_list)?
     (where_clause | (WHERE CURRENT OF cursor_name_=identifier))?
     returning_clause?
@@ -1086,16 +1087,17 @@ import_foreign_schema_stmt
     ;
 
 insert_stmt
-    : INSERT INTO table_name_ (AS alias_=identifier)? (OPEN_PAREN name_list CLOSE_PAREN)?
+    : with_clause?
+    INSERT INTO table_name_ (AS alias_=identifier)? (OPEN_PAREN name_list CLOSE_PAREN)?
     (OVERRIDING (SYSTEM | USER)? VALUE)?
     (DEFAULT VALUES | select_stmt | values_stmt)
-    returning_clause?
     (ON CONFLICT
         (OPEN_PAREN column_name CLOSE_PAREN)?
         (ON CONSTRAINT column_name)?
         where_clause?
         ((DO NOTHING)|(DO UPDATE SET updater_clause where_clause?))
     )?
+    returning_clause?
     ;
 
 listen_stmt
@@ -1172,7 +1174,8 @@ security_label_stmt
     ;
 
 select_stmt
-    : ((SELECT selector_clause from_clause?)
+    : with_clause?
+      ((SELECT selector_clause from_clause?)
       | (TABLE ONLY? table_name_ STAR?)
       | (OPEN_PAREN+ select_stmt CLOSE_PAREN+ combine_clause)
       )
@@ -1186,6 +1189,15 @@ select_stmt
       offset_clause?
       fetch_clause?
       for_clause?
+    ;
+
+with_clause:
+    WITH RECURSIVE? with_expr (COMMA with_expr)*
+    ;
+
+with_expr:
+    table_name_ (OPEN_PAREN name_list CLOSE_PAREN)?
+    AS OPEN_PAREN (select_stmt|insert_stmt|delete_stmt|update_stmt|values_stmt) CLOSE_PAREN
     ;
 
 set_stmt
@@ -1222,7 +1234,8 @@ unlisten_stmt
     ;
 
 update_stmt
-    : UPDATE ONLY? table_name_ STAR? (AS? alias_=identifier)?
+    : with_clause?
+    UPDATE ONLY? table_name_ STAR? (AS? alias_=identifier)?
     SET updater_clause
     from_clause?
     (where_clause | (WHERE CURRENT OF cursor_name_=identifier))?
@@ -1234,7 +1247,8 @@ vacuum_stmt
     ;
 
 values_stmt
-    : ((VALUES expr_list_list)
+    : with_clause?
+      ((VALUES expr_list_list)
       | (OPEN_PAREN+ values_stmt CLOSE_PAREN+ combine_clause)
       )
       order_by_clause?
@@ -1245,8 +1259,7 @@ values_stmt
     ;
 
 selector_clause
-    :(ALL | (DISTINCT (ON expr_list)?))?
-     (STAR | (expr (AS? name_)? (COMMA (STAR | expr (AS? name_)?))* ))?
+    :(ALL | (DISTINCT (ON expr_list)?))? column_list
     ;
 
 from_clause
@@ -1275,6 +1288,11 @@ grouping_elem_list
 
 having_clause
     : HAVING predicate (COMMA predicate)*
+    ;
+
+column_list
+    :      ((column_name_=expr (AS? output_name=name_)?) | STAR)
+    (COMMA ((column_name_=expr (AS? output_name=name_)?) | STAR))*
     ;
 
 explain_parameter
@@ -1351,8 +1369,7 @@ updater_expr
     ;
 
 returning_clause
-    : RETURNING ((column_name_=expr (AS? output_name=name_)?) | STAR)
-        (COMMA ((column_name_=expr (AS? output_name=name_)?) | STAR))*
+    : RETURNING column_list
     ;
 
 // TODO: split into more granular expression types?
@@ -1409,13 +1426,14 @@ expr
     | expr (OPEN_BRACKET expr? COLON expr? CLOSE_BRACKET)+
     | expr (COLON_COLON data_type)+
     | data_type expr
+    | expr IS OF OPEN_PAREN data_type CLOSE_PAREN
     | expr DOT (identifier | STAR)
     | aggregate // TODO: should there be a difference between an aggregate and a func_call?
     | array_cons_expr
-    | OPEN_PAREN select_stmt CLOSE_PAREN
     | expr (AT TIME ZONE) SINGLEQ_STRING_LITERAL // https://www.postgresql.org/docs/current/functions-datetime.html#FUNCTIONS-DATETIME-ZONECONVERT
     | EXISTS expr // NOT EXISTS will be in `op=(NOT | ALL) expr`
     | DOLLAR_DEC
+    | OPEN_PAREN select_stmt CLOSE_PAREN
     ;
 
 // TODO: is this necessary. can we just encapsulate within expr's operator precedence?

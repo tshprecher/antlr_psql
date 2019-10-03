@@ -231,4 +231,8 @@ public class MiscCommandTest extends CommandTest {
         super.test("VALUES", "/sql/values/");
     }
 
+    @Test
+    public void testWith() throws IOException {
+        super.test("WITH", "/sql/with/");
+    }
 }
