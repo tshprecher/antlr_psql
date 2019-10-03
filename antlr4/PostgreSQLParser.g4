@@ -1196,7 +1196,8 @@ with_clause:
     ;
 
 with_expr:
-    (table_name_|func_call) AS OPEN_PAREN (select_stmt|insert_stmt|delete_stmt|update_stmt|values_stmt) CLOSE_PAREN
+    table_name_ (OPEN_PAREN name_list CLOSE_PAREN)?
+    AS OPEN_PAREN (select_stmt|insert_stmt|delete_stmt|update_stmt|values_stmt) CLOSE_PAREN
     ;
 
 set_stmt
