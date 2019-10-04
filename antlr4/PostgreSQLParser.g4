@@ -820,7 +820,7 @@ create_user_mapping_stmt
 
 create_view_stmt
     : CREATE (OR REPLACE)? (TEMP|TEMPORARY)? RECURSIVE? VIEW name=name_ (OPEN_PAREN name_list CLOSE_PAREN)?
-    (WITH OPEN_PAREN parameter_list CLOSE_PAREN)?
+    (WITH OPEN_PAREN option_list CLOSE_PAREN)?
     AS (select_stmt | values_stmt)
     (WITH (CASCADED|LOCAL)? CHECK OPTION)?
     ;
@@ -1561,19 +1561,11 @@ identifier_list
 
 // TODD: should this be used outside
 option_expr
-    : option_name=identifier EQUAL value=param_value
+    : option_name=identifier (EQUAL value=param_value)?
     ;
 
 option_list
     : option_expr (COMMA option_expr)*
-    ;
-
-parameter_list
-    : parameter (COMMA parameter)*
-    ;
-
-parameter
-    : identifier (EQUAL identifier)?
     ;
 
 // TODO: remove
