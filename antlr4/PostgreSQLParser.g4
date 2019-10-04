@@ -187,15 +187,6 @@ alter_foreign_data_wrapper_stmt
     : todo_implement
     ;
 
-// TODD: should this be used outside
-option_value
-    : option=identifier EQUAL value=identifier
-    ;
-
-option_value_list
-    : option_value (COMMA option_value)*
-    ;
-
 alter_foreign_table_action
 // TODO: fix data_type?
     : ADD COLUMN? column_name_=column_name data_type_=data_type (COLLATE collation=identifier)? (column_constraints_=column_constraints)?
@@ -205,7 +196,7 @@ alter_foreign_table_action
     | ALTER COLUMN? column_name_=column_name DROP DEFAULT
     | ALTER COLUMN? column_name_=column_name (SET|DROP) NOT NULL
     | ALTER COLUMN? column_name_=column_name SET STATISTICS INTEGER
-    | ALTER COLUMN? column_name_=column_name SET OPEN_PAREN attribute_values=option_value_list CLOSE_PAREN
+    | ALTER COLUMN? column_name_=column_name SET OPEN_PAREN attribute_values=option_list CLOSE_PAREN
     | ALTER COLUMN? column_name_=column_name RESET OPEN_PAREN attributes=identifier_list CLOSE_PAREN
     | ALTER COLUMN? column_name_=column_name SET STORAGE (PLAIN|EXTERNAL|EXTENDED|MAIN)
     | ALTER COLUMN? column_name_=column_name OPTIONS ((ADD|SET|DROP)?)
@@ -250,7 +241,7 @@ alter_index_stmt
     : ALTER INDEX (IF EXISTS)? name=identifier RENAME TO new_name=identifier
     | ALTER INDEX (IF EXISTS)? name=identifier SET TABLESPACE tablespace_name=identifier
     | ALTER INDEX name=identifier DEPENDS ON EXTENSION extension_name=identifier
-    | ALTER INDEX (IF EXISTS)? name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER INDEX (IF EXISTS)? name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER INDEX (IF EXISTS)? RESET OPEN_PAREN identifier_list CLOSE_PAREN
     | ALTER INDEX ALL IN TABLESPACE name=identifier (OWNED BY roles=identifier_list)?
       SET TABLESPACE new_tablespace=identifier NOWAIT?
@@ -295,7 +286,7 @@ alter_publication_stmt
     : ALTER PUBLICATION name=identifier ADD TABLE ONLY? table_names=identifier_list
     | ALTER PUBLICATION name=identifier SET TABLE ONLY? table_names=identifier_list
     | ALTER PUBLICATION name=identifier DROP TABLE ONLY? table_names=identifier_list
-    | ALTER PUBLICATION name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER PUBLICATION name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER PUBLICATION name=identifier OWNER TO new_owner=role_name
     | ALTER PUBLICATION name=identifier RENAME TO new_name=name_
     ;
@@ -351,11 +342,11 @@ alter_statistics_stmt
 alter_subscription_stmt
     : ALTER SUBSCRIPTION name=identifier CONNECTION conninfo=param_value
     | ALTER SUBSCRIPTION name=identifier SET PUBLICATION publication_name=name_list
-        (WITH OPEN_PAREN options_list CLOSE_PAREN)?
-    | ALTER SUBSCRIPTION name=identifier REFRESH PUBLICATION (WITH OPEN_PAREN options_list CLOSE_PAREN)?
+        (WITH OPEN_PAREN option_list CLOSE_PAREN)?
+    | ALTER SUBSCRIPTION name=identifier REFRESH PUBLICATION (WITH OPEN_PAREN option_list CLOSE_PAREN)?
     | ALTER SUBSCRIPTION name=identifier ENABLE
     | ALTER SUBSCRIPTION name=identifier DISABLE
-    | ALTER SUBSCRIPTION name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER SUBSCRIPTION name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER SUBSCRIPTION name=identifier OWNER TO new_owner=role_name
     | ALTER SUBSCRIPTION name=identifier RENAME TO new_name=identifier
     ;
@@ -373,7 +364,7 @@ alter_table_stmt
 alter_tablespace_stmt
     : ALTER TABLESPACE name=identifier RENAME TO new_name=identifier
     | ALTER TABLESPACE name=identifier OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
-    | ALTER TABLESPACE name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER TABLESPACE name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER TABLESPACE name=identifier RESET OPEN_PAREN identifier_list CLOSE_PAREN
     ;
 
@@ -1560,16 +1551,21 @@ name_
     | identifier
     ;
 
-options_list
-    : opt=identifier EQUAL value=param_value (COMMA opt=identifier EQUAL value=param_value)*
-    ;
-
 name_list
     : name_ (COMMA name_)*
     ;
 
 identifier_list
     : identifier (COMMA identifier)*
+    ;
+
+// TODD: should this be used outside
+option_value
+    : option=identifier EQUAL value=identifier
+    ;
+
+option_list
+    : opt=identifier EQUAL value=param_value (COMMA opt=identifier EQUAL value=param_value)*
     ;
 
 parameter_list
@@ -1670,7 +1666,7 @@ column_constraints
     ;
 
 index_parameters
-    : (WITH OPEN_PAREN options_list CLOSE_PAREN)? (USING INDEX TABLESPACE tablespace=identifier)?
+    : (WITH OPEN_PAREN option_list CLOSE_PAREN)? (USING INDEX TABLESPACE tablespace=identifier)?
     ;
 
 exclude_element
