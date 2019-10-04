@@ -1344,7 +1344,7 @@ order_by_item
     ;
 
 limit_clause
-    : LIMIT (INTEGER_LITERAL | ALL)
+    : LIMIT (INTEGER_LITERAL | ALL | func_call)
     ;
 
 offset_clause
@@ -1608,7 +1608,7 @@ func_name
 func_call
     : func_name OPEN_PAREN VARIADIC expr CLOSE_PAREN
     | func_name OPEN_PAREN (expr (COMMA expr)* (COMMA VARIADIC expr)?)? CLOSE_PAREN
-    | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN
+    | func_name OPEN_PAREN todo_fill_in FROM expr (FOR expr)? CLOSE_PAREN
     ;
 
 array_cons_expr
