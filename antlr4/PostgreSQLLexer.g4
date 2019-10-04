@@ -867,6 +867,7 @@ SINGLEQ_STRING_LITERAL               : SQUOTA_STRING;
 DOUBLEQ_STRING_LITERAL               : DQUOTA_STRING;
 IDENTIFIER                           : [a-zA-Z_][a-zA-Z_0-9$]*;
 DOLLAR_DEC                           : '$' DEC_DIGIT+;
+IDENTIFIER_UNICODE                   : [a-zA-Z_\u00A1-\uFFFF][a-zA-Z_\u00A1-\uFFFF0-9$]*;
 
 // operator tokens
 AMP                                  : '&';

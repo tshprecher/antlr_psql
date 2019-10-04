@@ -187,15 +187,6 @@ alter_foreign_data_wrapper_stmt
     : todo_implement
     ;
 
-// TODD: should this be used outside
-option_value
-    : option=identifier EQUALS value=identifier
-    ;
-
-option_value_list
-    : option_value (COMMA option_value)*
-    ;
-
 alter_foreign_table_action
 // TODO: fix data_type?
     : ADD COLUMN? column_name_=column_name data_type_=data_type (COLLATE collation=identifier)? (column_constraints_=column_constraints)?
@@ -205,7 +196,7 @@ alter_foreign_table_action
     | ALTER COLUMN? column_name_=column_name DROP DEFAULT
     | ALTER COLUMN? column_name_=column_name (SET|DROP) NOT NULL
     | ALTER COLUMN? column_name_=column_name SET STATISTICS INTEGER
-    | ALTER COLUMN? column_name_=column_name SET OPEN_PAREN attribute_values=option_value_list CLOSE_PAREN
+    | ALTER COLUMN? column_name_=column_name SET OPEN_PAREN attribute_values=option_list CLOSE_PAREN
     | ALTER COLUMN? column_name_=column_name RESET OPEN_PAREN attributes=identifier_list CLOSE_PAREN
     | ALTER COLUMN? column_name_=column_name SET STORAGE (PLAIN|EXTERNAL|EXTENDED|MAIN)
     | ALTER COLUMN? column_name_=column_name OPTIONS ((ADD|SET|DROP)?)
@@ -250,7 +241,7 @@ alter_index_stmt
     : ALTER INDEX (IF EXISTS)? name=identifier RENAME TO new_name=identifier
     | ALTER INDEX (IF EXISTS)? name=identifier SET TABLESPACE tablespace_name=identifier
     | ALTER INDEX name=identifier DEPENDS ON EXTENSION extension_name=identifier
-    | ALTER INDEX (IF EXISTS)? name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER INDEX (IF EXISTS)? name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER INDEX (IF EXISTS)? RESET OPEN_PAREN identifier_list CLOSE_PAREN
     | ALTER INDEX ALL IN TABLESPACE name=identifier (OWNED BY roles=identifier_list)?
       SET TABLESPACE new_tablespace=identifier NOWAIT?
@@ -295,7 +286,7 @@ alter_publication_stmt
     : ALTER PUBLICATION name=identifier ADD TABLE ONLY? table_names=identifier_list
     | ALTER PUBLICATION name=identifier SET TABLE ONLY? table_names=identifier_list
     | ALTER PUBLICATION name=identifier DROP TABLE ONLY? table_names=identifier_list
-    | ALTER PUBLICATION name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER PUBLICATION name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER PUBLICATION name=identifier OWNER TO new_owner=role_name
     | ALTER PUBLICATION name=identifier RENAME TO new_name=name_
     ;
@@ -308,10 +299,9 @@ alter_role_options
     ;
 
 alter_role_stmt
-    // TODO: need to define value
     : ALTER ROLE role=role_name WITH? options=alter_role_options+
     | ALTER ROLE name=name_ RENAME TO new_name=name_
-    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier (TO | EQUALS) (value=INTEGER | DEFAULT)
+    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier (TO | EQUAL) (value=param_value | DEFAULT)
     | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier FROM CURRENT
     | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? RESET configuration_parameter=identifier
     | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? RESET ALL
@@ -352,17 +342,17 @@ alter_statistics_stmt
 alter_subscription_stmt
     : ALTER SUBSCRIPTION name=identifier CONNECTION conninfo=param_value
     | ALTER SUBSCRIPTION name=identifier SET PUBLICATION publication_name=name_list
-        (WITH OPEN_PAREN options_list CLOSE_PAREN)?
-    | ALTER SUBSCRIPTION name=identifier REFRESH PUBLICATION (WITH OPEN_PAREN options_list CLOSE_PAREN)?
+        (WITH OPEN_PAREN option_list CLOSE_PAREN)?
+    | ALTER SUBSCRIPTION name=identifier REFRESH PUBLICATION (WITH OPEN_PAREN option_list CLOSE_PAREN)?
     | ALTER SUBSCRIPTION name=identifier ENABLE
     | ALTER SUBSCRIPTION name=identifier DISABLE
-    | ALTER SUBSCRIPTION name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER SUBSCRIPTION name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER SUBSCRIPTION name=identifier OWNER TO new_owner=role_name
     | ALTER SUBSCRIPTION name=identifier RENAME TO new_name=identifier
     ;
 
 alter_system_stmt
-    : ALTER SYSTEM SET param=IDENTIFIER (TO|EQUALS) value=param_value
+    : ALTER SYSTEM SET param=IDENTIFIER (TO|EQUAL) value=param_value
     | ALTER SYSTEM RESET param=IDENTIFIER
     | ALTER SYSTEM RESET ALL
     ;
@@ -374,7 +364,7 @@ alter_table_stmt
 alter_tablespace_stmt
     : ALTER TABLESPACE name=identifier RENAME TO new_name=identifier
     | ALTER TABLESPACE name=identifier OWNER TO (new_owner=identifier|CURRENT_USER|SESSION_USER)
-    | ALTER TABLESPACE name=identifier SET OPEN_PAREN options_list CLOSE_PAREN
+    | ALTER TABLESPACE name=identifier SET OPEN_PAREN option_list CLOSE_PAREN
     | ALTER TABLESPACE name=identifier RESET OPEN_PAREN identifier_list CLOSE_PAREN
     ;
 
@@ -830,7 +820,7 @@ create_user_mapping_stmt
 
 create_view_stmt
     : CREATE (OR REPLACE)? (TEMP|TEMPORARY)? RECURSIVE? VIEW name=name_ (OPEN_PAREN name_list CLOSE_PAREN)?
-    (WITH OPEN_PAREN parameter_list CLOSE_PAREN)?
+    (WITH OPEN_PAREN option_list CLOSE_PAREN)?
     AS (select_stmt | values_stmt)
     (WITH (CASCADED|LOCAL)? CHECK OPTION)?
     ;
@@ -1344,7 +1334,7 @@ order_by_item
     ;
 
 limit_clause
-    : LIMIT (INTEGER_LITERAL | ALL)
+    : LIMIT (INTEGER_LITERAL | ALL | func_call)
     ;
 
 offset_clause
@@ -1561,10 +1551,6 @@ name_
     | identifier
     ;
 
-options_list
-    : opt=identifier EQUAL value=param_value (COMMA opt=identifier EQUALS value=param_value)*
-    ;
-
 name_list
     : name_ (COMMA name_)*
     ;
@@ -1573,12 +1559,13 @@ identifier_list
     : identifier (COMMA identifier)*
     ;
 
-parameter_list
-    : parameter (COMMA parameter)*
+// TODD: should this be used outside
+option_expr
+    : option_name=identifier (EQUAL value=param_value)?
     ;
 
-parameter
-    : identifier (EQUAL identifier)?
+option_list
+    : option_expr (COMMA option_expr)*
     ;
 
 // TODO: remove
@@ -1608,7 +1595,7 @@ func_name
 func_call
     : func_name OPEN_PAREN VARIADIC expr CLOSE_PAREN
     | func_name OPEN_PAREN (expr (COMMA expr)* (COMMA VARIADIC expr)?)? CLOSE_PAREN
-    | func_name OPEN_PAREN todo_fill_in FROM expr CLOSE_PAREN
+    | func_name OPEN_PAREN todo_fill_in FROM expr (FOR expr)? CLOSE_PAREN
     ;
 
 array_cons_expr
@@ -1628,6 +1615,7 @@ from_item
 
 with_column_alias
     : AS? alias (column_alias (COMMA column_alias)*)?
+    | AS? alias OPEN_PAREN name_list CLOSE_PAREN
     ;
 
 join_type
@@ -1670,7 +1658,7 @@ column_constraints
     ;
 
 index_parameters
-    : (WITH OPEN_PAREN options_list CLOSE_PAREN)? (USING INDEX TABLESPACE tablespace=identifier)?
+    : (WITH OPEN_PAREN option_list CLOSE_PAREN)? (USING INDEX TABLESPACE tablespace=identifier)?
     ;
 
 exclude_element
@@ -1815,6 +1803,7 @@ identifier
     | IDENTIFIER
     | identifier DOT identifier
     | type_name
+    | IDENTIFIER_UNICODE
     ;
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
