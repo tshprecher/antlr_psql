@@ -189,7 +189,7 @@ alter_foreign_data_wrapper_stmt
 
 // TODD: should this be used outside
 option_value
-    : option=identifier EQUALS value=identifier
+    : option=identifier EQUAL value=identifier
     ;
 
 option_value_list
@@ -308,10 +308,9 @@ alter_role_options
     ;
 
 alter_role_stmt
-    // TODO: need to define value
     : ALTER ROLE role=role_name WITH? options=alter_role_options+
     | ALTER ROLE name=name_ RENAME TO new_name=name_
-    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier (TO | EQUALS) (value=INTEGER | DEFAULT)
+    | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier (TO | EQUAL) (value=param_value | DEFAULT)
     | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? SET configuration_parameter=identifier FROM CURRENT
     | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? RESET configuration_parameter=identifier
     | ALTER ROLE (role=role_name | ALL) (IN DATABASE database_name=name_)? RESET ALL
@@ -362,7 +361,7 @@ alter_subscription_stmt
     ;
 
 alter_system_stmt
-    : ALTER SYSTEM SET param=IDENTIFIER (TO|EQUALS) value=param_value
+    : ALTER SYSTEM SET param=IDENTIFIER (TO|EQUAL) value=param_value
     | ALTER SYSTEM RESET param=IDENTIFIER
     | ALTER SYSTEM RESET ALL
     ;
@@ -1562,7 +1561,7 @@ name_
     ;
 
 options_list
-    : opt=identifier EQUAL value=param_value (COMMA opt=identifier EQUALS value=param_value)*
+    : opt=identifier EQUAL value=param_value (COMMA opt=identifier EQUAL value=param_value)*
     ;
 
 name_list
