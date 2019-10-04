@@ -1560,12 +1560,12 @@ identifier_list
     ;
 
 // TODD: should this be used outside
-option_value
-    : option=identifier EQUAL value=identifier
+option_expr
+    : option_name=identifier EQUAL value=param_value
     ;
 
 option_list
-    : opt=identifier EQUAL value=param_value (COMMA opt=identifier EQUAL value=param_value)*
+    : option_expr (COMMA option_expr)*
     ;
 
 parameter_list
