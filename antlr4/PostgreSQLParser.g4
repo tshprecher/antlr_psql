@@ -1803,6 +1803,7 @@ identifier
     | IDENTIFIER
     | identifier DOT identifier
     | type_name
+    | IDENTIFIER_UNICODE
     ;
 
 todo_fill_in        : . ;  // TODO: Fill in with proper identification
