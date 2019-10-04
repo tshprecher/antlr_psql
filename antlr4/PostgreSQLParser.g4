@@ -1628,6 +1628,7 @@ from_item
 
 with_column_alias
     : AS? alias (column_alias (COMMA column_alias)*)?
+    | AS? alias OPEN_PAREN name_list CLOSE_PAREN
     ;
 
 join_type
