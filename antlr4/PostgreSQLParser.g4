@@ -1123,7 +1123,9 @@ prepare_transaction_stmt
     ;
 
 reassign_owned_stmt
-    : todo_implement
+    : REASSIGN OWNED
+       BY ((identifier|CURRENT_USER|SESSION_USER) (COMMA (identifier|CURRENT_USER|SESSION_USER))*)
+       TO (identifier|CURRENT_USER|SESSION_USER)
     ;
 
 refresh_materialized_view_stmt
@@ -1135,7 +1137,7 @@ reindex_stmt
     ;
 
 release_savepoint_stmt
-    : todo_implement
+    : RELEASE SAVEPOINT? savepoint_name=identifier
     ;
 
 reset_stmt
@@ -1151,11 +1153,11 @@ rollback_stmt
     ;
 
 rollback_prepared_stmt
-    : todo_implement
+    : ROLLBACK PREPARED transaction_id=INTEGER_LITERAL
     ;
 
 rollback_to_savepoint_stmt
-    : todo_implement
+    : ROLLBACK (WORK | TRANSACTION)? TO SAVEPOINT? savepoint_name=identifier
     ;
 
 savepoint_stmt
