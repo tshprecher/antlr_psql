@@ -1159,7 +1159,7 @@ rollback_to_savepoint_stmt
     ;
 
 savepoint_stmt
-    : todo_implement
+    : SAVEPOINT savepoint_name=identifier
     ;
 
 security_label_stmt
