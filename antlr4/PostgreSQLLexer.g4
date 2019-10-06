@@ -354,6 +354,7 @@ K_                                   : K;
 KEY                                  : K E Y;
 KEY_MEMBER                           : K E Y '_' M E M B E R;
 KEY_TYPE                             : K E Y '_' T Y P E;
+LABEL                                : L A B E L;
 LANCOMPILER                          : L A N C O M P I L E R;
 LANGUAGE                             : L A N G U A G E;
 LARGE                                : L A R G E;

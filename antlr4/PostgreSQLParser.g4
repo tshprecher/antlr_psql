@@ -1163,7 +1163,27 @@ savepoint_stmt
     ;
 
 security_label_stmt
-    : todo_implement
+    : SECURITY LABEL (FOR provider=name_)? ON
+      ( TABLE object_name=identifier
+        | COLUMN table_name=identifier DOT column_name_=column_name
+        | AGGREGATE aggregate_name=identifier OPEN_PAREN aggregate_signature CLOSE_PAREN
+        | DATABASE object_name=identifier
+        | DOMAIN object_name=identifier
+        | EVENT TRIGGER object_name=identifier
+        | FOREIGN TABLE object_name=identifier
+        | FUNCTION function_name=identifier func_sig
+        | LARGE OBJECT large_object_oid=INTEGER_LITERAL
+        | MATERIALIZED VIEW object_name=identifier
+        | PROCEDURAL? LANGUAGE object_name=identifier
+        | PUBLICATION object_name=identifier
+        | ROLE object_name=identifier
+        | SCHEMA object_name=identifier
+        | SEQUENCE object_name=identifier
+        | SUBSCRIPTION object_name=identifier
+        | TABLESPACE object_name=identifier
+        | TYPE object_name=identifier
+        | VIEW object_name=identifier
+      ) IS label=SINGLEQ_STRING_LITERAL
     ;
 
 select_stmt
