@@ -1216,27 +1216,42 @@ with_expr:
     ;
 
 set_stmt
-    : todo_implement
+    : SET (SESSION | LOCAL)? configuration_parameter=identifier (TO | EQUAL) (value=param_value | DEFAULT)
+    | SET (SESSION | LOCAL)? TIME ZONE (timezone | LOCAL | DEFAULT)
     ;
 
 set_constraints_stmt
-    : todo_implement
+    : SET CONSTRAINTS (ALL | constraints=identifier_list) (DEFERRED | IMMEDIATE)
     ;
 
 set_role_stmt
-    : todo_implement
+    : SET (SESSION | LOCAL)? ROLE (role_name_=role_name | NONE)
+    | RESET ROLE
     ;
 
 set_session_authorization_stmt
     : todo_implement
     ;
 
+transaction_mode
+    : ISOLATION LEVEL (SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED)
+    | READ WRITE
+    | READ ONLY
+    | NOT? DEFERRABLE
+    ;
+
+transaction_mode_list
+    : transaction_mode (COMMA transaction_mode)*
+    ;
+
 set_transaction_stmt
-    : todo_implement
+    : SET TRANSACTION transaction_mode_list
+    | SET TRANSACTION SNAPSHOT snapshot_id=SINGLEQ_STRING_LITERAL
+    | SET SESSION CHARACTERISTICS AS TRANSACTION transaction_mode_list
     ;
 
 show_stmt
-    : todo_implement
+    : SHOW (name=identifier | TIME ZONE | ALL)
     ;
 
 truncate_stmt
@@ -1245,7 +1260,7 @@ truncate_stmt
     ;
 
 unlisten_stmt
-    : todo_implement
+    : UNLISTEN (channel=identifier | STAR)
     ;
 
 update_stmt
@@ -1257,8 +1272,18 @@ update_stmt
     returning_clause?
     ;
 
+vacuum_opt
+    : FULL | FREEZE | VERBOSE | ANALYZE | DISABLE_PAGE_SKIPPING
+    ;
+
+vacuum_opt_list
+    : vacuum_opt (COMMA vacuum_opt)*
+    ;
+
 vacuum_stmt
-    : todo_implement
+    : VACUUM (OPEN_PAREN vacuum_opt_list CLOSE_PAREN)? (table_name=table_name_ (OPEN_PAREN column_list CLOSE_PAREN)?)
+    | VACUUM FULL? FREEZE? VERBOSE? (table_name=table_name_)?
+    | VACUUM FULL? FREEZE? VERBOSE? ANALYZE (table_name=table_name_ (OPEN_PAREN column_list CLOSE_PAREN)?)?
     ;
 
 values_stmt
@@ -1552,6 +1577,13 @@ type_name
     | XML
     ;
 
+timezone
+    : SINGLEQ_STRING_LITERAL
+    | DOUBLEQ_STRING_LITERAL
+    | INTEGER_LITERAL
+    | NUMERIC_LITERAL
+    ;
+
 // TODO: what to do with this?
 oper
     :
@@ -1714,6 +1746,7 @@ param_value
     : ON | OFF | TRUE | FALSE | YES | NO | NONE
     | SINGLEQ_STRING_LITERAL
     | NUMERIC_LITERAL
+    | INTEGER_LITERAL
     | identifier
     ;
 
