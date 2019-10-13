@@ -72,6 +72,7 @@ stmt
      | savepoint_stmt
      | security_label_stmt
      | select_stmt
+     | select_into_stmt
      | set_stmt
      | set_constraints_stmt
      | set_role_stmt
@@ -1190,7 +1191,30 @@ security_label_stmt
 
 select_stmt
     : with_clause?
-      ((SELECT selector_clause from_clause?)
+      ((SELECT
+        selector_clause
+        from_clause?)
+      | (TABLE ONLY? table_name_ STAR?)
+      | (OPEN_PAREN+ select_stmt CLOSE_PAREN+ combine_clause)
+      )
+      where_clause?
+      group_by_clause?
+      having_clause?
+      window_clause?
+      combine_clause?
+      order_by_clause?
+      limit_clause?
+      offset_clause?
+      fetch_clause?
+      for_clause?
+    ;
+
+select_into_stmt
+    : with_clause?
+      ((SELECT
+        selector_clause
+        INTO (TEMPORARY | TEMP | UNLOGGED)? TABLE? new_table=table_name_
+        from_clause?)
       | (TABLE ONLY? table_name_ STAR?)
       | (OPEN_PAREN+ select_stmt CLOSE_PAREN+ combine_clause)
       )
